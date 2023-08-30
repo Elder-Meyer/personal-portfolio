@@ -3,12 +3,17 @@ import { Box, Button, Card, CardActionArea, CardMedia, Container, Grid, Toolbar,
 import React from 'react'
 import elderMeyer from '../../../assets/img/principal/elderMeyerV2.png'
 import space from '../../../assets/img/principal/space.jpg'
+import curvyLines from '../../../assets/img/principal/curvyLines.svg'
+import drawLines from '../../../assets/img/principal/drawLines.svg'
+import rainLines from '../../../assets/img/principal/rainLines.svg'
 import Typewriter from 'typewriter-effect'
 import ExampleDoc from "../../../assets/docs/exampleDoc.pdf"
+import { useTheme } from '@emotion/react'
 
 export const Presentation = () => {
+  const theme = useTheme();
   return (
-    <Box component='section' sx={{ background: "backgrond.default", backgroundImage: `url(${space})`, backgroundPosition: "top center", backgroundSize: "cover", backgroundRepeat: "no-repeat", display: "flex", alignItems: "center"}}>
+    <Box component='section' sx={{ background: theme.palette.background.default, backgroundImage: `url(${curvyLines})`, backgroundPosition: "center center", backgroundSize: "cover", backgroundRepeat: "no-repeat", display: "flex", alignItems: "center"}}>
       <Container maxWidth="lg" sx={{py: {xs: 15, sm: 20, md: 25}}}>
         <Grid container spacing={2} px={2}>
           <Grid item xs={12} sm={12} md={7}>
@@ -74,6 +79,7 @@ const ImageContent = () => {
   return (
     <Card
     data-aos="fade-right"
+    elevation={0}
     sx={{
       bgcolor: "transparent",
     }}
@@ -81,11 +87,11 @@ const ImageContent = () => {
     <Box  
       sx={{display: "flex", justifyContent: "center"}}
     >
-      <CardMedia
+      <Box
         sx={{width: {xs: "100%", sm: "70%", md: "100%"},}}
         component="img"
         height={"100%"}
-        image={elderMeyer}
+        src={elderMeyer}
         alt="elderMeyer"
       />
     </Box>

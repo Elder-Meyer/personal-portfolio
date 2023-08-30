@@ -11,6 +11,7 @@ import { KeyboardArrowUp } from '@mui/icons-material'
 import AppFooter from '../components/layout/footer/AppFooter'
 import ScrollToTop from '../components/items/ScrollToTop'
 import { DividerCurve } from '../components/items/DividerCurve'
+import { WavyDivider } from '../components/items/WavyDivider'
 
 export const Router = (props) => {
   return (
@@ -42,7 +43,7 @@ export const Router = (props) => {
           </BtnScrollTop>
         </ScrollToTop>
         
-        <DividerCurve/>
+        <WavyDivider/>
         <AppFooter/>
     </BrowserRouter>
   )
