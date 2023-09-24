@@ -59,26 +59,26 @@ export const projects = [
       imgXs: pro_pri_3_xs,
       toURL: "https://huasteca-mx.web.app"
     },
-    {
-      id: "project-4",
-      title: "Portfolio v2",
-      description: "A design of my first portfolio",
-      imgPrincipal: pro_pri_4,
-      imgMd: pro_pri_4_md,
-      imgSm: pro_pri_4_sm,
-      imgXs: pro_pri_4_xs,
-      toURL: ""
-    },
-    {
-      id: "project-5",
-      title: "Lama Dev",
-      description: "A project with material ui components",
-      imgPrincipal: pro_pri_5,
-      imgMd: pro_pri_5_md,
-      imgSm: pro_pri_5_sm,
-      imgXs: pro_pri_5_xs,
-      toURL: ""
-    },
+    // {
+    //   id: "project-4",
+    //   title: "Portfolio v2",
+    //   description: "A design of my first portfolio",
+    //   imgPrincipal: pro_pri_4,
+    //   imgMd: pro_pri_4_md,
+    //   imgSm: pro_pri_4_sm,
+    //   imgXs: pro_pri_4_xs,
+    //   toURL: ""
+    // },
+    // {
+    //   id: "project-5",
+    //   title: "Lama Dev",
+    //   description: "A project with material ui components",
+    //   imgPrincipal: pro_pri_5,
+    //   imgMd: pro_pri_5_md,
+    //   imgSm: pro_pri_5_sm,
+    //   imgXs: pro_pri_5_xs,
+    //   toURL: ""
+    // },
     {
       id: "project-6",
       title: "Movie APP",
@@ -89,14 +89,14 @@ export const projects = [
       imgXs: pro_pri_6, //revisar esto
       toURL: "", //revisar esto
     },
-    {
-      id: "project-7",
-      title: "CSS course",
-      description: "A course of CSS developed by me",
-      imgPrincipal: pro_pri_7,
-      imgMd: pro_pri_7, //rebisar esto
-      imgSm: pro_pri_7, //rebisar esto
-      imgXs: pro_pri_7, //rebisar esto
-      toURL: "", //rebisar esto
-    },
+    // {
+    //   id: "project-7",
+    //   title: "CSS course",
+    //   description: "A course of CSS developed by me",
+    //   imgPrincipal: pro_pri_7,
+    //   imgMd: pro_pri_7, //rebisar esto
+    //   imgSm: pro_pri_7, //rebisar esto
+    //   imgXs: pro_pri_7, //rebisar esto
+    //   toURL: "", //rebisar esto
+    // },
   ];

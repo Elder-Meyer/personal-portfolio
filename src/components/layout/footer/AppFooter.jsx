@@ -33,22 +33,6 @@ function Copyright() {
   );
 }
 
-const iconStyle = {
-  width: 48,
-  height: 48,
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  backgroundColor: 'secondary.light',
-  transition: "all 0.3s ease-in-out",
-  mr: 1,
-  '&:hover': {
-    bgcolor: 'primary.light',
-    borderRadius: "10%",
-    transform: "scale(1.1)",
-  },
-};
-
 const LANGUAGES = [
   {
     code: 'en-US',
