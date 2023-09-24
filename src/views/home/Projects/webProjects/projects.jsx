@@ -2,7 +2,6 @@
 import pro_pri_1 from "../../../../assets/img/img-projects/pro_pri_1.jpg";
 import pro_pri_2 from "../../../../assets/img/img-projects/pro_pri_2.jpg";
 import pro_pri_3 from "../../../../assets/img/img-projects/pro_pri_3.jpg";
-import pro_pri_4 from "../../../../assets/img/img-projects/pro_pri_4.jpg";
 import pro_pri_5 from "../../../../assets/img/img-projects/pro_pri_5.jpg";
 import pro_pri_6 from "../../../../assets/img/img-projects/pro_pri_6.jpg";
 import pro_pri_7 from "../../../../assets/img/img-projects/pro_pri_7.jpg";
@@ -11,21 +10,18 @@ import pro_pri_7 from "../../../../assets/img/img-projects/pro_pri_7.jpg";
 import pro_pri_1_md from "../../../../assets/img/img-projects/pro_pri_1_md.jpg";
 import pro_pri_2_md from "../../../../assets/img/img-projects/pro_pri_2_md.jpg";
 import pro_pri_3_md from "../../../../assets/img/img-projects/pro_pri_3_md.jpg";
-import pro_pri_4_md from "../../../../assets/img/img-projects/pro_pri_4_md.jpg";
 import pro_pri_5_md from "../../../../assets/img/img-projects/pro_pri_5_md.jpg";
 
 // IMAGENES MEDIANAS
 import pro_pri_1_sm from "../../../../assets/img/img-projects/pro_pri_1_sm.jpg";
 import pro_pri_2_sm from "../../../../assets/img/img-projects/pro_pri_2_sm.jpg";
 import pro_pri_3_sm from "../../../../assets/img/img-projects/pro_pri_3_sm.jpg";
-import pro_pri_4_sm from "../../../../assets/img/img-projects/pro_pri_4_sm.jpg";
 import pro_pri_5_sm from "../../../../assets/img/img-projects/pro_pri_5_sm.jpg";
 
 // IMAGENES PEQUEÑAS
 import pro_pri_1_xs from "../../../../assets/img/img-projects/pro_pri_1_xs.jpg";
 import pro_pri_2_xs from "../../../../assets/img/img-projects/pro_pri_2_xs.jpg";
 import pro_pri_3_xs from "../../../../assets/img/img-projects/pro_pri_3_xs.jpg";
-import pro_pri_4_xs from "../../../../assets/img/img-projects/pro_pri_4_xs.jpg";
 import pro_pri_5_xs from "../../../../assets/img/img-projects/pro_pri_5_xs.jpg";
 
 export const projects = [
