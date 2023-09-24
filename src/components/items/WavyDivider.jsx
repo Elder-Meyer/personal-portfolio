@@ -1,8 +1,12 @@
 import { useTheme } from '@emotion/react'
 import { Box } from '@mui/material'
 import React from 'react'
+import { useLocation } from 'react-router-dom';
 
 export const WavyDivider = ({invertColors}) => {
+
+    const location = useLocation();
+    const isHome = location.pathname === "/home";
 
     const theme = useTheme()
 
@@ -77,7 +81,7 @@ export const WavyDivider = ({invertColors}) => {
     `
 
   return (
-    <Box sx={{backgroundColor: invertColors ? theme.palette.primary.main : theme.palette.background.paper}}>
+    <Box sx={{backgroundColor: isHome ? theme.palette.secondary.dark : "transparent"}}>
         <style>{styles}</style>
         <svg className="editorial"
             xmlns="http://www.w3.org/2000/svg"
