@@ -1,7 +1,7 @@
 import python from "../../../../assets/img/tecnologies/python.png";
 import cpp from "../../../../assets/img/tecnologies/cpp.png";
 import csharp from "../../../../assets/img/tecnologies/csharp.png";
-import java from "../../../../assets/img/tecnologies/java.png";
+import javascript from "../../../../assets/img/tecnologies/javascript.png";
 
 import React from "react";
 
@@ -133,7 +133,7 @@ export const ProgrammingLanguages = () => {
               sx={{ userSelect: "none", pointerEvents: "none" }}
               component="img"
               height={"100%"}
-              image={java}
+              image={javascript}
               alt="java"
             />
             <Typography
@@ -141,7 +141,7 @@ export const ProgrammingLanguages = () => {
               textAlign="center"
               sx={{ userSelect: "none", pointerEvents: "none" }}
             >
-              Java
+              JavaScript
             </Typography>
           </Box>
         </Box>
