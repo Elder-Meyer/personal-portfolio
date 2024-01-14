@@ -16,6 +16,7 @@ import UseAnimations from 'react-useanimations';
 import facebook from "react-useanimations/lib/facebook";
 import twitter from "react-useanimations/lib/twitter";
 import github from "react-useanimations/lib/github";
+import useAnalyticsEventTracker from '../../../config/useAnalyticsEventTracker';
 
 
 function Copyright() {
@@ -65,6 +66,8 @@ export default function AppFooter() {
 
     setOpen(false);
   };
+
+  const gaEventTracker = useAnalyticsEventTracker("contact us")
 
   return (
     <Typography
@@ -130,10 +133,10 @@ export default function AppFooter() {
                 <Link color="primary.light" component={LinkRoute} to="/terms">Terms</Link>
               </Box>
               <Box component="li" sx={{ py: 0.5 }}>
-                <Link color="primary.light" component={LinkRoute} to="/privacy">Privacy</Link>
+                <Link color="primary.light" component={LinkRoute} onClick={()=> gaEventTracker('privacy')} to="/privacy">Privacy</Link>
               </Box>
               <Box component="li" sx={{ py: 0.5 }}>
-                <Link color="primary.light" component={LinkRoute} to="/contact">About me</Link>
+                <Link color="primary.light" component={LinkRoute} onClick={()=> gaEventTracker('call')} to="/contact">About me</Link>
               </Box>
             </Box>
           </Grid>
