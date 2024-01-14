@@ -1,17 +1,18 @@
-import React from 'react'
+import React, { Suspense, lazy } from 'react'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
-import { Home } from '../views/home/Home'
-import { Blog } from '../views/blog/Blog'
+
+const Blog = lazy(() => import('../views/blog/Blog').then((module) => ({ default: module.Blog })))
+const Contact = lazy(() => import('../views/contact/Contact').then((module) => ({ default: module.Contact })))
+const Error = lazy(() => import('../views/error/Error').then((module) => ({ default: module.Error })))
 import DrawerAppBar from '../components/layout/navbar/DrawerAppBar'
-import { Contact } from '../views/contact/Contact'
-import { Error } from '../views/error/Error'
-import { Box, Fab, Toolbar } from '@mui/material'
+import { Box, Fab } from '@mui/material'
 import { BtnScrollTop } from '../components/items/btnScrollTop'
 import { KeyboardArrowUp } from '@mui/icons-material'
 import AppFooter from '../components/layout/footer/AppFooter'
 import ScrollToTop from '../components/items/ScrollToTop'
-import { DividerCurve } from '../components/items/DividerCurve'
 import { WavyDivider } from '../components/items/WavyDivider'
+import { Loader } from '../components/items/Loader'
+import { Home } from '../views/home/Home'
 
 export const Router = (props) => {
   return (
@@ -20,13 +21,38 @@ export const Router = (props) => {
         <Box id="back-to-top-anchor" />
 
         <ScrollToTop>
-          <Routes>
-              <Route path='/'                         element={<Navigate to='/home'/>}/>
-              <Route path='/home/'                    element={<Home/>} />
-              <Route path='/blog/'                    element={<Blog/>} />
-              <Route path='/contact/'                 element={<Contact/>} />
-              <Route path='*'                         element={<Error/>} />
-          </Routes>
+          <Suspense fallback={<Loader/>}>
+            <Routes>
+              <Route 
+                path='/'                         
+                element={<Navigate to='/home'/>}
+              />
+              <Route 
+                path='/home/'                    
+                element={
+                    <Home/>
+                } 
+              />
+              <Route 
+                path='/blog/'                    
+                element={
+                    <Blog/>
+                } 
+              />
+              <Route 
+                path='/contact/'                 
+                element={
+                    <Contact/>
+                } 
+              />
+              <Route 
+                path='*'                         
+                element={
+                    <Error/>
+                } 
+              />
+            </Routes>
+          </Suspense>
 
           <BtnScrollTop {...props}>
             <Fab size="small" aria-label="scroll back to top" 
