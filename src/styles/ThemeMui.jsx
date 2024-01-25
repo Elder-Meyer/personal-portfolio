@@ -4,16 +4,18 @@ export const lightTheme = createTheme({
     palette: {
       mode: 'dark',
       primary: {
-        main: '#A688FA',
-      },
-      secondary:{
-        main: '#ff0000'
+        dark: '#7d7dff',
+        main: '#8e8bff',
+        light: '#9f98ff'
       },
       background: {
-        default: '#1A1625',
-        paper: '#2F2B3A',
+        default: '#1D1C26',
+        paper: '#32313A',
       },
     },
+    typography:{
+      fontFamily: "'Plus Jakarta Sans', sans-serif"
+    }
   });
   
 export const darkTheme = createTheme({
