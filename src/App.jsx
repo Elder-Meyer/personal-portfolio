@@ -10,6 +10,7 @@ console.log("welcome to my portfolio")
 function App() {
   return (
     <ThemeProvider theme={lightTheme}>
+      <meta name="theme-color" content={lightTheme.palette.primary.main} />
       <Router/>
     </ThemeProvider>
   )
