@@ -27,7 +27,7 @@ const navItems = [{title: 'Home', path: '/home', icon: <HomeOutlined/>, iconSele
 
 function DrawerAppBar(props) {
   const theme = useTheme();
-  Elder(theme.palette.background.default)
+  Elder(theme.palette.primary.main)
   const location = useLocation();
   const isHome = location.pathname === "/home";
   const navBackgroundStyle = isHome ? { backgroundColor: "transparent", paddingTop: 1 } : { backgroundColor: "background.default", paddingTop: 1 };
@@ -52,7 +52,7 @@ function DrawerAppBar(props) {
               sx={{
                 textAlign: 'left',
                 pl: 7,
-                color: '#fff', // Color por defecto para enlaces inactivos
+                color: 'text.primary', // Color por defecto para enlaces inactivos
                 '&.active': { // Estilos para enlaces activos
                   color: 'primary.light',
                 },
@@ -76,14 +76,14 @@ function DrawerAppBar(props) {
     <Box sx={{ display: 'flex' }}>
         {/* <HideOnScroll {...props}> */}
           <ElevationScroll {...props}> 
-            <AppBar sx={navBackgroundStyle} enableColorOnDark id="header-principal">
+            <AppBar color='primary' /*enableColorOnDark*/ sx={navBackgroundStyle} id="header-principal">
               <Container maxWidth="lg">
                 <Toolbar sx={{justifyContent: "space-between"}}>
                   <Typography
                     variant="h6"
                     component={Link}
                     to="/"
-                    color="primary.light"
+                    color="text.primary"
                     sx={{  display: { xs: 'flex', sm: 'flex' }, fontSize: '2.5rem', textDecoration: "none" }}
                   >
                     Elder M.
@@ -106,9 +106,9 @@ function DrawerAppBar(props) {
                           mr: 1,
                           fontSize: 16,
                           display: 'flex',
-                            color: '#fff', // Color por defecto para enlaces inactivos
+                            color: 'text.secondary', // Color por defecto para enlaces inactivos
                             '&.active': { // Estilos para enlaces activos
-                              color: 'primary.light',
+                              color: 'text.primary',
                             },
                           }}  
                           component={NavLink} 
