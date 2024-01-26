@@ -24,7 +24,7 @@ function Copyright() {
     <React.Fragment>
       <Box sx={{display: "flex", justifyContent: "center"}}>
 
-        <Link color="primary.light" component={LinkRoute} to="/home">
+        <Link color="text.secondary" component={LinkRoute} to="/home">
         {'© '}
           Elder Meyer {" "}
         {new Date().getFullYear()}
@@ -72,7 +72,7 @@ export default function AppFooter() {
   return (
     <Typography
       component="footer"
-      sx={{ display: 'flex', bgcolor: 'background.default' }}
+      sx={{ display: 'flex', bgcolor: 'primary.main' }}
     >
       <Snackbar open={open} autoHideDuration={5000} onClose={handleClose} anchorOrigin={{ vertical: "top", horizontal: "center"}}>
         <Alert onClose={handleClose} severity="warning" sx={{ width: '100%' }}>
@@ -95,7 +95,7 @@ export default function AppFooter() {
                     <UseAnimations 
                       animation={facebook} 
                       size={56} 
-                      strokeColor={theme.palette.primary.light} 
+                      strokeColor={theme.palette.text.primary} 
                       fillColor='blue' 
                     />
                   </LinkRoute>
@@ -103,7 +103,7 @@ export default function AppFooter() {
                     <UseAnimations 
                       animation={twitter} 
                       size={56} 
-                      strokeColor={theme.palette.primary.light}
+                      strokeColor={theme.palette.text.primary} 
                       fillColor='blue' 
                     />
                   </LinkRoute>
@@ -111,7 +111,7 @@ export default function AppFooter() {
                     <UseAnimations 
                       animation={github} 
                       size={56} 
-                      strokeColor={theme.palette.primary.light}
+                      strokeColor={theme.palette.text.primary} 
                       fillColor='blue' 
                     />
                   </LinkRoute>
@@ -125,23 +125,23 @@ export default function AppFooter() {
             </Grid>
           </Grid>
           <Grid item xs={12} sm={4} md={2} order={{md: 2, sm:2, xs:1}}>
-            <Typography color="secondary.light" variant="h6" marked="left" gutterBottom>
+            <Typography color="text.primary" variant="h6" marked="left" gutterBottom>
               Legal
             </Typography>
             <Box component="ul" sx={{ m: 0, listStyle: 'none', p: 0 }}>
               <Box component="li" sx={{ py: 0.5 }}>
-                <Link color="primary.light" component={LinkRoute} to="/terms">Terms</Link>
+                <Link color="text.secondary" variant='subtitle1' component={LinkRoute} to="/terms">Terms</Link>
               </Box>
               <Box component="li" sx={{ py: 0.5 }}>
-                <Link color="primary.light" component={LinkRoute} onClick={()=> gaEventTracker('privacy')} to="/privacy">Privacy</Link>
+                <Link color="text.secondary" variant='subtitle1' component={LinkRoute} onClick={()=> gaEventTracker('privacy')} to="/privacy">Privacy</Link>
               </Box>
               <Box component="li" sx={{ py: 0.5 }}>
-                <Link color="primary.light" component={LinkRoute} onClick={()=> gaEventTracker('call')} to="/contact">About me</Link>
+                <Link color="text.secondary" variant='subtitle1' component={LinkRoute} onClick={()=> gaEventTracker('call')} to="/contact">About me</Link>
               </Box>
             </Box>
           </Grid>
           <Grid item xs={12} sm={8} md={4} order={{md: 3, sm:3, xs:2}}>
-            <Typography color="secondary.light" variant="h6" marked="left" gutterBottom>
+            <Typography color="text.primary" variant="h6" marked="left" gutterBottom>
               Language
             </Typography>
             <TextField
@@ -152,20 +152,6 @@ export default function AppFooter() {
               SelectProps={{
                 native: true,
               }}
-              sx={{ 
-                mt: 1, width: 150,
-                '& .MuiInputBase-root': {
-                  color: 'secondary.light', // Cambia el color del texto del TextField
-                  bgcolor: 'background.paper', // Cambia el color de fondo del TextField
-                },
-                '& .MuiSelect-root': {
-                  bgcolor: 'secondary.light', // Cambia el color de fondo del menú desplegable
-                },
-                '& .MuiMenuItem-root': {
-                  backgroundColor: 'red', // Cambia el color de fondo de las opciones
-                  color: 'yellow', // Cambia el color del texto de las opciones
-                },
-               }}
             >
               {LANGUAGES.map((language) => (
                 <option value={language.code} key={language.code}>
