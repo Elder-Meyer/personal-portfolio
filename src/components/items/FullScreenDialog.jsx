@@ -41,16 +41,15 @@ export default function FullScreenDialog({
             {/* <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div" color="secondary.light" fontWeight={500}>
               {project.title}
             </Typography> */}
-            <DialogTitle sx={{flex:1, fontWeight: 900, fontSize: {xs: 25, sm:30, md:35}}} variant="h6" id="alert-dialog-title" color="secondary.light" >
+            <DialogTitle sx={{flex:1, fontWeight: 900, fontSize: {xs: 25, sm:30, md:35}}} variant="h6" id="alert-dialog-title" color="primary.main" >
               {project.title}
             </DialogTitle>
             
             <IconButton
               edge="start"
-              color="inherit"
               onClick={handleClose}
               aria-label="close"
-              sx={{color: "primary.light"}}
+              sx={{color: "error.main"}}
             >
               <CloseIcon />
             </IconButton>
