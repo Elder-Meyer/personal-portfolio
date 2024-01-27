@@ -22,6 +22,16 @@ export const Web = () => {
     setOpen(false);
   };
 
+  const [hoveredCard, setHoveredCard] = useState(null);
+
+  const handleMouseEnter = (index) => {
+    setHoveredCard(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredCard(null);
+  };
+
   return (
     <>
       <Grid container spacing={2} sx={{ mt: 2 }}>
@@ -30,18 +40,20 @@ export const Web = () => {
             <Grid item xs={12} sm={12} md={6} lg={4} xl={3} key={index}>
               <Card
                 sx={{
-                  bgcolor: "background.default",
                   maxWidth: "100%",
                   transition: "0.2s",
                   borderRadius: 5,
-                  border: "2px solid",
-                  borderColor: "secondary.dark",
-                  "&:hover": {
-                    transform: "scale(1.05)"
-                  }
+                  // border: "3px solid red",
+                  // border: "2px solid",
+                  // borderColor: "secondary.dark",
+                  transform: hoveredCard === index ? 'scale(1.05)' : 'scale(1)',
                 }}
               >
-                <CardActionArea onClick={() => handleClickOpen(project)}>
+                <CardActionArea onClick={() => handleClickOpen(project)} 
+                  onMouseEnter={() => handleMouseEnter(index)}
+                  onMouseLeave={handleMouseLeave}
+                  sx={{ /*border: "3px solid blue",*/ }}
+                >
                   <CardMedia
                     component="img"
                     height="180"
@@ -53,26 +65,24 @@ export const Web = () => {
                       gutterBottom
                       variant="h5"
                       component="div"
-                      color="secondary.main"
+                      color="primary.light"
                       fontWeight={500}
                     >
                       {project.title}
                     </Typography>
-                    <Typography variant="body2" color="secondary.light">
+                    <Typography variant="body2" color="text.secondary">
                       {project.description}
                     </Typography>
                   </CardContent>
                 </CardActionArea>
+                
                 <CardActions>
                   <Button
                     size="medium"
                     color="primary"
-                    variant="outlined"
+                    variant="contained"
                     sx={{
                       borderRadius: 5,
-                      bgcolor: "background.paper",
-                      color: "primary.light",
-                      borderColor: "primary.main",
                       '&:hover': {
                         borderColor: "primary.light",
                       },
@@ -95,13 +105,13 @@ export const Web = () => {
                   </Button>
                   <Button
                     size="medium"
-                    color="primary"
                     variant="outlined"
                     sx={{
                       borderRadius: 5,
-                      color: "primary.light",
-                      bgcolor: "background.default",
+                      color: "text.primary",
+                      borderColor: "text.secondary",
                       '&:hover': {
+                        color: "primary.light",
                         borderColor: "primary.light",
                       },
                       '&:hover svg': {
