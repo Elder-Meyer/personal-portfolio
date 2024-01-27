@@ -4,11 +4,11 @@ import { WorkingOnThat } from '../../components/items/WorkingOnThat'
 
 export const Blog = () => {
   return (
-    <>
-      <Typography variant='h2' sx={{mt:1}}>
+    <Box sx={{backgroundColor: "background.paper"}}>
+      <Typography color="text.secondary" variant='h2' >
           Blog
       </Typography>  
       <WorkingOnThat />
-    </>
+    </Box>
   )
 }

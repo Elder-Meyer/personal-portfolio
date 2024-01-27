@@ -62,7 +62,7 @@ export const ProgrammingLanguages = () => {
               alt="python"
             />
             <Typography
-              color="secondary.light"
+              color="text.secondary"
               textAlign="center"
               sx={{ userSelect: "none", pointerEvents: "none" }}
             >
@@ -87,7 +87,7 @@ export const ProgrammingLanguages = () => {
               alt="cpp"
             />
             <Typography
-              color="secondary.light"
+              color="text.secondary"
               textAlign="center"
               sx={{ userSelect: "none", pointerEvents: "none" }}
             >
@@ -112,7 +112,7 @@ export const ProgrammingLanguages = () => {
               alt="csharp"
             />
             <Typography
-              color="secondary.light"
+              color="text.secondary"
               textAlign="center"
               sx={{ userSelect: "none", pointerEvents: "none" }}
             >
@@ -137,7 +137,7 @@ export const ProgrammingLanguages = () => {
               alt="java"
             />
             <Typography
-              color="secondary.light"
+              color="text.secondary"
               textAlign="center"
               sx={{ userSelect: "none", pointerEvents: "none" }}
             >

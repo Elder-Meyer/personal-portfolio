@@ -64,7 +64,7 @@ export const Frameworks = () => {
               alt="react"
             />
             <Typography
-              color="secondary.light"
+              color="text.secondary"
               textAlign="center"
               sx={{ userSelect: "none", pointerEvents: "none" }}
             >
@@ -89,7 +89,7 @@ export const Frameworks = () => {
               alt="vite"
             />
             <Typography
-              color="secondary.light"
+              color="text.secondary"
               textAlign="center"
               sx={{ userSelect: "none", pointerEvents: "none" }}
             >
@@ -114,7 +114,7 @@ export const Frameworks = () => {
               alt="node"
             />
             <Typography
-              color="secondary.light"
+              color="text.secondary"
               textAlign="center"
               sx={{ userSelect: "none", pointerEvents: "none" }}
             >
@@ -139,7 +139,7 @@ export const Frameworks = () => {
               alt="bootstrap"
             />
             <Typography
-              color="secondary.light"
+              color="text.secondary"
               textAlign="center"
               sx={{ userSelect: "none", pointerEvents: "none" }}
             >
@@ -164,7 +164,7 @@ export const Frameworks = () => {
               alt="materialui"
             />
             <Typography
-              color="secondary.light"
+              color="text.secondary"
               textAlign="center"
               sx={{ userSelect: "none", pointerEvents: "none" }}
             >
@@ -189,7 +189,7 @@ export const Frameworks = () => {
               alt="sass"
             />
             <Typography
-              color="secondary.light"
+              color="text.secondary"
               textAlign="center"
               sx={{ userSelect: "none", pointerEvents: "none" }}
             >

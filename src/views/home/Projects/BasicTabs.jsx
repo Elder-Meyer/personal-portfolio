@@ -64,14 +64,14 @@ export default function BasicTabs() {
             <Tab 
                 label="Web" {...a11yProps(0)} 
                 sx={{
-                    '&:hover': {
-                        color: 'primary.light',
-                    },
-                    '&.Mui-selected': {
-                        color: 'primary.light',
-                    },
-                    color: "secondary.light",
-                }}
+                  '&:hover': {
+                      color: 'primary.light',
+                  },
+                  '&.Mui-selected': {
+                      color: 'primary.light',
+                  },
+                  color: "text.primary",
+              }}
             />
             <Tab 
                 label="Mobile" {...a11yProps(1)} 
@@ -82,20 +82,20 @@ export default function BasicTabs() {
                     '&.Mui-selected': {
                         color: 'primary.light',
                     },
-                    color: "secondary.light",
+                    color: "text.primary",
                 }}
             />
             <Tab 
                 label="Desktop" {...a11yProps(2)} 
                 sx={{
-                    '&:hover': {
-                        color: 'primary.light',
-                    },
-                    '&.Mui-selected': {
-                        color: 'primary.light',
-                    },
-                    color: "secondary.light",
-                }}
+                  '&:hover': {
+                      color: 'primary.light',
+                  },
+                  '&.Mui-selected': {
+                      color: 'primary.light',
+                  },
+                  color: "text.primary",
+              }}
             />
         </Tabs>
       </Box>

@@ -62,7 +62,7 @@ export const Database = () => {
               alt="firebase"
             />
             <Typography
-              color="secondary.light"
+              color="text.secondary"
               textAlign="center"
               sx={{ userSelect: "none", pointerEvents: "none" }}
             >
@@ -87,7 +87,7 @@ export const Database = () => {
               alt="mongo"
             />
             <Typography
-              color="secondary.light"
+              color="text.secondary"
               textAlign="center"
               sx={{ userSelect: "none", pointerEvents: "none" }}
             >
@@ -112,7 +112,7 @@ export const Database = () => {
               alt="mysql"
             />
             <Typography
-              color="secondary.light"
+              color="text.secondary"
               textAlign="center"
               sx={{ userSelect: "none", pointerEvents: "none" }}
             >
@@ -137,7 +137,7 @@ export const Database = () => {
               alt="cloud"
             />
             <Typography
-              color="secondary.light"
+              color="text.secondary"
               textAlign="center"
               sx={{ userSelect: "none", pointerEvents: "none" }}
             >
