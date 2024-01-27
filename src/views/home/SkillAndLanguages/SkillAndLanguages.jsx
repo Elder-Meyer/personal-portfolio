@@ -12,13 +12,13 @@ import { WebDevelopment } from './sliders/WebDevelopment'
 
 export const SkillAndLanguages = () => {
   return (
-    <Box component='section' sx={{ border: "3px solid #121212", bgcolor: "background.default"}}>
+    <Box component='section' sx={{ bgcolor: "background.default",  px:2, py: {xs:5, sm:5, md:6} }}>
       <Container maxWidth="lg">
-        <Paper sx={{borderRadius: 15, py: 3, px: 7, mt: -10, mb:10, bgcolor: "background.paper"}}>
-          <Typography textAlign="center" sx={{color: "white", fontSize: 45, fontWeight: 500}} gutterBottom>
+        <Paper sx={{borderRadius: 15, py: 3, px: 7, bgcolor: "background.paper" }} elevation={1}>
+          <Typography color='text.primary' textAlign="center" sx={{ fontSize: 45, fontWeight: 500}} gutterBottom>
             Skills
           </Typography>
-          <Typography color="secondary.light" textAlign="center" sx={{fontSize: 18, my:3}}>
+          <Typography color='text.secondary' textAlign="center" sx={{fontSize: 18, my:3}}>
             I have skills and experience with the following technologies and programming languages.
           </Typography>
             <WebDevelopment/>
@@ -34,7 +34,7 @@ export const SkillAndLanguages = () => {
           <Typography textAlign="center" sx={{color: "white", fontSize: 45, fontWeight: 500}} gutterBottom>
             Languages
           </Typography>
-          <Typography color="secondary.light" textAlign="center" sx={{fontSize: 18, my:3}}>
+          <Typography color="text.secondary" textAlign="center" sx={{fontSize: 18, my:3}}>
             I understand (and speak) three languages.
           </Typography>
           <SpeakLanguages/>
