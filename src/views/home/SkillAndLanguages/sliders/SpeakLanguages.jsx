@@ -58,7 +58,7 @@ export const SpeakLanguages = () => {
               alt="eeuu"
             />
             <Typography
-              color="secondary.light"
+              color="text.secondary"
               textAlign="center"
               sx={{ userSelect: "none", pointerEvents: "none" }}
             >
@@ -83,7 +83,7 @@ export const SpeakLanguages = () => {
               alt="french"
             />
             <Typography
-              color="secondary.light"
+              color="text.secondary"
               textAlign="center"
               sx={{ userSelect: "none", pointerEvents: "none" }}
             >
@@ -108,7 +108,7 @@ export const SpeakLanguages = () => {
               alt="spain"
             />
             <Typography
-              color="secondary.light"
+              color="text.secondary"
               textAlign="center"
               sx={{ userSelect: "none", pointerEvents: "none" }}
             >

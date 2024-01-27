@@ -62,7 +62,7 @@ export const WebDevelopment = () => {
               alt="html"
             />
             <Typography
-              color="secondary.light"
+              color="text.secondary"
               textAlign="center"
               sx={{ userSelect: "none", pointerEvents: "none" }}
             >
@@ -87,7 +87,7 @@ export const WebDevelopment = () => {
               alt="css"
             />
             <Typography
-              color="secondary.light"
+              color="text.secondary"
               textAlign="center"
               sx={{ userSelect: "none", pointerEvents: "none" }}
             >
@@ -112,7 +112,7 @@ export const WebDevelopment = () => {
               alt="javascript"
             />
             <Typography
-              color="secondary.light"
+              color="text.secondary"
               textAlign="center"
               sx={{ userSelect: "none", pointerEvents: "none" }}
             >
@@ -137,7 +137,7 @@ export const WebDevelopment = () => {
               alt="php"
             />
             <Typography
-              color="secondary.light"
+              color="text.secondary"
               textAlign="center"
               sx={{ userSelect: "none", pointerEvents: "none" }}
             >
