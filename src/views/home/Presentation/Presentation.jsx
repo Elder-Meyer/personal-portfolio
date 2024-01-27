@@ -1,5 +1,5 @@
 import { FileDownloadOutlined } from '@mui/icons-material'
-import { Box, Button, Card, CardActionArea, CardMedia, Container, Grid, Toolbar, Typography } from '@mui/material'
+import { Box, Button, Card, CardActionArea, CardMedia, Container, Grid, Toolbar, Typography, Paper } from '@mui/material'
 import React from 'react'
 import elderMeyer from '../../../assets/img/principal/elderMeyerV2.png'
 import space from '../../../assets/img/principal/space.jpg'
@@ -13,17 +13,22 @@ import { useTheme } from '@emotion/react'
 export const Presentation = () => {
   const theme = useTheme();
   return (
-    <Box component='section' sx={{ background: theme.palette.background.default, backgroundImage: `url(${curvyLines})`, backgroundPosition: "center center", backgroundSize: "cover", backgroundRepeat: "no-repeat", display: "flex", alignItems: "center"}}>
+    <Box component='section' sx={{ backgroundColor: "background.default"/*, backgroundImage: `url(${curvyLines})`, backgroundPosition: "center center", backgroundSize: "cover", backgroundRepeat: "no-repeat", display: "flex", alignItems: "center"*/}}>
       <Container maxWidth="lg" sx={{py: {xs: 15, sm: 20, md: 25}}}>
-        <Grid container spacing={2} px={2}>
-          <Grid item xs={12} sm={12} md={7}>
-            <CaptionInfo/>
+
+
+          <Grid container spacing={2} px={2}>
+            <Grid item xs={12} sm={12} md={7}>
+              <CaptionInfo/>
+            </Grid>
+            <Grid item xs={12} sm={12} md={5}>
+              <ImageContent/>
+            </Grid>
           </Grid>
-          <Grid item xs={12} sm={12} md={5}>
-            <ImageContent/>
-          </Grid>
-        </Grid>
-      </Container>
+
+
+        </Container>
+
     </Box>
   )
 }
@@ -31,11 +36,11 @@ export const Presentation = () => {
 
 const CaptionInfo = () => {
   return (
-    <Box sx={{color: "white", display: 'flex', flexFlow: 'column wrap', justifyContent: 'center',/* minHeight: '100vh', */ }}>
-      <Typography variant='h1' sx={{fontWeight: 500, fontSize: {xs: 76, sm: 86, md: 96}}}>
+    <Box sx={{display: 'flex', flexFlow: 'column wrap', justifyContent: 'center',/* minHeight: '100vh', */ }}>
+      <Typography variant='h1' color='text.primary' sx={{fontWeight: 500, fontSize: {xs: 76, sm: 86, md: 96}}}>
         Hi! I'm Elder.
       </Typography>
-      <Typography variant='h2' sx={{fontWeight: 100, fontSize: {xs: 35, sm: 50, md: 55}}}>
+      <Typography variant='h2' color='primary.light' sx={{fontWeight: 100, fontSize: {xs: 35, sm: 50, md: 55}}}>
         <Typewriter
           options={{
             strings: [ "Web Developer", "Web Designer", "UI/UX Dev" ],
@@ -44,7 +49,7 @@ const CaptionInfo = () => {
           }}
         />
       </Typography>
-      <Typography variant='subtitle1' color="secondary.light" sx={{fontSize: "1.3rem"}}>
+      <Typography variant='subtitle1' color="text.secondary" sx={{fontSize: "1.3rem"}}>
         I am a developer who is passionate about developing and designing web applications.
       </Typography>
       <Toolbar/>
@@ -54,7 +59,7 @@ const CaptionInfo = () => {
           size='large' 
           href={ExampleDoc} download="elderMeyer-cv" target='_blank'
           sx={{
-            color: "primary.light",
+            
             position: "relative",
             transition: "all 0.3s ease",
             '&:hover': {
