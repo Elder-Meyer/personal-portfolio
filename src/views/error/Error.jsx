@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom'
 
 export const Error = () => {
   return (
-    <>
-        <Container maxWidth="xs" sx={{mt: {xs: 10, sm: 5, md: 10}, }}>
+    <Box sx={{backgroundColor: "background.paper"}}>
+        <Container maxWidth="xs" sx={{pt: {xs: 10, sm: 5, md: 10}, }}>
             <Typography  
                 textAlign="center"
                 sx={{fontSize: {xs: 40, sm: 50, md:60}, fontWeight: 700, color: "primary.main"}}
@@ -37,13 +37,13 @@ export const Error = () => {
             textAlign="center"
             sx={{fontSize: {xs: 40, sm: 50, md:60}, fontWeight: 700, color: "primary.main"}}
         >
-            There is nothing here.
+            There is nothing here. 
         </Typography>
-        <Box sx={{display: "flex", justifyContent: "center", mb: 5}}>
+        <Box sx={{display: "flex", justifyContent: "center", pb: 5}}>
             <Button variant='contained' component={Link} to="/">
                 back to home
             </Button>
         </Box>
-    </>
+    </Box>
   )
 }

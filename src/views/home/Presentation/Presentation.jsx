@@ -1,38 +1,26 @@
 import { FileDownloadOutlined } from '@mui/icons-material'
-import { Box, Button, Card, CardActionArea, CardMedia, Container, Grid, Toolbar, Typography, Paper } from '@mui/material'
+import { Box, Button, Card, Container, Grid, Toolbar, Typography, Tooltip } from '@mui/material'
 import React from 'react'
-import elderMeyer from '../../../assets/img/principal/elderMeyerV2.png'
-import space from '../../../assets/img/principal/space.jpg'
-import curvyLines from '../../../assets/img/principal/curvyLines.svg'
-import drawLines from '../../../assets/img/principal/drawLines.svg'
-import rainLines from '../../../assets/img/principal/rainLines.svg'
+import cube from '../../../assets/img/principal/cube-glow.png'
 import Typewriter from 'typewriter-effect'
 import ExampleDoc from "../../../assets/docs/exampleDoc.pdf"
-import { useTheme } from '@emotion/react'
 
 export const Presentation = () => {
-  const theme = useTheme();
   return (
-    <Box component='section' sx={{ backgroundColor: "background.default"/*, backgroundImage: `url(${curvyLines})`, backgroundPosition: "center center", backgroundSize: "cover", backgroundRepeat: "no-repeat", display: "flex", alignItems: "center"*/}}>
-      <Container maxWidth="lg" sx={{py: {xs: 15, sm: 20, md: 25}}}>
-
-
+    <Box component='section' sx={{ backgroundColor: "background.default", minHeight: "100vh" }} display='flex' alignItems='center'>
+      <Container maxWidth="lg" sx={{ py: {xs: 15, sm: 20, md: 0} }}>
           <Grid container spacing={2} px={2}>
-            <Grid item xs={12} sm={12} md={7}>
+            <Grid item xs={12} sm={12} md={9}>
               <CaptionInfo/>
             </Grid>
-            <Grid item xs={12} sm={12} md={5}>
+            <Grid item xs={12} sm={12} md={3}>
               <ImageContent/>
             </Grid>
           </Grid>
-
-
         </Container>
-
     </Box>
   )
 }
-
 
 const CaptionInfo = () => {
   return (
@@ -49,17 +37,15 @@ const CaptionInfo = () => {
           }}
         />
       </Typography>
-      <Typography variant='subtitle1' color="text.secondary" sx={{fontSize: "1.3rem"}}>
+      <Typography variant='body2' color="text.secondary" sx={{fontSize: "1.3rem"}}>
         I am a developer who is passionate about developing and designing web applications.
       </Typography>
-      <Toolbar/>
-      <Box>
+      <Box my={3}>
         <Button
           variant='contained'
           size='large' 
           href={ExampleDoc} download="elderMeyer-cv" target='_blank'
           sx={{
-            
             position: "relative",
             transition: "all 0.3s ease",
             '&:hover': {
@@ -74,8 +60,8 @@ const CaptionInfo = () => {
           </Typography>
           <FileDownloadOutlined/>
         </Button>
-        
       </Box>
+      <Toolbar sx={{display: {xs: "none", sm: "none", md: "block"}}} />
     </Box>
   )
 }
@@ -83,23 +69,54 @@ const CaptionInfo = () => {
 const ImageContent = () => {
   return (
     <Card
-    data-aos="fade-right"
-    elevation={0}
-    sx={{
-      bgcolor: "transparent",
-    }}
+      elevation={0}
+      sx={{
+        bgcolor: "transparent",
+        height: '100%',
+        display:'flex',
+        alignItems: {xs: "flex-start", md: "center"},
+        justifyContent: {xs: 'flex-start',  md: 'center'},
+        flexFlow: {xs: "column wrap", md: "row wrap"},
+      }}
     >
-    <Box  
-      sx={{display: "flex", justifyContent: "center"}}
-    >
-      <Box
-        sx={{width: {xs: "100%", sm: "70%", md: "100%"},}}
-        component="img"
-        height={"100%"}
-        src={elderMeyer}
-        alt="elderMeyer"
-      />
-    </Box>
+      <Toolbar sx={{display: {xs: "block", md: "none"} }} />
+      <Box  
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          
+          
+        }}
+      >
+        <Tooltip title={":)"} arrow placement='right'>
+          <a href="https://gdbrowser.com/u/Mesher" target="_BLANK">
+            <Box
+              sx={{
+                width: {xs: "100%", sm: "100%", md: "100%"},
+                paddingX: 1,
+                animationDuration: "2s",
+                animationIterationCount: "infinite",
+                transformOrigin: "bottom",
+                animationName: "bounce-7",
+                animationTimingFunction: "cubic-bezier(0.280, 0.840, 0.420, 1)",
+                '@keyframes bounce-7': {
+                  '0%':   { transform: "scale(1, 1)       translateY(0)",       },
+                  '10%':  { transform: "scale(1.1, .9)    translateY(0)",    },
+                  '30%':  { transform: "scale(.9, 1.1)    translateY(-40px)",    },
+                  '50%':  { transform: "scale(1.05, .95)  translateY(0)",  },
+                  '57%':  { transform: "scale(1, 1)       translateY(-8px)",       },
+                  '64%':  { transform: "scale(1, 1)       translateY(0)",       },
+                  '100%': { transform: "scale(1, 1)       translateY(0)",       },
+                }
+              }}
+              component="img"
+              height={"100%"}
+              src={cube}
+              alt="elderMeyer"
+            />
+          </a>
+        </Tooltip>
+      </Box>
     </Card>
   )
 }
