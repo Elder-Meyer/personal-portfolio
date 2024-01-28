@@ -78,26 +78,26 @@ function DrawerAppBar(props) {
           <ElevationScroll {...props}> 
             <AppBar color='primary' /*enableColorOnDark*/ sx={navBackgroundStyle} id="header-principal">
               <Container maxWidth="lg">
-                <Toolbar sx={{justifyContent: "space-between"}}>
+                <Toolbar sx={{justifyContent: "space-between" }}>
                   <Typography
                     variant="h6"
                     component={Link}
                     to="/"
                     color="text.primary"
-                    sx={{  display: { xs: 'flex', sm: 'flex' }, fontSize: '2.5rem', textDecoration: "none" }}
+                    sx={{  display: 'flex', fontSize: '2.5rem', textDecoration: "none" }}
                   >
-                    Elder M.
+                    <Box sx={{display: isHome ? {xs :'none', md: 'none'} : 'flex' }}>Elder M.</Box>
                   </Typography>
                   <IconButton
                       color="inherit"
                       aria-label="open drawer"
                       edge="start"
                       onClick={handleDrawerToggle}
-                      sx={{ display: { xs: "flex", sm: "flex", md: 'none' } }}
+                      sx={{ display: { xs: "flex", sm: "flex", md: 'none' }  }}
                       >
                     <MenuIcon />
                   </IconButton>
-                  <Box sx={{  display: { xs: 'none', sm: 'none', md: 'flex' } }}>
+                  <Box sx={{  display: { xs: 'none', sm: 'none', md: 'flex' }  }}>
                       {navItems.map((item) => (
                         <Button 
                         startIcon={item.path === location.pathname ? item.iconSelected : item.icon }

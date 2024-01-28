@@ -2,7 +2,9 @@ export function Elder(color){
     window.addEventListener("scroll", function(){
         const header = document.getElementById("header-principal");    
         header.classList.toggle("abajo", this.window.scrollY>0);
-        header.style.transition = "all 0.3s ease-in-out";
+        header.style.transition = `
+            all 0.3s ease-in-out
+        `;
         document.head.appendChild(styleElement);
     });
     
@@ -10,6 +12,7 @@ export function Elder(color){
         header.abajo{
             background-color: ${color};
             padding: 0;
+            border-radius: 0 0 30px 30px;
         }
     `
     
