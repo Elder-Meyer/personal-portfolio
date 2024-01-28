@@ -16,61 +16,63 @@ import { Home } from '../views/home/Home'
 
 export const Router = (props) => {
   return (
-    <BrowserRouter>
-        <DrawerAppBar />
-        <Box id="back-to-top-anchor" />
+    <Box sx={{backgroundColor: "background.paper"}}>
+      <BrowserRouter>
+          <DrawerAppBar />
+          <Box id="back-to-top-anchor" />
 
-        <ScrollToTop>
-          <Suspense fallback={<Loader/>}>
-            <Routes>
-              <Route 
-                path='/'                         
-                element={<Navigate to='/home'/>}
-              />
-              <Route 
-                path='/home/'                    
-                element={
-                    <Home/>
-                } 
-              />
-              <Route 
-                path='/blog/'                    
-                element={
-                    <Blog/>
-                } 
-              />
-              <Route 
-                path='/contact/'                 
-                element={
-                    <Contact/>
-                } 
-              />
-              <Route 
-                path='*'                         
-                element={
-                    <Error/>
-                } 
-              />
-            </Routes>
-          </Suspense>
+          <ScrollToTop>
+            <Suspense fallback={<Loader/>}>
+              <Routes>
+                <Route 
+                  path='/'                         
+                  element={<Navigate to='/home'/>}
+                />
+                <Route 
+                  path='/home/'                    
+                  element={
+                      <Home/>
+                  } 
+                />
+                <Route 
+                  path='/blog/'                    
+                  element={
+                      <Blog/>
+                  } 
+                />
+                <Route 
+                  path='/contact/'                 
+                  element={
+                      <Contact/>
+                  } 
+                />
+                <Route 
+                  path='*'                         
+                  element={
+                      <Error/>
+                  } 
+                />
+              </Routes>
+            </Suspense>
 
-          <BtnScrollTop {...props}>
-            <Fab size="small" aria-label="scroll back to top" 
-              sx={{
-                bgcolor: "background.default", color: "primary.light", 
-                '&:hover': {
-                  bgcolor: 'primary.light',
-                  color: 'background.default'
-                },
-              }}
-            >
-                <KeyboardArrowUp />
-            </Fab>
-          </BtnScrollTop>
-        </ScrollToTop>
-        
-        <WavyDivider/>
-        <AppFooter/>
-    </BrowserRouter>
+            <BtnScrollTop {...props}>
+              <Fab size="small" aria-label="scroll back to top" 
+                sx={{
+                  bgcolor: "background.default", color: "primary.light", 
+                  '&:hover': {
+                    bgcolor: 'primary.light',
+                    color: 'background.default'
+                  },
+                }}
+              >
+                  <KeyboardArrowUp />
+              </Fab>
+            </BtnScrollTop>
+          </ScrollToTop>
+          
+          <WavyDivider/>
+          <AppFooter/>
+      </BrowserRouter>
+    </Box>
   )
 }
