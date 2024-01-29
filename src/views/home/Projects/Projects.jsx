@@ -21,7 +21,7 @@ export const Projects = () => {
       }}
     >
       <Container maxWidth="xl">
-          <Typography textAlign="center" sx={{color: "white", fontSize: 45, fontWeight: 500}} gutterBottom>
+          <Typography textAlign="center" sx={{color: "white", fontSize: 40, fontWeight: 500}} gutterBottom>
             Projects
           </Typography>
           <Typography color="text.secondary" textAlign="center" sx={{fontSize: 18, my:3}}>
