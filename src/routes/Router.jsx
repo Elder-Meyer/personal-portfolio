@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from 'react'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
-
+import '../styles/ScrollbarStyle.css'
 const Blog = lazy(() => import('../views/blog/Blog').then((module) => ({ default: module.Blog })))
 const Contact = lazy(() => import('../views/contact/Contact').then((module) => ({ default: module.Contact })))
 const Error = lazy(() => import('../views/error/Error').then((module) => ({ default: module.Error })))
