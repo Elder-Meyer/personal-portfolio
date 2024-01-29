@@ -28,14 +28,22 @@ const CaptionInfo = () => {
       <Typography variant='h1' color='text.primary' sx={{fontWeight: 500, fontSize: {xs: 76, sm: 86, md: 96}}}>
         Hi! I'm Elder.
       </Typography>
-      <Typography variant='h2' color='primary.light' sx={{fontWeight: 100, fontSize: {xs: 35, sm: 50, md: 55}}}>
-        <Typewriter
-          options={{
-            strings: [ "Web Developer", "Web Designer", "UI/UX Dev" ],
-            loop: true,
-            autoStart: true,
-          }}
-        />
+      <Typography variant='h2' color='primary.light' 
+        sx={{
+          fontWeight: 100, fontSize: {xs: 35, sm: 50, md: 55},
+          position: "relative"
+        }}
+      >
+        <Box sx={{position: "absolute"}}>
+          <Typewriter
+            options={{
+              strings: [ "Web Developer", "Web Designer", "UI/UX Developer", "Software Enginner" ],
+              loop: true,
+              autoStart: true,
+            }}
+          />
+        </Box>
+        <Toolbar sx={{ my:2}} />
       </Typography>
       <Typography variant='body2' color="text.secondary" sx={{fontSize: "1.3rem"}}>
         I am a developer who is passionate about developing and designing web applications.
