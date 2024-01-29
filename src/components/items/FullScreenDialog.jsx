@@ -41,7 +41,7 @@ export default function FullScreenDialog({
             {/* <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div" color="secondary.light" fontWeight={500}>
               {project.title}
             </Typography> */}
-            <DialogTitle sx={{flex:1, fontWeight: 900, fontSize: {xs: 25, sm:30, md:35}}} variant="h6" id="alert-dialog-title" color="primary.main" >
+            <DialogTitle sx={{flex:1, fontWeight: 400, fontSize: {xs: 20, sm:25, md:30, lg:35}}} variant="h6" id="alert-dialog-title" color="secondary.main" >
               {project.title}
             </DialogTitle>
             
@@ -49,9 +49,9 @@ export default function FullScreenDialog({
               edge="start"
               onClick={handleClose}
               aria-label="close"
-              sx={{color: "error.main"}}
+              sx={{color: "error.main" }}
             >
-              <CloseIcon />
+              <CloseIcon fontSize="large" />
             </IconButton>
           </Toolbar>
 
@@ -83,14 +83,12 @@ export default function FullScreenDialog({
           </DialogContentText> */}
         </DialogContent>
         <DialogActions /* sx={{bgcolor: "background.default"}} */>
-          <Button variant="outlined" /* onClick={handleClose} */
-            component={Link}
-            target="_blank"
-            to={project.toURL}
+          <Button 
+            size="medium"
+            color="primary"
+            variant="contained" /* onClick={handleClose} */
             sx={{
               borderRadius: 5,
-              color: "primary.light",
-              bgcolor: "background.default",
               '&:hover': {
                 borderColor: "primary.light",
               },
@@ -102,20 +100,24 @@ export default function FullScreenDialog({
                 '50%': { transform: "scale(1.2)", transformOrigin: "left bottom" },
                 '100%': { transform: "scale(1)", transformOrigin: "left bottom" }
               }
+
             }}
+            component={Link}
+            target="_blank"
+            to={project.toURL}
             endIcon={<OpenInNewOutlined/>}
-            size="large"
           >
             Go
           </Button>
-          <Button variant="outlined" onClick={handleClose} autoFocus
-            component={Link}
-            to={project.id}
+          <Button 
+            size="medium"
+            variant="outlined" 
             sx={{
               borderRadius: 5,
-              color: "primary.light",
-              borderColor: "primary.main",
+              color: "text.primary",
+              borderColor: "text.secondary",
               '&:hover': {
+                color: "primary.light",
                 borderColor: "primary.light",
               },
               '&:hover svg': {
@@ -126,9 +128,11 @@ export default function FullScreenDialog({
                 '50%': { transform: "scale(0.5)", opacity: 0 },
                 '100%': { transform: "scale(1)", opacity: 1 },
               }
+
             }}
+            component={Link}
+            to={project.id}
             endIcon={<VisibilityOutlined/>}
-            size="large"
           >
             View 
           </Button>
