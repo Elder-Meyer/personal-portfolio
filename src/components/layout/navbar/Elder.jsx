@@ -12,7 +12,7 @@ export function Elder(color){
         header.abajo{
             background-color: ${color};
             padding: 0;
-            border-radius: 0 0 30px 30px;
+            border-radius: 0 0 24px 24px;
         }
     `
     

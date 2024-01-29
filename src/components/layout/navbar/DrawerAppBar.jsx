@@ -4,6 +4,7 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
+import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -126,22 +127,23 @@ function DrawerAppBar(props) {
         {/* </HideOnScroll> */}
 
         <Box component="nav">
-            <Drawer
+            <SwipeableDrawer
                 anchor="right"
-                container={container}
-                variant="temporary"
                 open={mobileOpen}
                 onClose={handleDrawerToggle}
-                ModalProps={{
-                    keepMounted: true, // Better open performance on mobile.
-                }}
+                onOpen={handleDrawerToggle}
+                // container={container}
+                // variant="temporary"
+                // ModalProps={{
+                //     keepMounted: true, // Better open performance on mobile.
+                // }}
                 sx={{
                     display: { xs: 'block', sm: 'block', md: 'none' },
-                    '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, bgcolor: "background.default" },
+                    '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, bgcolor: "background.default", borderRadius: "24px 0 0 24px" },
                 }}
             >
                 {drawer}
-            </Drawer>
+            </SwipeableDrawer>
         </Box>
       {
         isHome ? null : 
