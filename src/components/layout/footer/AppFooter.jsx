@@ -2,16 +2,12 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
 import { Link as LinkRoute } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 import { CardMedia, Container, TextField, useTheme } from '@mui/material';
-import appFooterFacebook from './appFooterFacebook.png';
-import appFooterTwitter from './appFooterTwitter.png';
-import ponyLaughBlinkingV2 from '../../../assets/img/pony/ponyLaughBlinkingV2.gif';
+import cube from '../../../assets/img/principal/cube-glow.png';
 import UseAnimations from 'react-useanimations';
 import facebook from "react-useanimations/lib/facebook";
 import twitter from "react-useanimations/lib/twitter";
@@ -23,12 +19,10 @@ function Copyright() {
   return (
     <React.Fragment>
       <Box sx={{display: "flex", justifyContent: "center"}}>
-
         <Link color="text.secondary" component={LinkRoute} to="/home">
-        {'© '}
-          Elder Meyer {" "}
-        {new Date().getFullYear()}
-        </Link>{' '}
+          {'© Elder Meyer '}
+          { new Date().getFullYear() }
+        </Link>
       </Box>
     </React.Fragment>
   );
@@ -116,8 +110,6 @@ export default function AppFooter() {
                     />
                   </LinkRoute>
                 </Box>
-
-                
               </Grid>
               <Grid item>
                 <Copyright />
@@ -161,17 +153,18 @@ export default function AppFooter() {
             </TextField>
           </Grid>
           <Grid item xs={12} sm={4} md={3} order={{md: 4, sm:4, xs:3}}>
-            <Box sx={{display: "flex", justifyContent: {xs:"center", sm: "center", md:"flex-end"}}}>
+            <Box sx={{display: "flex", justifyContent: {xs:"center", sm: "center", md:"center", lg: "flex-end"}}}>
               <CardMedia
-                  sx={{
-                      // mt: {xs: 10, sm: 5, md: 10}, 
-                      width: {xs: "40%", sm: "50%", md:"50%"},
-                      bgcolor: "transparent",
-                  }}
-                  component="img"
-                  height={"100%"}
-                  image={ponyLaughBlinkingV2}
-                  alt="ponyLaughBlinkingV2"
+                sx={{
+                    // mt: {xs: 10, sm: 5, md: 10}, 
+                    width: {xs: 56, sm: 56, md: 56},
+                    bgcolor: "transparent",
+                }}
+                component="img"
+                height={"100%"}
+                image={cube}
+                alt="ponyLaughBlinkingV2"
+                title='just a cube'
               />
             </Box>
           </Grid>
