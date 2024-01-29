@@ -58,10 +58,11 @@ export const Router = (props) => {
             <BtnScrollTop {...props}>
               <Fab size="small" aria-label="scroll back to top" 
                 sx={{
-                  bgcolor: "background.default", color: "primary.light", 
+                  bgcolor: 'primary.light',
+                  color: 'background.default',
                   '&:hover': {
-                    bgcolor: 'primary.light',
-                    color: 'background.default'
+                    bgcolor: "background.default", 
+                    color: "primary.light", 
                   },
                 }}
               >
