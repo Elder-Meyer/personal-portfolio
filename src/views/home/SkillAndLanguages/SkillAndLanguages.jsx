@@ -1,7 +1,5 @@
-
 import { Box, Container, Paper, Toolbar, Typography } from '@mui/material'
 import React from 'react'
-
 import { Database } from './sliders/Database'
 import { Frameworks } from './sliders/Frameworks'
 import { ProgrammingLanguages } from './sliders/ProgrammingLanguages'

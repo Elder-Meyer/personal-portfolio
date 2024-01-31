@@ -1,4 +1,4 @@
-import { Box, CardMedia, Container, Toolbar, Typography } from '@mui/material'
+import { Box, CardMedia, Container, Typography } from '@mui/material'
 import React from 'react'
 import ponyDoubleNodBlinking from '../../assets/img/pony/ponyDoubleNodBlinking.gif'
 
