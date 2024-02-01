@@ -7,17 +7,28 @@ import ExampleDoc from "../../../assets/docs/exampleDoc.pdf"
 
 export const Presentation = () => {
   return (
-    <Box component='section' sx={{ backgroundColor: "background.default", minHeight: "100vh" }} display='flex' alignItems='center'>
-      <Container maxWidth="lg" sx={{ py: {xs: 15, sm: 20, md: 0} }}>
-          <Grid container spacing={2} px={2}>
-            <Grid item xs={12} sm={12} md={9}>
-              <CaptionInfo/>
-            </Grid>
-            <Grid item xs={12} sm={12} md={3}>
-              <ImageContent/>
-            </Grid>
+    <Box component='section' 
+      sx={{ 
+        backgroundColor: "background.default", minHeight: "100vh",
+        // border: "3px solid blue"
+      }} display='flex' alignItems='center'
+    >
+      <Container maxWidth="lg" 
+        sx={{ 
+          py: {xs: 15, sm: 10, md: 10, lg: 10, xl:20} ,
+          borderBottom: 1, borderColor: 'divider',
+          // border: "3px solid green"
+        }}
+      >
+        <Grid container spacing={2} px={2}>
+          <Grid item xs={12} sm={12} md={9}>
+            <CaptionInfo/>
           </Grid>
-        </Container>
+          <Grid item xs={12} sm={12} md={3}>
+            <ImageContent/>
+          </Grid>
+        </Grid>
+      </Container>
     </Box>
   )
 }

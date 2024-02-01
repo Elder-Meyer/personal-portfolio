@@ -1,6 +1,6 @@
-import { Paper, Typography, Container } from '@mui/material'
+import { Paper, Typography, Container, Box } from '@mui/material'
 import React from 'react'
-import BasicTabs from './BasicTabs';
+import { Web } from './webProjects/Web';
 
 
 export const Projects = () => {
@@ -11,12 +11,12 @@ export const Projects = () => {
       component="section"
       // aqui está lo importante si quieres hacer un cambio y poner el wavy divider
       sx={{
-        minHeight: "15rem",
         display: "flex",
         borderRadius:0,
         alignItems: "center",
-        py: 4,
-        backgroundColor: "background.paper",
+        pt: {xs: 15, sm: 0, md: 0, lg: 0, xl:0} ,
+        pb:15,
+        backgroundColor: "background.default",
         // border: "3px solid red",
       }}
     >
@@ -24,10 +24,17 @@ export const Projects = () => {
           <Typography textAlign="center" sx={{color: "white", fontSize: 40, fontWeight: 500}} gutterBottom>
             Projects
           </Typography>
-          <Typography color="text.secondary" textAlign="center" sx={{fontSize: 18, my:3}}>
-            Here you can see some of my created work.
-          </Typography>
-          <BasicTabs/>
+          <Box 
+            sx={{ 
+              // borderBottom: 1, borderColor: 'divider' 
+            }}
+          >
+            <Typography color="text.secondary" textAlign="center" sx={{fontSize: 18, my:3}}>
+              Here you can see some of my created work.
+            </Typography>
+          </Box>
+          {/* <BasicTabs/> */}
+          <Web/>
       </Container>
       
     </Paper>
