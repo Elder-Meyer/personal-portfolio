@@ -77,7 +77,7 @@ export const WavyDivider = ({invertColors}) => {
     `
 
   return (
-    <Box sx={{backgroundColor: isHome ? theme.palette.background.default : theme.palette.background.paper}}>
+    <Box sx={{backgroundColor: isHome ? theme.palette.background.default : theme.palette.background.default}}>
         <style>{styles}</style>
         <svg className="editorial"
             xmlns="http://www.w3.org/2000/svg"
