@@ -2,10 +2,7 @@ import * as React from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
-import { useMediaQuery } from '@mui/material';
-import { Desktop } from './desktopProjects/Desktop';
-import { Mobile } from './mobileProjects/Mobile';
-import { Web } from './webProjects/Web';
+import { useMediaQuery } from '@mui/material';;
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -98,13 +95,13 @@ export default function BasicTabs() {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <Web/>
+        {"item 1"}
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <Mobile/>
+        {"item 2"}
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <Desktop/>
+        {"item 3"}
       </TabPanel>
     </Box>
   );
