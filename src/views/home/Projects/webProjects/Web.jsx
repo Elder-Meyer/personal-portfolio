@@ -2,7 +2,7 @@ import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Grid
 import React, { forwardRef, useState } from 'react'
 import { Link } from 'react-router-dom';
 import FullScreenDialog from '../../../../components/items/FullScreenDialog';
-import { projects } from './projects';
+import { projects } from './projectsData';
 import { OpenInNewOutlined, VisibilityOutlined } from '@mui/icons-material';
 
 const Transition = forwardRef(function Transition(props, ref) {
@@ -71,7 +71,7 @@ export const Web = () => {
                       {project.title}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                      {project.description}
+                      {project.shortDescription}
                     </Typography>
                   </CardContent>
                 </CardActionArea>
