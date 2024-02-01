@@ -26,17 +26,7 @@ import pro_pri_5_xs from "../../../../assets/img/img-projects/pro_pri_5_xs.jpg";
 
 export const projects = [
     {
-      id: "project-1",
-      title: "Fashion Fusion",
-      description: "A store of clothes and accessories",
-      imgPrincipal: pro_pri_1,
-      imgMd: pro_pri_1_md,
-      imgSm: pro_pri_1_sm,
-      imgXs: pro_pri_1_xs,
-      toURL: "https://fashion-fusion-65eb8.web.app/"
-    },
-    {
-      id: "project-2",
+      id: "project-01-corazon-huasteco",
       title: "Corazón Huasteco",
       description: "Web application of culture.",
       imgPrincipal: pro_pri_2,
@@ -46,7 +36,7 @@ export const projects = [
       toURL: "https://corazon-huasteco.com"
     },
     {
-      id: "project-3",
+      id: "project-02-app-caih",
       title: "App CAIH",
       description: "Web system for architects,",
       imgPrincipal: pro_pri_3,
@@ -55,29 +45,9 @@ export const projects = [
       imgXs: pro_pri_3_xs,
       toURL: "https://huasteca-mx.web.app"
     },
-    // {
-    //   id: "project-4",
-    //   title: "Portfolio v2",
-    //   description: "A design of my first portfolio",
-    //   imgPrincipal: pro_pri_4,
-    //   imgMd: pro_pri_4_md,
-    //   imgSm: pro_pri_4_sm,
-    //   imgXs: pro_pri_4_xs,
-    //   toURL: ""
-    // },
-    // {
-    //   id: "project-5",
-    //   title: "Lama Dev",
-    //   description: "A project with material ui components",
-    //   imgPrincipal: pro_pri_5,
-    //   imgMd: pro_pri_5_md,
-    //   imgSm: pro_pri_5_sm,
-    //   imgXs: pro_pri_5_xs,
-    //   toURL: ""
-    // },
     {
-      id: "project-6",
-      title: "Movie APP",
+      id: "project-03-dulce-delicia",
+      title: "Dulce Delicia",
       description: "A simple movie search engine",
       imgPrincipal: pro_pri_6,
       imgMd: pro_pri_6, //revisar esto
@@ -85,14 +55,14 @@ export const projects = [
       imgXs: pro_pri_6, //revisar esto
       toURL: "", //revisar esto
     },
-    // {
-    //   id: "project-7",
-    //   title: "CSS course",
-    //   description: "A course of CSS developed by me",
-    //   imgPrincipal: pro_pri_7,
-    //   imgMd: pro_pri_7, //rebisar esto
-    //   imgSm: pro_pri_7, //rebisar esto
-    //   imgXs: pro_pri_7, //rebisar esto
-    //   toURL: "", //rebisar esto
-    // },
+    {
+      id: "project-04-fashion-fusion",
+      title: "Fashion Fusion",
+      description: "A store of clothes and accessories",
+      imgPrincipal: pro_pri_1,
+      imgMd: pro_pri_1_md,
+      imgSm: pro_pri_1_sm,
+      imgXs: pro_pri_1_xs,
+      toURL: "https://fashion-fusion-65eb8.web.app/"
+    },
   ];
