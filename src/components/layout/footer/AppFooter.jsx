@@ -163,7 +163,7 @@ export default function AppFooter() {
                 component="img"
                 height={"100%"}
                 image={cube}
-                alt="ponyLaughBlinkingV2"
+                alt="just a simple cube from GD"
                 title='just a cube'
               />
             </Box>
