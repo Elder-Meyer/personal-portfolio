@@ -7,7 +7,7 @@ import MuiAlert from '@mui/material/Alert';
 import { Link as LinkRoute } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 import { CardMedia, Container, TextField, useTheme } from '@mui/material';
-import cube from '../../../assets/img/principal/cube-glow.png';
+import cube from '../../../assets/img/principal/cube-glow.webp';
 import UseAnimations from 'react-useanimations';
 import facebook from "react-useanimations/lib/facebook";
 import twitter from "react-useanimations/lib/twitter";
