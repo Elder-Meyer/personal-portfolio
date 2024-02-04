@@ -1,7 +1,7 @@
-import html from "../../../../assets/img/tecnologies/html.png";
-import css from "../../../../assets/img/tecnologies/css.png";
-import javascript from "../../../../assets/img/tecnologies/javascript.png";
-import php from "../../../../assets/img/tecnologies/php.png";
+import html from "../../../../assets/img/tecnologies/html.webp";
+import css from "../../../../assets/img/tecnologies/css.webp";
+import javascript from "../../../../assets/img/tecnologies/javascript.webp";
+import php from "../../../../assets/img/tecnologies/php.webp";
 
 import React from "react";
 
