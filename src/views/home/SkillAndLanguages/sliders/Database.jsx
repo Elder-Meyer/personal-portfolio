@@ -1,7 +1,7 @@
-import firebase from "../../../../assets/img/tecnologies/firebase.png";
-import mongo from "../../../../assets/img/tecnologies/mongo.png";
-import mysql from "../../../../assets/img/tecnologies/mysql.png";
-import cloud from "../../../../assets/img/tecnologies/cloud.png";
+import firebase from "../../../../assets/img/tecnologies/firebase.webp";
+import mongo from "../../../../assets/img/tecnologies/mongo.webp";
+import mysql from "../../../../assets/img/tecnologies/mysql.webp";
+import cloud from "../../../../assets/img/tecnologies/cloud.webp";
 
 import React from "react";
 

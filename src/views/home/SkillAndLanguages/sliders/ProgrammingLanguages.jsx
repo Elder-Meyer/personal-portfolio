@@ -1,7 +1,7 @@
-import python from "../../../../assets/img/tecnologies/python.png";
-import cpp from "../../../../assets/img/tecnologies/cpp.png";
-import csharp from "../../../../assets/img/tecnologies/csharp.png";
-import javascript from "../../../../assets/img/tecnologies/javascript.png";
+import python from "../../../../assets/img/tecnologies/python.webp";
+import cpp from "../../../../assets/img/tecnologies/cpp.webp";
+import csharp from "../../../../assets/img/tecnologies/csharp.webp";
+import javascript from "../../../../assets/img/tecnologies/javascript.webp";
 
 import React from "react";
 

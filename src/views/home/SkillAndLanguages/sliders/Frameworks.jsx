@@ -1,9 +1,9 @@
-import react from "../../../../assets/img/tecnologies/react.png";
-import vite from "../../../../assets/img/tecnologies/vite.png";
-import node from "../../../../assets/img/tecnologies/node.png";
-import bootstrap from "../../../../assets/img/tecnologies/bootstrap.png";
-import materialui from "../../../../assets/img/tecnologies/materialui.png";
-import sass from "../../../../assets/img/tecnologies/sass.png";
+import react from "../../../../assets/img/tecnologies/react.webp";
+import vite from "../../../../assets/img/tecnologies/vite.webp";
+import node from "../../../../assets/img/tecnologies/node.webp";
+import bootstrap from "../../../../assets/img/tecnologies/bootstrap.webp";
+import materialui from "../../../../assets/img/tecnologies/materialui.webp";
+import sass from "../../../../assets/img/tecnologies/sass.webp";
 
 import React from "react";
 

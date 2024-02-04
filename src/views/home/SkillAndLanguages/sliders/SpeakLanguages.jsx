@@ -1,6 +1,6 @@
-import eeuu from "../../../../assets/img/languages/eeuu.png";
-import french from "../../../../assets/img/languages/french.png";
-import spain from "../../../../assets/img/languages/spain.png";
+import eeuu from "../../../../assets/img/languages/eeuu.webp";
+import french from "../../../../assets/img/languages/french.webp";
+import spain from "../../../../assets/img/languages/spain.webp";
 
 import React from "react";
 
