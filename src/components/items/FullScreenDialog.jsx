@@ -5,26 +5,29 @@ import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import { Link } from "react-router-dom";
-import { Box, DialogActions, DialogContent, DialogTitle } from "@mui/material";
+import { Box, DialogActions, DialogContent, DialogTitle, useMediaQuery, useTheme, Slide } from "@mui/material";
 import { OpenInNewOutlined, VisibilityOutlined } from "@mui/icons-material";
 
-export default function FullScreenDialog({
-  open,
-  handleClose,
-  Transition,
-  project,
-}) {
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
+
+export default function FullScreenDialog({ open, handleClose, Transition, project }) {
   console.log(project.id);
+  
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down('md'))
 
   return (
     <div>
 
       <Dialog
-        fullWidth
+        fullScreen={fullScreen}
         maxWidth="lg"
         disableScrollLock
         open={open}
         onClose={handleClose}
+        TransitionComponent={Transition}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
