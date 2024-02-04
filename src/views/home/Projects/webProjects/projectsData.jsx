@@ -32,7 +32,10 @@ export const projects = [
     {
       id: "project-01-corazon-huasteco",
       title: "Corazón Huasteco",
+      href: "#",
       date: "",
+      dateTime: "",
+      category: {title: 'Marketing', href: '#'},
       techs: ["", "", "", "", ""],
       shortDescription: "Web application of culture.",
       description: "this is a large description lorem lorem lorem lorem",
@@ -47,7 +50,10 @@ export const projects = [
     {
       id: "project-02-app-caih",
       title: "App CAIH",
+      href: "#",
       date: "",
+      dateTime: "",
+      category: {title: 'Marketing', href: '#'},
       techs: ["", "", "", "", ""],
       shortDescription: "Web system for architects,",
       description: "this is a large description lorem lorem lorem lorem",
@@ -62,7 +68,10 @@ export const projects = [
     {
       id: "project-03-dulce-delicia",
       title: "Dulce Delicia",
+      href: "#",
       date: "",
+      dateTime: "",
+      category: {title: 'Marketing', href: '#'},
       techs: ["", "", "", "", ""],
       shortDescription: "A candy store",
       description: "this is a large description lorem lorem lorem lorem",
@@ -77,7 +86,10 @@ export const projects = [
     {
       id: "project-04-fashion-fusion",
       title: "Fashion Fusion",
+      href: "#",
       date: "",
+      dateTime: "",
+      category: {title: 'Marketing', href: '#'},
       techs: ["", "", "", "", ""],
       shortDescription: "A store of clothes and accessories",
       description: "this is a large description lorem lorem lorem lorem",
