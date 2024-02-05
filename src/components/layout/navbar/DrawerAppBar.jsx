@@ -76,7 +76,7 @@ function DrawerAppBar(props) {
         {/* <HideOnScroll {...props}> */}
           <ElevationScroll {...props}> 
             <AppBar color='primary' /*enableColorOnDark*/ sx={navBackgroundStyle} id="header-principal">
-              <Container maxWidth="lg">
+              <Container maxWidth="xl">
                 <Toolbar sx={{justifyContent: "space-between" }}>
                   <Typography
                     variant="h6"
