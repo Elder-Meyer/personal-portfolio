@@ -13,12 +13,13 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import { Container, ListItemIcon } from '@mui/material';
+import { Container, ListItemIcon, Tooltip } from '@mui/material';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { Elder } from './Elder';
 import { useTheme } from '@emotion/react';
 import { Book, BookOutlined, ContactPage, ContactPageOutlined, Home, HomeOutlined } from '@mui/icons-material';
 import { ElevationScroll } from './fnElevationScroll';
+import {CubeGD} from '../../items/CubeGD'
 
 
 const drawerWidth = 240;
@@ -78,15 +79,22 @@ function DrawerAppBar(props) {
             <AppBar color='primary' /*enableColorOnDark*/ sx={navBackgroundStyle} id="header-principal">
               <Container maxWidth="xl">
                 <Toolbar sx={{justifyContent: "space-between" }}>
-                  <Typography
-                    variant="h6"
-                    component={Link}
-                    to="/"
-                    color="text.primary"
-                    sx={{  display: 'flex', fontSize: '2.5rem', textDecoration: "none" }}
-                  >
-                    <Box sx={{display: isHome ? {xs :'none', md: 'none'} : 'flex' }}>Elder M.</Box>
-                  </Typography>
+                  <Box>
+                    <Tooltip title="Go home" placement="right">
+                      <Link
+                        to="/home"
+                        style={{
+                          textDecoration: "none",
+                          color: "inherit",
+                        }}
+                        aria-label="Go home"
+                      >
+                        <Box sx={{display: isHome ? {xs :'none', md: 'none'} : 'flex'}}>
+                          <CubeGD aria-label='Go home' />
+                        </Box>
+                      </Link>            
+                    </Tooltip>
+                  </Box>
                   <IconButton
                       color="inherit"
                       aria-label="open drawer"
