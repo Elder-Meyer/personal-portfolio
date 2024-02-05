@@ -15,6 +15,7 @@ import { Loader } from '../components/items/Loader'
 import { Home } from '../views/home/Home'
 import { ProjectDetails } from '../views/projects/ProjectDetails'
 import { Projects } from '../views/home/Projects/Projects'
+import { Testtheme } from './Testtheme'
 
 export const Router = (props) => {
   return (
@@ -34,6 +35,12 @@ export const Router = (props) => {
                   path='/home/'                    
                   element={
                       <Home/>
+                  } 
+                />
+                <Route 
+                  path='/test-palette-theme/'                    
+                  element={
+                      <Testtheme/>
                   } 
                 />
                 <Route 
