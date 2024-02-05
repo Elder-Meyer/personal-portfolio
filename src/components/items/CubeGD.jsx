@@ -1,6 +1,6 @@
 import { Box, CardMedia } from '@mui/material';
 import React from 'react';
-import cube from '../../assets/img/principal/wave-glow.webp'
+import cube from '../../assets/img/principal/cube-glow.webp'
 
 export function CubeGD({animation}){
   
