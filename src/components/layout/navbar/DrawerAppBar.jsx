@@ -76,9 +76,9 @@ function DrawerAppBar(props) {
     <Box sx={{ display: 'flex' }}>
         {/* <HideOnScroll {...props}> */}
           <ElevationScroll {...props}> 
-            <AppBar color='primary' /*enableColorOnDark*/ sx={navBackgroundStyle} id="header-principal">
+            <AppBar color='primary' sx={{backgroundColor: theme.palette.background.default }} /*enableColorOnDark*/ /*sx={navBackgroundStyle} id="header-principal"*/>
               <Container maxWidth="xl">
-                <Toolbar sx={{justifyContent: "space-between" }}>
+                <Toolbar sx={{justifyContent: "space-between", mx:-2 }}>
                   <Box>
                     <Tooltip title="Go home" placement="right">
                       <Link
