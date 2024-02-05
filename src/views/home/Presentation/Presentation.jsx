@@ -60,24 +60,15 @@ const CaptionInfo = () => {
         I am a developer who is passionate about developing and designing web applications.
       </Typography>
       <Box my={3}>
-        <Button
-          variant='contained'
-          size='large' 
+        <Button 
+          variant="contained" 
+          size="medium" 
+          endIcon={<FileDownloadOutlined/>}
           href={ExampleDoc} download="elderMeyer-cv" target='_blank'
-          sx={{
-            position: "relative",
-            transition: "all 0.3s ease",
-            '&:hover': {
-              '&': {
-                transform: "translateY(-5px)" // Ajusta el valor según el desplazamiento deseado
-              }
-            }
-          }}
+          sx={{borderRadius: 5}}
+          disableElevation
         >
-          <Typography sx={{pr:1}}>
-            Download my CV
-          </Typography>
-          <FileDownloadOutlined/>
+          Download my CV
         </Button>
       </Box>
       <Toolbar sx={{display: {xs: "none", sm: "none", md: "block"}}} />
