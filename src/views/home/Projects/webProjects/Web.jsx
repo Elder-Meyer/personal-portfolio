@@ -125,7 +125,7 @@ export const Web = () => {
                       
                     }}
                     component={Link}
-                    to={project.id}
+                    to={`/projects/${project.id}/`}
                     endIcon={<VisibilityOutlined/>}
                   >
                     View

@@ -5,36 +5,39 @@ import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import { Link } from "react-router-dom";
-import { Box, DialogActions, DialogContent, DialogTitle } from "@mui/material";
+import { Box, DialogActions, DialogContent, DialogTitle, useMediaQuery, useTheme, Slide } from "@mui/material";
 import { OpenInNewOutlined, VisibilityOutlined } from "@mui/icons-material";
 
-export default function FullScreenDialog({
-  open,
-  handleClose,
-  Transition,
-  project,
-}) {
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
+
+export default function FullScreenDialog({ open, handleClose, Transition, project }) {
   console.log(project.id);
+  
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down('md'))
 
   return (
     <div>
 
       <Dialog
-        fullWidth
+        fullScreen={fullScreen}
         maxWidth="lg"
         disableScrollLock
         open={open}
         onClose={handleClose}
+        TransitionComponent={Transition}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
 
-          <Toolbar>
+          <Toolbar sx={{borderBottom: 2, borderColor: 'divider',}}>
             
             {/* <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div" color="secondary.light" fontWeight={500}>
               {project.title}
             </Typography> */}
-            <DialogTitle sx={{flex:1, fontWeight: 400, fontSize: {xs: 20, sm:25, md:30, lg:35}}} variant="h6" id="alert-dialog-title" color="secondary.main" >
+            <DialogTitle sx={{flex:1, fontWeight: 400, fontSize: {xs: 20, sm:25, md:30, lg:35}}} variant="h6" id="alert-dialog-title" color="primary.light" >
               {project.title}
             </DialogTitle>
             
@@ -42,7 +45,7 @@ export default function FullScreenDialog({
               edge="start"
               onClick={handleClose}
               aria-label="close"
-              sx={{color: "error.main" }}
+              sx={{color: "error.light" }}
             >
               <CloseIcon fontSize="large" />
             </IconButton>
@@ -124,7 +127,7 @@ export default function FullScreenDialog({
 
             }}
             component={Link}
-            to={project.id}
+            to={`/projects/${project.id}/`}
             endIcon={<VisibilityOutlined/>}
           >
             View 

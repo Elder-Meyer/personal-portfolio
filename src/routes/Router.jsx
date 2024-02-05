@@ -13,6 +13,8 @@ import ScrollToTop from '../components/items/ScrollToTop'
 import { WavyDivider } from '../components/items/WavyDivider'
 import { Loader } from '../components/items/Loader'
 import { Home } from '../views/home/Home'
+import { ProjectDetails } from '../views/projects/ProjectDetails'
+import { Projects } from '../views/home/Projects/Projects'
 
 export const Router = (props) => {
   return (
@@ -33,6 +35,18 @@ export const Router = (props) => {
                   element={
                       <Home/>
                   } 
+                />
+                <Route 
+                  path='/projects'
+                  element={
+                    <Projects/>
+                  }
+                />
+                <Route 
+                  path="/projects/:id"
+                  element={
+                    <ProjectDetails/>
+                  }
                 />
                 <Route 
                   path='/blog/'                    
