@@ -32,12 +32,12 @@ export default function FullScreenDialog({ open, handleClose, Transition, projec
         aria-describedby="alert-dialog-description"
       >
 
-          <Toolbar>
+          <Toolbar sx={{borderBottom: 2, borderColor: 'divider',}}>
             
             {/* <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div" color="secondary.light" fontWeight={500}>
               {project.title}
             </Typography> */}
-            <DialogTitle sx={{flex:1, fontWeight: 400, fontSize: {xs: 20, sm:25, md:30, lg:35}}} variant="h6" id="alert-dialog-title" color="secondary.main" >
+            <DialogTitle sx={{flex:1, fontWeight: 400, fontSize: {xs: 20, sm:25, md:30, lg:35}}} variant="h6" id="alert-dialog-title" color="primary.light" >
               {project.title}
             </DialogTitle>
             
@@ -45,7 +45,7 @@ export default function FullScreenDialog({ open, handleClose, Transition, projec
               edge="start"
               onClick={handleClose}
               aria-label="close"
-              sx={{color: "error.main" }}
+              sx={{color: "error.light" }}
             >
               <CloseIcon fontSize="large" />
             </IconButton>
@@ -127,7 +127,7 @@ export default function FullScreenDialog({ open, handleClose, Transition, projec
 
             }}
             component={Link}
-            to={project.id}
+            to={`/projects/${project.id}/`}
             endIcon={<VisibilityOutlined/>}
           >
             View 
