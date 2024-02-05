@@ -1,4 +1,4 @@
-import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Grid, Slide, Typography } from '@mui/material'
+import { Button, Card, CardActionArea, CardActions, CardContent, Stack, CardMedia, Grid, Slide, Typography } from '@mui/material'
 import React, { forwardRef, useState } from 'react'
 import { Link } from 'react-router-dom';
 import FullScreenDialog from '../../../../components/items/FullScreenDialog';
@@ -39,6 +39,7 @@ export const Web = () => {
           return (
             <Grid item xs={12} sm={12} md={6} lg={4} xl={3} key={index}>
               <Card
+                elevation={0}
                 sx={{
                   maxWidth: "100%",
                   transition: "0.2s",
@@ -65,7 +66,6 @@ export const Web = () => {
                       gutterBottom
                       variant="h5"
                       component="div"
-                      color="primary.light"
                       fontWeight={500}
                     >
                       {project.title}
@@ -77,59 +77,52 @@ export const Web = () => {
                 </CardActionArea>
                 
                 <CardActions>
-                  <Button
-                    size="medium"
-                    color="primary"
-                    variant="contained"
-                    sx={{
-                      borderRadius: 5,
-                      '&:hover': {
-                        borderColor: "primary.light",
-                      },
-                      '&:hover svg': {
-                        animation: "expand 1.1s /* infinite */"
-                      },
-                      '@keyframes expand': {
-                        '0%': { transform: "scale(1)", transformOrigin: "left bottom" },
-                        '50%': { transform: "scale(1.2)", transformOrigin: "left bottom" },
-                        '100%': { transform: "scale(1)", transformOrigin: "left bottom" }
-                      }
-                      
-                    }}
-                    component={Link}
-                    target="_blank"
-                    to={project.toURL}
-                    endIcon={<OpenInNewOutlined/>}
-                  >
-                    Go
-                  </Button>
-                  <Button
-                    size="medium"
-                    variant="outlined"
-                    sx={{
-                      borderRadius: 5,
-                      color: "text.primary",
-                      borderColor: "text.secondary",
-                      '&:hover': {
-                        color: "primary.light",
-                        borderColor: "primary.light",
-                      },
-                      '&:hover svg': {
-                        animation: "blink 1.1s /* infinite */"
-                      },
-                      '@keyframes blink': {
-                        '0%': { transform: "scale(1)", opacity: 1 },
-                        '50%': { transform: "scale(0.5)", opacity: 0 },
-                        '100%': { transform: "scale(1)", opacity: 1 },
-                      }
-                      
-                    }}
-                    component={Link}
-                    to={`/projects/${project.id}/`}
-                    endIcon={<VisibilityOutlined/>}
-                  >
-                    View
-                  </Button>
+                  <Stack direction="row" spacing={0.5}>
+                    <Button
+                      variant="contained"
+                      sx={{
+                        borderRadius: 5,
+                        '&:hover': {
+                          borderColor: "primary.light",
+                        },
+                        '&:hover svg': {
+                          animation: "expand 1.1s /* infinite */"
+                        },
+                        '@keyframes expand': {
+                          '0%': { transform: "scale(1)", transformOrigin: "left bottom" },
+                          '50%': { transform: "scale(1.2)", transformOrigin: "left bottom" },
+                          '100%': { transform: "scale(1)", transformOrigin: "left bottom" }
+                        }
+                      }}
+                      component={Link}
+                      target="_blank"
+                      to={project.toURL}
+                      endIcon={<OpenInNewOutlined/>}
+                      disableElevation
+                    >
+                      Go
+                    </Button>
+
+                    <Button
+                      variant="outlined"
+                      sx={{
+                        borderRadius: 5,
+                        '&:hover svg': {
+                          animation: "blink 1.1s /* infinite */"
+                        },
+                        '@keyframes blink': {
+                          '0%': { transform: "scale(1)", opacity: 1 },
+                          '50%': { transform: "scale(0.5)", opacity: 0 },
+                          '100%': { transform: "scale(1)", opacity: 1 },
+                        }
+                      }}
+                      component={Link}
+                      to={`/projects/${project.id}/`}
+                      endIcon={<VisibilityOutlined/>}
+                    >
+                      View
+                    </Button>
+                  </Stack>
                 </CardActions>
               </Card>
             </Grid>
