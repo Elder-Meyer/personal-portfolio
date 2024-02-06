@@ -100,7 +100,7 @@ export default function FullScreenDialog({ open, handleClose, Transition, projec
             }}
             component={Link}
             target="_blank"
-            to={project.toURL}
+            to={project.href}
             endIcon={<OpenInNewOutlined/>}
           >
             Go
