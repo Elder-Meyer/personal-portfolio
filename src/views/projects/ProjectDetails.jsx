@@ -110,35 +110,37 @@ export const ProjectDetails = () => {
           </Grid>
 
           {/* WEBSITE */}
-          <Grid container item spacing={2}>
+          <Grid container item spacing={0}>
             <Grid item>
               <Typography color="primary.light" variant="h5">
                 Website
               </Typography>
               <Typography color="text.primary" variant="body1">
-                <Link href={project.toURL} target="_BLANK">
-                  {project.toURL}
+                <Link href={project.href} target="_BLANK">
+                  {project.href}
                 </Link>
               </Typography>
             </Grid>
           </Grid>
 
           {/* GITHUB */}
-          <Grid container item spacing={2}>
+          <Grid container item spacing={0}>
             <Grid item>
               <Typography color="primary.light" variant="h5">
                 Github
               </Typography>
               <Typography color="text.primary" variant="body1">
-                enlace a github
+                <Link href={project.repo} target="_BLANK">
+                  {project.repo}
+                </Link>
               </Typography>
             </Grid>
           </Grid>
 
           {/* IRA AL PROYECTO */}
           <Grid item xs={12}>
-            <Button variant="contained" color="primary" fullWidth>
-              ir al proyecto
+            <Button variant="contained" color="primary" fullWidth href={project.href} target="_BLANK">
+              Go to Project
             </Button>
           </Grid>
         </Grid>
