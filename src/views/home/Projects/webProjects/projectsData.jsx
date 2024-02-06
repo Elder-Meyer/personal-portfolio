@@ -44,7 +44,8 @@ export const projects = [
       imgMd: proj_01_md,
       imgSm: proj_01_sm,
       imgXs: proj_01_xs,
-      toURL: "https://corazon-huasteco.com"
+      href: "https://corazon-huasteco.com",
+      repo: "https://github.com/Eduardo1802/Corazon_Huasteco"
     },
     {
       id: "project-02-app-caih",
@@ -61,7 +62,8 @@ export const projects = [
       imgMd: proj_02_md,
       imgSm: proj_02_sm,
       imgXs: proj_02_xs,
-      toURL: "https://huasteca-mx.web.app"
+      href: "https://huasteca-mx.web.app",
+      repo: "https://github.com/"
     },
     {
       id: "project-03-dulce-delicia",
@@ -78,7 +80,8 @@ export const projects = [
       imgMd: proj_03_md,
       imgSm: proj_03_sm,
       imgXs: proj_03_xs,
-      toURL: "https://dulce-delicia-b3afa.web.app/inicio", 
+      href: "https://dulce-delicia-b3afa.web.app/inicio", 
+      repo: "https://github.com/Elder-Meyer/dulce-delicia"
     },
     {
       id: "project-04-fashion-fusion",
@@ -95,6 +98,7 @@ export const projects = [
       imgMd: proj_04_md,
       imgSm: proj_04_sm,
       imgXs: proj_04_xs,
-      toURL: "https://fashion-fusion-65eb8.web.app/"
+      href: "https://fashion-fusion-65eb8.web.app/",
+      repo: "https://github.com/Elder-Meyer/fashion-fusion"
     },
   ];
