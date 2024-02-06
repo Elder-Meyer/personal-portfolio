@@ -96,16 +96,16 @@ export const WavyDivider = ({invertColors}) => {
                 />
             </defs>
             <g className="parallax1">
-                <use xlinkHref="#gentle-wave" x="50" y="3" fill={invertColors ? theme.palette.primary.main : theme.palette.secondary.dark}/>
+                <use xlinkHref="#gentle-wave" x="50" y="3" fill={invertColors ? theme.palette.primary.main : theme.palette.secondary.light}/>
             </g>
             <g className="parallax2">
-                <use xlinkHref="#gentle-wave" x="50" y="0" fill={invertColors ? theme.palette.primary.light : theme.palette.secondary.light}/>
+                <use xlinkHref="#gentle-wave" x="50" y="0" fill={invertColors ? theme.palette.primary.light : theme.palette.primary.light}/>
             </g>
             <g className="parallax3">
-                <use xlinkHref="#gentle-wave" x="50" y="9" fill={invertColors ? theme.palette.text.disabled : theme.palette.primary.light}/>
+                <use xlinkHref="#gentle-wave" x="50" y="9" fill={invertColors ? theme.palette.text.disabled : theme.palette.primary.main}/>
             </g>
             <g className="parallax4">
-                <use xlinkHref="#gentle-wave" x="50" y="6" fill={invertColors ? theme.palette.background.paper : theme.palette.primary.main}/>  
+                <use xlinkHref="#gentle-wave" x="50" y="6" fill={invertColors ? theme.palette.background.paper : theme.palette.background.paper}/>  
             </g>
         </svg>
     </Box>
