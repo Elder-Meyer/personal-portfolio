@@ -67,6 +67,7 @@ export const Web = () => {
                       variant="h5"
                       component="div"
                       fontWeight={500}
+                      color="primary.main"
                     >
                       {project.title}
                     </Typography>
@@ -107,6 +108,7 @@ export const Web = () => {
                       variant="outlined"
                       sx={{
                         borderRadius: 5,
+                        color: "text.secondary",
                         '&:hover svg': {
                           animation: "blink 1.1s /* infinite */"
                         },
