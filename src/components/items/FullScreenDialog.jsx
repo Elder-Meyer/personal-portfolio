@@ -32,7 +32,7 @@ export default function FullScreenDialog({ open, handleClose, Transition, projec
         aria-describedby="alert-dialog-description"
       >
 
-          <Toolbar sx={{borderBottom: 2, borderColor: 'divider',}}>
+          <Toolbar sx={{borderBottom: 2, borderColor: 'divider', bgcolor: "background.paper"}}>
             
             {/* <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div" color="secondary.light" fontWeight={500}>
               {project.title}
@@ -45,13 +45,13 @@ export default function FullScreenDialog({ open, handleClose, Transition, projec
               edge="start"
               onClick={handleClose}
               aria-label="close"
-              sx={{color: "error.light" }}
+              sx={{color: "error.main" }}
             >
               <CloseIcon fontSize="large" />
             </IconButton>
           </Toolbar>
 
-        <DialogContent>
+        <DialogContent sx={{bgcolor: "background.paper"}}>
           <Box sx={{display: {xs: "none", sm: "none", md: "flex"}}}>
             <img
               width="100%"
@@ -78,10 +78,8 @@ export default function FullScreenDialog({ open, handleClose, Transition, projec
             location data to Google, even when no apps are running.
           </DialogContentText> */}
         </DialogContent>
-        <DialogActions /* sx={{bgcolor: "background.default"}} */>
+        <DialogActions sx={{bgcolor: "background.paper"}} >
           <Button 
-            size="medium"
-            color="primary"
             variant="contained" /* onClick={handleClose} */
             sx={{
               borderRadius: 5,
@@ -96,26 +94,21 @@ export default function FullScreenDialog({ open, handleClose, Transition, projec
                 '50%': { transform: "scale(1.2)", transformOrigin: "left bottom" },
                 '100%': { transform: "scale(1)", transformOrigin: "left bottom" }
               }
-
             }}
             component={Link}
             target="_blank"
             to={project.href}
             endIcon={<OpenInNewOutlined/>}
+            disableElevation
           >
             Go
           </Button>
+
           <Button 
-            size="medium"
             variant="outlined" 
             sx={{
               borderRadius: 5,
-              color: "text.primary",
-              borderColor: "text.secondary",
-              '&:hover': {
-                color: "primary.light",
-                borderColor: "primary.light",
-              },
+              color: "text.secondary",
               '&:hover svg': {
                 animation: "blink 1.1s /* infinite */"
               },
@@ -124,7 +117,6 @@ export default function FullScreenDialog({ open, handleClose, Transition, projec
                 '50%': { transform: "scale(0.5)", opacity: 0 },
                 '100%': { transform: "scale(1)", opacity: 1 },
               }
-
             }}
             component={Link}
             to={`/projects/${project.id}/`}
