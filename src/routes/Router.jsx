@@ -14,7 +14,7 @@ import { WavyDivider } from '../components/items/WavyDivider'
 import { Loader } from '../components/items/Loader'
 import { Home } from '../views/home/Home'
 import { ProjectDetails } from '../views/projects/ProjectDetails'
-import { Projects } from '../views/home/Projects/Projects'
+import { Projects } from '../views/projects/Projects'
 import { Testtheme } from './Testtheme'
 
 export const Router = (props) => {
