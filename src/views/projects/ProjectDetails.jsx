@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Typography, Container, Box, Grid, Stack, Button, Chip, Link, CardMedia, Card, Toolbar, IconButton, Divider, Paper } from "@mui/material";
-import { projects } from "../home/Projects/webProjects/projectsData";
+import { projects } from "./projectsData";
 import { ArrowBackSharp, GitHub, Language } from "@mui/icons-material";
 import { Link as LinkRoute } from "react-router-dom";
 
