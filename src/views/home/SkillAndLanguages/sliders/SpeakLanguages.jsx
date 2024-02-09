@@ -1,14 +1,12 @@
 import eeuu from "../../../../assets/img/languages/eeuu.webp";
 import french from "../../../../assets/img/languages/french.webp";
 import spain from "../../../../assets/img/languages/spain.webp";
-
 import React from "react";
-
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { CardMedia } from "@mui/material";
 import { Typography } from "../../../../components/material-ui/Typography";
 import { Box } from "../../../../components/material-ui/Box";
+import { CardMedia } from "../../../../components/material-ui/CardMedia";
 
 const responsive = {
   superLargeDesktop: {

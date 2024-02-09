@@ -1,10 +1,8 @@
-import { Box, CardMedia } from '@mui/material';
 import React from 'react';
 import cube from '../../assets/img/principal/cube-glow.webp'
+import { CardMedia } from '../material-ui/CardMedia';
 
 export function CubeGD({animation}){
-  
-
   return(
     <CardMedia
       sx={{

@@ -4,7 +4,7 @@ import Link from '@mui/material/Link';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
 import { Link as LinkRoute } from 'react-router-dom';
-import { CardMedia, Container, TextField, useTheme } from '@mui/material';
+import { Container, TextField, useTheme } from '@mui/material';
 import cube from '../../../assets/img/principal/cube-glow.webp';
 import UseAnimations from 'react-useanimations';
 import facebook from "react-useanimations/lib/facebook";
@@ -13,6 +13,7 @@ import github from "react-useanimations/lib/github";
 import useAnalyticsEventTracker from '../../../config/useAnalyticsEventTracker';
 import { Typography } from '../../material-ui/Typography';
 import { Box } from '../../material-ui/Box';
+import { CardMedia } from '../../material-ui/CardMedia';
 
 
 function Copyright() {

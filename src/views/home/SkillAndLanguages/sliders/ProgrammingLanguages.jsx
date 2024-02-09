@@ -2,14 +2,12 @@ import python from "../../../../assets/img/tecnologies/python.webp";
 import cpp from "../../../../assets/img/tecnologies/cpp.webp";
 import csharp from "../../../../assets/img/tecnologies/csharp.webp";
 import javascript from "../../../../assets/img/tecnologies/javascript.webp";
-
 import React from "react";
-
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { CardMedia } from "@mui/material";
 import { Typography } from "../../../../components/material-ui/Typography";
 import { Box } from "../../../../components/material-ui/Box";
+import { CardMedia } from "../../../../components/material-ui/CardMedia";
 
 const responsive = {
   superLargeDesktop: {
