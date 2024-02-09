@@ -2,7 +2,7 @@ import React from 'react'
 import { Presentation } from './Presentation/Presentation'
 import { SkillAndLanguages } from './SkillAndLanguages/SkillAndLanguages'
 import { Projects } from '../projects/Projects'
-import { Box } from '@mui/material'
+import { Box } from '../../components/material-ui/Box'
 
 export const Home = () => {
   return (

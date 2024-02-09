@@ -1,7 +1,7 @@
 import { useTheme } from '@emotion/react'
-import { Box } from '@mui/material'
 import React from 'react'
 import { useLocation } from 'react-router-dom';
+import { Box } from '../material-ui/Box';
 
 export const WavyDivider = ({invertColors}) => {
 

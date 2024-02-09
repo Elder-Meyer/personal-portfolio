@@ -1,4 +1,4 @@
-import { Box, Container, Paper, Toolbar } from '@mui/material'
+import { Container, Paper, Toolbar } from '@mui/material'
 import React from 'react'
 import { Database } from './sliders/Database'
 import { Frameworks } from './sliders/Frameworks'
@@ -6,6 +6,7 @@ import { ProgrammingLanguages } from './sliders/ProgrammingLanguages'
 import { SpeakLanguages } from './sliders/SpeakLanguages'
 import { WebDevelopment } from './sliders/WebDevelopment'
 import { Typography } from '../../../components/material-ui/Typography'
+import { Box } from '../../../components/material-ui/Box'
 
 
 

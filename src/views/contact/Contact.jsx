@@ -1,7 +1,8 @@
-import { Box, Grid, Container } from '@mui/material'
+import { Grid, Container } from '@mui/material'
 import React from 'react'
 import { WorkingOnThat } from '../../components/items/WorkingOnThat'
 import { Typography } from '../../components/material-ui/Typography'
+import { Box } from '../../components/material-ui/Box'
 
 export const Contact = () => {
   return (

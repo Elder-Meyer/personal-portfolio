@@ -1,8 +1,9 @@
-import { Box, Button, Grid, Container } from '@mui/material'
+import { Button, Grid, Container } from '@mui/material'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowBack,  } from '@mui/icons-material'
 import { Typography } from '../../components/material-ui/Typography'
+import { Box } from '../../components/material-ui/Box'
 
 export const Error = () => {
   return (

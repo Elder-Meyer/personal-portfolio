@@ -10,11 +10,12 @@ const Error = lazy(() => import('../views/error/Error').then((module) => ({ defa
 const DrawerAppBar = lazy(() => import('../components/layout/navbar/DrawerAppBar').then((module) => ({ default: module.DrawerAppBar })))
 const WavyDivider = lazy(() => import('../components/items/WavyDivider').then((module) => ({ default: module.WavyDivider })))
 const AppFooter = lazy(() => import('../components/layout/footer/AppFooter').then((module) => ({ default: module.AppFooter })))
-import { Box, Fab } from '@mui/material'
+import { Fab } from '@mui/material'
 import { BtnScrollTop } from '../components/items/btnScrollTop'
 import { KeyboardArrowUp } from '@mui/icons-material'
 import ScrollToTop from '../components/items/ScrollToTop'
 import { Loader } from '../components/items/Loader'
+import { Box } from '../components/material-ui/Box'
 
 export const Router = (props) => {
   return (

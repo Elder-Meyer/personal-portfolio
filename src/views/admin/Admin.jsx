@@ -1,6 +1,6 @@
-import { Box } from '@mui/material'
 import React from 'react'
 import { Typography } from '../../components/material-ui/Typography'
+import { Box } from '../../components/material-ui/Box'
 
 export const Admin = () => {
   return (

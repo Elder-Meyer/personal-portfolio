@@ -5,9 +5,10 @@ import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import { Link } from "react-router-dom";
-import { Box, DialogActions, DialogContent, DialogTitle, useMediaQuery, useTheme, Slide } from "@mui/material";
+import { DialogActions, DialogContent, DialogTitle, useMediaQuery, useTheme, Slide } from "@mui/material";
 import { OpenInNewOutlined, VisibilityOutlined } from "@mui/icons-material";
 import { Image } from "./Image";
+import { Box } from "../material-ui/Box";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;

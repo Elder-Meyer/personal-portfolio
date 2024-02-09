@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import Snackbar from '@mui/material/Snackbar';
@@ -13,6 +12,7 @@ import twitter from "react-useanimations/lib/twitter";
 import github from "react-useanimations/lib/github";
 import useAnalyticsEventTracker from '../../../config/useAnalyticsEventTracker';
 import { Typography } from '../../material-ui/Typography';
+import { Box } from '../../material-ui/Box';
 
 
 function Copyright() {

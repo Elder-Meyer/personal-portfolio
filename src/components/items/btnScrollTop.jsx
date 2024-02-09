@@ -1,4 +1,5 @@
-import { Box, Fade, useScrollTrigger } from "@mui/material";
+import { Fade, useScrollTrigger } from "@mui/material";
+import { Box } from "../material-ui/Box";
 
 export function BtnScrollTop(props) {
     const { children, window } = props;
