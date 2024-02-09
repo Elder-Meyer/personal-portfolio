@@ -1,4 +1,3 @@
-import { Button, Card, CardActionArea, CardActions, CardContent, Stack, Grid, Slide } from '@mui/material'
 import React, { forwardRef, useState } from 'react'
 import { Link } from 'react-router-dom';
 import FullScreenDialog from '../../components/items/FullScreenDialog';
@@ -6,6 +5,14 @@ import { projects } from './projectsData';
 import { OpenInNewOutlined, VisibilityOutlined } from '@mui/icons-material';
 import { Typography } from '../../components/material-ui/Typography';
 import { CardMedia } from '../../components/material-ui/CardMedia';
+import { Button } from '../../components/material-ui/Button';
+import { Card } from '../../components/material-ui/Card';
+import { CardActionArea } from '../../components/material-ui/CardActionArea';
+import { CardActions } from '../../components/material-ui/CardActions';
+import { CardContent } from '../../components/material-ui/CardContent';
+import { Grid } from '../../components/material-ui/Grid';
+import { Slide } from '../../components/material-ui/Slide';
+import { Stack } from '../../components/material-ui/Stack';
 
 const Transition = forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;

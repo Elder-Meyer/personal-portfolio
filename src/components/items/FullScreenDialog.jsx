@@ -1,14 +1,18 @@
 import * as React from "react";
-import Button from "@mui/material/Button";
-import Dialog from "@mui/material/Dialog";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import { Link } from "react-router-dom";
-import { DialogActions, DialogContent, DialogTitle, useMediaQuery, useTheme, Slide } from "@mui/material";
+import { useMediaQuery, useTheme } from "@mui/material";
 import { OpenInNewOutlined, VisibilityOutlined } from "@mui/icons-material";
 import { Image } from "./Image";
 import { Box } from "../material-ui/Box";
+import { Button } from "../material-ui/Button";
+import { Dialog } from "../material-ui/Dialog";
+import { DialogActions } from "../material-ui/DialogActions";
+import { DialogContent } from "../material-ui/DialogContent";
+import { DialogTitle } from "../material-ui/DialogTitle";
+import { IconButton } from "../material-ui/IconButton";
+import { Slide } from "../material-ui/Slide";
+import { Toolbar } from "../material-ui/Toolbar";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;

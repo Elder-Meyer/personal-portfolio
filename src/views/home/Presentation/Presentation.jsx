@@ -1,11 +1,16 @@
 import { FileDownloadOutlined } from '@mui/icons-material'
-import { Button, Card, Container, Grid, Toolbar, Tooltip } from '@mui/material'
 import React from 'react'
 import cube from '../../../assets/img/principal/cube-glow.webp'
 import Typewriter from 'typewriter-effect'
 import ExampleDoc from "../../../assets/docs/exampleDoc.pdf"
 import { Typography } from '../../../components/material-ui/Typography'
 import { Box } from '../../../components/material-ui/Box'
+import { Button } from '../../../components/material-ui/Button'
+import { Card } from '../../../components/material-ui/Card'
+import { Container } from '../../../components/material-ui/Container'
+import { Grid } from '../../../components/material-ui/Grid'
+import { Toolbar } from '../../../components/material-ui/Toolbar'
+import { Tooltip } from '../../../components/material-ui/Tooltip'
 
 export const Presentation = () => {
   return (

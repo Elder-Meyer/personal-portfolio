@@ -1,12 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Container, Grid, Stack, Button, Chip, Link, Card, Toolbar, IconButton, Divider, Paper } from "@mui/material";
+import { Button, Toolbar } from "@mui/material";
 import { projects } from "./projectsData";
 import { ArrowBackSharp, GitHub, Language } from "@mui/icons-material";
 import { Link as LinkRoute } from "react-router-dom";
 import { Typography } from "../../components/material-ui/Typography";
 import { Box } from "../../components/material-ui/Box";
 import { CardMedia } from "../../components/material-ui/CardMedia";
+import { Card } from "../../components/material-ui/Card";
+import { Chip } from "../../components/material-ui/Chip";
+import { Container } from "../../components/material-ui/Container";
+import { Divider } from "../../components/material-ui/Divider";
+import { Grid } from "../../components/material-ui/Grid";
+import { IconButton } from "../../components/material-ui/IconButton";
+import { Link } from "../../components/material-ui/Link";
+import { Paper } from "../../components/material-ui/Paper";
+import { Stack } from "../../components/material-ui/Stack";
 
 export const ProjectDetails = () => {
   const [project, setProject] = useState("");

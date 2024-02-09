@@ -1,8 +1,9 @@
-import { Paper, Container } from '@mui/material'
 import React from 'react'
 import { Web } from './Web';
 import { Typography } from '../../components/material-ui/Typography';
 import { Box } from '../../components/material-ui/Box';
+import { Container } from '../../components/material-ui/Container';
+import { Paper } from '../../components/material-ui/Paper';
 
 export const Projects = () => {
   return (

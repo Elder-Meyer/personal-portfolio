@@ -1,8 +1,9 @@
-import { Container, Grid } from '@mui/material'
 import React from 'react'
 import { WorkingOnThat } from '../../components/items/WorkingOnThat'
 import { Typography } from '../../components/material-ui/Typography'
 import { Box } from '../../components/material-ui/Box'
+import { Container } from '../../components/material-ui/Container'
+import { Grid } from '../../components/material-ui/Grid'
 
 export const Blog = () => {
   return (
