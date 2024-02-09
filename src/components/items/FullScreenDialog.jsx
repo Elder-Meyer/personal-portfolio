@@ -7,6 +7,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { Link } from "react-router-dom";
 import { Box, DialogActions, DialogContent, DialogTitle, useMediaQuery, useTheme, Slide } from "@mui/material";
 import { OpenInNewOutlined, VisibilityOutlined } from "@mui/icons-material";
+import { Image } from "./Image";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -47,25 +48,13 @@ export default function FullScreenDialog({ open, handleClose, Transition, projec
 
         <DialogContent sx={{bgcolor: "background.paper"}}>
           <Box sx={{display: {xs: "none", sm: "none", md: "flex"}}}>
-            <img
-              width="100%"
-              src={project.imgMd}
-              alt={project.title}
-            />
+            <Image src={project.imgMd} alt={project.title} width={"100%"} />
           </Box>
           <Box sx={{display: {xs: "none", sm: "flex", md: "none"}}}>
-            <img
-              width="100%"
-              src={project.imgSm}
-              alt={project.title}
-            />
+            <Image src={project.imgSm} alt={project.title} width={"100%"} />
           </Box>
           <Box sx={{display: {xs: "flex", sm: "none", md: "none"}}}>
-            <img
-              width="100%"
-              src={project.imgXs}
-              alt={project.title}
-            />
+            <Image src={project.imgXs} alt={project.title} width={"100%"} />
           </Box>
           {/* <DialogContentText id="alert-dialog-description">
             Let Google help apps determine location. This means sending anonymous
