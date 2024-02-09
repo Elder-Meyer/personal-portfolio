@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import FullScreenDialog from '../../components/items/FullScreenDialog';
 import { projects } from './projectsData';
 import { OpenInNewOutlined, VisibilityOutlined } from '@mui/icons-material';
+// MATERIAL UI - LOCAL
 import { Typography } from '../../components/material-ui/Typography';
 import { CardMedia } from '../../components/material-ui/CardMedia';
 import { Button } from '../../components/material-ui/Button';

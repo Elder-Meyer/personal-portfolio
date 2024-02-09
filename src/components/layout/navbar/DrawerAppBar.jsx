@@ -5,8 +5,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { useTheme } from '@emotion/react';
 import { Book, BookOutlined, ContactPage, ContactPageOutlined, Home, HomeOutlined } from '@mui/icons-material';
-import { ElevationScroll } from './fnElevationScroll';
+import { ElevationScroll } from '../../../utils/fnElevationScroll';
 import {CubeGD} from '../../items/CubeGD'
+// MATERIAL UI - LOCAL
 import { Typography } from '../../material-ui/Typography';
 import { Box } from '../../material-ui/Box';
 import { Button } from '../../material-ui/Button';

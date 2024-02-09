@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useMediaQuery, useTheme } from "@mui/material";
 import { OpenInNewOutlined, VisibilityOutlined } from "@mui/icons-material";
 import { Image } from "./Image";
+// MATERIAL UI - LOCAL
 import { Box } from "../material-ui/Box";
 import { Button } from "../material-ui/Button";
 import { Dialog } from "../material-ui/Dialog";
@@ -61,10 +62,6 @@ export default function FullScreenDialog({ open, handleClose, Transition, projec
           <Box sx={{display: {xs: "flex", sm: "none", md: "none"}}}>
             <Image src={project.imgXs} alt={project.title} width={"100%"} />
           </Box>
-          {/* <DialogContentText id="alert-dialog-description">
-            Let Google help apps determine location. This means sending anonymous
-            location data to Google, even when no apps are running.
-          </DialogContentText> */}
         </DialogContent>
         <DialogActions sx={{bgcolor: "background.paper"}} >
           <Button 
@@ -114,7 +111,6 @@ export default function FullScreenDialog({ open, handleClose, Transition, projec
           </Button>
         </DialogActions>
       </Dialog>
-      
     </div>
   );
 }

@@ -3,6 +3,7 @@ import React from 'react'
 import cube from '../../../assets/img/principal/cube-glow.webp'
 import Typewriter from 'typewriter-effect'
 import ExampleDoc from "../../../assets/docs/exampleDoc.pdf"
+// MATERIAL UI - LOCAL
 import { Typography } from '../../../components/material-ui/Typography'
 import { Box } from '../../../components/material-ui/Box'
 import { Button } from '../../../components/material-ui/Button'
@@ -101,8 +102,6 @@ const ImageContent = () => {
         sx={{
           display: "flex",
           justifyContent: "center",
-          
-          
         }}
       >
         <Tooltip title={":)"} arrow placement='right'>

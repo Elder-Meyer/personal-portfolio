@@ -2,11 +2,10 @@ import firebase from "../../../../assets/img/tecnologies/firebase.webp";
 import mongo from "../../../../assets/img/tecnologies/mongo.webp";
 import mysql from "../../../../assets/img/tecnologies/mysql.webp";
 import cloud from "../../../../assets/img/tecnologies/cloud.webp";
-
 import React from "react";
-
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+// MATERIAL UI - LOCAL
 import { Typography } from "../../../../components/material-ui/Typography";
 import { Box } from "../../../../components/material-ui/Box";
 import { CardMedia } from "../../../../components/material-ui/CardMedia";

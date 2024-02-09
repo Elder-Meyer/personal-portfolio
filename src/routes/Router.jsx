@@ -1,20 +1,21 @@
 import React, { Suspense, lazy } from 'react'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import '../styles/ScrollbarStyle.css'
-const Home = lazy(() => import('../views/home/Home').then((module) => ({ default: module.Home })))
-const Projects = lazy(() => import('../views/projects/Projects').then((module) => ({ default: module.Projects })))
-const ProjectDetails = lazy(() => import('../views/projects/ProjectDetails').then((module) => ({ default: module.ProjectDetails })))
-const Blog = lazy(() => import('../views/blog/Blog').then((module) => ({ default: module.Blog })))
-const Contact = lazy(() => import('../views/contact/Contact').then((module) => ({ default: module.Contact })))
-const Error = lazy(() => import('../views/error/Error').then((module) => ({ default: module.Error })))
-const DrawerAppBar = lazy(() => import('../components/layout/navbar/DrawerAppBar').then((module) => ({ default: module.DrawerAppBar })))
-const WavyDivider = lazy(() => import('../components/items/WavyDivider').then((module) => ({ default: module.WavyDivider })))
-const AppFooter = lazy(() => import('../components/layout/footer/AppFooter').then((module) => ({ default: module.AppFooter })))
+const Home            = lazy(() => import('../views/home/Home').then((module) => ({ default: module.Home })))
+const Projects        = lazy(() => import('../views/projects/Projects').then((module) => ({ default: module.Projects })))
+const ProjectDetails  = lazy(() => import('../views/projects/ProjectDetails').then((module) => ({ default: module.ProjectDetails })))
+const Blog            = lazy(() => import('../views/blog/Blog').then((module) => ({ default: module.Blog })))
+const Contact         = lazy(() => import('../views/contact/Contact').then((module) => ({ default: module.Contact })))
+const Error           = lazy(() => import('../views/error/Error').then((module) => ({ default: module.Error })))
+const DrawerAppBar    = lazy(() => import('../components/layout/navbar/DrawerAppBar').then((module) => ({ default: module.DrawerAppBar })))
+const WavyDivider     = lazy(() => import('../components/items/WavyDivider').then((module) => ({ default: module.WavyDivider })))
+const AppFooter       = lazy(() => import('../components/layout/footer/AppFooter').then((module) => ({ default: module.AppFooter })))
 import { Fab } from '@mui/material'
 import { BtnScrollTop } from '../components/items/btnScrollTop'
 import { KeyboardArrowUp } from '@mui/icons-material'
 import ScrollToTop from '../components/items/ScrollToTop'
 import { Loader } from '../components/items/Loader'
+// MATERIAL UI - LOCAL
 import { Box } from '../components/material-ui/Box'
 
 export const Router = (props) => {

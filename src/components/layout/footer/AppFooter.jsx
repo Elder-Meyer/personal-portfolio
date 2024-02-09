@@ -9,13 +9,13 @@ import facebook from "react-useanimations/lib/facebook";
 import twitter from "react-useanimations/lib/twitter";
 import github from "react-useanimations/lib/github";
 import useAnalyticsEventTracker from '../../../config/useAnalyticsEventTracker';
+// MATERIAL UI - LOCAL
 import { Typography } from '../../material-ui/Typography';
 import { Box } from '../../material-ui/Box';
 import { CardMedia } from '../../material-ui/CardMedia';
 import { Container } from '../../material-ui/Container';
 import { Grid } from '../../material-ui/Grid';
 import { Link } from '../../material-ui/Link';
-
 
 function Copyright() {
   return (

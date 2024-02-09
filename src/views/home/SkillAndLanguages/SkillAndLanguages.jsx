@@ -4,13 +4,12 @@ import { Frameworks } from './sliders/Frameworks'
 import { ProgrammingLanguages } from './sliders/ProgrammingLanguages'
 import { SpeakLanguages } from './sliders/SpeakLanguages'
 import { WebDevelopment } from './sliders/WebDevelopment'
+// MATERIAL UI - LOCAL
 import { Typography } from '../../../components/material-ui/Typography'
 import { Box } from '../../../components/material-ui/Box'
 import { Container } from '../../../components/material-ui/Container'
 import { Paper } from '../../../components/material-ui/Paper'
 import { Toolbar } from '../../../components/material-ui/Toolbar'
-
-
 
 export const SkillAndLanguages = () => {
   return (
@@ -31,7 +30,6 @@ export const SkillAndLanguages = () => {
           <Toolbar/>
             <Database/>
           <Toolbar/>
-
           
           <Typography textAlign="center" sx={{color: "white", fontSize: 40, fontWeight: 500}} gutterBottom>
             Languages
