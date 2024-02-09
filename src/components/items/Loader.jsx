@@ -1,6 +1,8 @@
+import { useTheme } from '@emotion/react'
 import React from 'react'
 
 export const Loader = () => {
+    const theme = useTheme()
 
     const estilos = `
     .container{
@@ -9,7 +11,7 @@ export const Loader = () => {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #111E26;
+        background-color: ${theme.palette.background.default};
         flex-direction: column;
     }
 
@@ -23,7 +25,7 @@ export const Loader = () => {
         content: "";
         position: absolute;
         border-radius: 50px;
-        box-shadow: 0 0 0 3px inset #fff;
+        box-shadow: 0 0 0 3px inset ${theme.palette.primary.main};
         animation: l5 2.5s infinite;
     }
     .loader:after {
@@ -48,12 +50,12 @@ export const Loader = () => {
         font-family: sans-serif;
         font-size: 30px;
         animation: l1 1s linear infinite alternate;
-        color: #fff;
+        color: ${theme.palette.primary.main};
         font-size: 45px;
         font-heigh: 700;
     }
     .loader-text:before {
-        content:"Cargando..."
+        content:"Loading..."
     }
     @keyframes l1 {to{opacity: 0}}
     `
