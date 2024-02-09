@@ -1,10 +1,9 @@
-import { Paper, Typography, Container, Box } from '@mui/material'
+import { Paper, Container, Box } from '@mui/material'
 import React from 'react'
 import { Web } from './Web';
-
+import { Typography } from '../../components/material-ui/Typography';
 
 export const Projects = () => {
-
   return (
     <Paper
       elevation={0}

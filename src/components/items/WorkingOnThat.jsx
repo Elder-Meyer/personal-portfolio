@@ -1,5 +1,6 @@
-import { Typography, Grid } from '@mui/material'
+import { Grid } from '@mui/material'
 import React from 'react'
+import { Typography } from '../material-ui/Typography'
 
 export const WorkingOnThat = () => {
   return (

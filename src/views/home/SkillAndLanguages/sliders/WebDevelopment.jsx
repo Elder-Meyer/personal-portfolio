@@ -7,7 +7,8 @@ import React from "react";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { Box, CardMedia, Typography } from "@mui/material";
+import { Box, CardMedia } from "@mui/material";
+import { Typography } from "../../../../components/material-ui/Typography";
 
 const responsive = {
   superLargeDesktop: {

@@ -1,9 +1,10 @@
-import { Button, Card, CardActionArea, CardActions, CardContent, Stack, CardMedia, Grid, Slide, Typography } from '@mui/material'
+import { Button, Card, CardActionArea, CardActions, CardContent, Stack, CardMedia, Grid, Slide } from '@mui/material'
 import React, { forwardRef, useState } from 'react'
 import { Link } from 'react-router-dom';
 import FullScreenDialog from '../../components/items/FullScreenDialog';
 import { projects } from './projectsData';
 import { OpenInNewOutlined, VisibilityOutlined } from '@mui/icons-material';
+import { Typography } from '../../components/material-ui/Typography';
 
 const Transition = forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;

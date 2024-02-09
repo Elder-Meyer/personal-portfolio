@@ -20,7 +20,6 @@ export default function FullScreenDialog({ open, handleClose, Transition, projec
 
   return (
     <div>
-
       <Dialog
         fullScreen={fullScreen}
         maxWidth="lg"
@@ -31,25 +30,20 @@ export default function FullScreenDialog({ open, handleClose, Transition, projec
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-
-          <Toolbar sx={{borderBottom: 2, borderColor: 'divider', bgcolor: "background.paper"}}>
-            
-            {/* <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div" color="secondary.light" fontWeight={500}>
-              {project.title}
-            </Typography> */}
-            <DialogTitle sx={{flex:1, fontWeight: 400, fontSize: {xs: 20, sm:25, md:30, lg:35}}} variant="h6" id="alert-dialog-title" color="primary.light" >
-              {project.title}
-            </DialogTitle>
-            
-            <IconButton
-              edge="start"
-              onClick={handleClose}
-              aria-label="close"
-              sx={{color: "error.main" }}
-            >
-              <CloseIcon fontSize="large" />
-            </IconButton>
-          </Toolbar>
+        <Toolbar sx={{borderBottom: 2, borderColor: 'divider', bgcolor: "background.paper"}}>
+          <DialogTitle sx={{flex:1, fontWeight: 400, fontSize: {xs: 20, sm:25, md:30, lg:35}}} variant="h6" id="alert-dialog-title" color="primary.light" >
+            {project.title}
+          </DialogTitle>
+          
+          <IconButton
+            edge="start"
+            onClick={handleClose}
+            aria-label="close"
+            sx={{color: "error.main" }}
+          >
+            <CloseIcon fontSize="large" />
+          </IconButton>
+        </Toolbar>
 
         <DialogContent sx={{bgcolor: "background.paper"}}>
           <Box sx={{display: {xs: "none", sm: "none", md: "flex"}}}>

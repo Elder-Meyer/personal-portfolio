@@ -11,23 +11,21 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Container, ListItemIcon, Tooltip } from '@mui/material';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { Elder } from './Elder';
 import { useTheme } from '@emotion/react';
 import { Book, BookOutlined, ContactPage, ContactPageOutlined, Home, HomeOutlined } from '@mui/icons-material';
 import { ElevationScroll } from './fnElevationScroll';
 import {CubeGD} from '../../items/CubeGD'
+import { Typography } from '../../material-ui/Typography';
 
 
 const drawerWidth = 240;
 const navItems = [{title: 'Home', path: '/home', icon: <HomeOutlined/>, iconSelected: <Home/>}, {title: 'Blog', path: '/blog', icon: <BookOutlined/>, iconSelected: <Book/>}, {title: 'Contact', path: '/contact', icon: <ContactPageOutlined/>, iconSelected: <ContactPage/>}];
 
-function DrawerAppBar(props) {
+export const DrawerAppBar = (props) => {
   const theme = useTheme();
-  Elder(theme.palette.primary.main)
   const location = useLocation();
   const isHome = location.pathname === "/home";
   const navBackgroundStyle = isHome ? { backgroundColor: "transparent", paddingTop: 1 } : { backgroundColor: "background.default", paddingTop: 1 };
@@ -169,4 +167,3 @@ DrawerAppBar.propTypes = {
   window: PropTypes.func,
 };
 
-export default DrawerAppBar;

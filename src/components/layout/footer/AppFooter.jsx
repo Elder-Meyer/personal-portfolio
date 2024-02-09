@@ -5,7 +5,6 @@ import Link from '@mui/material/Link';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
 import { Link as LinkRoute } from 'react-router-dom';
-import Typography from '@mui/material/Typography';
 import { CardMedia, Container, TextField, useTheme } from '@mui/material';
 import cube from '../../../assets/img/principal/cube-glow.webp';
 import UseAnimations from 'react-useanimations';
@@ -13,6 +12,7 @@ import facebook from "react-useanimations/lib/facebook";
 import twitter from "react-useanimations/lib/twitter";
 import github from "react-useanimations/lib/github";
 import useAnalyticsEventTracker from '../../../config/useAnalyticsEventTracker';
+import { Typography } from '../../material-ui/Typography';
 
 
 function Copyright() {
@@ -43,7 +43,7 @@ const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
 
-export default function AppFooter() {
+export const AppFooter = () => {
 
   const theme = useTheme();
 
