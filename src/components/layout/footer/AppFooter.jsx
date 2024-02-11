@@ -68,7 +68,7 @@ export const AppFooter = () => {
   return (
     <Typography
       component="footer"
-      sx={{ display: 'flex' }}
+      sx={{ display: 'flex', backgroundColor: "background.paper" }}
     >
       <Snackbar open={open} autoHideDuration={5000} onClose={handleClose} anchorOrigin={{ vertical: "top", horizontal: "center"}}>
         <Alert onClose={handleClose} severity="warning" sx={{ width: '100%' }}>
