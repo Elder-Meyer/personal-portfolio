@@ -10,6 +10,7 @@ export function CubeGD({animation}){
           transform: "rotate(180deg)",
           width: {xs: 56, sm: 56, md: 56},
           bgcolor: "transparent",
+          userSelect: "none"
       }}
       component="img"
       height={"100%"}
