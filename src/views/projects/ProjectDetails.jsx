@@ -55,12 +55,11 @@ export const ProjectDetails = () => {
             {/* GRID - PRINCIPAL DATA */}
             <Grid container item spacing={2}>
               {/* IMAGE CONTAINER */}
-              <Grid item xs={12} sm={12} md={6} lg={7} xl={8}
+              <Grid container item xs={12} sm={12} md={6} lg={7} xl={8}
                 component={Stack}
                 direction="row"
                 justifyContent="center"
                 alignItems="center"
-                spacing={1}
               >
                 <Card elevation={3}>
                   <CardMedia component="img"
