@@ -19,11 +19,11 @@ import { Loader } from '../components/items/Loader'
 // MATERIAL UI - LOCAL
 import { Box } from '../components/material-ui/Box'
 
-export const Router = (props) => {
+export const Router = ({darkMode, handleChangeTheme}, props) => {
   return (
     <BrowserRouter>
       <Box id="back-to-top-anchor" />
-      <DrawerAppBar />
+      <DrawerAppBar darkMode={darkMode} handleChangeTheme={handleChangeTheme}/>
         <ScrollToTop>
           <Suspense fallback={<Loader/>}>
             <Routes>
