@@ -4,7 +4,7 @@ import AppBar from '@mui/material/AppBar';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { useTheme } from '@emotion/react';
-import { Book, BookOutlined, ContactPage, ContactPageOutlined, Home, HomeOutlined } from '@mui/icons-material';
+import { Book, BookOutlined, ContactPage, ContactPageOutlined, Home, HomeOutlined, LightMode, LightModeOutlined } from '@mui/icons-material';
 import { ElevationScroll } from '../../../utils/fnElevationScroll';
 import {CubeGD} from '../../items/CubeGD'
 // MATERIAL UI - LOCAL
@@ -22,12 +22,14 @@ import { ListItemIcon } from '../../material-ui/ListItemIcon';
 import { SwipeableDrawer } from '../../material-ui/SwipeableDrawer';
 import { Toolbar } from '../../material-ui/Toolbar';
 import { Tooltip } from '../../material-ui/Tooltip';
-
+import ThemeSwitcher from '../../items/ThemeSwitcher';
 
 const drawerWidth = 240;
 const navItems = [{title: 'Home', path: '/home', icon: <HomeOutlined/>, iconSelected: <Home/>}, {title: 'Blog', path: '/blog', icon: <BookOutlined/>, iconSelected: <Book/>}, {title: 'Contact', path: '/contact', icon: <ContactPageOutlined/>, iconSelected: <ContactPage/>}];
 
 export const DrawerAppBar = (props) => {
+  const { darkMode } = props
+  const { handleChangeTheme } = props
   const theme = useTheme();
   const location = useLocation();
   const isHome = location.pathname === "/home";
@@ -41,7 +43,7 @@ export const DrawerAppBar = (props) => {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', height: "100%" }}>
       <Typography variant="h6" sx={{ my: 2, color: "primary.light" }}>
         Elder M.
       </Typography>
@@ -68,6 +70,9 @@ export const DrawerAppBar = (props) => {
           </ListItem>
         ))}
       </List>
+      <Box sx={{ height: "60%", display: "flex", alignItems: "flex-end", justifyContent: "center"}}>
+        <ThemeSwitcher darkMode={darkMode} handleChangeTheme={handleChangeTheme} />
+      </Box>
     </Box>
   );
 
@@ -97,7 +102,6 @@ export const DrawerAppBar = (props) => {
                     </Tooltip>
                   </Box>
                   <IconButton
-                      color="inherit"
                       aria-label="open drawer"
                       edge="start"
                       onClick={handleDrawerToggle}
@@ -126,6 +130,7 @@ export const DrawerAppBar = (props) => {
                           {item.title}
                         </Button>
                       ))}
+                    <ThemeSwitcher darkMode={darkMode} handleChangeTheme={handleChangeTheme} />
                   </Box>
                 </Toolbar>
               </Container>
