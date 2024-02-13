@@ -23,7 +23,7 @@ export const Projects = () => {
       }}
     >
       <Container maxWidth="xl">
-          <Typography textAlign="center" sx={{color: "white", fontSize: 40, fontWeight: 500}} gutterBottom>
+          <Typography textAlign="center" color="primary.main" sx={{fontSize: 40, fontWeight: 500}} gutterBottom>
             Projects
           </Typography>
           <Box 
