@@ -4,7 +4,7 @@ import AppBar from '@mui/material/AppBar';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { useTheme } from '@emotion/react';
-import { Book, BookOutlined, ContactPage, ContactPageOutlined, Home, HomeOutlined, LightMode, LightModeOutlined } from '@mui/icons-material';
+import { Book, BookOutlined, ContactPage, ContactPageOutlined, Home, HomeOutlined } from '@mui/icons-material';
 import { ElevationScroll } from '../../../utils/fnElevationScroll';
 import {CubeGD} from '../../items/CubeGD'
 // MATERIAL UI - LOCAL
@@ -28,39 +28,25 @@ const drawerWidth = 240;
 const navItems = [{title: 'Home', path: '/home', icon: <HomeOutlined/>, iconSelected: <Home/>}, {title: 'Blog', path: '/blog', icon: <BookOutlined/>, iconSelected: <Book/>}, {title: 'Contact', path: '/contact', icon: <ContactPageOutlined/>, iconSelected: <ContactPage/>}];
 
 export const DrawerAppBar = (props) => {
-  const { darkMode } = props
-  const { handleChangeTheme } = props
+  const { darkMode, handleChangeTheme } = props
   const theme = useTheme();
   const location = useLocation();
   const isHome = location.pathname === "/home";
-  const navBackgroundStyle = isHome ? { backgroundColor: "transparent", paddingTop: 1 } : { backgroundColor: "background.default", paddingTop: 1 };
-  
   const { window } = props;
   const [mobileOpen, setMobileOpen] = useState(false);
-
-  const handleDrawerToggle = () => {
-    setMobileOpen((prevState) => !prevState);
-  };
+  const handleDrawerToggle = () => { setMobileOpen((prevState) => !prevState); };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', height: "100%" }}>
+    <Box sx={{ textAlign: 'center', height: "100%" }}>
       <Typography variant="h6" sx={{ my: 2, color: "primary.light" }}>
         Elder M.
       </Typography>
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item.path} disablePadding>
-            <ListItemButton 
-              sx={{
-                textAlign: 'left',
-                pl: 7,
-                color: 'text.primary', // Color por defecto para enlaces inactivos
-                '&.active': { // Estilos para enlaces activos
-                  color: 'primary.light',
-                },
-              }}
-              component={NavLink} to={item.path}
+          <ListItem key={item.path} disablePadding onClick={handleDrawerToggle}>
+            <ListItemButton component={NavLink} to={item.path}
+              sx={{ textAlign: 'left', pl: 7, color: 'text.primary', '&.active': { color: 'primary.light' } }}
             >
               <ListItemIcon sx={{color: 'inherit'}}>
                 {item.path === location.pathname ? item.iconSelected : item.icon }
@@ -80,83 +66,72 @@ export const DrawerAppBar = (props) => {
 
   return (
     <Box sx={{ display: 'flex' }}>
-        {/* <HideOnScroll {...props}> */}
-          <ElevationScroll {...props}> 
-            <AppBar color='primary' sx={{backgroundColor: theme.palette.background.default }} /*enableColorOnDark*/ /*sx={navBackgroundStyle} id="header-principal"*/>
-              <Container maxWidth="xl">
-                <Toolbar sx={{justifyContent: "space-between", mx:-2 }}>
-                  <Box>
-                    <Tooltip title="Go home" placement="right">
-                      <Link
-                        to="/home"
-                        style={{
-                          textDecoration: "none",
-                          color: "inherit",
-                        }}
-                        aria-label="Go home"
-                      >
-                        <Box sx={{display: isHome ? {xs :'none', md: 'none'} : 'flex'}}>
-                          <CubeGD aria-label='Go home' />
-                        </Box>
-                      </Link>            
-                    </Tooltip>
-                  </Box>
-                  <IconButton
-                      aria-label="open drawer"
-                      edge="start"
-                      onClick={handleDrawerToggle}
-                      sx={{ display: { xs: "flex", sm: "flex", md: 'none' }  }}
-                      >
-                    <MenuIcon />
-                  </IconButton>
-                  <Box sx={{  display: { xs: 'none', sm: 'none', md: 'flex' }  }}>
-                      {navItems.map((item) => (
-                        <Button 
-                        startIcon={item.path === location.pathname ? item.iconSelected : item.icon }
-                        key={item.path} 
-                        sx={{
-                          mr: 1,
-                          fontSize: 16,
-                          display: 'flex',
-                            color: 'text.secondary', // Color por defecto para enlaces inactivos
-                            '&.active': { // Estilos para enlaces activos
-                              color: 'text.primary',
-                            },
-                          }}  
-                          component={NavLink} 
-                          to={item.path}
-                          size="inherit"
-                          >
-                          {item.title}
-                        </Button>
-                      ))}
-                    <ThemeSwitcher darkMode={darkMode} handleChangeTheme={handleChangeTheme} />
-                  </Box>
-                </Toolbar>
-              </Container>
-            </AppBar>
-          </ElevationScroll>
-        {/* </HideOnScroll> */}
+      <ElevationScroll {...props}> 
+        <AppBar color='primary' sx={{backgroundColor: theme.palette.background.default }}>
+          <Container maxWidth="xl">
+            <Toolbar sx={{justifyContent: "space-between", mx:-2 }}>
+              <Box>
+                <Tooltip title="Go home" placement="right">
+                  <Link
+                    to="/home"
+                    style={{
+                      textDecoration: "none",
+                      color: "inherit",
+                    }}
+                    aria-label="Go home"
+                  >
+                    <Box sx={{display: isHome ? {xs :'none', md: 'none'} : 'flex'}}>
+                      <CubeGD aria-label='Go home' />
+                    </Box>
+                  </Link>            
+                </Tooltip>
+              </Box>
+              <IconButton aria-label="open drawer" edge="start"
+                onClick={handleDrawerToggle} sx={{ display: { xs: "flex", sm: "flex", md: 'none' }  }}
+              >
+                <MenuIcon />
+              </IconButton>
+              <Box sx={{  display: { xs: 'none', sm: 'none', md: 'flex' }  }}>
+                {navItems.map((item) => (
+                  <Button startIcon={item.path === location.pathname ? item.iconSelected : item.icon }
+                    key={item.path} 
+                    sx={{
+                      mr: 1,
+                      fontSize: 16,
+                      display: 'flex',
+                      color: 'text.secondary', // Color por defecto para enlaces inactivos
+                      '&.active': { color: 'text.primary' },
+                    }}  
+                    component={NavLink} 
+                    to={item.path}
+                    size="inherit"
+                  >
+                    {item.title}
+                  </Button>
+                ))}
+                <ThemeSwitcher darkMode={darkMode} handleChangeTheme={handleChangeTheme} />
+              </Box>
+            </Toolbar>
+          </Container>
+        </AppBar>
+      </ElevationScroll>
 
-        <Box component="nav">
-            <SwipeableDrawer
-                anchor="right"
-                open={mobileOpen}
-                onClose={handleDrawerToggle}
-                onOpen={handleDrawerToggle}
-                // container={container}
-                // variant="temporary"
-                // ModalProps={{
-                //     keepMounted: true, // Better open performance on mobile.
-                // }}
-                sx={{
-                    display: { xs: 'block', sm: 'block', md: 'none' },
-                    '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, bgcolor: "background.default", borderRadius: "24px 0 0 24px" },
-                }}
-            >
-                {drawer}
-            </SwipeableDrawer>
-        </Box>
+      <Box component="nav">
+        <SwipeableDrawer anchor="right"
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          onOpen={handleDrawerToggle}
+          // container={container}
+          // variant="temporary"
+          // ModalProps={{ keepMounted: true, /* Better open performance on mobile*/ }}
+          sx={{
+            display: { xs: 'block', sm: 'block', md: 'none' },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, bgcolor: "background.default", borderRadius: "24px 0 0 24px" },
+          }}
+        >
+          {drawer}
+        </SwipeableDrawer>
+      </Box>
       {
         isHome ? null : 
         <>
@@ -174,4 +149,3 @@ DrawerAppBar.propTypes = {
    */
   window: PropTypes.func,
 };
-
