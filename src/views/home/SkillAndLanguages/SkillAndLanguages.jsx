@@ -31,7 +31,7 @@ export const SkillAndLanguages = () => {
             <Database/>
           <Toolbar/>
           
-          <Typography textAlign="center" sx={{color: "white", fontSize: 40, fontWeight: 500}} gutterBottom>
+          <Typography textAlign="center" color="primary.main" sx={{fontSize: 40, fontWeight: 500}} gutterBottom>
             Languages
           </Typography>
           <Typography color="text.secondary" textAlign="center" sx={{fontSize: 18, my:3}}>
