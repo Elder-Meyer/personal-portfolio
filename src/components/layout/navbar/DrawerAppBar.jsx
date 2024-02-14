@@ -67,7 +67,7 @@ export const DrawerAppBar = (props) => {
   return (
     <Box sx={{ display: 'flex' }}>
       <ElevationScroll {...props}> 
-        <AppBar color='primary' sx={{backgroundColor: theme.palette.background.default }}>
+        <AppBar position='fixed' sx={{backgroundColor: theme.palette.mode === "dark" ? "background.default" : "primary" }}>
           <Container maxWidth="xl">
             <Toolbar sx={{justifyContent: "space-between", mx:-2 }}>
               <Box>
@@ -99,8 +99,8 @@ export const DrawerAppBar = (props) => {
                       mr: 1,
                       fontSize: 16,
                       display: 'flex',
-                      color: 'text.secondary', // Color por defecto para enlaces inactivos
-                      '&.active': { color: 'text.primary' },
+                      color: "inherit", 
+                      '&.active': { color: theme.palette.mode === 'dark' ? 'primary.main' : "background.default" },
                     }}  
                     component={NavLink} 
                     to={item.path}
