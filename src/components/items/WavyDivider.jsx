@@ -3,7 +3,7 @@ import React from 'react'
 import { useLocation } from 'react-router-dom';
 import { Box } from '../material-ui/Box';
 
-export const WavyDivider = ({invertColors}) => {
+export const WavyDivider = () => {
 
     const location = useLocation();
     const isHome = location.pathname === "/home";
@@ -77,7 +77,7 @@ export const WavyDivider = ({invertColors}) => {
     `
 
   return (
-    <Box sx={{backgroundColor: isHome ? theme.palette.background.default : theme.palette.background.default}}>
+    <Box sx={{backgroundColor: theme.palette.background.default}}>
         <style>{styles}</style>
         <svg className="editorial"
             xmlns="http://www.w3.org/2000/svg"
@@ -96,16 +96,16 @@ export const WavyDivider = ({invertColors}) => {
                 />
             </defs>
             <g className="parallax1">
-                <use xlinkHref="#gentle-wave" x="50" y="3" fill={invertColors ? theme.palette.primary.main : theme.palette.secondary.light}/>
+                <use xlinkHref="#gentle-wave" x="50" y="3" fill={theme.palette.mode === 'dark' ? theme.palette.secondary.light : theme.palette.background.paper}/>
             </g>
             <g className="parallax2">
-                <use xlinkHref="#gentle-wave" x="50" y="0" fill={invertColors ? theme.palette.primary.light : theme.palette.primary.light}/>
+                <use xlinkHref="#gentle-wave" x="50" y="0" fill={theme.palette.mode === 'dark' ? theme.palette.primary.main : theme.palette.secondary.main}/>
             </g>
             <g className="parallax3">
-                <use xlinkHref="#gentle-wave" x="50" y="9" fill={invertColors ? theme.palette.text.disabled : theme.palette.primary.main}/>
+                <use xlinkHref="#gentle-wave" x="50" y="9" fill={theme.palette.mode === 'dark' ? theme.palette.primary.dark : theme.palette.primary.light}/>
             </g>
             <g className="parallax4">
-                <use xlinkHref="#gentle-wave" x="50" y="6" fill={invertColors ? theme.palette.background.paper : theme.palette.background.paper}/>  
+                <use xlinkHref="#gentle-wave" x="50" y="6" fill={theme.palette.mode === 'dark' ? theme.palette.background.paper : theme.palette.primary.main}/>  
             </g>
         </svg>
     </Box>
