@@ -18,7 +18,8 @@ const ThemeSwitcher = (props) => {
       sx={{
         borderWidth: 1,
         borderStyle: "solid",
-        borderColor: "text.primary",
+        borderColor: "inherit",
+        color : "inherit"
       }}
     >
       {darkMode ? (
