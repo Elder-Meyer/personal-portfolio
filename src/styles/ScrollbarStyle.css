@@ -1,4 +1,0 @@
-* { scrollbar-width: thin; scrollbar-color: #C1BBFF #32313a; }
-*::-webkit-scrollbar { width: 8px; }
-*::-webkit-scrollbar-track { background: #32313a; }
-*::-webkit-scrollbar-thumb { background-color: #C1BBFF; border-radius: 10px; border: 3px none #C1BBFF; }
