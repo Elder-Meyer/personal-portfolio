@@ -17,11 +17,11 @@ import { Container } from '../../material-ui/Container';
 import { Grid } from '../../material-ui/Grid';
 import { Link } from '../../material-ui/Link';
 
-function Copyright() {
+function Copyright({theme}) {
   return (
     <React.Fragment>
-      <Box sx={{display: "flex", justifyContent: "center"}}>
-        <Link color="text.secondary" component={LinkRoute} to="/home">
+      <Box sx={{display: "flex", justifyContent: "center", color: theme.palette.mode==='dark'?"text.secondary":"background.paper"}}>
+        <Link color="inherit" component={LinkRoute} to="/home">
           {'© Elder Meyer '}
           { new Date().getFullYear() }
         </Link>
@@ -46,29 +46,22 @@ const Alert = React.forwardRef(function Alert(props, ref) {
 });
 
 export const AppFooter = () => {
-
   const theme = useTheme();
 
   const [open, setOpen] = React.useState(false);
 
-  const handleClick = () => {
-    setOpen(true);
-  };
+  const handleClick = () => { setOpen(true); };
 
   const handleClose = (event, reason) => {
-    if (reason === 'clickaway') {
-      return;
-    }
-
+    if (reason === 'clickaway') { return; }
     setOpen(false);
   };
 
   const gaEventTracker = useAnalyticsEventTracker("contact us")
-
   return (
-    <Typography
+    <Box
       component="footer"
-      sx={{ display: 'flex', backgroundColor: "background.paper" }}
+      sx={{ display: 'flex', backgroundColor: theme.palette.mode === 'dark' ? "background.paper" : "primary.main" }}
     >
       <Snackbar open={open} autoHideDuration={5000} onClose={handleClose} anchorOrigin={{ vertical: "top", horizontal: "center"}}>
         <Alert onClose={handleClose} severity="warning" sx={{ width: '100%' }}>
@@ -91,51 +84,48 @@ export const AppFooter = () => {
                     <UseAnimations 
                       animation={facebook} 
                       size={56} 
-                      strokeColor={theme.palette.text.primary} 
-                      fillColor='blue' 
+                      strokeColor={theme.palette.mode === "dark" ?  theme.palette.primary.light : theme.palette.background.default} 
                     />
                   </LinkRoute>
                   <LinkRoute to="https://twitter.com/elder_yahir" target='_BLANK'>
                     <UseAnimations 
                       animation={twitter} 
                       size={56} 
-                      strokeColor={theme.palette.text.primary} 
-                      fillColor='blue' 
+                      strokeColor={theme.palette.mode === "dark" ?  theme.palette.primary.light : theme.palette.background.default} 
                     />
                   </LinkRoute>
                   <LinkRoute to="https://github.com/Elder-Meyer" target='_BLANK'>
                     <UseAnimations 
                       animation={github} 
                       size={56} 
-                      strokeColor={theme.palette.text.primary} 
-                      fillColor='blue' 
+                      strokeColor={theme.palette.mode === "dark" ?  theme.palette.primary.light : theme.palette.background.default} 
                     />
                   </LinkRoute>
                 </Box>
               </Grid>
               <Grid item>
-                <Copyright />
+                <Copyright theme={theme} />
               </Grid>
             </Grid>
           </Grid>
           <Grid item xs={12} sm={4} md={2} order={{md: 2, sm:2, xs:1}}>
-            <Typography color="text.primary" variant="h6" marked="left" gutterBottom>
+            <Typography color={theme.palette.mode==='dark'?"primary.light":"background.default"} variant="h6" marked="left" gutterBottom>
               Legal
             </Typography>
-            <Box component="ul" sx={{ m: 0, listStyle: 'none', p: 0 }}>
+            <Box component="ul" sx={{ m: 0, listStyle: 'none', p: 0, color: theme.palette.mode==='dark'?"text.secondary":"background.paper" }}>
               <Box component="li" sx={{ py: 0.5 }}>
-                <Link color="text.secondary" variant='subtitle1' component={LinkRoute} to="/terms">Terms</Link>
+                <Link color="inherit" variant='subtitle1' component={LinkRoute} to="/terms">Terms</Link>
               </Box>
               <Box component="li" sx={{ py: 0.5 }}>
-                <Link color="text.secondary" variant='subtitle1' component={LinkRoute} onClick={()=> gaEventTracker('privacy')} to="/privacy">Privacy</Link>
+                <Link color="inherit" variant='subtitle1' component={LinkRoute} onClick={()=> gaEventTracker('privacy')} to="/privacy">Privacy</Link>
               </Box>
               <Box component="li" sx={{ py: 0.5 }}>
-                <Link color="text.secondary" variant='subtitle1' component={LinkRoute} onClick={()=> gaEventTracker('call')} to="/contact">About me</Link>
+                <Link color="inherit" variant='subtitle1' component={LinkRoute} onClick={()=> gaEventTracker('call')} to="/contact">About me</Link>
               </Box>
             </Box>
           </Grid>
           <Grid item xs={12} sm={8} md={4} order={{md: 3, sm:3, xs:2}}>
-            <Typography color="text.primary" variant="h6" marked="left" gutterBottom>
+            <Typography color={theme.palette.mode==='dark'?"primary.light":"background.default"} variant="h6" marked="left" gutterBottom>
               Language
             </Typography>
             <TextField
@@ -145,6 +135,17 @@ export const AppFooter = () => {
               variant="standard"
               SelectProps={{
                 native: true,
+              }}
+              sx={{ 
+                width: 150,
+                '& .MuiInputBase-root': {
+                  color: theme.palette.mode==='dark'?"text.secondary":"primary.dark", 
+                  bgcolor: theme.palette.mode==='dark'?"background.paper":"background.paper", 
+                  
+                },
+                '& .MuiSelect-root': {
+                  bgcolor: theme.palette.mode==='dark'?"text.secondary":"green", 
+                },
               }}
             >
               {LANGUAGES.map((language) => (
@@ -172,6 +173,6 @@ export const AppFooter = () => {
           </Grid>
         </Grid>
       </Container>
-    </Typography>
+    </Box>
   );
 }
