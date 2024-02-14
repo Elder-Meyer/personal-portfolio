@@ -1,6 +1,5 @@
 import React, { Suspense, lazy } from 'react'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
-import '../styles/ScrollbarStyle.css'
 import { Home } from '../views/home/Home'
 // const Home            = lazy(() => import('../views/home/Home').then((module) => ({ default: module.Home })))
 const Projects        = lazy(() => import('../views/projects/Projects').then((module) => ({ default: module.Projects })))
