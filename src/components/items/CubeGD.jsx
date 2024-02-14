@@ -8,7 +8,7 @@ export function CubeGD({animation}){
       sx={{
           // mt: {xs: 10, sm: 5, md: 10}, 
           transform: "rotate(180deg)",
-          width: {xs: 56, sm: 56, md: 56},
+          width: 42,
           bgcolor: "transparent",
           userSelect: "none"
       }}
