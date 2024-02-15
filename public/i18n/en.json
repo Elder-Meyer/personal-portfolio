@@ -1,10 +1,61 @@
 {
-    "title": "Multi-language app",
-    "label": "Select another language!",
-    "about": "About me",
-    "home": "Home",
-    "user": "My name is: {{name}}",
+    "home" : {
+        "presentation" : {
+            "title" : "Hi! I'm Elder.",
+            "caption" : "",
+            "description" : "I am a developer who is passionate about developing and designing web applications.",
+            "cvbtn" : "Download my cv"
+        },
+        "skills" : {
+            "titleskills" : "Skills",
+            "descriptionskills" : "I have skills and experience with the following technologies and programming languages.",
+            "web" : "Web Development",
+            "pro" : "Programming Language",
+            "frame" : "Frameworks and libraries",
+            "data" : "Database",
+            "titlelanguages" : "Languages",
+            "descriptionlanguages" : "I understand (and speak) three languages.",
+            "en" : "English",
+            "fr" : "French",
+            "es" : "Spanish"
+        }
+    },
+    "projects" : {
+        "title" : "Projects",
+        "subtitle" : "Here you can see some of my created work.",
+        "pbtn" : "Go",
+        "sbtn" : "View"
+    },
+    "projectsdetails" : {
+        "about" : "About",
+        "technologies" : "Technologies",
+        "website" : "Website",
+        "repo" : "GitHub"
+    },
+    "blog" : {
+        "title" : "Blog"
+    },
+    "contact" : {
+        "title" : "Contact"
+    },
+    "error" : {
+        "title" : "There is nothing here.",
+        "btn" : "Back to home"
+    },
+    "workon" : {
+        "title" : "I'm working on that"
+    },
     "footer" : {
-        "title" : "Language"
+        "legal" : {
+            "title" : "Legal",
+            "terms" : "Terms",
+            "privacy" : "Privacy",
+            "about" : "About me"
+        },
+        "language" : {
+            "title" : "Language",
+            "en" : "English",
+            "es" : "Spanish"
+        }
     }
 }
