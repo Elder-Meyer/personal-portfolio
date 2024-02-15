@@ -16,8 +16,10 @@ import { IconButton } from "../../components/material-ui/IconButton";
 import { Link } from "../../components/material-ui/Link";
 import { Paper } from "../../components/material-ui/Paper";
 import { Stack } from "../../components/material-ui/Stack";
+import { useTranslation } from "react-i18next";
 
 export const ProjectDetails = () => {
+  const { t } = useTranslation();
   const [project, setProject] = useState("");
 
   const params = useParams();
@@ -79,7 +81,7 @@ export const ProjectDetails = () => {
                     </Typography>
                     <Divider />
                     <Typography color="primary.light" variant="h5" fontWeight={400}>
-                      About
+                      {t('projectsdetails.about')}
                     </Typography>
                     <Typography color="text.primary" variant="body1" sx={{textWrap: "pretty"}}>
                       {project.largeDescription}
@@ -90,7 +92,7 @@ export const ProjectDetails = () => {
                 <Grid item xs={12} component={Stack}>
                   <Stack spacing={1} justifyContent={"flex-end"}>
                     <Typography color="primary.light" variant="h5">
-                      Technologies
+                      {t('projectsdetails.technologies')}
                     </Typography>
                     <Stack direction="row" flexWrap="wrap" gap={0.5}>
                       { project && project.techs 
@@ -113,7 +115,7 @@ export const ProjectDetails = () => {
               <Stack direction="row" spacing={1} alignItems="center">
                 <Language color="primary"/>
                 <Link color="primary" variant="h5" href={project.href} target="_BLANK" underline="always">
-                  Website
+                  {t('projectsdetails.website')}
                 </Link>
               </Stack>
             </Grid>
@@ -123,7 +125,7 @@ export const ProjectDetails = () => {
               <Stack direction="row" spacing={1} alignItems="center">
                 <GitHub color="primary"/>
                 <Link color="primary" variant="h5" href={project.repo} target="_BLANK" underline="always">
-                  GitHub
+                  {t('projectsdetails.repo')}
                 </Link>
               </Stack>
             </Grid>

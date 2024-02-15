@@ -5,8 +5,10 @@ import { Typography } from '../../components/material-ui/Typography';
 import { Box } from '../../components/material-ui/Box';
 import { Container } from '../../components/material-ui/Container';
 import { Paper } from '../../components/material-ui/Paper';
+import { useTranslation } from 'react-i18next';
 
 export const Projects = () => {
+  const { t } = useTranslation();
   return (
     <Paper
       elevation={0}
@@ -24,7 +26,7 @@ export const Projects = () => {
     >
       <Container maxWidth="xl">
           <Typography textAlign="center" color="primary.main" sx={{fontSize: 40, fontWeight: 500}} gutterBottom>
-            Projects
+            {t('projects.title')}
           </Typography>
           <Box 
             sx={{ 
@@ -32,11 +34,11 @@ export const Projects = () => {
             }}
           >
             <Typography color="text.secondary" textAlign="center" sx={{fontSize: 18, my:3}}>
-              Here you can see some of my created work.
+              {t('projects.subtitle')}
             </Typography>
           </Box>
           {/* <BasicTabs/> */}
-          <Web/>
+          <Web t={t}/>
       </Container>
       
     </Paper>

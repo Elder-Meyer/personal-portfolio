@@ -19,7 +19,7 @@ const Transition = forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-export const Web = () => {
+export const Web = ({t}) => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [open, setOpen] = useState(false);
 
@@ -111,7 +111,7 @@ export const Web = () => {
                       endIcon={<OpenInNewOutlined/>}
                       disableElevation
                     >
-                      Go
+                      {t('projects.pbtn')}
                     </Button>
 
                     <Button
@@ -132,7 +132,7 @@ export const Web = () => {
                       to={`/projects/${project.id}/`}
                       endIcon={<VisibilityOutlined/>}
                     >
-                      View
+                      {t('projects.sbtn')}
                     </Button>
                   </Stack>
                 </CardActions>
