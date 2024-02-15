@@ -5,7 +5,7 @@ import { initReactI18next } from "react-i18next";
 const getCurrentHost =
   import.meta.env.MODE === "development"
     ? "http://localhost:5173"
-    : "https://elder-meyer.web.app/";
+    : "https://elder-meyer.web.app";
 
 i18n
   .use(i18nBackend)
@@ -17,7 +17,7 @@ i18n
       escapeValue: false,
     },
     backend: {
-      loadPath: "http://localhost:5173/i18n/{{lng}}.json",
+      loadPath: `${getCurrentHost}/i18n/{{lng}}.json`,
     },
   });
 
