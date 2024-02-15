@@ -5,15 +5,17 @@ import { Typography } from '../../components/material-ui/Typography'
 import { Box } from '../../components/material-ui/Box'
 import { Container } from '../../components/material-ui/Container'
 import { Grid } from '../../components/material-ui/Grid'
+import { useTranslation } from 'react-i18next'
 
 export const Contact = () => {
+  const { t } = useTranslation();
   return (
     <Box sx={{backgroundColor: "background.default"}}>
       <Container maxWidth="lg">
         <Grid container columnSpacing={2} py={5}>
           <Grid item xs={12}>
             <Typography color="text.secondary" variant='subtitle1' textAlign="center" >
-                Contact
+              {t('contact.title')}
             </Typography>
           </Grid>
           <Grid item xs={12}>
