@@ -8,7 +8,7 @@ import UseAnimations from 'react-useanimations';
 import facebook from "react-useanimations/lib/facebook";
 import twitter from "react-useanimations/lib/twitter";
 import github from "react-useanimations/lib/github";
-import useAnalyticsEventTracker from '../../../config/useAnalyticsEventTracker';
+import useAnalyticsEventTracker from '../../../config/analytics/useAnalyticsEventTracker';
 // MATERIAL UI - LOCAL
 import { Typography } from '../../material-ui/Typography';
 import { Box } from '../../material-ui/Box';
@@ -16,6 +16,10 @@ import { CardMedia } from '../../material-ui/CardMedia';
 import { Container } from '../../material-ui/Container';
 import { Grid } from '../../material-ui/Grid';
 import { Link } from '../../material-ui/Link';
+import Backdrop         from '@mui/material/Backdrop';
+import CircularProgress from '@mui/material/CircularProgress';
+import { LANGUAGES } from '../../../config/lan';
+import { useTranslation } from 'react-i18next';
 
 function Copyright({theme}) {
   return (
@@ -30,31 +34,27 @@ function Copyright({theme}) {
   );
 }
 
-const LANGUAGES = [
-  {
-    code: 'en-US',
-    name: 'English',
-  },
-  {
-    code: 'es-ES',
-    name: 'Español',
-  },
-];
-
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
 
 export const AppFooter = () => {
   const theme = useTheme();
+  const { i18n, t } = useTranslation();
 
-  const [open, setOpen] = React.useState(false);
+  const [openAlert, setOpenAlert] = React.useState(false);
 
-  const handleClick = () => { setOpen(true); };
+  const handleClick = () => { setOpenAlert(true); };
 
-  const handleClose = (event, reason) => {
+  const handleCloseAlert = (event, reason) => {
     if (reason === 'clickaway') { return; }
-    setOpen(false);
+    setOpenAlert(false);
+  };
+
+  const onChangeLang = (e) => {
+    const lang_code = e.target.value;
+    i18n.changeLanguage(lang_code);
+    handleClick()
   };
 
   const gaEventTracker = useAnalyticsEventTracker("contact us")
@@ -63,9 +63,9 @@ export const AppFooter = () => {
       component="footer"
       sx={{ display: 'flex', backgroundColor: theme.palette.mode === 'dark' ? "background.paper" : "primary.main" }}
     >
-      <Snackbar open={open} autoHideDuration={5000} onClose={handleClose} anchorOrigin={{ vertical: "top", horizontal: "center"}}>
-        <Alert onClose={handleClose} severity="warning" sx={{ width: '100%' }}>
-          Oops, this feature is not available yet :p
+      <Snackbar open={openAlert} autoHideDuration={3000} onClose={handleCloseAlert} anchorOrigin={{ vertical: "top", horizontal: "center"}} >
+        <Alert onClose={handleCloseAlert} severity="info" sx={{ width: '100%', color: "white" }}>
+          Language changed
         </Alert>
       </Snackbar>
       <Container sx={{ my: 8, display: 'flex' }}>
@@ -126,13 +126,14 @@ export const AppFooter = () => {
           </Grid>
           <Grid item xs={12} sm={8} md={4} order={{md: 3, sm:3, xs:2}}>
             <Typography color={theme.palette.mode==='dark'?"primary.light":"background.default"} variant="h6" marked="left" gutterBottom>
-              Language
+              Language {t("footer.title")}
             </Typography>
             <TextField
-              onChange={handleClick}
+              onChange={onChangeLang}
               select
               size="medium"
               variant="standard"
+              defaultValue={i18n.language}
               SelectProps={{
                 native: true,
               }}
@@ -148,9 +149,9 @@ export const AppFooter = () => {
                 },
               }}
             >
-              {LANGUAGES.map((language) => (
-                <option value={language.code} key={language.code}>
-                  {language.name}
+              {LANGUAGES.map(({ code, label }) => (
+                <option key={code} value={code}>
+                  {label}
                 </option>
               ))}
             </TextField>
