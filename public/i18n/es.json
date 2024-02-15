@@ -1,0 +1,10 @@
+{
+    "title": "aplicacion multilenguaje",
+    "label": "selecciona otro lenguaje",
+    "about": "sobre mi",
+    "home": "inicio",
+    "user": "My name is: {{name}}",
+    "footer" : {
+        "title" : "Idioma"
+    }
+}
