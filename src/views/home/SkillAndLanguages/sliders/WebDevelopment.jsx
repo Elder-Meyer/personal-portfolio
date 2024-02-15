@@ -34,11 +34,11 @@ const responsive = {
   },
 };
 
-export const WebDevelopment = () => {
+export const WebDevelopment = ({t}) => {
   return (
     <>
       <Typography variant="h5" color="primary.light" gutterBottom>
-        Web Development
+        {t('home.skills.web')}
       </Typography>
       <Carousel
         responsive={responsive}

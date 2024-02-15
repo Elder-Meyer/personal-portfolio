@@ -12,8 +12,10 @@ import { Container } from '../../../components/material-ui/Container'
 import { Grid } from '../../../components/material-ui/Grid'
 import { Toolbar } from '../../../components/material-ui/Toolbar'
 import { Tooltip } from '../../../components/material-ui/Tooltip'
+import { useTranslation } from 'react-i18next'
 
 export const Presentation = () => {
+  const { t } = useTranslation();
   return (
     <Box component='section' 
       sx={{ 
@@ -30,7 +32,7 @@ export const Presentation = () => {
       >
         <Grid container spacing={2} px={2}>
           <Grid item xs={12} sm={12} md={9}>
-            <CaptionInfo/>
+            <CaptionInfo t={t} />
           </Grid>
           <Grid item xs={12} sm={12} md={3}>
             <ImageContent/>
@@ -41,11 +43,11 @@ export const Presentation = () => {
   )
 }
 
-const CaptionInfo = () => {
+const CaptionInfo = ({t}) => {
   return (
     <Box sx={{display: 'flex', flexFlow: 'column wrap', justifyContent: 'center',/* minHeight: '100vh', */ }}>
       <Typography variant='h1' color='text.primary' sx={{fontWeight: 500, fontSize: {xs: 76, sm: 86, md: 96}}}>
-        Hi! I'm Elder.
+      {t('home.presentation.title')}
       </Typography>
       <Typography variant='h2' color='primary.light' 
         sx={{
@@ -65,7 +67,7 @@ const CaptionInfo = () => {
         <Toolbar sx={{ my:2}} />
       </Typography>
       <Typography variant='body2' color="text.secondary" sx={{fontSize: "1.3rem"}}>
-        I am a developer who is passionate about developing and designing web applications.
+        {t('home.presentation.description')}
       </Typography>
       <Box my={3}>
         <Button 
@@ -76,7 +78,7 @@ const CaptionInfo = () => {
           sx={{borderRadius: 5}}
           disableElevation
         >
-          Download my CV
+          {t('home.presentation.cvbtn')}
         </Button>
       </Box>
       <Toolbar sx={{display: {xs: "none", sm: "none", md: "block"}}} />

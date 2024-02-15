@@ -33,7 +33,7 @@ const responsive = {
   },
 };
 
-export const SpeakLanguages = () => {
+export const SpeakLanguages = ({t}) => {
   return (
     <>
       <Carousel
@@ -63,7 +63,7 @@ export const SpeakLanguages = () => {
               textAlign="center"
               sx={{ userSelect: "none", pointerEvents: "none" }}
             >
-              English
+              {t('home.skills.en')}
             </Typography>
           </Box>
         </Box>
@@ -88,7 +88,7 @@ export const SpeakLanguages = () => {
               textAlign="center"
               sx={{ userSelect: "none", pointerEvents: "none" }}
             >
-              French
+              {t('home.skills.fr')}
             </Typography>
           </Box>
         </Box>
@@ -113,7 +113,7 @@ export const SpeakLanguages = () => {
               textAlign="center"
               sx={{ userSelect: "none", pointerEvents: "none" }}
             >
-              Spanish
+              {t('home.skills.es')}
             </Typography>
           </Box>
         </Box>

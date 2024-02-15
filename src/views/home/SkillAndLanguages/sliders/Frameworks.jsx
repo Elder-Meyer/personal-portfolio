@@ -36,11 +36,11 @@ const responsive = {
   },
 };
 
-export const Frameworks = () => {
+export const Frameworks = ({t}) => {
   return (
     <>
       <Typography variant="h5" color="primary.light" gutterBottom>
-        Frameworks and libraries
+        {t('home.skills.frame')}
       </Typography>
       <Carousel
         responsive={responsive}

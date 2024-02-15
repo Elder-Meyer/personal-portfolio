@@ -34,11 +34,11 @@ const responsive = {
   },
 };
 
-export const ProgrammingLanguages = () => {
+export const ProgrammingLanguages = ({t}) => {
   return (
     <>
       <Typography variant="h5" color="primary.light" gutterBottom>
-        Programming Language
+        {t('home.skills.pro')}
       </Typography>
       <Carousel
         responsive={responsive}
