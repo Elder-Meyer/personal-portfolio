@@ -70,7 +70,7 @@ export const AppFooter = () => {
     >
       <Snackbar open={openAlert} autoHideDuration={3000} onClose={handleCloseAlert} anchorOrigin={{ vertical: "top", horizontal: "center"}} >
         <Alert onClose={handleCloseAlert} severity="info" sx={{ width: '100%', color: "white" }}>
-          Language changed
+          {t("footer.alert")}
         </Alert>
       </Snackbar>
       <Container sx={{ my: 8, display: 'flex' }}>
