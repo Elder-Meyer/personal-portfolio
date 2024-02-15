@@ -18,7 +18,6 @@ import { Grid } from '../../material-ui/Grid';
 import { Link } from '../../material-ui/Link';
 import Backdrop         from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
-import { LANGUAGES } from '../../../config/lan';
 import { useTranslation } from 'react-i18next';
 
 function Copyright({theme}) {
@@ -56,6 +55,12 @@ export const AppFooter = () => {
     i18n.changeLanguage(lang_code);
     handleClick()
   };
+
+  const LANGUAGES = [
+    { label: t("footer.language.en"), code: "en" },
+    { label: t("footer.language.es"), code: "es" },
+  ];
+  
 
   const gaEventTracker = useAnalyticsEventTracker("contact us")
   return (
@@ -110,23 +115,23 @@ export const AppFooter = () => {
           </Grid>
           <Grid item xs={12} sm={4} md={2} order={{md: 2, sm:2, xs:1}}>
             <Typography color={theme.palette.mode==='dark'?"primary.light":"background.default"} variant="h6" marked="left" gutterBottom>
-              Legal
+              {t('footer.legal.title')}
             </Typography>
             <Box component="ul" sx={{ m: 0, listStyle: 'none', p: 0, color: theme.palette.mode==='dark'?"text.secondary":"background.paper" }}>
               <Box component="li" sx={{ py: 0.5 }}>
-                <Link color="inherit" variant='subtitle1' component={LinkRoute} to="/terms">Terms</Link>
+                <Link color="inherit" variant='subtitle1' component={LinkRoute} to="/terms">{t('footer.legal.terms')}</Link>
               </Box>
               <Box component="li" sx={{ py: 0.5 }}>
-                <Link color="inherit" variant='subtitle1' component={LinkRoute} onClick={()=> gaEventTracker('privacy')} to="/privacy">Privacy</Link>
+                <Link color="inherit" variant='subtitle1' component={LinkRoute} onClick={()=> gaEventTracker('privacy')} to="/privacy">{t('footer.legal.privacy')}</Link>
               </Box>
               <Box component="li" sx={{ py: 0.5 }}>
-                <Link color="inherit" variant='subtitle1' component={LinkRoute} onClick={()=> gaEventTracker('call')} to="/contact">About me</Link>
+                <Link color="inherit" variant='subtitle1' component={LinkRoute} onClick={()=> gaEventTracker('call')} to="/contact">{t('footer.legal.about')}</Link>
               </Box>
             </Box>
           </Grid>
           <Grid item xs={12} sm={8} md={4} order={{md: 3, sm:3, xs:2}}>
             <Typography color={theme.palette.mode==='dark'?"primary.light":"background.default"} variant="h6" marked="left" gutterBottom>
-              Language {t("footer.title")}
+              {t("footer.language.title")}
             </Typography>
             <TextField
               onChange={onChangeLang}
