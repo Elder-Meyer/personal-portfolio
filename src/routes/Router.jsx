@@ -20,11 +20,11 @@ import { Box } from '../components/material-ui/Box'
 
 export const Router = ({darkMode, handleChangeTheme}, props) => {
   return (
-    <BrowserRouter>
-      <Box id="back-to-top-anchor" />
-      <DrawerAppBar darkMode={darkMode} handleChangeTheme={handleChangeTheme}/>
-        <ScrollToTop>
-          <Suspense fallback={<Loader/>}>
+    <Suspense fallback={<Loader/>}>
+      <BrowserRouter>
+        <Box id="back-to-top-anchor" />
+        <DrawerAppBar darkMode={darkMode} handleChangeTheme={handleChangeTheme}/>
+          <ScrollToTop>
             <Routes>
               <Route path='/'             element={<Navigate to='/home'/>} />
               <Route path='/home/'        element={<Home/>} />
@@ -34,15 +34,15 @@ export const Router = ({darkMode, handleChangeTheme}, props) => {
               <Route path='/contact/'     element={<Contact/>} />
               <Route path='*'             element={<Error/>} />
             </Routes>
-          </Suspense>
-          <BtnScrollTop {...props}>
-            <Fab size="small" aria-label="scroll back to top" color='primary'>
-              <KeyboardArrowUp/>
-            </Fab>
-          </BtnScrollTop>
-        </ScrollToTop>
+            <BtnScrollTop {...props}>
+              <Fab size="small" aria-label="scroll back to top" color='primary'>
+                <KeyboardArrowUp/>
+              </Fab>
+            </BtnScrollTop>
+          </ScrollToTop>
         <WavyDivider/>
         <AppFooter/>
-    </BrowserRouter>
+      </BrowserRouter>
+    </Suspense>
   )
 }
