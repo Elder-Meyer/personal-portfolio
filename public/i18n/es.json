@@ -1,10 +1,61 @@
 {
-    "title": "aplicacion multilenguaje",
-    "label": "selecciona otro lenguaje",
-    "about": "sobre mi",
-    "home": "inicio",
-    "user": "My name is: {{name}}",
+    "home" : {
+        "presentation" : {
+            "title" : "Hola! Soy Elder.",
+            "caption" : "",
+            "description" : "Soy un desarrollador apasionado por desarrollar y diseñar aplicaciones webs.",
+            "cvbtn" : "Descarga mi cv"
+        },
+        "skills" : {
+            "titleskills" : "Habilidades",
+            "descriptionskills" : "Tengo las siguientes habilidades y experiencia con las siguientes tecnologias y lenguajes de programación.",
+            "web" : "Desarrollo web",
+            "pro" : "Lenguajes de Programación",
+            "frame" : "Frameworks y librerias",
+            "data" : "Bases de datos",
+            "titlelanguages" : "Idiomas",
+            "descriptionlanguages" : "Entiendo y los siguientes lenguajes.",
+            "en" : "Inglés",
+            "fr" : "Francés",
+            "es" : "Español"
+        }
+    },
+    "projects" : {
+        "title" : "Proyectos",
+        "subtitle" : "Aqui puedes ver algo de mi trabajo creado.",
+        "pbtn" : "Ir",
+        "sbtn" : "Ver"
+    },
+    "projectsdetails" : {
+        "about" : "Acerca de",
+        "technologies" : "Tecnologías",
+        "website" : "Sitio web",
+        "repo" : "Repositorio"
+    },
+    "blog" : {
+        "title" : "Blog"
+    },
+    "contact" : {
+        "title" : "Contacto"
+    },
+    "error" : {
+        "title" : "No hay nada aquí.",
+        "btn" : "Volver al inicio"
+    },
+    "workon" : {
+        "title" : "Estoy trabajando en eso"
+    },
     "footer" : {
-        "title" : "Idioma"
+        "legal" : {
+            "title" : "Legal",
+            "terms" : "Terminos",
+            "privacy" : "Privacidad",
+            "about" : "Sobre mi"
+        },
+        "language" : {
+            "title" : "Idioma",
+            "en" : "Inglés",
+            "es" : "Español"
+        }
     }
 }
