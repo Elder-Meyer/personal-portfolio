@@ -60,6 +60,29 @@
         "alert" : "Idioma cambiado correctamente"
     },
     "projectsdata":{
-        "title" : "Corazón Huasteco"
+        "project01" : {
+            "title" : "Corazón Huasteco",
+            "date" : "01 Diciembre 2023",
+            "shortdescription" : "Sitio web para la preservación de la cultura.",
+            "largedescription" : "Sitio web desarrollado con el objetivo de preservar la cultura de la ciudad de Huejutla de Reyes Hgo. a través de un sitio web, que aloje artículos interesantes y sea accesible para todos"
+        },
+        "project02" : {
+            "title" : "Aplicación CAIH",
+            "date" : "15 Agosto 2022",
+            "shortdescription" : "Sitio web para colegio de arquitectos.",
+            "largedescription" : "Plataforma web desarrollada como proyecto de estancia TSU (Técnico Superior Universitario), para el Colegio de Arquitectos e Ingenieros (CAIH)"
+        },
+        "project03" : {
+            "title" : "Dulce Delicia",
+            "date" : "28 Noviembre 2023",
+            "shortdescription" : "Sitio web temático de tienda de dulces.",
+            "largedescription" : "Sitio web desarrollado como práctica individual para la creación de una PWA (aplicación web progresiva), tomando como referencia un sitio existente llamado 'azucar dulcerias'"
+        },
+        "project04" : {
+            "title" : "Fashion Fusion",
+            "date" : "15 Agosto 2023",
+            "shortdescription" : "Sitio web temático de tienda de ropa.",
+            "largedescription" : "Sitio web desarrollado con el propósito de poner en práctica la mejora continua de los devops y el sistema de gestión de versiones git y github."
+        }
     }
 }
