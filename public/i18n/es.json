@@ -58,5 +58,8 @@
             "es" : "Español"
         },
         "alert" : "Idioma cambiado correctamente"
+    },
+    "projectsdata":{
+        "title" : "Corazón Huasteco"
     }
 }

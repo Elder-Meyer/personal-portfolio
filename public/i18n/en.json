@@ -58,5 +58,8 @@
             "es" : "Spanish"
         },
         "alert" : "Language changed succesfully"
+    },
+    "projectsdata":{
+        "title" : "Huastec Heart"
     }
 }
