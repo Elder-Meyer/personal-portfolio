@@ -20,14 +20,38 @@ import { useTranslation } from "react-i18next";
 
 export const ProjectDetails = () => {
   const { t } = useTranslation();
-  const [project, setProject] = useState("");
-
+  const [translatedProject, setTranslatedProject] = useState(null);
   const params = useParams();
 
   useEffect(() => {
-    let project = projects.filter((project) => project.id === params.id);
-    setProject(project[0]);
-  }, []);
+    
+    // Find the project based on the id from the params
+    const foundProject = projects.find((project) => project.id === params.id);
+    
+    // Translate the project properties
+    const translatedProject = translateProject(foundProject);
+    
+    // Set the translated project
+    setTranslatedProject(translatedProject);
+    
+  }, [params.id, t]); // Update when id or language changes
+
+  // Function to translate the project properties
+  const translateProject = (project) => {
+    const projectIdNumber = project.id.match(/\d+/)[0]; // Extrae el primer número encontrado en el id
+    return {
+      ...project,
+      title:            t(`projectsdata.project${projectIdNumber}.title`),
+      date:             t(`projectsdata.project${projectIdNumber}.date`),
+      shortDescription: t(`projectsdata.project${projectIdNumber}.shortdescription`),
+      largeDescription: t(`projectsdata.project${projectIdNumber}.largedescription`),
+      // Add more properties to translate if needed
+    };
+  };
+
+  if (!translatedProject){
+    return <div>loading...</div>
+  }
 
   return (
     <Box sx={{ backgroundColor: "background.default" }}>
@@ -41,7 +65,7 @@ export const ProjectDetails = () => {
                   <ArrowBackSharp />
                 </IconButton>
                 <Typography color="primary.light" variant="h4" fontWeight={800}>
-                  {project.title}
+                  {translatedProject.title}
                 </Typography>
               </Stack>
               <Divider />
@@ -50,7 +74,7 @@ export const ProjectDetails = () => {
             {/* SUBTITULO */}
             <Grid item xs={12}>
               <Typography color="text.primary" variant="body1">
-                {project.shortDescription}
+                {translatedProject.shortDescription}
               </Typography>
             </Grid>
 
@@ -66,8 +90,8 @@ export const ProjectDetails = () => {
                 <Card elevation={3}>
                   <CardMedia component="img"
                     height="180"
-                    image={project.imgPrincipal}
-                    alt={project.id}
+                    image={translatedProject.imgPrincipal}
+                    alt={translatedProject.id}
                   />
                 </Card>
               </Grid>
@@ -77,14 +101,14 @@ export const ProjectDetails = () => {
                 <Grid item xs={12}>
                   <Stack spacing={1}>
                     <Typography color="text.secondary" variant="caption" display="flex" justifyContent="flex-end">
-                      {project.date}
+                      {translatedProject.date}
                     </Typography>
                     <Divider />
                     <Typography color="primary.light" variant="h5" fontWeight={400}>
                       {t('projectsdetails.about')}
                     </Typography>
                     <Typography color="text.primary" variant="body1" sx={{textWrap: "pretty"}}>
-                      {project.largeDescription}
+                      {translatedProject.largeDescription}
                     </Typography>
                   </Stack>
                 </Grid>
@@ -95,8 +119,8 @@ export const ProjectDetails = () => {
                       {t('projectsdetails.technologies')}
                     </Typography>
                     <Stack direction="row" flexWrap="wrap" gap={0.5}>
-                      { project && project.techs 
-                        ? project.techs.map((tech, index) => (
+                      { translatedProject && translatedProject.techs 
+                        ? translatedProject.techs.map((tech, index) => (
                           <Chip key={index}
                             label={tech}
                             variant="filled" 
@@ -114,7 +138,7 @@ export const ProjectDetails = () => {
             <Grid item xs={12} sm={6}>
               <Stack direction="row" spacing={1} alignItems="center">
                 <Language color="primary"/>
-                <Link color="primary" variant="h5" href={project.href} target="_BLANK" underline="always">
+                <Link color="primary" variant="h5" href={translatedProject.href} target="_BLANK" underline="always">
                   {t('projectsdetails.website')}
                 </Link>
               </Stack>
@@ -124,7 +148,7 @@ export const ProjectDetails = () => {
             <Grid item xs={12} sm={6}>
               <Stack direction="row" spacing={1} alignItems="center">
                 <GitHub color="primary"/>
-                <Link color="primary" variant="h5" href={project.repo} target="_BLANK" underline="always">
+                <Link color="primary" variant="h5" href={translatedProject.repo} target="_BLANK" underline="always">
                   {t('projectsdetails.repo')}
                 </Link>
               </Stack>
