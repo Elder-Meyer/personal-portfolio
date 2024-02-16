@@ -27,19 +27,18 @@ import proj_04_lg from "../../assets/img/img-projects/proj_04_lg.webp";
 import proj_04_md from "../../assets/img/img-projects/proj_04_md.webp";
 import proj_04_sm from "../../assets/img/img-projects/proj_04_sm.webp";
 import proj_04_xs from "../../assets/img/img-projects/proj_04_xs.webp";
-
+import i18n from "../../config/lan/i18n";
 
 const projects = [
   {
     id: "project-01-corazon-huasteco",
-    title: "Corazón Huasteco",
-    date: "Dec 1, 2023",
+    title: i18n.t("projectsdata.project01.title"),
+    date: i18n.t("projectsdata.project01.date"),
     dateTime: "01-12-2023",
     category: { title: "Cultura", href: "#" },
     techs: ["React Js", "Firebase", "Material UI", "Google Analytics", "PWA"],
-    shortDescription: "Sitio web para la preservación de la cultura.",
-    largeDescription:
-      "Sitio web desarrollado con el objetivo de preservar la cultura de la ciudad de Huejutla de Reyes Hgo. por medio de un sitio web, alojando articulos interesantes y siendo accesible para todos",
+    shortDescription: i18n.t("projectsdata.project01.shortdescription"),
+    largeDescription: i18n.t("projectsdata.project01.largedescription"),
     imgPrincipal: pri_proj_view_01,
     imgXl: proj_01_xl,
     imgLg: proj_01_lg,
@@ -51,14 +50,13 @@ const projects = [
   },
   {
     id: "project-02-app-caih",
-    title: "App CAIH",
-    date: "Aug 15, 2022",
+    title: i18n.t("projectsdata.project02.title"),
+    date: i18n.t("projectsdata.project02.date"),
     dateTime: "15-08-2022",
     category: { title: "Arquitectura", href: "#" },
     techs: ["React Js", "Material UI", "Leaflet", "CSS", "HTML", "JavaScript"],
-    shortDescription: "Sitio web para colegio de arquitectos",
-    largeDescription:
-      "Plataforma web desarrollada como proyecto de estadía de TSU (Tecnico Superior Universitario), para el colegio de arquitectos e ingenieros (CAIH)",
+    shortDescription: i18n.t("projectsdata.project02.shortdescription"),
+    largeDescription: i18n.t("projectsdata.project02.largedescription"),
     imgPrincipal: pri_proj_view_02,
     imgXl: proj_02_xl,
     imgLg: proj_02_lg,
@@ -70,14 +68,13 @@ const projects = [
   },
   {
     id: "project-03-dulce-delicia",
-    title: "Dulce Delicia",
-    date: "Nov 28, 2023",
+    title: i18n.t("projectsdata.project03.title"),
+    date: i18n.t("projectsdata.project03.date"),
     dateTime: "28-11-2023",
     category: { title: "Dulceria", href: "#" },
     techs: ["React Js", "JavaScript", "HTML", "CSS", "PWA", "Firebase"],
-    shortDescription: "Sitio web con tematica de dulceria",
-    largeDescription:
-      "Sitio web desarrollado como practica individual para la creación de una PWA (progressive web app), tomando coo referencia un  sitio existente llamado 'azucar dulcerias'",
+    shortDescription: i18n.t("projectsdata.project03.shortdescription"),
+    largeDescription: i18n.t("projectsdata.project03.largedescription"),
     imgPrincipal: pri_proj_view_03,
     imgXl: proj_03_xl,
     imgLg: proj_03_lg,
@@ -89,14 +86,13 @@ const projects = [
   },
   {
     id: "project-04-fashion-fusion",
-    title: "Fashion Fusion",
-    date: "Aug 15, 2023",
+    title: i18n.t("projectsdata.project04.title"),
+    date: i18n.t("projectsdata.project04.date"),
     dateTime: "15-08-2023",
     category: { title: "DevOps", href: "#" },
     techs: ["React Js", "Materail UI", "Firebase", "Markdown", "Git"],
-    shortDescription: "Sitio web con tematica de tienda de ropa",
-    largeDescription:
-      "Sitio web desarrollado con el proposito de poner en practica la mejora continua devops y el sitema de gestión de versiones git y github",
+    shortDescription: i18n.t("projectsdata.project04.shortdescription"),
+    largeDescription: i18n.t("projectsdata.project04.largedescription"),
     imgPrincipal: pri_proj_view_04,
     imgXl: proj_04_xl,
     imgLg: proj_04_lg,
