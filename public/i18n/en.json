@@ -60,6 +60,29 @@
         "alert" : "Language changed succesfully"
     },
     "projectsdata":{
-        "title" : "Huastec Heart"
+        "project01" : {
+            "title" : "Corazon Huasteco",
+            "date" : "Dec 01, 2023",
+            "shortdescription" : "Website for the preservation of culture.",
+            "largedescription" : "Website developed with the objective of preserving the culture of the city of Huejutla de Reyes Hgo. through a website, hosting interesting articles and being accessible to everyone"
+        },
+        "project02" : {
+            "title" : "App CAIH",
+            "date" : "Aug 15, 2022",
+            "shortdescription" : "Website for college of architects",
+            "largedescription" : "Web platform developed as a TSU (Higher University Technician) stay project, for the College of Architects and Engineers (CAIH)"
+        },
+        "project03" : {
+            "title" : "Dulce Delicia",
+            "date" : "Nov 28, 2023",
+            "shortdescription" : "Sweet shop themed website",
+            "largedescription" : "Website developed as an individual practice for the creation of a PWA (progressive web app), taking as reference an existing site called 'azucar dulcerias'"
+        },
+        "project04" : {
+            "title" : "Fashion Fusion",
+            "date" : "Aug 15, 2023",
+            "shortdescription" : "Clothing store themed website",
+            "largedescription" : "Website developed with the purpose of putting into practice continuous improvement devops and the git and github version management system"
+        }
     }
 }
