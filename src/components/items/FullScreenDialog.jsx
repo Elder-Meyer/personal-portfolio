@@ -18,7 +18,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-export default function FullScreenDialog({ open, handleClose, Transition, project }) {
+export default function FullScreenDialog({ t, open, handleClose, Transition, project }) {
   console.log(project.id);
   
   const theme = useTheme();
@@ -65,7 +65,7 @@ export default function FullScreenDialog({ open, handleClose, Transition, projec
           to={project.href} endIcon={<OpenInNewOutlined/>}
           disableElevation
         >
-          Go
+          {t('projects.pbtn')}
         </Button>
         <Button variant="outlined" 
           sx={{
@@ -81,7 +81,7 @@ export default function FullScreenDialog({ open, handleClose, Transition, projec
           component={Link} to={`/projects/${project.id}/`}
           endIcon={<VisibilityOutlined/>}
         >
-          View 
+          {t('projects.sbtn')}
         </Button>
       </DialogActions>
     </Dialog>
