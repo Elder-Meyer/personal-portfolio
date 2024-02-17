@@ -63,6 +63,7 @@ export const Frameworks = ({t}) => {
               height={"100%"}
               image={react}
               alt="react"
+              loading="lazy"
             />
             <Typography
               color="text.secondary"
@@ -88,6 +89,7 @@ export const Frameworks = ({t}) => {
               height={"100%"}
               image={vite}
               alt="vite"
+              loading="lazy"
             />
             <Typography
               color="text.secondary"
@@ -113,6 +115,7 @@ export const Frameworks = ({t}) => {
               height={"100%"}
               image={node}
               alt="node"
+              loading="lazy"
             />
             <Typography
               color="text.secondary"
@@ -138,6 +141,7 @@ export const Frameworks = ({t}) => {
               height={"100%"}
               image={bootstrap}
               alt="bootstrap"
+              loading="lazy"
             />
             <Typography
               color="text.secondary"
@@ -163,6 +167,7 @@ export const Frameworks = ({t}) => {
               height={"100%"}
               image={materialui}
               alt="materialui"
+              loading="lazy"
             />
             <Typography
               color="text.secondary"
@@ -188,6 +193,7 @@ export const Frameworks = ({t}) => {
               height={"100%"}
               image={sass}
               alt="sass"
+              loading="lazy"
             />
             <Typography
               color="text.secondary"

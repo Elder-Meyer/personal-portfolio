@@ -61,6 +61,7 @@ export const Database = ({t}) => {
               height={"100%"}
               image={firebase}
               alt="firebase"
+              loading="lazy"
             />
             <Typography
               color="text.secondary"
@@ -86,6 +87,7 @@ export const Database = ({t}) => {
               height={"100%"}
               image={mongo}
               alt="mongo"
+              loading="lazy"
             />
             <Typography
               color="text.secondary"
@@ -111,6 +113,7 @@ export const Database = ({t}) => {
               height={"100%"}
               image={mysql}
               alt="mysql"
+              loading="lazy"
             />
             <Typography
               color="text.secondary"
@@ -136,6 +139,7 @@ export const Database = ({t}) => {
               height={"100%"}
               image={cloud}
               alt="cloud"
+              loading="lazy"
             />
             <Typography
               color="text.secondary"

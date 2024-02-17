@@ -61,6 +61,7 @@ export const WebDevelopment = ({t}) => {
               height={"100%"}
               image={html}
               alt="html"
+              loading="lazy"
             />
             <Typography
               color="text.secondary"
@@ -86,6 +87,7 @@ export const WebDevelopment = ({t}) => {
               height={"100%"}
               image={css}
               alt="css"
+              loading="lazy"
             />
             <Typography
               color="text.secondary"
@@ -111,6 +113,7 @@ export const WebDevelopment = ({t}) => {
               height={"100%"}
               image={javascript}
               alt="javascript"
+              loading="lazy"
             />
             <Typography
               color="text.secondary"
@@ -136,6 +139,7 @@ export const WebDevelopment = ({t}) => {
               height={"100%"}
               image={php}
               alt="php"
+              loading="lazy"
             />
             <Typography
               color="text.secondary"

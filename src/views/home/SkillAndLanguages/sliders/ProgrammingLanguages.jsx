@@ -61,6 +61,7 @@ export const ProgrammingLanguages = ({t}) => {
               height={"100%"}
               image={python}
               alt="python"
+              loading="lazy"
             />
             <Typography
               color="text.secondary"
@@ -86,6 +87,7 @@ export const ProgrammingLanguages = ({t}) => {
               height={"100%"}
               image={cpp}
               alt="cpp"
+              loading="lazy"
             />
             <Typography
               color="text.secondary"
@@ -111,6 +113,7 @@ export const ProgrammingLanguages = ({t}) => {
               height={"100%"}
               image={csharp}
               alt="csharp"
+              loading="lazy"
             />
             <Typography
               color="text.secondary"
@@ -135,7 +138,8 @@ export const ProgrammingLanguages = ({t}) => {
               component="img"
               height={"100%"}
               image={javascript}
-              alt="java"
+              alt="javascript"
+              loading="lazy"
             />
             <Typography
               color="text.secondary"

@@ -57,6 +57,7 @@ export const SpeakLanguages = ({t}) => {
               height={"100%"}
               image={eeuu}
               alt="eeuu"
+              loading="lazy"
             />
             <Typography
               color="text.secondary"
@@ -82,6 +83,7 @@ export const SpeakLanguages = ({t}) => {
               height={"100%"}
               image={french}
               alt="french"
+              loading="lazy"
             />
             <Typography
               color="text.secondary"
@@ -107,6 +109,7 @@ export const SpeakLanguages = ({t}) => {
               height={"100%"}
               image={spain}
               alt="spain"
+              loading="lazy"
             />
             <Typography
               color="text.secondary"
