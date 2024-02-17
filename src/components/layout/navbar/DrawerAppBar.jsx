@@ -87,7 +87,7 @@ export const DrawerAppBar = (props) => {
                 </Tooltip>
               </Box>
               <IconButton aria-label="open drawer" edge="start"
-                onClick={handleDrawerToggle} sx={{ display: { xs: "flex", sm: "flex", md: 'none' }  }}
+                onClick={handleDrawerToggle} sx={{ display: { xs: "flex", sm: "flex", md: 'none' }, color: "inherit"  }}
               >
                 <MenuIcon />
               </IconButton>
