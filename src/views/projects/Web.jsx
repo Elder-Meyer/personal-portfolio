@@ -103,6 +103,7 @@ export const Web = ({t}) => {
                 >
                   <CardMedia
                     component="img"
+                    loading='lazy'
                     height="180"
                     image={project.imgPrincipal}
                     alt={project.title}
