@@ -13,7 +13,7 @@ function App() {
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <CssBaseline enableColorScheme/>
-      <meta name="theme-color" content={darkMode ? darkTheme.palette.background.default : lightTheme.palette.background.default } />
+      <meta name="theme-color" content={darkMode ? darkTheme.palette.background.default : lightTheme.palette.primary.main } />
       <Router darkMode={darkMode} handleChangeTheme={handleChangeTheme}/>
     </ThemeProvider>
   )
