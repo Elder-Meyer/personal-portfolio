@@ -40,13 +40,13 @@ export default function FullScreenDialog({ t, open, handleClose, Transition, pro
 
       <DialogContent sx={{bgcolor: "background.paper"}}>
         <Box sx={{display: {xs: "none", sm: "none", md: "flex"}}}>
-          <img src={project.imgMd} alt={project.title} width={"100%"} />
+          <img src={project.imgMd} alt={project.title} width={"100%"} loading="lazy"/>
         </Box>
         <Box sx={{display: {xs: "none", sm: "flex", md: "none"}}}>
-          <img src={project.imgSm} alt={project.title} width={"100%"} />
+          <img src={project.imgSm} alt={project.title} width={"100%"} loading="lazy"/>
         </Box>
         <Box sx={{display: {xs: "flex", sm: "none", md: "none"}}}>
-          <img src={project.imgXs} alt={project.title} width={"100%"} />
+          <img src={project.imgXs} alt={project.title} width={"100%"} loading="lazy"/>
         </Box>
       </DialogContent>
       <DialogActions sx={{bgcolor: "background.paper"}} >
