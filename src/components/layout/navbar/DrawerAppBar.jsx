@@ -23,11 +23,14 @@ import { SwipeableDrawer } from '../../material-ui/SwipeableDrawer';
 import { Toolbar } from '../../material-ui/Toolbar';
 import { Tooltip } from '../../material-ui/Tooltip';
 import ThemeSwitcher from '../../items/ThemeSwitcher';
+import { useTranslation } from 'react-i18next';
 
 const drawerWidth = 240;
-const navItems = [{title: 'Home', path: '/home', icon: <HomeOutlined/>, iconSelected: <Home/>}, {title: 'Blog', path: '/blog', icon: <BookOutlined/>, iconSelected: <Book/>}, {title: 'Contact', path: '/contact', icon: <ContactPageOutlined/>, iconSelected: <ContactPage/>}];
 
 export const DrawerAppBar = (props) => {
+  const { t } = useTranslation()
+  const navItems = [{title: t("navbar.items.home"), path: '/home', icon: <HomeOutlined/>, iconSelected: <Home/>}, {title: t("navbar.items.blog"), path: '/blog', icon: <BookOutlined/>, iconSelected: <Book/>}, {title: t("navbar.items.contact"), path: '/contact', icon: <ContactPageOutlined/>, iconSelected: <ContactPage/>}];
+
   const { darkMode, handleChangeTheme } = props
   const theme = useTheme();
   const location = useLocation();
@@ -71,7 +74,7 @@ export const DrawerAppBar = (props) => {
           <Container maxWidth="xl">
             <Toolbar sx={{justifyContent: "space-between", mx:-2 }}>
               <Box>
-                <Tooltip title="Go home" placement="right">
+                <Tooltip title={t("navbar.bbtn")} placement="right" arrow>
                   <Link
                     to="/home"
                     style={{
