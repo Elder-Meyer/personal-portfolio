@@ -36,7 +36,22 @@
         "title" : "Blog"
     },
     "contact" : {
-        "title" : "Contact"
+        "title" : "Contact",
+        "subtitle": "Lets get in touch, send me an email",
+        "form":{
+            "name" : "Name",
+            "helpname" : "Name is required",
+            "email" : "Email",
+            "helpemail" : "Email is required",
+            "helpemailtype" : "Email must be a valid email",
+            "message" : "Message",
+            "pbtn" : "Submit",
+            "sbtn" : "Reset"
+        },
+        "alert" : {
+            "success" : "Message sent successfully",
+            "error" : "Oops, there was an error sending the message"
+        }
     },
     "error" : {
         "title" : "There is nothing here.",

@@ -36,7 +36,22 @@
         "title" : "Blog"
     },
     "contact" : {
-        "title" : "Contacto"
+        "title" : "Contacto",
+        "subtitle": "Pongamonos en contacto, enviame un correo",
+        "form" : {
+            "name" : "Nombre",
+            "helpname" : "El nombre es obligatorio",
+            "email" : "Correo electronico",
+            "helpemail" : "El correo es obligatorio",
+            "helpemailtype" : "El correo debe ser un correo electronico valido",
+            "message" : "Mensaje",
+            "pbtn" : "Enviar",
+            "sbtn" : "Limpiar"
+        },
+        "alert" : {
+            "success" : "Mensaje enviado correctamente",
+            "error" : "Oops, hubo un problema enviando el mensaje"
+        }
     },
     "error" : {
         "title" : "No hay nada aquí.",
