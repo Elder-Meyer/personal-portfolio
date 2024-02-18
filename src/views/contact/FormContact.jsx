@@ -11,12 +11,14 @@ import { Box } from "../../components/material-ui/Box";
 import TextField from '@mui/material/TextField'
 import DeleteIcon                    from '@mui/icons-material/Delete';
 import { Send } from "@mui/icons-material";
+import { useTranslation } from "react-i18next";
 
 const Alert = React.forwardRef(function Alert(props, ref) {
     return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
 
 export const FormContact = () => {
+    const { t } = useTranslation()
     // captura de errores
     const [textAlert, setTextAlert] = useState("");
     // alerta y variante de la alerta
@@ -26,17 +28,17 @@ export const FormContact = () => {
     const form = useRef()
     
     // validaciones y funcionamiento del formulario
-    const formik = useContactForm({ setTextAlert, setSnackbarOpen, setVariantAlert, form })
+    const formik = useContactForm({ setTextAlert, setSnackbarOpen, setVariantAlert, form, t })
     
 
   return (
     <Container maxWidth="md">
       <Paper sx={{ p: 2 }} elevation={0}>
         <Typography variant="h4" color="primary" textAlign="center">
-          Contact
+          {t("contact.title")}
         </Typography>
         <Typography variant="body1" color="primary.light" textAlign="center" mb={3}>
-          Lets get in touch, send me an email
+          {t("contact.subtitle")}
         </Typography>
         {/* mensajes */}
         {/*alerta y loading*/}
@@ -69,7 +71,7 @@ export const FormContact = () => {
                     {/* name */}
                     <TextField
                         fullWidth
-                        label="Name"
+                        label={t("contact.form.name")}
                         type="text"
                         name="name"
                         onChange={formik.handleChange}
@@ -84,7 +86,7 @@ export const FormContact = () => {
                     {/* email */}
                     <TextField
                         fullWidth
-                        label="Email"
+                        label={t("contact.form.email")}
                         type="email"
                         name="email"
                         onChange={formik.handleChange}
@@ -99,7 +101,7 @@ export const FormContact = () => {
                     {/* mensaje */}
                     <TextField
                         fullWidth
-                        label="Message"
+                        label={t("contact.form.message")}
                         type="text"
                         name="message"
                         onChange={formik.handleChange}
@@ -122,7 +124,7 @@ export const FormContact = () => {
                         aria-label="enviar formulario de acceso"
                         endIcon={<Send />}
                     >
-                        Enviar
+                      {t("contact.form.pbtn")}
                     </Button>
                 </Grid>
                 <Grid item xs={12} md={6}>
@@ -134,7 +136,7 @@ export const FormContact = () => {
                         onClick={formik.handleReset}
                         endIcon={<DeleteIcon />}
                     >
-                        Limpiar
+                      {t("contact.form.sbtn")}
                     </Button>
                 </Grid>
 
