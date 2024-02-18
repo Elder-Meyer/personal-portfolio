@@ -1,12 +1,11 @@
-import { useState }               from "react";
 import * as Yup                   from "yup";
 import { useFormik }              from "formik";
 import emailjs                    from '@emailjs/browser'
 
-export const useContactForm = ({ setTextAlert, setSnackbarOpen, setVariantAlert, form }) => {
+export const useContactForm = ({ setTextAlert, setSnackbarOpen, setVariantAlert, form, t }) => {
   const handleSubmit = async (data) => {
     console.log(data)
-    sendEmail(form, setVariantAlert, setTextAlert, setSnackbarOpen)
+    sendEmail(form, setVariantAlert, setTextAlert, setSnackbarOpen, t)
   };
 
   const formikBag = useFormik({
@@ -16,8 +15,8 @@ export const useContactForm = ({ setTextAlert, setSnackbarOpen, setVariantAlert,
       message: ""
     },
     validationSchema: Yup.object({
-      name: Yup.string().required("El nombre es obligatorio"),
-      email: Yup.string().email().required("Esl correo es obligatorio"),
+      name: Yup.string().required(t("contact.form.helpname")),
+      email: Yup.string().email(t("contact.form.helpemailtype")).required(t("contact.form.helpemail")),
     //   message: Yup.string().required("El mensaje es obligatorio"),
     }),
     onSubmit: (formData) => {
@@ -30,7 +29,7 @@ export const useContactForm = ({ setTextAlert, setSnackbarOpen, setVariantAlert,
 };
 
 
-const sendEmail = (form, setVariantAlert, setTextAlert, setSnackbarOpen) => {
+const sendEmail = (form, setVariantAlert, setTextAlert, setSnackbarOpen, t) => {
   emailjs
     .sendForm('service_sbks8j7', 'template_poglmy6', form.current, {
       publicKey: 'Dp0PXdHBw9twu_g_e',
@@ -40,14 +39,14 @@ const sendEmail = (form, setVariantAlert, setTextAlert, setSnackbarOpen) => {
         console.log(result.text);
         console.log("message sent");
         setVariantAlert("success")
-        setTextAlert("El mensaje se ha enviado correctamente");
+        setTextAlert(t("contact.alert.success"));
         setSnackbarOpen(true)
       },
       (error) => {
         console.log(error.text);
         console.error("error");
         setVariantAlert("error")
-        setTextAlert("Hubo un problema al enviar el correo");
+        setTextAlert(t("contact.alert.error"));
         setSnackbarOpen(true)
       }
     );
