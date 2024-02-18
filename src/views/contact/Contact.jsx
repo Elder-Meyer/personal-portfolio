@@ -1,28 +1,25 @@
 import React from 'react'
-import { WorkingOnThat } from '../../components/items/WorkingOnThat'
 // MATERIAL UI - LOCAL
-import { Typography } from '../../components/material-ui/Typography'
 import { Box } from '../../components/material-ui/Box'
 import { Container } from '../../components/material-ui/Container'
 import { Grid } from '../../components/material-ui/Grid'
-import { useTranslation } from 'react-i18next'
+import { FormContact } from './FormContact'
+import { Stack } from '../../components/material-ui/Stack'
 
 export const Contact = () => {
-  const { t } = useTranslation();
   return (
-    <Box sx={{backgroundColor: "background.default"}}>
-      <Container maxWidth="lg">
-        <Grid container columnSpacing={2} py={5}>
-          <Grid item xs={12}>
-            <Typography color="text.secondary" variant='subtitle1' textAlign="center" >
-              {t('contact.title')}
-            </Typography>
+    <Box sx={{ backgroundColor: "background.default"}}>
+      <Stack direction="row" useFlexGap  minHeight="60vh" justifyContent="center" alignItems="center">
+        <Container maxWidth="lg">
+          <Grid container columnSpacing={2} pt={5}>
+            <Grid item xs={12}></Grid>
+            <Grid item xs={12}>
+              <FormContact/>
+            </Grid>
+            <Grid item xs={12}></Grid>
           </Grid>
-          <Grid item xs={12}>
-            <WorkingOnThat />
-          </Grid>
-        </Grid>
-      </Container>
+        </Container>
+      </Stack>
     </Box>
-  )
+  );
 }
