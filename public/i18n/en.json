@@ -18,7 +18,8 @@
             "en" : "English",
             "fr" : "French",
             "es" : "Spanish"
-        }
+        },
+        "backtopbtn" : "Back to the top"
     },
     "projects" : {
         "title" : "Projects",
@@ -59,6 +60,15 @@
     },
     "workon" : {
         "title" : "I'm working on that"
+    },
+    "navbar" : {
+        "items" : {
+            "home" : "Home",
+            "blog" : "Blog",
+            "contact" : "Contact"
+        },
+        "bbtn" : "Go home",
+        "themebtn" : "Change light/dark theme"
     },
     "footer" : {
         "legal" : {
