@@ -12,25 +12,18 @@ import { Container } from '../../../components/material-ui/Container'
 import { Grid } from '../../../components/material-ui/Grid'
 import { Toolbar } from '../../../components/material-ui/Toolbar'
 import { Tooltip } from '../../../components/material-ui/Tooltip'
+import { useMediaQuery } from '@mui/material'
 import { useTranslation } from 'react-i18next'
+import { Stack } from '../../../components/material-ui/Stack'
 
 export const Presentation = () => {
   const { t } = useTranslation();
   return (
-    <Box component='section' 
-      sx={{ 
-        backgroundColor: "background.default", minHeight: "100vh",
-        // border: "3px solid blue"
-      }} display='flex' alignItems='center'
+    <Box component='section' display='flex' alignItems='center'
+      sx={{ backgroundColor: "background.default", minHeight: "100vh" }}
     >
-      <Container maxWidth="lg" 
-        sx={{ 
-          py: {xs: 15, sm: 10, md: 10, lg: 10, xl:20} ,
-          borderBottom: 1, borderColor: 'divider',
-          // border: "3px solid green"
-        }}
-      >
-        <Grid container spacing={2} px={2}>
+      <Container maxWidth="lg" sx={{pt:{xs:15, sm:0}}}>
+        <Grid container spacing={1} px={{xs:1, sm:3, md:5}}>
           <Grid item xs={12} sm={12} md={9}>
             <CaptionInfo t={t} />
           </Grid>
@@ -44,27 +37,26 @@ export const Presentation = () => {
 }
 
 const CaptionInfo = ({t}) => {
+  const isSmallScreen = useMediaQuery('(max-width:364px)');
   return (
-    <Box sx={{display: 'flex', flexFlow: 'column wrap', justifyContent: 'center',/* minHeight: '100vh', */ }}>
+    <Stack direction="column" spacing={3}>
       <Typography variant='h1' color='text.primary' sx={{fontWeight: 500, fontSize: {xs: 76, sm: 86, md: 96}}}>
-      {t('home.presentation.title')}
+        {t('home.presentation.title')}
       </Typography>
       <Typography variant='h2' color='primary.light' 
         sx={{
           fontWeight: 100, fontSize: {xs: 35, sm: 50, md: 55},
-          position: "relative"
+          display: "flex", alignItems: "center",
+          height: isSmallScreen ? "84px" : "auto"
         }}
       >
-        <Box sx={{position: "absolute"}}>
-          <Typewriter
-            options={{
-              strings: [ "Web Developer", "Web Designer", "UI/UX Developer", "Software Enginner" ],
-              loop: true,
-              autoStart: true,
-            }}
-          />
-        </Box>
-        <Toolbar sx={{ my:2}} />
+        <Typewriter
+          options={{
+            strings: [ "Web Developer", "Web Designer", "UI/UX Developer", "Software Enginner" ],
+            loop: true,
+            autoStart: true,
+          }}
+        />
       </Typography>
       <Typography variant='body2' color="text.secondary" sx={{fontSize: "1.3rem"}}>
         {t('home.presentation.description')}
@@ -81,15 +73,13 @@ const CaptionInfo = ({t}) => {
           {t('home.presentation.cvbtn')}
         </Button>
       </Box>
-      <Toolbar sx={{display: {xs: "none", sm: "none", md: "block"}}} />
-    </Box>
+    </Stack>
   )
 }
 
 const ImageContent = () => {
   return (
-    <Card
-      elevation={0}
+    <Card elevation={0}
       sx={{
         bgcolor: "transparent",
         height: '100%',
