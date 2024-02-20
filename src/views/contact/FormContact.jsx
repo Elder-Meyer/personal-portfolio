@@ -32,8 +32,8 @@ export const FormContact = () => {
     
 
   return (
-    <Container maxWidth="md">
-      <Paper sx={{ p: 2 }} elevation={0}>
+    // <Container maxWidth="md">
+      <Paper sx={{ p: {xs:1, sm:3, md:5}, mx: {xs: 1, sm: 2, md: 10, lg: 20, xl: 50 }}} elevation={0}>
         <Typography variant="h4" color="primary" textAlign="center">
           {t("contact.title")}
         </Typography>
@@ -144,6 +144,6 @@ export const FormContact = () => {
 
         </Box>
       </Paper>
-    </Container>
+    // </Container>
   );
 };
