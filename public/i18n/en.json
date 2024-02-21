@@ -68,7 +68,8 @@
             "contact" : "Contact"
         },
         "bbtn" : "Go home",
-        "themebtn" : "Change light/dark theme"
+        "darkThemeText" : "Turn on the light",
+        "lightThemeText" : "Turn off the light"
     },
     "footer" : {
         "legal" : {

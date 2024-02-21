@@ -68,7 +68,8 @@
             "contact" : "Contacto"
         },
         "bbtn" : "Volver al inicio",
-        "themebtn" : "Cambiar a tema claro/oscuro"
+        "darkThemeText" : "Enciende la luz",
+        "lightThemeText" : "Apaga la luz"
     },
     "footer" : {
         "legal" : {
