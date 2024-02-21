@@ -3,6 +3,7 @@ import IconButton from '@mui/material/IconButton';
 import { DarkMode, DarkModeOutlined, Face, LightMode, LightModeOutlined } from '@mui/icons-material';
 import { Tooltip } from '../material-ui/Tooltip';
 import { useTranslation } from 'react-i18next';
+import { useMediaQuery } from '@mui/material'
 
 const ThemeSwitcher = (props) => {
 
@@ -12,9 +13,10 @@ const ThemeSwitcher = (props) => {
   const { handleChangeTheme } = props
 
   const [hovered, setHovered] = useState(false);
+  const isMobile = useMediaQuery('(max-width:899px)');
 
   return (
-    <Tooltip title={t("navbar.themebtn")} placement='bottom' arrow>
+    <Tooltip title={t("navbar.themebtn")} placement={isMobile ? "top" : "bottom"} arrow>
       <IconButton
         aria-label=""
         onClick={handleChangeTheme}
