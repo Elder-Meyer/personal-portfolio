@@ -83,7 +83,7 @@ export const Web = ({t}) => {
 
   return (
     <>
-      <Grid container spacing={2} sx={{ mt: 2 }}>
+      <Grid container spacing={2}>
         {translatedProjects.map((project, index) => {
           return (
             <Grid item xs={12} sm={12} md={6} lg={4} xl={3} key={index}>
@@ -93,7 +93,7 @@ export const Web = ({t}) => {
                   maxWidth: "100%",
                   transition: "0.2s",
                   borderRadius: 5,
-                  transform: hoveredCard === index ? 'scale(1.05)' : 'scale(1)',
+                  transform: hoveredCard === index ? 'scale(1.025)' : 'scale(1)',
                 }}
               >
                 <CardActionArea onClick={() => handleClickOpen(project)} 

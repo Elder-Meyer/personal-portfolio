@@ -4,43 +4,24 @@ import { Web } from './Web';
 import { Typography } from '../../components/material-ui/Typography';
 import { Box } from '../../components/material-ui/Box';
 import { Container } from '../../components/material-ui/Container';
-import { Paper } from '../../components/material-ui/Paper';
 import { useTranslation } from 'react-i18next';
+import { Stack } from '../../components/material-ui/Stack';
 
 export const Projects = () => {
   const { t } = useTranslation();
   return (
-    <Paper
-      elevation={0}
-      component="section"
-      // aqui está lo importante si quieres hacer un cambio y poner el wavy divider
-      sx={{
-        display: "flex",
-        borderRadius:0,
-        alignItems: "center",
-        pt: {xs: 15, sm: 0, md: 0, lg: 0, xl:0} ,
-        pb:15,
-        backgroundColor: "background.default",
-        // border: "3px solid red",
-      }}
-    >
+    <Box component='section' sx={{ bgcolor: "background.default",  px:{ xs: 0, sm:1, md:2, lg:2}, py: {xs:3, md:10, xl: 20} }}>
       <Container maxWidth="xl">
-          <Typography textAlign="center" color="primary.main" sx={{fontSize: 40, fontWeight: 500}} gutterBottom>
+        <Stack direction="column" spacing={1} pb={2}>
+          <Typography color="primary.main" textAlign="center" sx={{fontSize: 40, fontWeight: 500}} >
             {t('projects.title')}
           </Typography>
-          <Box 
-            sx={{ 
-              // borderBottom: 1, borderColor: 'divider' 
-            }}
-          >
-            <Typography color="text.secondary" textAlign="center" sx={{fontSize: 18, my:3}}>
-              {t('projects.subtitle')}
-            </Typography>
-          </Box>
-          {/* <BasicTabs/> */}
-          <Web t={t}/>
+          <Typography color="text.secondary" textAlign="center" sx={{fontSize: 18}}>
+            {t('projects.subtitle')}
+          </Typography>
+        </Stack>
+        <Web t={t}/>
       </Container>
-      
-    </Paper>
+    </Box>
   );
 }
