@@ -22,7 +22,7 @@ export const Presentation = () => {
     <Box component='section' display='flex' alignItems='center'
       sx={{ backgroundColor: "background.default", minHeight: "100vh" }}
     >
-      <Container maxWidth="lg" sx={{pt:{xs:15, sm:0}}}>
+      <Container maxWidth="lg" sx={{mt:{xs:15, sm:15, md:3, lg:3, xl:3}}}>
         <Grid container spacing={1} px={{xs:1, sm:3, md:5}}>
           <Grid item xs={12} sm={12} md={9}>
             <CaptionInfo t={t} />
