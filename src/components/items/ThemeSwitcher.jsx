@@ -16,25 +16,19 @@ const ThemeSwitcher = (props) => {
   const isMobile = useMediaQuery('(max-width:899px)');
 
   return (
-    <Tooltip title={t("navbar.themebtn")} placement={isMobile ? "top" : "bottom"} arrow>
+    <Tooltip title={darkMode ? t("navbar.darkThemeText") : t("navbar.lightThemeText") } placement={isMobile ? "top" : "bottom"} arrow>
       <IconButton
         aria-label=""
         onClick={handleChangeTheme}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        sx={{
-          borderWidth: 1,
-          borderStyle: "solid",
-          borderColor: "inherit",
-          color : "inherit"
-        }}
+        sx={{ border: 1, borderColor: 'divider', color : "inherit" }}
       >
-
-          {darkMode ? (
-            hovered ? <DarkMode /> : <DarkModeOutlined />
-          ) : (
-            hovered ? <LightMode /> : <LightModeOutlined />
-          )}
+        {darkMode ? (
+          hovered ? <LightMode /> : <LightModeOutlined />
+        ) : (
+          hovered ? <DarkMode /> : <DarkModeOutlined />
+        )}
       </IconButton>
     </Tooltip>
   );
