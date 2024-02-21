@@ -24,6 +24,8 @@ import { Toolbar } from '../../material-ui/Toolbar';
 import { Tooltip } from '../../material-ui/Tooltip';
 import ThemeSwitcher from '../../items/ThemeSwitcher';
 import { useTranslation } from 'react-i18next';
+import { LanguageSwitcherNav } from '../../items/LanguageSwitcherNav';
+import { Stack } from '../../material-ui/Stack';
 
 const drawerWidth = 240;
 
@@ -59,9 +61,9 @@ export const DrawerAppBar = (props) => {
           </ListItem>
         ))}
       </List>
-      <Box sx={{ height: "60%", display: "flex", alignItems: "flex-end", justifyContent: "center"}}>
+      <Stack direction="column" spacing={1} alignItems="center" justifyContent="center" py={2} /**height={"60%"} */ >
         <ThemeSwitcher darkMode={darkMode} handleChangeTheme={handleChangeTheme} />
-      </Box>
+      </Stack>
     </Box>
   );
 
