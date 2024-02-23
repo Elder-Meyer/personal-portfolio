@@ -1,7 +1,6 @@
 import React, { Suspense, lazy } from 'react'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
-import { Home } from '../views/home/Home'
-// const Home            = lazy(() => import('../views/home/Home').then((module) => ({ default: module.Home })))
+const Home            = lazy(() => import('../views/home/Home').then((module) => ({ default: module.Home })))
 const Projects        = lazy(() => import('../views/projects/Projects').then((module) => ({ default: module.Projects })))
 const ProjectDetails  = lazy(() => import('../views/projects/ProjectDetails').then((module) => ({ default: module.ProjectDetails })))
 const Blog            = lazy(() => import('../views/blog/Blog').then((module) => ({ default: module.Blog })))
@@ -15,7 +14,6 @@ import { BtnScrollTop } from '../components/items/btnScrollTop'
 import { KeyboardArrowUp } from '@mui/icons-material'
 import ScrollToTop from '../components/items/ScrollToTop'
 import { Loader } from '../components/items/Loader'
-// MATERIAL UI - LOCAL
 import { Box } from '../components/material-ui/Box'
 
 export const Router = ({darkMode, handleChangeTheme}, props) => {
