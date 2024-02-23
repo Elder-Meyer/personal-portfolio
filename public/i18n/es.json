@@ -72,17 +72,17 @@
         "lightThemeText" : "Apaga la luz"
     },
     "footer" : {
-        "legal" : {
-            "title" : "Legal",
-            "terms" : "Terminos",
-            "privacy" : "Privacidad",
-            "about" : "Sobre mi"
+        "links" : {
+            "about" : "Sobre mi",
+            "blog" : "Blog",
+            "contact" : "Contacto"
         },
         "language" : {
             "title" : "Idioma",
             "en" : "Inglés",
             "es" : "Español"
         },
+        "copy" : "Todos los derechos reservados.",
         "alert" : "Idioma cambiado correctamente"
     },
     "projectsdata":{

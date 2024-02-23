@@ -72,17 +72,17 @@
         "lightThemeText" : "Turn off the light"
     },
     "footer" : {
-        "legal" : {
-            "title" : "Legal",
-            "terms" : "Terms",
-            "privacy" : "Privacy",
-            "about" : "About me"
+        "links" : {
+            "about" : "About me",
+            "blog" : "Blog",
+            "contact" : "Contact"
         },
         "language" : {
             "title" : "Language",
             "en" : "English",
             "es" : "Spanish"
         },
+        "copy" : "All rights reserved.",
         "alert" : "Language changed succesfully"
     },
     "projectsdata":{
