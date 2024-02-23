@@ -40,11 +40,7 @@ export const AppFooter = () => {
 
   const handleClick = () => { setOpenAlert(true); };
 
-  const handleCloseAlert = (event, reason) => {
-    if (reason === 'clickaway') { return; }
-    setOpenAlert(false);
-  };
-
+  const handleCloseAlert = () => { setOpenAlert(false); };
   const onChangeLang = (e) => {
     const lang_code = e.target.value;
     i18n.changeLanguage(lang_code);
@@ -139,27 +135,13 @@ export const AppFooter = () => {
 
 const CssTextField = styled(TextField)(({ theme })=>({
   width: 115,
-  '& label ': {
-    color: theme.palette.mode === "dark" ? theme.palette.primary.light : theme.palette.background.default,
-  },
-  '& label.Mui-focused': {
-    color: theme.palette.mode === "dark" ? theme.palette.primary.light : theme.palette.background.default,
-  },
-  '.MuiSelect-select':{
-    color: theme.palette.mode === "dark" ? theme.palette.primary.light : theme.palette.background.default,
-  },
-  '.MuiSvgIcon-root':{
-    color: "white",
-  },
+  '& label ': { color: theme.palette.mode === "dark" ? theme.palette.primary.light : theme.palette.background.default, },
+  '& label.Mui-focused': { color: theme.palette.mode === "dark" ? theme.palette.primary.light : theme.palette.background.default, },
+  '.MuiSelect-select':{ color: theme.palette.mode === "dark" ? theme.palette.primary.light : theme.palette.background.default, },
+  '.MuiSvgIcon-root':{ color: "white", },
   '& .MuiOutlinedInput-root': {
-    '&:hover fieldset': {
-      borderColor: theme.palette.mode === "dark" ? theme.palette.primary.main : theme.palette.background.paper,
-    },
-    '& fieldset': {
-      borderColor: theme.palette.mode === "dark" ? theme.palette.primary.light : theme.palette.background.default,
-    },
-    '&.Mui-focused fieldset': {
-      borderColor: theme.palette.mode === "dark" ? theme.palette.primary.light : theme.palette.background.default,
-    },
+    '&:hover fieldset': { borderColor: theme.palette.mode === "dark" ? theme.palette.primary.main : theme.palette.background.paper, },
+    '& fieldset': { borderColor: theme.palette.mode === "dark" ? theme.palette.primary.light : theme.palette.background.default, },
+    '&.Mui-focused fieldset': { borderColor: theme.palette.mode === "dark" ? theme.palette.primary.light : theme.palette.background.default, },
   },
 }));
