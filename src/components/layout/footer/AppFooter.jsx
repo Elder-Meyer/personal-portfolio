@@ -1,24 +1,22 @@
-import * as React from 'react';
-import Snackbar from '@mui/material/Snackbar';
-import MuiAlert from '@mui/material/Alert';
+import { forwardRef, useState } from 'react';
 import { Link as LinkRoute } from 'react-router-dom';
-import { TextField, useTheme, MenuItem } from '@mui/material';
-import { styled } from '@mui/material/styles';
+import { useTranslation } from 'react-i18next';
+import { TextField, useTheme, MenuItem, styled, Snackbar } from '@mui/material';
+import MuiAlert from '@mui/material/Alert';
 import UseAnimations from 'react-useanimations';
 import facebook from "react-useanimations/lib/facebook";
 import twitter from "react-useanimations/lib/twitter";
 import github from "react-useanimations/lib/github";
 import linkedin from "react-useanimations/lib/linkedin"
-import useAnalyticsEventTracker from '../../../config/analytics/useAnalyticsEventTracker';
-import { Typography } from '../../material-ui/Typography';
 import { Box } from '../../material-ui/Box';
 import { Container } from '../../material-ui/Container';
+import { Divider } from '../../material-ui/Divider';
 import { Grid } from '../../material-ui/Grid';
 import { Link } from '../../material-ui/Link';
-import { useTranslation } from 'react-i18next';
 import { Stack } from '../../material-ui/Stack';
-import { Divider } from '../../material-ui/Divider';
+import { Typography } from '../../material-ui/Typography';
 import { CubeGD } from '../../items/CubeGD';
+import useAnalyticsEventTracker from '../../../config/analytics/useAnalyticsEventTracker';
 
 function Copyright({theme, t}) {
   return ( <Box sx={{color: theme.palette.mode==='dark'?"text.secondary":"background.paper"}}>
@@ -26,7 +24,7 @@ function Copyright({theme, t}) {
   </Box> );
 }
 
-const Alert = React.forwardRef(function Alert(props, ref) {
+const Alert = forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
 
@@ -34,12 +32,12 @@ export const AppFooter = () => {
   const theme = useTheme();
   const { i18n, t } = useTranslation();
 
-  const [openAlert, setOpenAlert] = React.useState(false);
-  const [selectedLanguage, setSelectedLanguage] = React.useState(i18n.language);
+  const [openAlert, setOpenAlert] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
 
   const handleClick = () => { setOpenAlert(true); };
-
   const handleCloseAlert = () => { setOpenAlert(false); };
+  
   const onChangeLang = (e) => {
     const lang_code = e.target.value;
     i18n.changeLanguage(lang_code);
@@ -60,7 +58,6 @@ export const AppFooter = () => {
           {t("footer.alert")}
         </Alert>
       </Snackbar>
-      
       <Container sx={{ my: 8 }}>
         <Grid container spacing={1}>
           <Grid item xs={12} md={4}>
@@ -74,16 +71,11 @@ export const AppFooter = () => {
               <Link color="inherit" variant='subtitle1' underline='hover' component={LinkRoute} to='/about-me' onClick={() => gaEventTracker('About me')}> {t('footer.links.about')} </Link>
               <Link color="inherit" variant='subtitle1' underline='hover' component={LinkRoute} to='/blog'     onClick={() => gaEventTracker('blog')}    > {t('footer.links.blog')} </Link>
               <Link color="inherit" variant='subtitle1' underline='hover' component={LinkRoute} to='/contact'  onClick={() => gaEventTracker('contact')} > {t('footer.links.contact')} </Link>
-              
-              <CssTextField 
-                onChange={onChangeLang}
-                select
+              <CssTextField onChange={onChangeLang}
+                select size="small"
                 label={t("footer.language.title")}
-                size="small"
                 value={selectedLanguage}
-                SelectProps={{
-                  MenuProps: {disableScrollLock: true},
-                }}
+                SelectProps={{ MenuProps: {disableScrollLock: true},}}
               >
                 {LANGUAGES.map((option) => (
                   <MenuItem key={option.code} value={option.code}>
