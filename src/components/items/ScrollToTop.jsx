@@ -10,7 +10,6 @@ const ScrollToTop = (props) => {
       left: 0,
       behavior: "smooth"
     });
-
   }, [location]);
 
   return <>{props.children}</>

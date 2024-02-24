@@ -4,7 +4,6 @@ import MuiAlert from '@mui/material/Alert';
 import { Link as LinkRoute } from 'react-router-dom';
 import { TextField, useTheme, MenuItem } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import cube from '../../../assets/img/principal/cube-glow.webp';
 import UseAnimations from 'react-useanimations';
 import facebook from "react-useanimations/lib/facebook";
 import twitter from "react-useanimations/lib/twitter";
@@ -13,13 +12,13 @@ import linkedin from "react-useanimations/lib/linkedin"
 import useAnalyticsEventTracker from '../../../config/analytics/useAnalyticsEventTracker';
 import { Typography } from '../../material-ui/Typography';
 import { Box } from '../../material-ui/Box';
-import { CardMedia } from '../../material-ui/CardMedia';
 import { Container } from '../../material-ui/Container';
 import { Grid } from '../../material-ui/Grid';
 import { Link } from '../../material-ui/Link';
 import { useTranslation } from 'react-i18next';
 import { Stack } from '../../material-ui/Stack';
 import { Divider } from '../../material-ui/Divider';
+import { CubeGD } from '../../items/CubeGD';
 
 function Copyright({theme, t}) {
   return ( <Box sx={{color: theme.palette.mode==='dark'?"text.secondary":"background.paper"}}>
@@ -66,10 +65,7 @@ export const AppFooter = () => {
         <Grid container spacing={1}>
           <Grid item xs={12} md={4}>
             <Stack direction="row" spacing={1} height={"100%"} justifyContent={{xs: "center", md: "flex-start"}} alignItems="center" mx={2}>
-              <CardMedia component="img"
-                sx={{ width: 42, bgcolor: "transparent" }}
-                image={cube} alt="just a simple cube from GD" title='just a cube'
-              />
+              <CubeGD/>
               <Typography variant='h5' fontWeight={700} color={theme.palette.mode === "dark" ? "primary.main" : "background.paper"}> Elder </Typography>
             </Stack>
           </Grid>

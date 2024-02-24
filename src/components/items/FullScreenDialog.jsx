@@ -1,9 +1,6 @@
-import * as React from "react";
-import CloseIcon from "@mui/icons-material/Close";
 import { Link } from "react-router-dom";
 import { useMediaQuery, useTheme } from "@mui/material";
-import { OpenInNewOutlined, VisibilityOutlined } from "@mui/icons-material";
-// MATERIAL UI - LOCAL
+import { OpenInNewOutlined, VisibilityOutlined, CloseOutlined } from "@mui/icons-material";
 import { Box } from "../material-ui/Box";
 import { Button } from "../material-ui/Button";
 import { Dialog } from "../material-ui/Dialog";
@@ -11,12 +8,7 @@ import { DialogActions } from "../material-ui/DialogActions";
 import { DialogContent } from "../material-ui/DialogContent";
 import { DialogTitle } from "../material-ui/DialogTitle";
 import { IconButton } from "../material-ui/IconButton";
-import { Slide } from "../material-ui/Slide";
 import { Toolbar } from "../material-ui/Toolbar";
-
-const Transition = React.forwardRef(function Transition(props, ref) {
-  return <Slide direction="up" ref={ref} {...props} />;
-});
 
 export default function FullScreenDialog({ t, open, handleClose, Transition, project }) {
   console.log(project.id);
@@ -34,7 +26,7 @@ export default function FullScreenDialog({ t, open, handleClose, Transition, pro
           {project.title}
         </DialogTitle>
         <IconButton edge="start" onClick={handleClose} aria-label="close" sx={{color: "error.main" }}>
-          <CloseIcon fontSize="large" />
+          <CloseOutlined fontSize="large" />
         </IconButton>
       </Toolbar>
 
