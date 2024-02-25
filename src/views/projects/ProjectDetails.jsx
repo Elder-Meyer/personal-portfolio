@@ -42,7 +42,7 @@ export const ProjectDetails = () => {
 
   if (!translatedProject){ return <Loader/> }
   return (
-    <Container maxWidth="xl">
+    <Container maxWidth="xl" sx={{minHeight: {xs: "55vh", sm: "60vh", md: "67vh"}, display: "flex", alignItems: "center" }}>
       <Paper elevation={0} sx={{p: {xs:1, md:2, lg:3}}}>
         <Grid container spacing={2}>
           {/* TITULO */}

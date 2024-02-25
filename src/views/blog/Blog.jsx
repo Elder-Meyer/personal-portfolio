@@ -7,7 +7,7 @@ import { WorkingOnThat } from '../../components/items/WorkingOnThat'
 export const Blog = () => {
   const { t } = useTranslation();
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="lg" sx={{minHeight: {xs: "55vh", sm: "60vh", md: "67vh"}, display: "flex", alignItems: "center" }}>
       <Grid container columnSpacing={2} py={5}>
         <Grid item xs={12}>
           <Typography color="text.secondary" variant='subtitle1' textAlign="center"> {t('blog.title')} </Typography>  
