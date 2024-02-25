@@ -18,29 +18,31 @@ import { Box } from '../components/material-ui/Box'
 
 export const Router = ({darkMode, handleChangeTheme}, props) => {
   return (
-    <Suspense fallback={<Loader/>}>
-      <BrowserRouter>
-        <Box id="back-to-top-anchor" />
-        <DrawerAppBar darkMode={darkMode} handleChangeTheme={handleChangeTheme}/>
-          <ScrollToTop>
-            <Routes>
-              <Route path='/'             element={<Navigate to='/home'/>} />
-              <Route path='/home/'        element={<Home/>} />
-              <Route path='/projects'     element={<Projects/>} />
-              <Route path="/projects/:id" element={<ProjectDetails/>} />
-              <Route path='/blog/'        element={<Blog/>} />
-              <Route path='/contact/'     element={<Contact/>} />
-              <Route path='*'             element={<Error/>} />
-            </Routes>
-            <BtnScrollTop {...props}>
-              <Fab size="small" aria-label="scroll back to top" color='primary'>
-                <KeyboardArrowUp/>
-              </Fab>
-            </BtnScrollTop>
-          </ScrollToTop>
-        <WavyDivider/>
-        <AppFooter/>
-      </BrowserRouter>
-    </Suspense>
+    <Box sx={{bgcolor: "background.default"}}>
+      <Suspense fallback={<Loader/>}>
+        <BrowserRouter>
+          <Box id="back-to-top-anchor" />
+          <DrawerAppBar darkMode={darkMode} handleChangeTheme={handleChangeTheme}/>
+            <ScrollToTop>
+              <Routes>
+                <Route path='/'             element={<Navigate to='/home'/>} />
+                <Route path='/home/'        element={<Home/>} />
+                <Route path='/projects'     element={<Projects/>} />
+                <Route path="/projects/:id" element={<ProjectDetails/>} />
+                <Route path='/blog/'        element={<Blog/>} />
+                <Route path='/contact/'     element={<Contact/>} />
+                <Route path='*'             element={<Error/>} />
+              </Routes>
+              <BtnScrollTop {...props}>
+                <Fab size="small" aria-label="scroll back to top" color='primary'>
+                  <KeyboardArrowUp/>
+                </Fab>
+              </BtnScrollTop>
+            </ScrollToTop>
+          <WavyDivider/>
+          <AppFooter/>
+        </BrowserRouter>
+      </Suspense>
+    </Box>
   )
 }
