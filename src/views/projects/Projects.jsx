@@ -8,7 +8,7 @@ import { Web } from './Web';
 export const Projects = () => {
   const { t } = useTranslation();
   return (
-    <Box component='section' sx={{ bgcolor: "background.default",  px:{ xs: 0, sm:1, md:2, lg:2}, py: {xs:3, md:10, xl: 20} }}>
+    <Box component='section' sx={{ px:{ xs: 0, sm:1, md:2, lg:2}, py: {xs:3, md:10, xl: 20} }}>
       <Container maxWidth="xl">
         <Stack direction="column" spacing={1} pb={2}>
           <Typography color="primary.main" textAlign="center" sx={{fontSize: 40, fontWeight: 500}} >

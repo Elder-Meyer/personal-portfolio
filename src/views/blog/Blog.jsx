@@ -1,5 +1,4 @@
 import { useTranslation } from 'react-i18next'
-import { Box } from '../../components/material-ui/Box'
 import { Container } from '../../components/material-ui/Container'
 import { Grid } from '../../components/material-ui/Grid'
 import { Typography } from '../../components/material-ui/Typography'
@@ -8,17 +7,15 @@ import { WorkingOnThat } from '../../components/items/WorkingOnThat'
 export const Blog = () => {
   const { t } = useTranslation();
   return (
-    <Box sx={{backgroundColor: "background.default"}}>
-      <Container maxWidth="lg">
-        <Grid container columnSpacing={2} py={5}>
-          <Grid item xs={12}>
-            <Typography color="text.secondary" variant='subtitle1' textAlign="center"> {t('blog.title')} </Typography>  
-          </Grid>
-          <Grid item xs={12}>
-            <WorkingOnThat />
-          </Grid>
+    <Container maxWidth="lg">
+      <Grid container columnSpacing={2} py={5}>
+        <Grid item xs={12}>
+          <Typography color="text.secondary" variant='subtitle1' textAlign="center"> {t('blog.title')} </Typography>  
         </Grid>
-      </Container>
-    </Box>
+        <Grid item xs={12}>
+          <WorkingOnThat />
+        </Grid>
+      </Grid>
+    </Container>
   )
 }
