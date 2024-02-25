@@ -5,33 +5,24 @@ import { Button } from "../../components/material-ui/Button";
 import { Grid } from "../../components/material-ui/Grid";
 import { Paper } from "../../components/material-ui/Paper";
 import { Typography } from "../../components/material-ui/Typography";
-import { TextField, Snackbar, Alert } from '@mui/material'
+import { TextField } from '@mui/material'
 import { Delete, Send,  } from "@mui/icons-material";
 import { useContactForm } from "../../context/useContactForm"
+import { PopUpAlert } from "../../components/items/PopUpAlert";
 
 export const FormContact = () => {
   const { t } = useTranslation()
   const form = useRef()
-  const [textAlert, setTextAlert] = useState("");
-  const [variantAlert, setVariantAlert] = useState("");
   const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const [variantAlert, setVariantAlert] = useState("");
+  const [textAlert, setTextAlert] = useState("");
   const formik = useContactForm({ setTextAlert, setSnackbarOpen, setVariantAlert, form, t })
     
   return (
     <Paper sx={{ p: {xs:1, sm:3, md:5}, mx: {xs: 1, sm: 2, md: 10, lg: 20, xl: 50 }}} elevation={0}>
       <Typography variant="h4" color="primary" textAlign="center"> {t("contact.title")} </Typography>
       <Typography variant="body1" color="primary.light" textAlign="center" mb={3}> {t("contact.subtitle")} </Typography>
-      <Snackbar open={snackbarOpen} onClose={() => setSnackbarOpen(false)} autoHideDuration={4000}
-        anchorOrigin={{ vertical: "top", horizontal: "center" }}
-        aria-label={textAlert}
-      >
-        <Alert variant="filled" elevation={6} onClose={() => setSnackbarOpen(false)} 
-          severity={variantAlert ? variantAlert : "error"}
-          sx={{ width: "100%", color: "white" }}
-        >
-          {textAlert}
-        </Alert>
-      </Snackbar>
+      <PopUpAlert snackbarOpen={snackbarOpen} setSnackbarOpen={setSnackbarOpen} variantAlert={variantAlert} textAlert={textAlert} />
       <Box component="form" ref={form} onSubmit={formik.handleSubmit} autoComplete="off">
         <Grid container spacing={1}>
           <Grid item xs={12} md={6}>
