@@ -1,11 +1,9 @@
-import React from 'react'
-import { Web } from './Web';
-// MATERIAL UI - LOCAL
-import { Typography } from '../../components/material-ui/Typography';
+import { useTranslation } from 'react-i18next';
 import { Box } from '../../components/material-ui/Box';
 import { Container } from '../../components/material-ui/Container';
-import { useTranslation } from 'react-i18next';
 import { Stack } from '../../components/material-ui/Stack';
+import { Typography } from '../../components/material-ui/Typography';
+import { Web } from './Web';
 
 export const Projects = () => {
   const { t } = useTranslation();

@@ -4,17 +4,14 @@ import node from "../../../../assets/img/tecnologies/node.webp";
 import bootstrap from "../../../../assets/img/tecnologies/bootstrap.webp";
 import materialui from "../../../../assets/img/tecnologies/materialui.webp";
 import sass from "../../../../assets/img/tecnologies/sass.webp";
-import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-// MATERIAL UI - LOCAL
-import { Typography } from "../../../components/material-ui/Typography";
 import { Box } from "../../../components/material-ui/Box";
 import { CardMedia } from "../../../components/material-ui/CardMedia";
+import { Typography } from "../../../components/material-ui/Typography";
 
 const responsive = {
   superLargeDesktop: {
-    // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 3000 },
     items: 5,
   },

@@ -1,26 +1,21 @@
-// imagenes
-// project 01
 import pri_proj_view_01 from "../../assets/img/img-projects/pri_proj_view_01.webp";
 import proj_01_xl from "../../assets/img/img-projects/proj_01_xl.webp";
 import proj_01_lg from "../../assets/img/img-projects/proj_01_lg.webp";
 import proj_01_md from "../../assets/img/img-projects/proj_01_md.webp";
 import proj_01_sm from "../../assets/img/img-projects/proj_01_sm.webp";
 import proj_01_xs from "../../assets/img/img-projects/proj_01_xs.webp";
-// project 02
 import pri_proj_view_02 from "../../assets/img/img-projects/pri_proj_view_02.webp";
 import proj_02_xl from "../../assets/img/img-projects/proj_02_xl.webp";
 import proj_02_lg from "../../assets/img/img-projects/proj_02_lg.webp";
 import proj_02_md from "../../assets/img/img-projects/proj_02_md.webp";
 import proj_02_sm from "../../assets/img/img-projects/proj_02_sm.webp";
 import proj_02_xs from "../../assets/img/img-projects/proj_02_xs.webp";
-// project 03
 import pri_proj_view_03 from "../../assets/img/img-projects/pri_proj_view_03.webp";
 import proj_03_xl from "../../assets/img/img-projects/proj_03_xl.webp";
 import proj_03_lg from "../../assets/img/img-projects/proj_03_lg.webp";
 import proj_03_md from "../../assets/img/img-projects/proj_03_md.webp";
 import proj_03_sm from "../../assets/img/img-projects/proj_03_sm.webp";
 import proj_03_xs from "../../assets/img/img-projects/proj_03_xs.webp";
-// project 04
 import pri_proj_view_04 from "../../assets/img/img-projects/pri_proj_view_04.webp";
 import proj_04_xl from "../../assets/img/img-projects/proj_04_xl.webp";
 import proj_04_lg from "../../assets/img/img-projects/proj_04_lg.webp";

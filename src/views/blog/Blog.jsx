@@ -1,11 +1,9 @@
-import React from 'react'
-import { WorkingOnThat } from '../../components/items/WorkingOnThat'
-// MATERIAL UI - LOCAL
-import { Typography } from '../../components/material-ui/Typography'
+import { useTranslation } from 'react-i18next'
 import { Box } from '../../components/material-ui/Box'
 import { Container } from '../../components/material-ui/Container'
 import { Grid } from '../../components/material-ui/Grid'
-import { useTranslation } from 'react-i18next'
+import { Typography } from '../../components/material-ui/Typography'
+import { WorkingOnThat } from '../../components/items/WorkingOnThat'
 
 export const Blog = () => {
   const { t } = useTranslation();
@@ -14,9 +12,7 @@ export const Blog = () => {
       <Container maxWidth="lg">
         <Grid container columnSpacing={2} py={5}>
           <Grid item xs={12}>
-            <Typography color="text.secondary" variant='subtitle1' textAlign="center">
-            {t('blog.title')}
-            </Typography>  
+            <Typography color="text.secondary" variant='subtitle1' textAlign="center"> {t('blog.title')} </Typography>  
           </Grid>
           <Grid item xs={12}>
             <WorkingOnThat />

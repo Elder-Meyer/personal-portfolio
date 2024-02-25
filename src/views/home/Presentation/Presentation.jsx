@@ -1,27 +1,23 @@
-import { FileDownloadOutlined } from '@mui/icons-material'
-import React from 'react'
-import cube from '../../../assets/img/principal/cube-glow.webp'
-import Typewriter from 'typewriter-effect'
-import ExampleDoc from "../../../assets/docs/exampleDoc.pdf"
-// MATERIAL UI - LOCAL
-import { Typography } from '../../../components/material-ui/Typography'
+import { useTranslation } from 'react-i18next'
 import { Box } from '../../../components/material-ui/Box'
 import { Button } from '../../../components/material-ui/Button'
 import { Card } from '../../../components/material-ui/Card'
 import { Container } from '../../../components/material-ui/Container'
 import { Grid } from '../../../components/material-ui/Grid'
+import { Stack } from '../../../components/material-ui/Stack'
 import { Toolbar } from '../../../components/material-ui/Toolbar'
 import { Tooltip } from '../../../components/material-ui/Tooltip'
+import { Typography } from '../../../components/material-ui/Typography'
+import { FileDownloadOutlined } from '@mui/icons-material'
+import cube from '../../../assets/img/principal/cube-glow.webp'
+import Typewriter from 'typewriter-effect'
+import ExampleDoc from "../../../assets/docs/exampleDoc.pdf"
 import { useMediaQuery } from '@mui/material'
-import { useTranslation } from 'react-i18next'
-import { Stack } from '../../../components/material-ui/Stack'
 
 export const Presentation = () => {
   const { t } = useTranslation();
   return (
-    <Box component='section' display='flex' alignItems='center'
-      sx={{ backgroundColor: "background.default", minHeight: "100vh" }}
-    >
+    <Box component='section' display='flex' alignItems='center' sx={{ backgroundColor: "background.default", minHeight: "100vh" }}>
       <Container maxWidth="lg" sx={{mt:{xs:15, sm:15, md:3, lg:3, xl:3}}}>
         <Grid container spacing={1} px={{xs:1, sm:3, md:5}}>
           <Grid item xs={12} sm={12} md={9}>
@@ -62,13 +58,10 @@ const CaptionInfo = ({t}) => {
         {t('home.presentation.description')}
       </Typography>
       <Box my={3}>
-        <Button 
-          variant="contained" 
-          size="medium" 
+        <Button variant="contained" size="medium" download="elderMeyer-cv" target='_blank' disableElevation
           endIcon={<FileDownloadOutlined/>}
-          href={ExampleDoc} download="elderMeyer-cv" target='_blank'
+          href={ExampleDoc} 
           sx={{borderRadius: 5}}
-          disableElevation
         >
           {t('home.presentation.cvbtn')}
         </Button>
@@ -90,15 +83,10 @@ const ImageContent = () => {
       }}
     >
       <Toolbar sx={{display: {xs: "block", md: "none"} }} />
-      <Box  
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
+      <Box sx={{ display: "flex", justifyContent: "center", }}>
         <Tooltip title={":)"} arrow placement='right'>
           <a href="https://gdbrowser.com/u/Mesher" target="_BLANK">
-            <Box
+            <Box component="img" height={"100%"} src={cube} alt="elderMeyer"
               sx={{
                 width: {xs: "100%", sm: "100%", md: "100%"},
                 paddingX: 1,
@@ -117,10 +105,6 @@ const ImageContent = () => {
                   '100%': { transform: "scale(1, 1)       translateY(0)",       },
                 }
               }}
-              component="img"
-              height={"100%"}
-              src={cube}
-              alt="elderMeyer"
             />
           </a>
         </Tooltip>

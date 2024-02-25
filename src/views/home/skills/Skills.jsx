@@ -1,12 +1,10 @@
-import React from 'react'
-// MATERIAL UI - LOCAL
-import { Typography } from '../../../components/material-ui/Typography'
+import { useTranslation } from 'react-i18next'
 import { Box } from '../../../components/material-ui/Box'
 import { Container } from '../../../components/material-ui/Container'
-import { Paper } from '../../../components/material-ui/Paper'
-import { useTranslation } from 'react-i18next'
 import { Grid } from '../../../components/material-ui/Grid'
+import { Paper } from '../../../components/material-ui/Paper'
 import { Stack } from '../../../components/material-ui/Stack'
+import { Typography } from '../../../components/material-ui/Typography'
 
 export const Skills = () => {
   const { t } = useTranslation();

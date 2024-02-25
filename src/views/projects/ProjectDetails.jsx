@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link as LinkRoute } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { projects } from "./projectsData";
 import { ArrowBackSharp, GitHub, Language } from "@mui/icons-material";
-import { Link as LinkRoute } from "react-router-dom";
-// MATERIAL UI - LOCAL
-import { Typography } from "../../components/material-ui/Typography";
 import { Box } from "../../components/material-ui/Box";
 import { CardMedia } from "../../components/material-ui/CardMedia";
 import { Card } from "../../components/material-ui/Card";
@@ -16,7 +14,7 @@ import { IconButton } from "../../components/material-ui/IconButton";
 import { Link } from "../../components/material-ui/Link";
 import { Paper } from "../../components/material-ui/Paper";
 import { Stack } from "../../components/material-ui/Stack";
-import { useTranslation } from "react-i18next";
+import { Typography } from "../../components/material-ui/Typography";
 
 export const ProjectDetails = () => {
   const { t } = useTranslation();
@@ -24,35 +22,25 @@ export const ProjectDetails = () => {
   const params = useParams();
 
   useEffect(() => {
-    
-    // Find the project based on the id from the params
     const foundProject = projects.find((project) => project.id === params.id);
     
-    // Translate the project properties
     const translatedProject = translateProject(foundProject);
     
-    // Set the translated project
     setTranslatedProject(translatedProject);
-    
-  }, [params.id, t]); // Update when id or language changes
+  }, [params.id, t]);
 
-  // Function to translate the project properties
   const translateProject = (project) => {
-    const projectIdNumber = project.id.match(/\d+/)[0]; // Extrae el primer número encontrado en el id
+    const projectIdNumber = project.id.match(/\d+/)[0];
     return {
       ...project,
       title:            t(`projectsdata.project${projectIdNumber}.title`),
       date:             t(`projectsdata.project${projectIdNumber}.date`),
       shortDescription: t(`projectsdata.project${projectIdNumber}.shortdescription`),
       largeDescription: t(`projectsdata.project${projectIdNumber}.largedescription`),
-      // Add more properties to translate if needed
     };
   };
 
-  if (!translatedProject){
-    return <div>loading...</div>
-  }
-
+  if (!translatedProject){ return <div>loading...</div> }
   return (
     <Box sx={{ backgroundColor: "background.default" }}>
       <Container maxWidth="xl">

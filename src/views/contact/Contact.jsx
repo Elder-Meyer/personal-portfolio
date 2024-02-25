@@ -1,9 +1,7 @@
-import React from 'react'
-// MATERIAL UI - LOCAL
 import { Box } from '../../components/material-ui/Box'
 import { Grid } from '../../components/material-ui/Grid'
-import { FormContact } from './FormContact'
 import { Stack } from '../../components/material-ui/Stack'
+import { FormContact } from './FormContact'
 
 export const Contact = () => {
   return (
