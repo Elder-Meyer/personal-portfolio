@@ -1,8 +1,7 @@
 import { forwardRef, useState } from 'react';
 import { Link as LinkRoute } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { TextField, useTheme, MenuItem, styled, Snackbar } from '@mui/material';
-import MuiAlert from '@mui/material/Alert';
+import { TextField, useTheme, MenuItem, styled, Snackbar, Alert, AlertTitle } from '@mui/material';
 import UseAnimations from 'react-useanimations';
 import facebook from "react-useanimations/lib/facebook";
 import twitter from "react-useanimations/lib/twitter";
@@ -17,6 +16,7 @@ import { Stack } from '../../material-ui/Stack';
 import { Typography } from '../../material-ui/Typography';
 import { CubeGD } from '../../items/CubeGD';
 import useAnalyticsEventTracker from '../../../config/analytics/useAnalyticsEventTracker';
+import { PopUpAlert } from '../../items/PopUpAlert';
 
 function Copyright({theme, t}) {
   return ( <Box sx={{color: theme.palette.mode==='dark'?"text.secondary":"background.paper"}}>
@@ -24,25 +24,22 @@ function Copyright({theme, t}) {
   </Box> );
 }
 
-const Alert = forwardRef(function Alert(props, ref) {
-  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
-});
-
 export const AppFooter = () => {
   const theme = useTheme();
   const { i18n, t } = useTranslation();
 
-  const [openAlert, setOpenAlert] = useState(false);
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const [variantAlert, setVariantAlert] = useState("");
+  const [textAlert, setTextAlert] = useState("");
   const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
-
-  const handleClick = () => { setOpenAlert(true); };
-  const handleCloseAlert = () => { setOpenAlert(false); };
   
   const onChangeLang = (e) => {
     const lang_code = e.target.value;
     i18n.changeLanguage(lang_code);
     setSelectedLanguage(lang_code);
-    handleClick();
+    setVariantAlert("info")
+    setTextAlert(t("footer.alert"))
+    setSnackbarOpen(true)
   };
 
   const LANGUAGES = [
@@ -53,11 +50,7 @@ export const AppFooter = () => {
   const gaEventTracker = useAnalyticsEventTracker("contact us")
   return (
     <Box component="footer" sx={{ display: 'flex', backgroundColor: theme.palette.mode === 'dark' ? "background.paper" : "primary.main" }}>
-      <Snackbar open={openAlert} autoHideDuration={3000} onClose={handleCloseAlert} anchorOrigin={{ vertical: "top", horizontal: "center"}} >
-        <Alert onClose={handleCloseAlert} severity="info" sx={{ width: '100%', color: "white" }}>
-          {t("footer.alert")}
-        </Alert>
-      </Snackbar>
+      <PopUpAlert snackbarOpen={snackbarOpen} setSnackbarOpen={setSnackbarOpen} variantAlert={variantAlert} textAlert={textAlert} />
       <Container sx={{ my: 8 }}>
         <Grid container spacing={1}>
           <Grid item xs={12} md={4}>
@@ -67,7 +60,7 @@ export const AppFooter = () => {
             </Stack>
           </Grid>
           <Grid item xs={12} md={8}>
-            <Stack direction="row" spacing={3} height={"100%"} flexWrap={"wrap"} justifyContent={{xs: "center", md: "flex-end"}} alignItems={"center"} mx={2} color={theme.palette.mode === "dark" ? "primary.light" : "background.default"}>
+            <Stack direction="row" spacing={3} height={"100%"} flexWrap={"wrap"} useFlexGap justifyContent={{xs: "center", md: "flex-end"}} alignItems={"center"} mx={2} color={theme.palette.mode === "dark" ? "primary.light" : "background.default"}>
               <Link color="inherit" variant='subtitle1' underline='hover' component={LinkRoute} to='/about-me' onClick={() => gaEventTracker('About me')}> {t('footer.links.about')} </Link>
               <Link color="inherit" variant='subtitle1' underline='hover' component={LinkRoute} to='/blog'     onClick={() => gaEventTracker('blog')}    > {t('footer.links.blog')} </Link>
               <Link color="inherit" variant='subtitle1' underline='hover' component={LinkRoute} to='/contact'  onClick={() => gaEventTracker('contact')} > {t('footer.links.contact')} </Link>
@@ -87,7 +80,7 @@ export const AppFooter = () => {
           </Grid>
           <Grid item xs={12}> <Divider color="inherit"/> </Grid>
           <Grid item xs={12} sm={6}>
-            <Stack direction="row" spacing={1} height={"100%"} justifyContent={{xs:"center", sm: "flex-start"}} alignItems="center" mx={2}>
+            <Stack direction="row" spacing={1} height={"100%"} justifyContent={{xs:"center", sm: "flex-start"}} alignItems="center" mx={2} textAlign={"center"}>
               <Copyright theme={theme} t={t} />
             </Stack>
           </Grid>
