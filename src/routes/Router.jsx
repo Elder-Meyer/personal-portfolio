@@ -15,6 +15,7 @@ import { KeyboardArrowUp } from '@mui/icons-material'
 import ScrollToTop from '../components/items/ScrollToTop'
 import { Loader } from '../components/items/Loader'
 import { Box } from '../components/material-ui/Box'
+import Breadcrumb from '../components/items/Breadcrumbs'
 
 export const Router = ({darkMode, handleChangeTheme}, props) => {
   return (
@@ -24,6 +25,7 @@ export const Router = ({darkMode, handleChangeTheme}, props) => {
           <Box id="back-to-top-anchor" />
           <DrawerAppBar darkMode={darkMode} handleChangeTheme={handleChangeTheme}/>
             <ScrollToTop>
+              <Breadcrumb/>
               <Routes>
                 <Route path='/'             element={<Navigate to='/home'/>} />
                 <Route path='/home/'        element={<Home/>} />
