@@ -73,10 +73,10 @@ export const ProjectDetails = () => {
               direction="row"
               justifyContent="center"
               alignItems="center"
+              sx={{aspectRatio: "384/199"}}
             >
               <Card elevation={3}>
                 <CardMedia component="img"
-                  height="180"
                   image={translatedProject.imgPrincipal}
                   alt={translatedProject.id}
                 />
