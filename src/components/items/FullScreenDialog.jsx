@@ -31,14 +31,11 @@ export default function FullScreenDialog({ t, open, handleClose, Transition, pro
       </Toolbar>
 
       <DialogContent sx={{bgcolor: "background.paper"}}>
-        <Box sx={{display: {xs: "none", sm: "none", md: "flex"}}}>
-          <img src={project.imgMd} alt={project.title} width={"100%"} loading="lazy"/>
-        </Box>
-        <Box sx={{display: {xs: "none", sm: "flex", md: "none"}}}>
-          <img src={project.imgSm} alt={project.title} width={"100%"} loading="lazy"/>
-        </Box>
-        <Box sx={{display: {xs: "flex", sm: "none", md: "none"}}}>
-          <img src={project.imgXs} alt={project.title} width={"100%"} loading="lazy"/>
+        <Box component="picture" sx={{aspectRatio: project.id=== "project-02-app-caih" ? "1199/1042" : "11/35", width: "100%", height: "auto"}}>
+          <source media="(0px <= width <= 599px)"    srcset={project.imgXs} width="550" height="4820" />
+          <source media="(600px <= width <= 899px )" srcset={project.imgSm} width="850" height="3201" />
+          <source media="(900px <= width <= 1536px)" srcset={project.imgMd} width="1135" height="3611" />
+          <img src={project.imgMd} alt={project.title} width="1135" height="3611" />
         </Box>
       </DialogContent>
       <DialogActions sx={{bgcolor: "background.paper"}} >
