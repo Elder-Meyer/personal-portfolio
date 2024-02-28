@@ -76,9 +76,10 @@ export const ProjectDetails = () => {
               sx={{aspectRatio: "384/199"}}
             >
               <Card elevation={3}>
-                <CardMedia component="img"
+                <CardMedia component="img" width="954.66px" height="494.72px"
                   image={translatedProject.imgPrincipal}
                   alt={translatedProject.id}
+                  sx={{aspectRatio: "384/199", height: "auto", width: "100%" }}
                 />
               </Card>
             </Grid>
