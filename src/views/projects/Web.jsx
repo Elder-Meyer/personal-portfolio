@@ -90,9 +90,10 @@ export const Web = ({t}) => {
                   onMouseEnter={() => handleMouseEnter(index)}
                   onMouseLeave={handleMouseLeave}
                 >
-                  <CardMedia component="img" loading='lazy' height="180"
+                  <CardMedia component="img" width="360px" height="186px"
                     image={project.imgPrincipal}
                     alt={project.title}
+                    sx={{aspectRatio: "384/199", height: "auto", width: "100%" }}
                   />
                   <CardContent>
                     <Typography variant="h5" component="div" color="primary.main" fontWeight={500} gutterBottom>
