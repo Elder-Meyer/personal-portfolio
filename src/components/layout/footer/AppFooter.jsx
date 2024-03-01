@@ -86,7 +86,7 @@ export const AppFooter = () => {
           </Grid>
           <Grid item xs={12} sm={6}>
             <Stack direction="row" spacing={0.5} height={"100%"} justifyContent={{xs: "center", sm: "flex-end"}} alignItems={"center"} mx={2} color={theme.palette.mode === "dark" ? "primary.light" : "background.paper"}>
-              <LinkRoute to="https://www.linkedin.com/in/elder-meyer-196a3a290/" target='_BLANK'>
+              <LinkRoute to="https://www.linkedin.com/in/elder-meyer/" target='_BLANK'>
                 <UseAnimations animation={linkedin} size={45} 
                   strokeColor={theme.palette.mode === "dark" ?  theme.palette.primary.light : theme.palette.background.default} 
                 />
@@ -96,12 +96,12 @@ export const AppFooter = () => {
                   strokeColor={theme.palette.mode === "dark" ?  theme.palette.primary.light : theme.palette.background.default} 
                 />
               </LinkRoute>
-              <LinkRoute to="https://github.com/Elder-Meyer" target='_BLANK'>
+              <LinkRoute to="https://github.com/elder-meyer" target='_BLANK'>
                 <UseAnimations animation={github} size={45} 
                   strokeColor={theme.palette.mode === "dark" ?  theme.palette.primary.light : theme.palette.background.default} 
                 />
               </LinkRoute>
-              <LinkRoute to="https://facebook.com/yahir.meyer" target='_BLANK'>
+              <LinkRoute to="https://facebook.com/elder.meyer784/" target='_BLANK'>
                 <UseAnimations animation={facebook} size={45} 
                   strokeColor={theme.palette.mode === "dark" ?  theme.palette.primary.light : theme.palette.background.default} 
                 />
