@@ -100,7 +100,7 @@ export const DrawerAppBar = ({darkMode, handleChangeTheme, window}, props) => {
           // ModalProps={{ keepMounted: true, /* Better open performance on mobile*/ }}
           sx={{
             display: { xs: 'block', sm: 'block', md: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, bgcolor: "background.default", borderRadius: "24px 0 0 24px" },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, bgcolor: "background.default", borderRadius: "40px 0 0 40px" },
           }}
         >
           {drawer}

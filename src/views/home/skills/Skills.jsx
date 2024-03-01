@@ -11,7 +11,7 @@ export const Skills = () => {
   return (
     <Box component='section' sx={{ px:{ xs: 0, sm:1, md:2, lg:2}, py: {xs:3, md:10, xl: 20} }}>
       <Container maxWidth="lg">
-        <Paper sx={{borderRadius: 6, py: 3, px: {xs: 1.5, md: 8, xl:16 }, bgcolor: "background.paper" }} elevation={0}>
+        <Paper sx={{borderRadius: 5, py: 3, px: {xs: 1.5, md: 8, xl:16 }, bgcolor: "background.paper" }} elevation={0}>
           <Stack direction="column" spacing={1} pb={2}>
             <Typography color='primary.main' textAlign="center" sx={{ fontSize: 40, fontWeight: 500}}>
               {t('home.skills.titleskills')}
