@@ -6,6 +6,7 @@ const ProjectDetails  = lazy(() => import('../views/projects/ProjectDetails').th
 const Blog            = lazy(() => import('../views/blog/Blog').then((module) => ({ default: module.Blog })))
 const Contact         = lazy(() => import('../views/contact/Contact').then((module) => ({ default: module.Contact })))
 const Error           = lazy(() => import('../views/error/Error').then((module) => ({ default: module.Error })))
+const AboutMe         = lazy(() => import('../views/about-me/AboutMe').then((module) => ({ default: module.AboutMe })))
 import { DrawerAppBar } from '../components/layout/navbar/DrawerAppBar'
 import { WavyDivider } from '../components/items/WavyDivider'
 import { AppFooter } from '../components/layout/footer/AppFooter'
@@ -33,6 +34,7 @@ export const Router = ({darkMode, handleChangeTheme}, props) => {
                 <Route path="/projects/:id" element={<ProjectDetails/>} />
                 <Route path='/blog/'        element={<Blog/>} />
                 <Route path='/contact/'     element={<Contact/>} />
+                <Route path='/about-me/'     element={<AboutMe/>} />
                 <Route path='*'             element={<Error/>} />
               </Routes>
               <BtnScrollTop {...props}>
