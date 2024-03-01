@@ -11,7 +11,7 @@ import { Typography } from '../../../components/material-ui/Typography'
 import { FileDownloadOutlined } from '@mui/icons-material'
 import cube from '../../../assets/img/principal/cube-glow.webp'
 import Typewriter from 'typewriter-effect'
-import ExampleDoc from "../../../assets/docs/exampleDoc.pdf"
+import CVElderMeyer from "../../../assets/docs/CV-ElderMeyer.pdf"
 import { useMediaQuery } from '@mui/material'
 
 export const Presentation = () => {
@@ -58,9 +58,9 @@ const CaptionInfo = ({t}) => {
         {t('home.presentation.description')}
       </Typography>
       <Box my={3}>
-        <Button variant="contained" size="medium" download="elderMeyer-cv" target='_blank' disableElevation
+        <Button variant="contained" size="medium" download="CV-ElderMeyer" target='_blank' disableElevation
           endIcon={<FileDownloadOutlined/>}
-          href={ExampleDoc} 
+          href={CVElderMeyer} 
           sx={{borderRadius: 5}}
         >
           {t('home.presentation.cvbtn')}
