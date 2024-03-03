@@ -17,8 +17,8 @@ import { useMediaQuery } from '@mui/material'
 export const Presentation = () => {
   const { t } = useTranslation();
   return (
-    <Box component='section' display='flex' alignItems='center' sx={{ minHeight: "100vh" }}>
-      <Container maxWidth="lg" sx={{mt:{xs:15, sm:15, md:3, lg:3, xl:3}}}>
+    <Box component='section' display='flex' alignItems='center' sx={{ minHeight: "97vh" }}>
+      <Container maxWidth="lg" sx={{mt:1}}>
         <Grid container spacing={1} px={{xs:1, sm:3, md:5}}>
           <Grid item xs={12} sm={12} md={9}>
             <CaptionInfo t={t} />
@@ -57,7 +57,7 @@ const CaptionInfo = ({t}) => {
       <Typography variant='body2' color="text.secondary" sx={{fontSize: "1.3rem"}}>
         {t('home.presentation.description')}
       </Typography>
-      <Box my={3}>
+      <Box>
         <Button variant="contained" size="medium" download="CV-ElderMeyer" target='_blank' disableElevation
           endIcon={<FileDownloadOutlined/>}
           href={CVElderMeyer} 
