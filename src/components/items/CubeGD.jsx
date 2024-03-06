@@ -5,12 +5,14 @@ export function CubeGD({animation}){
   return(
     <CardMedia component="img"
       image={cube}
+      draggable="false"
       alt="just a simple cube from GD"
       title='just a cube'
       sx={{ 
         aspectRatio: "42/42", width: 42, bgcolor: "transparent", userSelect: "none",
         // animation: "hithere 1s ease infinite",
         // animation: "spin 4s infinite linear",
+        // animation: "elastic-spin 3s infinite ease",
         animation: "swing 2s ease infinite",
         // animation: "wobble 3s ease infinite",
         '@keyframes hithere': {
@@ -23,6 +25,10 @@ export function CubeGD({animation}){
         '@keyframes spin': {
           'from': { transform: "rotate(0deg)" },
           'to':   { transform: "rotate(360deg)" },
+        },
+        '@keyframes elastic-spin': {
+          'from': { transform: "rotate(0deg)" },
+          'to':   { transform: "rotate(720deg)" },
         },
         '@keyframes swing': {
           '20%': { transform: "rotate(15deg)" },
