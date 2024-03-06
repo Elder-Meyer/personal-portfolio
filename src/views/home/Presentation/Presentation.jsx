@@ -18,7 +18,7 @@ export const Presentation = () => {
   const { t } = useTranslation();
   return (
     <Box component='section' display='flex' alignItems='center' sx={{ minHeight: "97vh" }}>
-      <Container maxWidth="lg" sx={{mt:1}}>
+      <Container maxWidth="lg" sx={{mt:{xs:10, sm: 1}}}>
         <Grid container spacing={1} px={{xs:1, sm:3, md:5}}>
           <Grid item xs={12} sm={12} md={9}>
             <CaptionInfo t={t} />
