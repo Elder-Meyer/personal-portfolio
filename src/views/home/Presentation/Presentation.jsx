@@ -12,7 +12,7 @@ import { FileDownloadOutlined } from '@mui/icons-material'
 import cube from '../../../assets/img/principal/cube-glow.webp'
 import Typewriter from 'typewriter-effect'
 import CVElderMeyer from "../../../assets/docs/CV-ElderMeyer.pdf"
-import { useMediaQuery } from '@mui/material'
+import { useMediaQuery, styled } from '@mui/material'
 
 export const Presentation = () => {
   const { t } = useTranslation();
@@ -37,7 +37,7 @@ const CaptionInfo = ({t}) => {
   return (
     <Stack direction="column" spacing={3}>
       <Typography variant='h1' color='text.primary' sx={{fontWeight: 500, fontSize: {xs: 76, sm: 86, md: 96}}}>
-        {t('home.presentation.title')}
+        {t('home.presentation.title')} <CaptionName> Elder </CaptionName>
       </Typography>
       <Typography variant='h2' color='primary.light' 
         sx={{
@@ -112,3 +112,10 @@ const ImageContent = () => {
     </Card>
   )
 }
+
+export const CaptionName = styled("span")(({ theme })=>({
+  fontSize: "clamp(2rem, 10w, 8rem)",
+  backgroundImage: "linear-gradient(92deg, #7F7EFF 10%, #56A5FE 60%, #02FFFF)",
+  WebkitTextFillColor: "#0000",
+  WebkitBackgroundClip: "text"
+}));
