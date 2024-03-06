@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import cube from '../../assets/img/principal/cube-glow.webp'
 import { CardMedia } from '../material-ui/CardMedia';
 
-export function CubeGD({animate = 2}){
+export function CubeGD({animate = 3, large = 42}){
   const [animation, setAnimation] = useState( {animation: "", time: "", keyframes: {}} )
 
   useEffect(() => {
@@ -25,6 +25,17 @@ export function CubeGD({animate = 2}){
       case 2:
         setAnimation({
           ...animation,
+          animation: "elastic-spin",
+          time: "3s infinite ease",
+          keyframes: {
+            'from': { transform: "rotate(0deg)" },
+            'to':   { transform: "rotate(720deg)" },
+          }
+        });
+        break;
+      case 3:
+        setAnimation({
+          ...animation,
           animation: "hithere",
           time: "1s ease infinite",
           keyframes: {
@@ -33,17 +44,6 @@ export function CubeGD({animate = 2}){
             '50%':      { transform: "rotate(5deg) scale(1.1)" },
             '70%':      { transform: "rotate(0deg) scale(1.1)" },
             '100%':     { transform: "scale(1)" },
-          }
-        });
-        break;
-      case 3:
-        setAnimation({
-          ...animation,
-          animation: "elastic-spin",
-          time: "3s infinite ease",
-          keyframes: {
-            'from': { transform: "rotate(0deg)" },
-            'to':   { transform: "rotate(720deg)" },
           }
         });
         break;
@@ -87,11 +87,12 @@ export function CubeGD({animate = 2}){
   return(
     <CardMedia component="img"
       image={cube}
+      width={`${large}px`}
       draggable="false"
       alt="Principal Image of the Website"
       title='Principal image'
       sx={{ 
-        aspectRatio: "42/42", width: 42, bgcolor: "transparent", userSelect: "none",
+        aspectRatio: "42/42", width: large, bgcolor: "transparent", userSelect: "none",
         animation: `${animation.animation} ${animation.time}`,
         [`@keyframes ${animation.animation}`]: animation.keyframes,
       }}
