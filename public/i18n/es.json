@@ -3,18 +3,18 @@
         "presentation" : {
             "title" : "Hola! Soy ",
             "caption" : "",
-            "description" : "Soy un desarrollador apasionado por desarrollar y diseñar aplicaciones webs.",
+            "description" : "Soy un desarrollador web apasionado por crear aplicaciones que sean útiles, atractivas e innovadoras. Me mantengo explorando nuevas tecnologías y tendencias para ofrecer productos que estén a la vanguardia de la innovación en la web.",
             "cvbtn" : "Descarga mi cv"
         },
         "skills" : {
             "titleskills" : "Habilidades",
-            "descriptionskills" : "Tengo las siguientes habilidades y experiencia con las siguientes tecnologias y lenguajes de programación.",
+            "descriptionskills" : "Tengo experiencia y habilidades en diversas tecnologías y lenguajes de programación.",
             "web" : "Desarrollo web",
             "pro" : "Lenguajes de Programación",
             "frame" : "Frameworks y librerias",
             "data" : "Bases de datos",
             "titlelanguages" : "Idiomas",
-            "descriptionlanguages" : "Entiendo los siguientes lenguajes.",
+            "descriptionlanguages" : "Tengo conocimientos de los siguientes idiomas.",
             "en" : "Inglés",
             "fr" : "Francés",
             "es" : "Español"
@@ -23,7 +23,7 @@
     },
     "projects" : {
         "title" : "Proyectos",
-        "subtitle" : "Aqui puedes ver algo de mi trabajo creado.",
+        "subtitle" : "Aquí puedes ver algunos de los proyectos que he creado.",
         "pbtn" : "Ir",
         "sbtn" : "Ver"
     },
@@ -38,13 +38,13 @@
     },
     "contact" : {
         "title" : "Contacto",
-        "subtitle": "Pongamonos en contacto, enviame un correo",
+        "subtitle": "Pongamonos en contacto, enviame un correo electrónico",
         "form" : {
             "name" : "Nombre",
             "helpname" : "El nombre es obligatorio",
-            "email" : "Correo electronico",
+            "email" : "Correo electrónico",
             "helpemail" : "El correo es obligatorio",
-            "helpemailtype" : "El correo debe ser un correo electronico valido",
+            "helpemailtype" : "El correo debe ser un correo electrónico valido",
             "message" : "Mensaje",
             "pbtn" : "Enviar",
             "sbtn" : "Limpiar"
@@ -55,11 +55,11 @@
         }
     },
     "error" : {
-        "title" : "No hay nada aquí.",
+        "title" : "No hay nada en este lugar.",
         "btn" : "Volver al inicio"
     },
     "workon" : {
-        "title" : "Estoy trabajando en eso"
+        "title" : "En fase de desarrollo"
     },
     "navbar" : {
         "items" : {
@@ -73,7 +73,7 @@
     },
     "footer" : {
         "links" : {
-            "about" : "Sobre mi",
+            "about" : "Sobre Mi",
             "blog" : "Blog",
             "contact" : "Contacto"
         },
@@ -88,27 +88,27 @@
     "projectsdata":{
         "project01" : {
             "title" : "Corazón Huasteco",
-            "date" : "01 Diciembre 2023",
+            "date" : "01 de Diciembre de 2023",
             "shortdescription" : "Sitio web para la preservación de la cultura.",
-            "largedescription" : "Sitio web desarrollado con el objetivo de preservar la cultura de la ciudad de Huejutla de Reyes Hgo. a través de un sitio web, que aloje artículos interesantes y sea accesible para todos"
+            "largedescription" : "Corazón Huasteco es un proyecto desarrollado como parte del programa de Ingeniería en Desarrollo y Gestión de Software en la Universidad Tecnológica de la Huasteca Hidalguense (UTHH). Este proyecto tiene como objetivo principal preservar la rica cultura de Huejutla de Reyes, Hidalgo, a través de un sitio web que aloje artículos interesantes y sea accesible para todos. Fue desarrollado en equipo, como parte de un esfuerzo colaborativo que involucró la aplicación de diversas tecnologías, algunas de las cuales se detallan en la sección de tecnologías. Además, Corazón Huasteco tiene una relación directa con un cliente potencial, lo que permitió integrar la experiencia práctica en el desarrollo y la gestión administrativa del proyecto."
         },
         "project02" : {
             "title" : "Aplicación CAIH",
-            "date" : "15 Agosto 2022",
+            "date" : "15 de Agosto de 2022",
             "shortdescription" : "Sitio web para colegio de arquitectos.",
-            "largedescription" : "Plataforma web desarrollada como proyecto de estancia TSU (Técnico Superior Universitario), para el Colegio de Arquitectos e Ingenieros (CAIH)"
+            "largedescription" : "Aplicación CAIH es un proyecto desarrollado como parte de la práctica para titularme como Técnico Superior Universitario en Tecnologías de la Información (TSU). Trabajé en colaboración con otras dos personas, desempeñando un papel de diseñador y administrador de la documentación. El objetivo principal fue actualizar una plataforma para el Colegio de Arquitectos e Ingenieros (CAIH), migrando la idea original creada con HTML, CSS y JavaScript a un entorno que emplea frameworks, librerías y servicios en la nube."
         },
         "project03" : {
             "title" : "Dulce Delicia",
-            "date" : "28 Noviembre 2023",
+            "date" : "28 de Noviembre de 2023",
             "shortdescription" : "Sitio web temático de tienda de dulces.",
-            "largedescription" : "Sitio web desarrollado como práctica individual para la creación de una PWA (aplicación web progresiva), tomando como referencia un sitio existente llamado 'azucar dulcerias'"
+            "largedescription" : "Dulce Delicia es un proyecto desarrollado como práctica individual para explorar tecnologías relacionadas con las PWAs (Aplicaciones Web Progresivas), incluyendo Service Workers, archivos de manifiesto, notificaciones y acceso sin conexión. Se tomó como referencia un sitio web existente llamado 'Azúcar Dulcerías' para estructurar elementos y contenido."
         },
         "project04" : {
             "title" : "Fashion Fusion",
-            "date" : "15 Agosto 2023",
+            "date" : "15 de Agosto de 2023",
             "shortdescription" : "Sitio web temático de tienda de ropa.",
-            "largedescription" : "Sitio web desarrollado con el propósito de poner en práctica la mejora continua de los devops y el sistema de gestión de versiones git y github."
+            "largedescription" : "Fashion Fusion es un proyecto desarrollado de forma colaborativa para poner en práctica el versionamiento con Git y GitHub, así como metodologías como DevOps para desarrollar procesos de manera ágil. El sitio web tiene una temática de tienda de ropa y todo el contenido fue agregado en menos de una semana, siguiendo técnicas como las ya mencionadas."
         }
     }
 }

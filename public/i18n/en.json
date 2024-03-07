@@ -3,18 +3,18 @@
         "presentation" : {
             "title" : "Hi! I'm ",
             "caption" : "",
-            "description" : "I am a developer who is passionate about developing and designing web applications.",
-            "cvbtn" : "Download my cv"
+            "description" : "​​I am a web developer passionate about creating applications that are useful, engaging, and innovative. I keep exploring new technologies and trends to deliver products that are at the forefront of web innovation.",
+            "cvbtn" : "Check my cv"
         },
         "skills" : {
             "titleskills" : "Skills",
-            "descriptionskills" : "I have skills and experience with the following technologies and programming languages.",
+            "descriptionskills" : "I have experience and skills in various technologies and programming languages.",
             "web" : "Web Development",
             "pro" : "Programming Language",
             "frame" : "Frameworks and libraries",
             "data" : "Database",
             "titlelanguages" : "Languages",
-            "descriptionlanguages" : "I understand (and speak) three languages.",
+            "descriptionlanguages" : "I have knowledge of the following languages.",
             "en" : "English",
             "fr" : "French",
             "es" : "Spanish"
@@ -23,7 +23,7 @@
     },
     "projects" : {
         "title" : "Projects",
-        "subtitle" : "Here you can see some of my created work.",
+        "subtitle" : "Here you can see some of the projects I have created.",
         "pbtn" : "Go",
         "sbtn" : "View"
     },
@@ -55,11 +55,11 @@
         }
     },
     "error" : {
-        "title" : "There is nothing here.",
+        "title" : "There is nothing in this place.",
         "btn" : "Back to home"
     },
     "workon" : {
-        "title" : "I'm working on that"
+        "title" : "I'm working on it"
     },
     "navbar" : {
         "items" : {
@@ -73,7 +73,7 @@
     },
     "footer" : {
         "links" : {
-            "about" : "About me",
+            "about" : "About Me",
             "blog" : "Blog",
             "contact" : "Contact"
         },
@@ -90,25 +90,25 @@
             "title" : "Corazon Huasteco",
             "date" : "Dec 01, 2023",
             "shortdescription" : "Website for the preservation of culture.",
-            "largedescription" : "Website developed with the objective of preserving the culture of the city of Huejutla de Reyes Hgo. through a website, hosting interesting articles and being accessible to everyone"
+            "largedescription" : "Corazón Huasteco is a project developed as part of the Software Development and Management Engineering program at the Technological University of Huasteca Hidalguense (UTHH). The main objective of this project is to preserve the rich culture of Huejutla de Reyes, Hidalgo, through a website hosting interesting articles that are accessible to everyone. It was developed collaboratively, involving the application of various technologies, some of which are detailed in the technologies section. Additionally, Corazón Huasteco has a direct relationship with a potential client, allowing the integration of practical experience in project development and management administration."
         },
         "project02" : {
             "title" : "App CAIH",
             "date" : "Aug 15, 2022",
             "shortdescription" : "Website for college of architects",
-            "largedescription" : "Web platform developed as a TSU (Higher University Technician) stay project, for the College of Architects and Engineers (CAIH)"
+            "largedescription" : "CAIH Application is a project developed as part of the internship requirement for my Associate Degree in Information Technology. I worked collaboratively with two other individuals, serving as a designer and documentation manager. The main objective was to update a platform for the Architects and Engineers Association (CAIH), migrating the original idea created with HTML, CSS, and JavaScript to an environment utilizing frameworks, libraries, and cloud services."
         },
         "project03" : {
             "title" : "Dulce Delicia",
             "date" : "Nov 28, 2023",
             "shortdescription" : "Sweet shop themed website",
-            "largedescription" : "Website developed as an individual practice for the creation of a PWA (progressive web app), taking as reference an existing site called 'azucar dulcerias'"
+            "largedescription" : "Dulce Delicia is a project developed as an individual practice to explore technologies related to PWAs (Progressive Web Applications), including Service Workers, manifest files, notifications, and offline access. It was inspired by an existing website called 'Azucar Dulcerias' to structure elements and content."
         },
         "project04" : {
             "title" : "Fashion Fusion",
             "date" : "Aug 15, 2023",
             "shortdescription" : "Clothing store themed website",
-            "largedescription" : "Website developed with the purpose of putting into practice continuous improvement devops and the git and github version management system"
+            "largedescription" : "Fashion Fusion is a project developed collaboratively to practice continuous improvement of DevOps and version control system using Git and GitHub. The website has a clothing store theme, and all content was added in less than a week, following techniques such as those mentioned."
         }
     }
 }
