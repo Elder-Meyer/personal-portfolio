@@ -17,6 +17,8 @@ import { Typography } from '../../material-ui/Typography';
 import { CubeGD } from '../../items/CubeGD';
 import useAnalyticsEventTracker from '../../../config/analytics/useAnalyticsEventTracker';
 import { PopUpAlert } from '../../items/PopUpAlert';
+import InputAdornment from '@mui/material/InputAdornment';
+import { Face, Language } from '@mui/icons-material';
 
 function Copyright({theme, t}) {
   return ( <Box sx={{color: theme.palette.mode==='dark'?"text.secondary":"background.paper"}}>
@@ -69,6 +71,9 @@ export const AppFooter = () => {
                 label={t("footer.language.title")}
                 value={selectedLanguage}
                 SelectProps={{ MenuProps: {disableScrollLock: true},}}
+                InputProps={{
+                  startAdornment: <InputAdornment position="start"><Language color='inherit'/></InputAdornment>,
+                }}
               >
                 {LANGUAGES.map((option) => (
                   <MenuItem key={option.code} value={option.code}>
@@ -115,7 +120,7 @@ export const AppFooter = () => {
 }
 
 const CssTextField = styled(TextField)(({ theme })=>({
-  width: 115,
+  width: 145,
   '& label ': { color: theme.palette.mode === "dark" ? theme.palette.primary.light : theme.palette.background.default, },
   '& label.Mui-focused': { color: theme.palette.mode === "dark" ? theme.palette.primary.light : theme.palette.background.default, },
   '.MuiSelect-select':{ color: theme.palette.mode === "dark" ? theme.palette.primary.light : theme.palette.background.default, },
