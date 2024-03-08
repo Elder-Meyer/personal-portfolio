@@ -33,28 +33,26 @@ export const Presentation = () => {
 }
 
 const CaptionInfo = ({t}) => {
-  const isSmallScreen = useMediaQuery('(max-width:364px)');
+  const isSmallScreen = useMediaQuery('(max-width:334px)');
   return (
-    <Stack direction="column" spacing={3}>
+    <Stack direction="column" spacing={1.5}>
       <Typography variant='h1' color='text.primary' sx={{fontWeight: 500, fontSize: {xs: 76, sm: 86, md: 96}}}>
         {t('home.presentation.title')} <CaptionName> Elder </CaptionName>
       </Typography>
       <Typography variant='h2' color='primary.light' 
         sx={{
-          fontWeight: 100, fontSize: {xs: 35, sm: 50, md: 55},
-          display: "flex", alignItems: "center",
-          height: isSmallScreen ? "84px" : "auto"
+          fontWeight: 100, fontSize: isSmallScreen ? "30px" : {xs: 35, sm: 50, md: 55},
         }}
       >
         <Typewriter
           options={{
-            strings: [ "Web Developer", "Web Designer", "UI/UX Developer", "Software Enginner" ],
+            strings: [ "Web Developer", "Web Designer", "UI/UX Developer", "Software Eng." ],
             loop: true,
             autoStart: true,
           }}
         />
       </Typography>
-      <Typography variant='body2' color="text.secondary" sx={{fontSize: "1.3rem"}}>
+      <Typography variant='body2' color="text.primary" sx={{fontSize: "1.3rem"}}>
         {t('home.presentation.description')}
       </Typography>
       <Box>
