@@ -114,8 +114,18 @@ const ImageContent = () => {
 }
 
 export const CaptionName = styled("span")(({ theme })=>({
-  fontSize: "clamp(2rem, 10w, 8rem)",
   backgroundImage: "linear-gradient(92deg, #7F7EFF 10%, #56A5FE 60%, #02FFFF)",
-  WebkitTextFillColor: "#0000",
-  WebkitBackgroundClip: "text"
+  backgroundClip: "text",
+  WebkitTextFillColor: "transparent",
+  backgroundSize: "150%",
+  fontSize: "clamp(2rem, 10w, 8rem)",
+  WebkitBackgroundClip: "text",
+  animation: "animated_gradient_text 4s ease-in-out infinite",
+
+
+  '@keyframes animated_gradient_text' : {
+    '0%':{ backgroundPosition: "0% 50%" },
+    '50%':{ backgroundPosition: "100% 50%" },
+    '100%':{ backgroundPosition: "0% 50%" },
+  }
 }));
