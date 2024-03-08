@@ -53,7 +53,7 @@ export const AppFooter = () => {
   return (
     <Box component="footer" sx={{ display: 'flex', backgroundColor: theme.palette.mode === 'dark' ? "background.paper" : "primary.main" }}>
       <PopUpAlert snackbarOpen={snackbarOpen} setSnackbarOpen={setSnackbarOpen} variantAlert={variantAlert} textAlert={textAlert} />
-      <Container sx={{ my: 8 }}>
+      <Container maxWidth="lg" sx={{ my: 8 }}>
         <Grid container spacing={1}>
           <Grid item xs={12} md={4}>
             <Stack direction="row" spacing={1} height={"100%"} justifyContent={{xs: "center", md: "flex-start"}} alignItems="center" mx={2}>
