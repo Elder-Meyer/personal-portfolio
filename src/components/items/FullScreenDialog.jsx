@@ -32,9 +32,9 @@ export default function FullScreenDialog({ t, open, handleClose, Transition, pro
 
       <DialogContent sx={{bgcolor: "background.paper"}}>
         <Box component="picture" sx={{aspectRatio: project.id=== "project-02-app-caih" ? "1199/1042" : "11/35", width: "100%", height: "auto"}}>
-          <source media="(0px <= width <= 599px)"    srcset={project.imgXs} width="550" height="4820" />
-          <source media="(600px <= width <= 899px )" srcset={project.imgSm} width="850" height="3201" />
-          <source media="(900px <= width <= 1536px)" srcset={project.imgMd} width="1135" height="3611" />
+          <source media="(0px <= width <= 599px)"    srcSet={project.imgXs} width="550" height="4820" />
+          <source media="(600px <= width <= 899px )" srcSet={project.imgSm} width="850" height="3201" />
+          <source media="(900px <= width <= 1536px)" srcSet={project.imgMd} width="1135" height="3611" />
           <img src={project.imgMd} alt={project.title} width="1135" height="3611" />
         </Box>
       </DialogContent>
