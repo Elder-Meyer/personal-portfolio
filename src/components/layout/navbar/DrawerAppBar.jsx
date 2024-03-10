@@ -62,7 +62,7 @@ export const DrawerAppBar = ({darkMode, handleChangeTheme, window}, props) => {
   return (
     <Box sx={{ display: 'flex' }}>
       <ElevationScroll {...props}> 
-        <AppBar position='fixed' sx={{backgroundColor: theme.palette.mode === "dark" ? "transparent" : `${theme.palette.primary.dark}e5` , backdropFilter: "blur(20px)" }}>
+        <AppBar position='fixed' sx={{backgroundColor: theme.palette.mode === "dark" ? `${theme.palette.background.default}bf` : `${theme.palette.primary.dark}cc` , backdropFilter: "blur(8px)" }}>
           <Container maxWidth="xl">
             <Toolbar sx={{justifyContent: "space-between", mx:-2 }}>
               <Box>
