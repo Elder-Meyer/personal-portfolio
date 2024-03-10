@@ -10,8 +10,10 @@ import { Typography } from "../../components/material-ui/Typography";
 import { Chip } from "../../components/material-ui/Chip";
 import { Divider } from "../../components/material-ui/Divider";
 import { ChipDownloadCV } from "./ChipDownloadCV";
+import { useTranslation } from 'react-i18next'
 
 export const AboutMe = () => {
+  const { t } = useTranslation()
   return (
     <Container maxWidth="lg" sx={{ minHeight: { xs: "55vh", sm: "60vh", md: "67vh" }}}>
       <Paper  elevation={0} sx={{p: {xs:1, md:2, lg:3}, borderRadius: 5 }}>
@@ -23,7 +25,7 @@ export const AboutMe = () => {
                 Elder Meyer
               </Typography>
               <Typography color="text.primary" variant="h6" fontWeight={700}>
-                TSU. EN TECNOLOGÍAS DE LA INFORMACIÓN
+                {t("aboutMe.sub")}
               </Typography>
             </Stack>
           </Grid>
@@ -59,37 +61,30 @@ export const AboutMe = () => {
           {/* Desc */}
           <Grid item xs={12}>
             <Typography color="text.secondary" variant="body1">
-              Desarrollador web apasionado por crear aplicaciones que sean útiles, atractivas e innovadoras.
-              Siempre explorando nuevas tecnologías y tendencias para ofrecer productos que estén a la vanguardia de la
-              innovación en la web.
-              Desarrollador proactivo, organizado y con capacidad de trabajo en equipo,
+              {t("aboutMe.info")}
             </Typography>
           </Grid>
           <Grid item xs={12}> <Divider /> </Grid>
           {/* Experiencia */}
           <Grid item xs={12}>
             <Typography color="text.primary" variant="h5" fontWeight={700}>
-              Experiencia Laboral
+              {t("aboutMe.workTitle")}
             </Typography>
             <Typography color="text.primary" variant="subtitle1">
-              Auxiliar
+              {t("aboutMe.workCaption")}
             </Typography>
             <Typography color="text.primary" variant="subtitle2">
               Tienda de abarrotes, Sep 2020 - Nov 2023
             </Typography>
             <Typography color="text.secondary" variant="body1">
-              Atención al cliente: Brindar un servicio de atención al cliente amable y eficiente, resolviendo las dudas y consultas de los clientes.
-              Organización de productos:Mantener los productos en los estantes de manera ordenada y accesible para los clientes. Habilidades
-              de comunicación y atención al cliente:Capacidad para comunicarse de forma efectiva con los clientes, resolviendo sus dudas y
-              consultas de forma amable y eficiente. Habilidades de organización y planificación:Capacidad para organizar y planificar el trabajo
-              de manera eficiente.
+              {t("aboutMe.workDescription")}
             </Typography>
           </Grid>
           <Grid item xs={12}> <Divider /> </Grid>
           {/* Educación */}
           <Grid item xs={12} sm={6}>
             <Typography color="text.primary" variant="h5" fontWeight={700}>
-              Educación
+              {t("aboutMe.educationTitle")}
             </Typography>
             <Stack direction="column" spacing={3}>
               <div>
@@ -100,7 +95,7 @@ export const AboutMe = () => {
                   Universidad Tecnologica de la Huasteca Hidalguense
                 </Typography>
                 <Typography color="text.secondary" variant="body2">
-                  Ing. en Desarrollo y Gestión de Software
+                  {t("aboutMe.ing")}
                 </Typography>
               </div>
               <div>
@@ -111,7 +106,7 @@ export const AboutMe = () => {
                   Universidad Tecnologica de la Huasteca Hidalguense
                 </Typography>
                 <Typography color="text.secondary" variant="body2">
-                  TSU. en Tecnologías de la información
+                  {t("aboutMe.tsu")}
                 </Typography>
               </div>
               <div>
@@ -122,7 +117,7 @@ export const AboutMe = () => {
                   Colegio de Bachilleres del Estado de Hidalgo
                 </Typography>
                 <Typography color="text.secondary" variant="body2">
-                  Capacitación para el trabajo en informatica
+                  {t("aboutMe.cpt")} 
                 </Typography>
               </div>
             </Stack>
@@ -131,7 +126,7 @@ export const AboutMe = () => {
           <Grid container item xs={12} sm={6}>
             <Grid item xs={12}>
               <Typography color="text.primary" variant="h5" fontWeight={700}>
-                Habilidades
+                {t("aboutMe.skillsTitle")}
               </Typography>
             </Grid>
             {/* listas */}
@@ -340,10 +335,10 @@ export const AboutMe = () => {
             <Grid item xs={12}>
               <br/>
               <Typography color="text.secondary" variant="body1" gutterBottom>
-                Comunicación Asertiva, Resolución de Problemas, Trabajo en Equipo, Autodidacta
+                {t("aboutMe.subSkills")}
               </Typography>
               <Typography color="text.secondary" variant="body1">
-                Inglés (Intermedio)
+                {t("aboutMe.language")}
               </Typography>
             </Grid>
           </Grid>
