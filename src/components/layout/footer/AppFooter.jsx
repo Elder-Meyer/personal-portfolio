@@ -124,7 +124,7 @@ const CssTextField = styled(TextField)(({ theme })=>({
   '& label ': { color: theme.palette.mode === "dark" ? theme.palette.primary.light : theme.palette.background.default, },
   '& label.Mui-focused': { color: theme.palette.mode === "dark" ? theme.palette.primary.light : theme.palette.background.default, },
   '.MuiSelect-select':{ color: theme.palette.mode === "dark" ? theme.palette.primary.light : theme.palette.background.default, },
-  '.MuiSvgIcon-root':{ color: "white", },
+  '.MuiSvgIcon-root':{ color: theme.palette.mode === "dark" ? theme.palette.primary.light : theme.palette.background.default, },
   '& .MuiOutlinedInput-root': {
     '&:hover fieldset': { borderColor: theme.palette.mode === "dark" ? theme.palette.primary.main : theme.palette.background.paper, },
     '& fieldset': { borderColor: theme.palette.mode === "dark" ? theme.palette.primary.light : theme.palette.background.default, },
