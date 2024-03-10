@@ -21,6 +21,20 @@
         },
         "backtopbtn" : "Volver arriba"
     },
+    "aboutMe" : {
+        "sub" : "TSU. EN TECNOLOGÍAS DE LA INFORMACIÓN",
+        "info" : "Desarrollador web apasionado por crear aplicaciones que sean útiles, atractivas e innovadoras. Siempre explorando nuevas tecnologías y tendencias para ofrecer productos que estén a la vanguardia de la innovación en la web. Desarrollador proactivo, organizado y con capacidad de trabajo en equipo,",
+        "workTitle" : "Experiencia Laboral",
+        "workCaption" : "Auxiliar",
+        "workDescription" : "Atención al cliente: Brindar un servicio de atención al cliente amable y eficiente, resolviendo las dudas y consultas de los clientes. Organización de productos:Mantener los productos en los estantes de manera ordenada y accesible para los clientes. Habilidades de comunicación y atención al cliente:Capacidad para comunicarse de forma efectiva con los clientes, resolviendo sus dudas y consultas de forma amable y eficiente. Habilidades de organización y planificación:Capacidad para organizar y planificar el trabajo de manera eficiente.",
+        "educationTitle" : "Educación",
+        "ing" : "Ing. en Desarrollo y Gestión de Software",
+        "tsu" : "TSU. en Tecnologías de la información",
+        "cpt" : "Capacitación para el trabajo en informatica",
+        "skillsTitle" : "Habilidades",
+        "subSkills" : "Comunicación Asertiva, Resolución de Problemas, Trabajo en Equipo, Autodidacta",
+        "language" : "Inglés (intermedio), Español (nativo)"
+    },
     "projects" : {
         "title" : "Proyectos",
         "subtitle" : "Aquí puedes ver algunos de los proyectos que he creado.",
