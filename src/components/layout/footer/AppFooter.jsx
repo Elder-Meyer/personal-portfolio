@@ -1,4 +1,4 @@
-import { forwardRef, useState } from 'react';
+import { forwardRef, useEffect, useState } from 'react';
 import { Link as LinkRoute } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { TextField, useTheme, MenuItem, styled, Snackbar, Alert, AlertTitle } from '@mui/material';
@@ -19,6 +19,7 @@ import useAnalyticsEventTracker from '../../../config/analytics/useAnalyticsEven
 import { PopUpAlert } from '../../items/PopUpAlert';
 import InputAdornment from '@mui/material/InputAdornment';
 import { Face, Language } from '@mui/icons-material';
+import Cookies from 'js-cookie';
 
 function Copyright({theme, t}) {
   return ( <Box sx={{color: theme.palette.mode==='dark'?"text.secondary":"background.paper"}}>
@@ -39,6 +40,7 @@ export const AppFooter = () => {
     const lang_code = e.target.value;
     i18n.changeLanguage(lang_code);
     setSelectedLanguage(lang_code);
+    Cookies.set('language', lang_code);
     setVariantAlert("info")
     setTextAlert(t("footer.alert"))
     setSnackbarOpen(true)
@@ -49,6 +51,29 @@ export const AppFooter = () => {
     { label: t("footer.language.es"), code: "es" },
   ];
 
+  useEffect(() => {
+    const userLanguage = navigator.language;
+    const storedLanguage = Cookies.get('language');
+
+    if (storedLanguage) {
+        i18n.changeLanguage(storedLanguage);
+        setSelectedLanguage(storedLanguage);
+        console.log(storedLanguage)
+    } else {
+        if (userLanguage.includes("en")) {
+            i18n.changeLanguage("en");
+            setSelectedLanguage("en");
+        } else if (userLanguage.includes("es")) {
+            i18n.changeLanguage("es");
+            setSelectedLanguage("es");
+        } else {
+            i18n.changeLanguage("en");
+            setSelectedLanguage("en");
+        }
+        Cookies.set('language', selectedLanguage);
+    }
+}, []);
+  
   const gaEventTracker = useAnalyticsEventTracker("contact us")
   return (
     <Box component="footer" sx={{ display: 'flex', backgroundColor: theme.palette.mode === 'dark' ? "background.paper" : "primary.main" }}>
