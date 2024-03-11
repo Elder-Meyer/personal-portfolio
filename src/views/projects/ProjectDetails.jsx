@@ -95,9 +95,11 @@ export const ProjectDetails = () => {
                   <Typography color="primary.light" variant="h5" fontWeight={400}>
                     {t('projectsdetails.about')}
                   </Typography>
-                  <Typography color="text.primary" variant="body1" sx={{textWrap: "pretty"}}>
-                    {translatedProject.largeDescription}
-                  </Typography>
+                  { translatedProject.largeDescription.split('\n').map((paragraph, index) => (
+                    <Typography key={index} color="text.primary" variant="body1" gutterBottom>
+                      {paragraph}
+                    </Typography>
+                  ))}
                 </Stack>
               </Grid>
               {/* TECHNOLOGIES DATA CONTAINER */}
