@@ -104,25 +104,25 @@
             "title" : "Corazón Huasteco",
             "date" : "01 de Diciembre de 2023",
             "shortdescription" : "Sitio web para la preservación de la cultura.",
-            "largedescription" : "Corazón Huasteco es un proyecto desarrollado como parte del programa de Ingeniería en Desarrollo y Gestión de Software en la Universidad Tecnológica de la Huasteca Hidalguense (UTHH). Este proyecto tiene como objetivo principal preservar la rica cultura de Huejutla de Reyes, Hidalgo, a través de un sitio web que aloje artículos interesantes y sea accesible para todos. Fue desarrollado en equipo, como parte de un esfuerzo colaborativo que involucró la aplicación de diversas tecnologías, algunas de las cuales se detallan en la sección de tecnologías. Además, Corazón Huasteco tiene una relación directa con un cliente potencial, lo que permitió integrar la experiencia práctica en el desarrollo y la gestión administrativa del proyecto."
+            "largedescription" : "Corazón Huasteco es un proyecto desarrollado como parte del programa de Ingeniería en Desarrollo y Gestión de Software en la Universidad Tecnológica de la Huasteca Hidalguense (UTHH). \n Este proyecto tiene como objetivo principal preservar la rica cultura de Huejutla de Reyes, Hidalgo, a través de un sitio web que aloje artículos interesantes y sea accesible para todos. \n Fue desarrollado en equipo, como parte de un esfuerzo colaborativo que involucró la aplicación de diversas tecnologías, algunas de las cuales se detallan en la sección de tecnologías. \n Además, Corazón Huasteco tiene una relación directa con un cliente potencial, lo que permitió integrar la experiencia práctica en el desarrollo y la gestión administrativa del proyecto."
         },
         "project02" : {
             "title" : "Aplicación CAIH",
             "date" : "15 de Agosto de 2022",
             "shortdescription" : "Sitio web para colegio de arquitectos.",
-            "largedescription" : "Aplicación CAIH es un proyecto desarrollado como parte de la práctica para titularme como Técnico Superior Universitario en Tecnologías de la Información (TSU). Trabajé en colaboración con otras dos personas, desempeñando un papel de diseñador y administrador de la documentación. El objetivo principal fue actualizar una plataforma para el Colegio de Arquitectos e Ingenieros (CAIH), migrando la idea original creada con HTML, CSS y JavaScript a un entorno que emplea frameworks, librerías y servicios en la nube."
+            "largedescription" : "Aplicación CAIH es un proyecto desarrollado como parte de la práctica para titularme como Técnico Superior Universitario en Tecnologías de la Información (TSU). \n Trabajé en colaboración con otras dos personas, desempeñando un papel de diseñador y administrador de la documentación. \n El objetivo principal fue actualizar una plataforma para el Colegio de Arquitectos e Ingenieros (CAIH), migrando la idea original creada con HTML, CSS y JavaScript a un entorno que emplea frameworks, librerías y servicios en la nube."
         },
         "project03" : {
             "title" : "Dulce Delicia",
             "date" : "28 de Noviembre de 2023",
             "shortdescription" : "Sitio web temático de tienda de dulces.",
-            "largedescription" : "Dulce Delicia es un proyecto desarrollado como práctica individual para explorar tecnologías relacionadas con las PWAs (Aplicaciones Web Progresivas), incluyendo Service Workers, archivos de manifiesto, notificaciones y acceso sin conexión. Se tomó como referencia un sitio web existente llamado 'Azúcar Dulcerías' para estructurar elementos y contenido."
+            "largedescription" : "Dulce Delicia es un proyecto desarrollado como práctica individual para explorar tecnologías relacionadas con las PWAs (Aplicaciones Web Progresivas), incluyendo Service Workers, archivos de manifiesto, notificaciones y acceso sin conexión. \n Se tomó como referencia un sitio web existente llamado 'Azúcar Dulcerías' para estructurar elementos y contenido."
         },
         "project04" : {
             "title" : "Fashion Fusion",
             "date" : "15 de Agosto de 2023",
             "shortdescription" : "Sitio web temático de tienda de ropa.",
-            "largedescription" : "Fashion Fusion es un proyecto desarrollado de forma colaborativa para poner en práctica el versionamiento con Git y GitHub, así como metodologías como DevOps para desarrollar procesos de manera ágil. El sitio web tiene una temática de tienda de ropa y todo el contenido fue agregado en menos de una semana, siguiendo técnicas como las ya mencionadas."
+            "largedescription" : "Fashion Fusion es un proyecto desarrollado de forma colaborativa para poner en práctica el versionamiento con Git y GitHub, así como metodologías como DevOps para desarrollar procesos de manera ágil. \n El sitio web tiene una temática de tienda de ropa y todo el contenido fue agregado en menos de una semana, siguiendo técnicas como las ya mencionadas."
         }
     }
 }

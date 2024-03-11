@@ -104,25 +104,25 @@
             "title" : "Corazon Huasteco",
             "date" : "Dec 01, 2023",
             "shortdescription" : "Website for the preservation of culture.",
-            "largedescription" : "Corazón Huasteco is a project developed as part of the Software Development and Management Engineering program at the Technological University of Huasteca Hidalguense (UTHH). The main objective of this project is to preserve the rich culture of Huejutla de Reyes, Hidalgo, through a website hosting interesting articles that are accessible to everyone. It was developed collaboratively, involving the application of various technologies, some of which are detailed in the technologies section. Additionally, Corazón Huasteco has a direct relationship with a potential client, allowing the integration of practical experience in project development and management administration."
+            "largedescription" : "Corazón Huasteco is a project developed as part of the Software Development and Management Engineering program at the Technological University of Huasteca Hidalguense (UTHH). \n The main objective of this project is to preserve the rich culture of Huejutla de Reyes, Hidalgo, through a website hosting interesting articles that are accessible to everyone. \n It was developed collaboratively, involving the application of various technologies, some of which are detailed in the technologies section. \n Additionally, Corazón Huasteco has a direct relationship with a potential client, allowing the integration of practical experience in project development and management administration."
         },
         "project02" : {
             "title" : "App CAIH",
             "date" : "Aug 15, 2022",
             "shortdescription" : "Website for college of architects",
-            "largedescription" : "CAIH Application is a project developed as part of the internship requirement for my Associate Degree in Information Technology. I worked collaboratively with two other individuals, serving as a designer and documentation manager. The main objective was to update a platform for the Architects and Engineers Association (CAIH), migrating the original idea created with HTML, CSS, and JavaScript to an environment utilizing frameworks, libraries, and cloud services."
+            "largedescription" : "CAIH Application is a project developed as part of the internship requirement for my Associate Degree in Information Technology. \n I worked collaboratively with two other individuals, serving as a designer and documentation manager. \n The main objective was to update a platform for the Architects and Engineers Association (CAIH), migrating the original idea created with HTML, CSS, and JavaScript to an environment utilizing frameworks, libraries, and cloud services."
         },
         "project03" : {
             "title" : "Dulce Delicia",
             "date" : "Nov 28, 2023",
             "shortdescription" : "Sweet shop themed website",
-            "largedescription" : "Dulce Delicia is a project developed as an individual practice to explore technologies related to PWAs (Progressive Web Applications), including Service Workers, manifest files, notifications, and offline access. It was inspired by an existing website called 'Azucar Dulcerias' to structure elements and content."
+            "largedescription" : "Dulce Delicia is a project developed as an individual practice to explore technologies related to PWAs (Progressive Web Applications), including Service Workers, manifest files, notifications, and offline access. \n It was inspired by an existing website called 'Azucar Dulcerias' to structure elements and content."
         },
         "project04" : {
             "title" : "Fashion Fusion",
             "date" : "Aug 15, 2023",
             "shortdescription" : "Clothing store themed website",
-            "largedescription" : "Fashion Fusion is a project developed collaboratively to practice continuous improvement of DevOps and version control system using Git and GitHub. The website has a clothing store theme, and all content was added in less than a week, following techniques such as those mentioned."
+            "largedescription" : "Fashion Fusion is a project developed collaboratively to practice continuous improvement of DevOps and version control system using Git and GitHub. \n The website has a clothing store theme, and all content was added in less than a week, following techniques such as those mentioned."
         }
     }
 }
