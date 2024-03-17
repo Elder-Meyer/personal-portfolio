@@ -51,7 +51,7 @@ export const ProjectDetails = () => {
             {/* TITULO */}
             <Grid item xs={12}>
               <Stack direction={{xs:"column", sm: "row"}} spacing={0} display="flex" alignItems="flex-start">
-                <IconButton aria-label="back" component={LinkRoute} to="/projects">
+                <IconButton aria-label="back" component={LinkRoute} to="/projects" sx={{display: {xs: "none", md: "flex"}}}>
                   <ArrowBackSharp />
                 </IconButton>
                 <Typography color="primary.light" variant="h4" fontWeight={800}>
