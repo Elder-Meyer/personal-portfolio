@@ -47,7 +47,7 @@ export const darkTheme = createTheme({
       secondary: "#e0e0e0",
       icon: "#fb7703",
     },
-    divider: "#59517a",
+    divider: "#46464E",
     background: {
       paper: "#28272e",
       default: "#1d1c26",
