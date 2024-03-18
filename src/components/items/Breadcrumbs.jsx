@@ -50,7 +50,7 @@ function getIcon(name) {
   if(name.includes('project-')){
     return <Description sx={{mr: 0.5}} fontSize='inherit' />
   }
-  if(!isNaN(name)){
+  if(!isNaN(name) || name.includes('post-') ){
     return <Subject sx={{mr: 0.5}} fontSize='inherit' />
   }
   switch (name) {
