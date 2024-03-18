@@ -17,6 +17,7 @@ import ScrollToTop from '../components/items/ScrollToTop'
 import { Loader } from '../components/items/Loader'
 import { Box } from '../components/material-ui/Box'
 import Breadcrumb from '../components/items/Breadcrumbs'
+import { BlogDetails } from '../views/blog/BlogDetails'
 
 export const Router = ({darkMode, handleChangeTheme}, props) => {
   return (
@@ -33,6 +34,7 @@ export const Router = ({darkMode, handleChangeTheme}, props) => {
                 <Route path='/projects'     element={<Projects/>} />
                 <Route path="/projects/:id" element={<ProjectDetails/>} />
                 <Route path='/blog/'        element={<Blog/>} />
+                <Route path='/blog/post-01-centrar-un-div'     element={<BlogDetails/>} />
                 <Route path='/contact/'     element={<Contact/>} />
                 <Route path='/about-me/'     element={<AboutMe/>} />
                 <Route path='*'             element={<Error/>} />
