@@ -29,7 +29,7 @@ export const Blog = () => {
     <Container maxWidth="lg" sx={{minHeight: {xs: "55vh", sm: "60vh", md: "67vh"}, display: "flex", alignItems: "flex-start" }}>
       <Grid container spacing={2} py={1}>
         <Grid item xs={12}>
-          <Typography color="text.secondary" variant='subtitle1' textAlign="left"> Blog </Typography>  
+          <Typography color="text.secondary" variant='subtitle1' textAlign="left" sx={{display: {xs: "none", md: "block"}}}> Blog </Typography>  
         </Grid>
         {/* reserva */}        
         <Grid item xs={12} sm={12} md={4}>
