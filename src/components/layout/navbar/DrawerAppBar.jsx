@@ -38,7 +38,7 @@ export const DrawerAppBar = ({darkMode, handleChangeTheme, window}, props) => {
   const drawer = (
     <Box sx={{ textAlign: 'center', height: "100%" }}>
       <Typography variant="h6" sx={{ my: 2, color: "primary.light" }}> Elder M. </Typography>
-      <Divider variant='middle' sx={{borderColor: "secondary.dark"}} />
+      <Divider variant="middle"/>
       <List>
         {navItems.map((item) => (
           <ListItem key={item.path} disablePadding onClick={handleDrawerToggle}>
@@ -51,7 +51,7 @@ export const DrawerAppBar = ({darkMode, handleChangeTheme, window}, props) => {
           </ListItem>
         ))}
       </List>
-      <Divider variant='middle' sx={{borderColor: "secondary.dark"}} />
+      <Divider variant="middle"/>
       <Stack direction="column" spacing={1} alignItems="center" justifyContent="center" py={2}>
         <ThemeSwitcher darkMode={darkMode} handleChangeTheme={handleChangeTheme} />
       </Stack>
