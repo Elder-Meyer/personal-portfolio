@@ -99,7 +99,7 @@ export const ProjectDetails = () => {
                       {t('projectsdetails.about')}
                     </Typography>
                     { translatedProject.largeDescription.split('\n').map((paragraph, index) => (
-                      <Typography key={index} color="text.primary" variant="body1" gutterBottom>
+                      <Typography key={index} color="text.primary" variant="body1" paragraph>
                         {paragraph}
                       </Typography>
                     ))}
