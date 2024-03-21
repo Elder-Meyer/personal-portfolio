@@ -69,7 +69,7 @@ export const DrawerAppBar = ({darkMode, handleChangeTheme, window}, props) => {
               <Box>
                 <Tooltip title={t("navbar.bbtn")} placement="right" arrow>
                   <Link to="/home" style={{ textDecoration: "none", color: "inherit" }} aria-label="Go home" >
-                    <CubeGD aria-label='Go home' />
+                    <CubeGD animate={3} aria-label='Go home' />
                   </Link>            
                 </Tooltip>
               </Box>
