@@ -101,7 +101,8 @@ const ImageContent = () => {
                   '57%':  { transform: "scale(1, 1)       translateY(0)",       },
                   '64%':  { transform: "scale(1, 1)       translateY(0)",       },
                   '100%': { transform: "scale(1, 1)       translateY(0)",       },
-                }
+                },
+                '&:hover':{ animationName: "none" }
               }}
             />
           </a>
