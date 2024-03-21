@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import cube from '../../assets/img/principal/cube-glow.webp'
 import { CardMedia } from '../material-ui/CardMedia';
 
-export function CubeGD({animate = 3, large = 42}){
+export function CubeGD({animate, large = 42}){
   const [animation, setAnimation] = useState( {animation: "", time: "", keyframes: {}} )
 
   useEffect(() => {
@@ -78,7 +78,7 @@ export function CubeGD({animate = 3, large = 42}){
         });
         break;
       default :
-        setAnimation({animation: "", time: "", keyframes: {}});
+        setAnimation({animation: "none", time: "", keyframes: {}});
         break;
     }
     console.log("animacion cambiado")
