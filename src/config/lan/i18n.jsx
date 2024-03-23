@@ -4,7 +4,7 @@ import { initReactI18next } from "react-i18next";
 
 const getCurrentHost =
   import.meta.env.MODE === "development"
-    ? "http://localhost:5173"
+    ? window.location.origin
     : "https://elder-meyer.web.app";
 
 i18n
