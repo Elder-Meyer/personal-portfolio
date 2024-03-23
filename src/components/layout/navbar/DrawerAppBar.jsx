@@ -22,6 +22,7 @@ import { Stack } from '../../material-ui/Stack';
 import ThemeSwitcher from '../../items/ThemeSwitcher';
 import { CubeGD } from '../../items/CubeGD'
 import { ElevationScroll } from '../../../utils/fnElevationScroll';
+import ScrollIndicator from '../../items/ScrollIndicator';
 
 const drawerWidth = 240;
 
@@ -89,6 +90,7 @@ export const DrawerAppBar = ({darkMode, handleChangeTheme, window}, props) => {
               </Box>
             </Toolbar>
           </Container>
+          <ScrollIndicator/>
         </AppBar>
       </ElevationScroll>
 
