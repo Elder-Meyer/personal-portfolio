@@ -8,8 +8,10 @@ import Typography from '@mui/material/Typography';
 import { CookieOutlined } from "@mui/icons-material";
 import Slide from '@mui/material/Slide';
 import Cookies from 'js-cookie';
+import { useTranslation } from 'react-i18next'
 
 export const CookiesDialog = () => {
+  const { t } = useTranslation();
     const [bannerOpen, setBannerOpen] = useState(true);
 
     const closeBanner = () => {
@@ -39,10 +41,10 @@ export const CookiesDialog = () => {
           <Stack direction={"column"} justifyContent="center" gap={2}>
             <Box>
               <CookieOutlined fontSize="large" sx={{mb:1}}/>
-              <Typography fontWeight="bold">This website uses cookies</Typography>
-              <Typography variant="body2">To improve your experience this website use cookies</Typography>
+              <Typography fontWeight="bold">{t('home.cookies.title')}</Typography>
+              <Typography variant="body2">{t('home.cookies.description')}</Typography>
             </Box>
-            <Button size="small" onClick={closeBanner} variant="contained">Allow all</Button>
+            <Button size="small" onClick={closeBanner} variant="contained">{t('home.cookies.btn')}</Button>
           </Stack>
         </Paper>
       </Slide>
