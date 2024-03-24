@@ -19,7 +19,12 @@
             "fr" : "French",
             "es" : "Spanish"
         },
-        "backtopbtn" : "Back to the top"
+        "backtopbtn" : "Back to the top",
+        "cookies" : {
+            "title" : "This website uses cookies.",
+            "description" : "To improve your experience this website use cookies.",
+            "btn" : "Allow All"
+        }
     },
     "aboutMe" : {
         "sub" : "HT. IN INFORMATION TECHNOLOGIES",
