@@ -19,7 +19,12 @@
             "fr" : "Francés",
             "es" : "Español"
         },
-        "backtopbtn" : "Volver arriba"
+        "backtopbtn" : "Volver arriba",
+        "cookies" : {
+            "title" : "Este sitio web utiliza cookies.",
+            "description" : "Para mejorar tu experiencia este sitio web utiliza cookies.",
+            "btn" : "Permitir todas"
+        }
     },
     "aboutMe" : {
         "sub" : "TSU. EN TECNOLOGÍAS DE LA INFORMACIÓN",
