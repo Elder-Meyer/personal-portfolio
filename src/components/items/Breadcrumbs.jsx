@@ -1,5 +1,3 @@
-// Breadcrumbs.js
-import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Breadcrumbs, Typography, Chip} from '@mui/material';
 import { Container } from '../material-ui/Container';
@@ -9,39 +7,33 @@ import { NavigateNext, Home, Book, ContactPage, Warning, EmojiEmotions, Descript
 function Breadcrumb() {
   const location = useLocation();
   const pathnames = location.pathname.split('/').filter((x) => x);
-
   return (
     <Container maxWidth="xl" sx={{py:1}}>
-        <Breadcrumbs separator={<NavigateNext fontSize="small" />} aria-label="breadcrumb">
+      <Breadcrumbs separator={<NavigateNext fontSize="small" />} aria-label="breadcrumb">
+        <StyledBreadcrumb component={Link} to="/" label="Home" icon={<Home sx={{mr: 0.5}} fontSize='inherit'/>} />
+        {pathnames.map((name, index) => {
+          const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
+          const isLast = index === pathnames.length - 1;
+          const icon = getIcon(name);
+          return isLast ? (
+            <StyledBreadcrumb
+              component={Typography}
+              key={routeTo}
+              label={name}
+              icon={icon}
+              sx={{ '&:hover':{ cursor: "default" } }}
+            />
+          ) : (
             <StyledBreadcrumb
               component={Link}
-              to="/"
-              label="Home"
-              icon={<Home sx={{mr: 0.5}} fontSize='inherit'/>}
+              key={routeTo}
+              to={routeTo}
+              label={name}
+              icon={icon}
             />
-            {pathnames.map((name, index) => {
-                const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
-                const isLast = index === pathnames.length - 1;
-                const icon = getIcon(name);
-                return isLast ? (
-                    <StyledBreadcrumb
-                      component={Typography}
-                      key={routeTo}
-                      label={name}
-                      icon={icon}
-                      sx={{ '&:hover':{ cursor: "default" } }}
-                    />
-                ) : (
-                    <StyledBreadcrumb
-                      component={Link}
-                      key={routeTo}
-                      to={routeTo}
-                      label={name}
-                      icon={icon}
-                    />
-                );
-            })}
-        </Breadcrumbs>
+          );
+        })}
+      </Breadcrumbs>
     </Container>
   );
 }
@@ -68,10 +60,7 @@ function getIcon(name) {
 }
 
 const StyledBreadcrumb = styled(Chip)(({ theme }) => {
-  const backgroundColor =
-    theme.palette.mode === "light"
-      ? theme.palette.grey[100]
-      : theme.palette.grey[800];
+  const backgroundColor = theme.palette.mode === "light" ? theme.palette.grey[100] : theme.palette.grey[800];
   return {
     backgroundColor,
     height: theme.spacing(3),
