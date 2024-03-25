@@ -102,7 +102,7 @@ const ImageContent = () => {
                   '64%':  { transform: "scale(1, 1)       translateY(0)",       },
                   '100%': { transform: "scale(1, 1)       translateY(0)",       },
                 },
-                '&:hover':{ animationName: "none" }
+                '&:hover':{ animationPlayState: "paused" }
               }}
             />
           </a>
