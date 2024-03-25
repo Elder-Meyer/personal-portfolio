@@ -6,6 +6,11 @@ import { Toolbar } from '../../components/material-ui/Toolbar'
 import { Paper } from '../../components/material-ui/Paper'
 import Alert from '@mui/material/Alert';
 import { Stack } from '../../components/material-ui/Stack'
+import { styled } from '@mui/material/styles';
+import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
+import MuiAccordion from '@mui/material/Accordion';
+import MuiAccordionSummary from '@mui/material/AccordionSummary';
+import MuiAccordionDetails from '@mui/material/AccordionDetails';
 
 export const BlogDetails = () => {
   return (
@@ -26,6 +31,30 @@ export const BlogDetails = () => {
       </Typography>
       <br/>
 
+      <div>
+        <Accordion>
+          <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
+            <Typography>Collapsible Group Item #1</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti est, natus reprehenderit consequuntur harum itaque assumenda ad voluptate earum corporis maxime aspernatur non, temporibus tempora error tenetur. Animi, dolorem! Doloremque!s
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
+          <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
+            <Typography>Collapsible Group Item #2</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus consequuntur autem nemo nulla doloremque corporis recusandae qui at, a, quas ipsam! Voluptate, voluptatibus. Alias beatae quam et consectetur ex provident. Autem atque obcaecati eos, sit tempora, dolore voluptas reiciendis suscipit aliquam itaque dicta veritatis asperiores ipsum odit at? Nesciunt illo earum eum nisi harum provident accusantium cumque tempora maiores aliquam?
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+      </div>
+      <br/>
+
       <Typography variant="h2" component="h2" fontWeight={600} fontSize={24} paragraph>1. Lorem ipsum dolor sit amet consectetur adipisicing elit. </Typography>
       <Typography variant="body2" component="p" fontSize={18} paragraph>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam provident veritatis beatae molestiae. Dolor quos explicabo, pariatur ratione ipsa quo rerum soluta magni a maiores ad non sit repellat nulla?
@@ -41,7 +70,6 @@ export const BlogDetails = () => {
         <Paper sx={{p:6}} variant='elevation' elevation={1}></Paper>
       </Stack>
       <Toolbar variant="dense" />
-      
       
       <Typography variant="h2" component="h2" fontWeight={600} fontSize={24} paragraph>2. Lorem ipsum dolor sit amet consectetur adipisicing elit. </Typography>
       <Typography variant="body2" component="p" fontSize={18} paragraph>
@@ -59,7 +87,6 @@ export const BlogDetails = () => {
       </Stack>
       <Toolbar variant="dense" />
       
-      
       <Typography variant="h2" component="h2" fontWeight={600} fontSize={24} paragraph>3. Lorem ipsum dolor sit amet consectetur adipisicing elit. </Typography>
       <Typography variant="body2" component="p" fontSize={18} paragraph>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam provident veritatis beatae molestiae. Dolor quos explicabo, pariatur ratione ipsa quo rerum soluta magni a maiores ad non sit repellat nulla?
@@ -75,7 +102,6 @@ export const BlogDetails = () => {
         <Paper sx={{p:6}} variant='elevation' elevation={1}></Paper>
       </Stack>
       <Toolbar variant="dense" />
-      
 
       <Typography variant="h2" component="h2" fontWeight={600} fontSize={24} paragraph>4. Lorem ipsum dolor sit amet consectetur adipisicing elit. </Typography>
       <Typography variant="body2" component="p" fontSize={18} paragraph>
@@ -92,7 +118,6 @@ export const BlogDetails = () => {
         <Paper sx={{p:6}} variant='elevation' elevation={1}></Paper>
       </Stack>
       <Toolbar variant="dense" />
-
 
       <Box component="div" sx={{ width: {xs: 280, md: 500}, height: {xs: 280, md: 500}, filter: "blur(270px)", opacity: 0.8, position: "absolute", top: -50, right: 0 }}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
@@ -112,3 +137,24 @@ export const BlogDetails = () => {
 }
 
 const bull = ( <Box component="span" sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)'}}>•</Box> );
+
+const Accordion = styled((props) => ( <MuiAccordion disableGutters elevation={0} square {...props} /> ))(({ theme }) => ({
+  border: `1px solid ${theme.palette.divider}`,
+  '&:not(:last-child)': { borderBottom: 0 },
+  '&::before': { display: 'none' },
+}));
+
+const AccordionSummary = styled((props) => ( <MuiAccordionSummary expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '0.9rem' }} />} {...props}/> ))(({ theme }) => ({
+  backgroundColor:
+    theme.palette.mode === 'dark'
+      ? 'rgba(255, 255, 255, .05)'
+      : 'rgba(0, 0, 0, .03)',
+  flexDirection: 'row-reverse',
+  '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': { transform: 'rotate(90deg)' },
+  '& .MuiAccordionSummary-content': { marginLeft: theme.spacing(1) },
+}));
+
+const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+  padding: theme.spacing(2),
+  borderTop: '1px solid rgba(0, 0, 0, .125)',
+}));
