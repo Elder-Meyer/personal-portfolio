@@ -8,7 +8,6 @@ const ThemeSwitcher = ({ darkMode, handleChangeTheme }) => {
   const { t } = useTranslation()
   const [isRotated, setIsRotated] = useState(false);
   const [hovered, setHovered] = useState(false);
-  const isMobile = useMediaQuery('(max-width:899px)');
 
   const handleIconClick = () => {
     setIsRotated(!isRotated);
@@ -16,7 +15,7 @@ const ThemeSwitcher = ({ darkMode, handleChangeTheme }) => {
   };
 
   return (
-    <Tooltip title={darkMode ? t("navbar.darkThemeText") : t("navbar.lightThemeText") } placement={isMobile ? "top" : "bottom"} arrow>
+    <Tooltip title={darkMode ? t("navbar.darkThemeText") : t("navbar.lightThemeText") } placement={"bottom"} arrow>
       <IconButton onClick={handleIconClick}
         sx={{ 
           color : "inherit",
