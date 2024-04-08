@@ -62,7 +62,7 @@ export const Blog = () => {
               <CardActions >
                 <Button size="small" variant="contained" fullWidth disableElevation
                   component={Link}
-                  to={"post-01-centrar-un-elemento-en-css"}
+                  to={"post-01-1712600908448"}
                 >
                   {t('blog.post.btn')}
                 </Button>
