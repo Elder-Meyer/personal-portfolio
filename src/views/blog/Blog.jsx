@@ -52,9 +52,9 @@ export const Blog = () => {
                 <Typography variant="h5" component="div" gutterBottom>
                   {t('blog.post.title')}
                 </Typography>
-                <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                <Box sx={{ mb: 1.5 }}>
                   <Chip color="info" label={t('blog.post.category')} />
-                </Typography>
+                </Box>
                 <Typography variant="body2">
                   {t('blog.post.subject')}
                 </Typography>
