@@ -54,7 +54,7 @@
     },
     "blog" : {
         "title" : "Blog",
-        "post" : {
+        "postPrev" : {
             "date" : "April 07, 2024",
             "title" : "How to center an element in CSS",
             "category" : "CSS",
