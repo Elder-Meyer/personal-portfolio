@@ -54,7 +54,7 @@
     },
     "blog" : {
         "title" : "Blog",
-        "post" : {
+        "postPrev" : {
             "date" : "07 de Abril de 2024",
             "title" : "Como centrar un elemento con CSS",
             "category" : "CSS",
