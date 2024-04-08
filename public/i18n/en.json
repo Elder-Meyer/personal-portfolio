@@ -55,7 +55,7 @@
     "blog" : {
         "title" : "Blog",
         "postPrev" : {
-            "date" : "April 07, 2024",
+            "date" : "April 08, 2024",
             "title" : "How to center an element in CSS",
             "category" : "CSS",
             "subject" : "Centering an element in CSS does not have to be difficult, let's see the ways in which we can achieve it",
