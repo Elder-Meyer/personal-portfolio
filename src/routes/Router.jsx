@@ -34,7 +34,7 @@ export const Router = ({darkMode, handleChangeTheme}, props) => {
                 <Route path='/projects'     element={<Projects/>} />
                 <Route path="/projects/:id" element={<ProjectDetails/>} />
                 <Route path='/blog/'        element={<Blog/>} />
-                <Route path='/blog/post-01-centrar-un-elemento-en-css'     element={<BlogDetails/>} />
+                <Route path='/blog/post-01-1712600908448'     element={<BlogDetails/>} />
                 <Route path='/contact/'     element={<Contact/>} />
                 <Route path='/about-me/'     element={<AboutMe/>} />
                 <Route path='*'             element={<Error/>} />
