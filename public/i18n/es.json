@@ -56,7 +56,7 @@
         "title" : "Blog",
         "post" : {
             "date" : "07 de Abril de 2024",
-            "title" : "Como centrar un elemento con css",
+            "title" : "Como centrar un elemento con CSS",
             "category" : "CSS",
             "subject" : "Centrar un elemento en CSS no tiene porque ser dificil, hechemos un vistazo a las diversas formas de como lograrlo",
             "btn" : "Leer más"
