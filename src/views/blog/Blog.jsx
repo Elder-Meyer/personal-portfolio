@@ -47,16 +47,16 @@ export const Blog = () => {
             <Box sx={{ display: 'flex', flexDirection: 'column', width: "100%" }}>
               <CardContent>
                 <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                  {t('blog.post.date')}
+                  {t('blog.postPrev.date')}
                 </Typography>
                 <Typography variant="h5" component="div" gutterBottom>
-                  {t('blog.post.title')}
+                  {t('blog.postPrev.title')}
                 </Typography>
                 <Box sx={{ mb: 1.5 }}>
-                  <Chip color="info" label={t('blog.post.category')} />
+                  <Chip color="info" label={t('blog.postPrev.category')} />
                 </Box>
                 <Typography variant="body2">
-                  {t('blog.post.subject')}
+                  {t('blog.postPrev.subject')}
                 </Typography>
               </CardContent>
               <CardActions >
@@ -64,7 +64,7 @@ export const Blog = () => {
                   component={Link}
                   to={"post-01-1712600908448"}
                 >
-                  {t('blog.post.btn')}
+                  {t('blog.postPrev.btn')}
                 </Button>
               </CardActions>
             </Box>
