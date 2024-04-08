@@ -9,6 +9,7 @@ import { Box } from '../../components/material-ui/Box'
 import { Card } from '../../components/material-ui/Card'
 import { CardMedia } from '../../components/material-ui/CardMedia'
 import { Link } from "react-router-dom"
+import { Chip } from '../../components/material-ui/Chip'
 // import { useEffect, useState } from 'react'
 // import { getItems } from '../../app/api'
 
@@ -46,18 +47,16 @@ export const Blog = () => {
             <Box sx={{ display: 'flex', flexDirection: 'column', width: "100%" }}>
               <CardContent>
                 <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                  18 March 2024
+                  {t('blog.post.date')}
                 </Typography>
                 <Typography variant="h5" component="div" gutterBottom>
-                  How center an element with CSS
+                  {t('blog.post.title')}
                 </Typography>
                 <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                  CSS
+                  <Chip color="info" label={t('blog.post.category')} />
                 </Typography>
                 <Typography variant="body2">
-                It´s very easy to create stylish and beautiful prototypes for your futurre proyects both graphical and dynamic
-                  <br />
-                  {'"a benevolent smile"'}
+                  {t('blog.post.subject')}
                 </Typography>
               </CardContent>
               <CardActions >
@@ -65,7 +64,7 @@ export const Blog = () => {
                   component={Link}
                   to={"post-01-centrar-un-elemento-en-css"}
                 >
-                  Read More
+                  {t('blog.post.btn')}
                 </Button>
               </CardActions>
             </Box>
