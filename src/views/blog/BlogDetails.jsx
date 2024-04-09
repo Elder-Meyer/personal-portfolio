@@ -6,13 +6,14 @@ import { Toolbar } from '../../components/material-ui/Toolbar'
 import { Paper } from '../../components/material-ui/Paper'
 import Alert from '@mui/material/Alert';
 import { Stack } from '../../components/material-ui/Stack'
-import { styled } from '@mui/material/styles';
+import { styled, useTheme } from '@mui/material/styles';
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 
 export const BlogDetails = () => {
+  const theme = useTheme()
   return (
     <Container maxWidth="md">
       <Toolbar variant='dense' sx={{display: {xs: "none", md: "block"} }}/>
@@ -121,15 +122,15 @@ export const BlogDetails = () => {
 
       <Box component="div" sx={{ width: {xs: 300, sm: 400, md: 500}, height: {xs: 300, sm: 400, md: 500}, filter: "blur(270px)", opacity: 0.8, position: "absolute", top: -50, right: 0 }}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
-          <path fill="#5C62E0" d="M25.36 226.56L25.36 20.92 222.12 20.92"></path>
-          <path fill="#5C62E0" d="M77.88 279.08L77.88 73.44 274.64 73.44"></path>
+          <path fill={theme.palette.mode === "dark" ? "#5C62E0" : "#F5F5F5"} d="M25.36 226.56L25.36 20.92 222.12 20.92"></path>
+          <path fill={theme.palette.mode === "dark" ? "#5C62E0" : "#F5F5F5"} d="M77.88 279.08L77.88 73.44 274.64 73.44"></path>
         </svg>
       </Box>
       <Box component="div" sx={{ width: {xs: 300, sm: 400, md: 500}, height: {xs: 300, sm: 400, md: 500}, filter: "blur(270px)", opacity: 0.4, position: "absolute", bottom: -700, left: 0 }}>
         <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 300 300">
-          <rect width="157.42" height="157.42" x="125.36" y="121.07" fill="#5C62E0" rx="20" ry="20"></rect>
-          <rect width="83.59" height="83.59" x="21.68" y="17.39" fill="#6b789b" opacity="0.25" rx="10" ry="10"></rect>
-          <rect width="140.6" height="140.6" x="63.47" y="59.19" fill="#152d73" opacity="0.5" rx="15" ry="15"></rect>
+          <rect width="157.42" height="157.42" x="125.36" y="121.07" fill={theme.palette.mode === "dark" ? "#5C62E0" : "#F5F5F5"} rx="20" ry="20"></rect>
+          <rect width="83.59" height="83.59" x="21.68" y="17.39" fill={theme.palette.mode === "dark" ? "#5C62E0" : "#F5F5F5"} opacity="0.25" rx="10" ry="10"></rect>
+          <rect width="140.6" height="140.6" x="63.47" y="59.19" fill={theme.palette.mode === "dark" ? "#152d73" : "#A8A8A8"} opacity="0.5" rx="15" ry="15"></rect>
         </svg>
       </Box>
     </Container>
