@@ -23,7 +23,7 @@
         "cookies" : {
             "title" : "This website uses cookies.",
             "description" : "To improve your experience this website use cookies.",
-            "btn" : "Allow All"
+            "btn" : "Ok, got it!"
         }
     },
     "aboutMe" : {
