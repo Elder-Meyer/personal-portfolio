@@ -1,7 +1,7 @@
-import { forwardRef, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link as LinkRoute } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { TextField, useTheme, MenuItem, styled, Snackbar, Alert, AlertTitle } from '@mui/material';
+import { TextField, useTheme, MenuItem, styled } from '@mui/material';
 import UseAnimations from 'react-useanimations';
 import facebook from "react-useanimations/lib/facebook";
 import twitter from "react-useanimations/lib/twitter";
@@ -18,7 +18,7 @@ import { CubeGD } from '../../items/CubeGD';
 import useAnalyticsEventTracker from '../../../config/analytics/useAnalyticsEventTracker';
 import { PopUpAlert } from '../../items/PopUpAlert';
 import InputAdornment from '@mui/material/InputAdornment';
-import { Face, Language } from '@mui/icons-material';
+import { Language } from '@mui/icons-material';
 import Cookies from 'js-cookie';
 
 function Copyright({theme, t}) {
