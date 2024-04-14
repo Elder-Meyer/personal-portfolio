@@ -17,7 +17,10 @@ export const BlogDetails = () => {
   return (
     <>
     <Container maxWidth="md" sx={{ position: "relative", zIndex: 10 }}> 
-      <Toolbar variant='dense' sx={{display: {xs: "none", md: "block"} }}/>
+      <Box minHeight={"100vh"}>
+        <Typography variant="h4" textAlign={"center"}>working on that</Typography>
+      </Box>
+      {/* <Toolbar variant='dense' sx={{display: {xs: "none", md: "block"} }}/>
       <Typography variant="h1" component="h1" fontWeight={600} fontSize={36} gutterBottom>
         Las diferentes formas de centrar un elemento en CSS.
       </Typography>
@@ -119,7 +122,7 @@ export const BlogDetails = () => {
         </Alert>
         <Paper sx={{p:6}} variant='elevation' elevation={1}></Paper>
       </Stack>
-      <Toolbar variant="dense" />
+      <Toolbar variant="dense" /> */}
 
     </Container>
     <Box component="div" sx={{ width: {xs: 300, sm: 400, md: 500}, height: {xs: 300, sm: 400, md: 500}, filter: "blur(270px)", opacity: 0.8, position: "absolute", top: -50, right: 0, zIndex: 5 }}>
