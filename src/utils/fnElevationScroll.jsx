@@ -10,5 +10,5 @@ export function ElevationScroll(props) {
       target: window ? window() : undefined,
     });
   
-    return cloneElement(children, { elevation: trigger ? 0.32 : 0 });
+    return cloneElement(children, { elevation: trigger ? 1 : 0 });
   }
