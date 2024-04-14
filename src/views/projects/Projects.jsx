@@ -11,7 +11,7 @@ export const Projects = () => {
   const location = useLocation()
   const isProjects = location.pathname === "/projects";
   return (
-    <Box component='section' sx={{ px:{ xs: 0, sm:1, md:2, lg:2}, py: isProjects ? 1 : {xs:3, md:10, xl: 20}, minHeight: isProjects ?  {xs: "auto", sm: "auto", md: "62vh"} : "auto" }} >
+    <Box component='section' sx={{ px:{ xs: 0, lg:2}, py: isProjects ? 1 : {xs:3, md:10, xl: 20}, minHeight: isProjects ?  {xs: "auto", sm: "auto", md: "62vh"} : "auto" }} >
       <Container maxWidth="xl">
         <Stack direction="column" spacing={1} pb={2}>
           <Typography color="primary.main" textAlign="center" sx={{fontSize: 40, fontWeight: 500}} >
