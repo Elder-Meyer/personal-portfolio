@@ -84,7 +84,7 @@ const ImageContent = () => {
       <Box sx={{ display: "flex", justifyContent: "center", }}>
         <Tooltip title={"gdbrowser"} arrow placement='right'>
           <a href="https://gdbrowser.com/u/Mesher" target="_BLANK">
-            <Box component="img" height={"100%"} src={cube} alt="elderMeyer"
+            <Box component="img" height={"100%"} src={cube} alt="GD Browser Profile" title="GD Browser Profile"
               sx={{
                 width: {xs: "100%", sm: "100%", md: "100%"},
                 paddingX: 1,
