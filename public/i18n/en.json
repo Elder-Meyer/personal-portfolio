@@ -3,7 +3,7 @@
         "presentation" : {
             "title" : "Hi! I'm ",
             "caption" : "",
-            "description" : "Web developer passionate about innovation. Always exploring new tech and trends to deliver cutting-edge products",
+            "description" : "Web developer passionate about innovation. Always exploring new tech and trends to deliver cutting-edge products.",
             "cvbtn" : "Check my cv"
         },
         "skills" : {
@@ -121,19 +121,19 @@
         "project02" : {
             "title" : "App CAIH",
             "date" : "Aug 15, 2022",
-            "shortdescription" : "Website for college of architects",
+            "shortdescription" : "Website for college of architects.",
             "largedescription" : "CAIH Application is a project developed as part of the internship requirement for my Associate Degree in Information Technology. \n I worked collaboratively with two other individuals, serving as a designer and documentation manager. \n The main objective was to update a platform for the Architects and Engineers Association (CAIH), migrating the original idea created with HTML, CSS, and JavaScript to an environment utilizing frameworks, libraries, and cloud services."
         },
         "project03" : {
             "title" : "Dulce Delicia",
             "date" : "Nov 28, 2023",
-            "shortdescription" : "Sweet shop themed website",
+            "shortdescription" : "Sweet shop themed website.",
             "largedescription" : "Dulce Delicia is a project developed as an individual practice to explore technologies related to PWAs (Progressive Web Applications), including Service Workers, manifest files, notifications, and offline access. \n It was inspired by an existing website called 'Azucar Dulcerias' to structure elements and content."
         },
         "project04" : {
             "title" : "Fashion Fusion",
             "date" : "Aug 15, 2023",
-            "shortdescription" : "Clothing store themed website",
+            "shortdescription" : "Clothing store themed website.",
             "largedescription" : "Fashion Fusion is a project developed collaboratively to practice continuous improvement of DevOps and version control system using Git and GitHub. \n The website has a clothing store theme, and all content was added in less than a week, following techniques such as those mentioned."
         }
     }
