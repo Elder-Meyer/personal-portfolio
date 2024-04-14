@@ -25,6 +25,24 @@ function App() {
     }
   }, [])
   
+  useEffect(() => {
+    // Función para cambiar el color del meta theme color
+    const changeThemeColor = () => {
+      const metaThemeColor = document.querySelector("meta[name=theme-color]");
+      if (metaThemeColor) {
+        const colorUp = darkMode ? darkTheme.palette.background.default : lightTheme.palette.primary.light;
+        const colorScrolled = darkMode ? darkTheme.palette.background.paper : lightTheme.palette.primary.light;
+        metaThemeColor.setAttribute("content", window.scrollY > 0 ? colorScrolled : colorUp);
+      }
+    };
+    // Agrega un listener para el evento de desplazamiento que llame a la función changeThemeColor
+    window.addEventListener("scroll", changeThemeColor);
+    // Limpia el listener al desmontar el componente
+    return () => {
+      window.removeEventListener("scroll", changeThemeColor);
+    };
+  }, [darkMode]);
+
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <CssBaseline enableColorScheme/>
