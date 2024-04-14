@@ -3,11 +3,12 @@ import { Router } from "./routes/Router"
 import { lightTheme, darkTheme } from "./styles/ThemeMui"
 import ReactGA from 'react-ga';
 import { useEffect, useState } from "react";
-const TRACKING_ID = "6395311067"; // OUR_TRACKING_ID
-ReactGA.initialize(TRACKING_ID, {debug: true});
 import { CssBaseline } from '@mui/material';
 import Cookies from "js-cookie";
 import { CookiesDialog } from "./components/items/CookiesDialog";
+
+const TRACKING_ID = "6395311067"; // OUR_TRACKING_ID
+ReactGA.initialize(TRACKING_ID, {debug: true});
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
