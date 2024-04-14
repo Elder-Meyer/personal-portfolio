@@ -7,8 +7,10 @@ import { NavigateNext, Home, Book, ContactPage, Warning, EmojiEmotions, Descript
 function Breadcrumb() {
   const location = useLocation();
   const pathnames = location.pathname.split('/').filter((x) => x);
+  const isBlogDetails = location.pathname.includes("/blog/post")
+  
   return (
-    <Container maxWidth="xl" sx={{py:1}}>
+    <Container maxWidth="xl" sx={{py:1, position: isBlogDetails ? "relative" : "static", zIndex: isBlogDetails ? "10" : "none"}}>
       <Breadcrumbs separator={<NavigateNext fontSize="small" />} aria-label="breadcrumb">
         <StyledBreadcrumb component={Link} to="/" label="Home" icon={<Home sx={{mr: 0.5}} fontSize='inherit'/>} />
         {pathnames.map((name, index) => {
