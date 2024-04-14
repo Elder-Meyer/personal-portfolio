@@ -23,7 +23,7 @@ import Cookies from 'js-cookie';
 
 function Copyright({theme, t}) {
   return ( <Box sx={{color: theme.palette.mode==='dark'?"text.secondary":"background.paper"}}>
-      <Typography variant="caption"> {'©  '}{ new Date().getFullYear() }{" Elder Meyer, "}{t("footer.copy")} </Typography>
+      <Typography variant="caption"> {'©  2024 | '}{" Elder Meyer, "}{t("footer.copy")} </Typography>
   </Box> );
 }
 
