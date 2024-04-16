@@ -1,14 +1,6 @@
 import { Link } from "react-router-dom";
-import { useMediaQuery, useTheme } from "@mui/material";
+import { useMediaQuery, useTheme, Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, IconButton, Toolbar } from "@mui/material";
 import { OpenInNewOutlined, VisibilityOutlined, CloseOutlined } from "@mui/icons-material";
-import { Box } from "../material-ui/Box";
-import { Button } from "../material-ui/Button";
-import { Dialog } from "../material-ui/Dialog";
-import { DialogActions } from "../material-ui/DialogActions";
-import { DialogContent } from "../material-ui/DialogContent";
-import { DialogTitle } from "../material-ui/DialogTitle";
-import { IconButton } from "../material-ui/IconButton";
-import { Toolbar } from "../material-ui/Toolbar";
 
 export default function FullScreenDialog({ t, open, handleClose, Transition, project }) {
   console.log(project.id);

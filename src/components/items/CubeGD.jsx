@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import cube from '../../assets/img/principal/cube-glow.webp'
-import { CardMedia } from '../material-ui/CardMedia';
+import { CardMedia } from '@mui/material';
+
 
 export function CubeGD({animate, large = 42}){
   const [animation, setAnimation] = useState( {animation: "", time: "", keyframes: {}} )

@@ -1,8 +1,6 @@
-import { Typography } from '../material-ui/Typography'
-import { Grid } from '../material-ui/Grid'
 import { useTranslation } from 'react-i18next';
 import { CubeGD } from './CubeGD';
-import { Stack } from '../material-ui/Stack';
+import { Typography, Grid, Stack } from '@mui/material'
 
 export const WorkingOnThat = () => {
     const { t } = useTranslation();

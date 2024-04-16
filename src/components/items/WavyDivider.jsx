@@ -1,5 +1,5 @@
 import { useTheme } from '@emotion/react'
-import { Box } from '../material-ui/Box';
+import { Box } from '@mui/material'
 
 export const WavyDivider = () => {
     const theme = useTheme()

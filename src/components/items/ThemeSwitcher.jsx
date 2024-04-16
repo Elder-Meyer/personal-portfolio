@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { IconButton, useMediaQuery } from '@mui/material';
+import { IconButton, useMediaQuery, Tooltip } from '@mui/material';
 import { DarkMode, DarkModeOutlined, LightMode, LightModeOutlined } from '@mui/icons-material';
-import { Tooltip } from '../material-ui/Tooltip';
 
 const ThemeSwitcher = ({ darkMode, handleChangeTheme }) => {
   const { t } = useTranslation()

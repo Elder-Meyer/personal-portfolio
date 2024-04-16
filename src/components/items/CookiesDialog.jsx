@@ -1,14 +1,9 @@
 import { useState, useEffect } from 'react';
-import Stack from '@mui/material/Stack';
 import TrapFocus from '@mui/material/Unstable_TrapFocus';
-import Paper from '@mui/material/Paper';
-import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
 import { CookieOutlined } from "@mui/icons-material";
-import Slide from '@mui/material/Slide';
 import Cookies from 'js-cookie';
 import { useTranslation } from 'react-i18next'
+import { Stack, Paper, Button, Box, Typography, Slide } from '@mui/material';
 
 export const CookiesDialog = () => {
   const { t } = useTranslation();

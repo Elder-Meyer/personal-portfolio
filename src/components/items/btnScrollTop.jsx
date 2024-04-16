@@ -1,6 +1,4 @@
-import { Fade, useScrollTrigger } from "@mui/material";
-import { Box } from "../material-ui/Box";
-import { Tooltip } from "../material-ui/Tooltip";
+import { Fade, useScrollTrigger, Box, Tooltip } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
 export function BtnScrollTop(props) {
