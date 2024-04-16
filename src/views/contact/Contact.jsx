@@ -1,5 +1,4 @@
-import { Grid } from '../../components/material-ui/Grid'
-import { Stack } from '../../components/material-ui/Stack'
+import { Grid, Stack } from '@mui/material';
 import { FormContact } from './FormContact'
 
 export const Contact = () => {

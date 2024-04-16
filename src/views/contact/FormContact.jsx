@@ -1,10 +1,6 @@
 import React, { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Box } from "../../components/material-ui/Box";
-import { Button } from "../../components/material-ui/Button";
-import { Grid } from "../../components/material-ui/Grid";
-import { Paper } from "../../components/material-ui/Paper";
-import { Typography } from "../../components/material-ui/Typography";
+import { Box, Button, Grid, Paper, Typography } from '@mui/material'
 import { TextField } from '@mui/material'
 import { Delete, Send,  } from "@mui/icons-material";
 import { useContactForm } from "../../context/useContactForm"
