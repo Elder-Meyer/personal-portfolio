@@ -3,7 +3,7 @@ import { Breadcrumbs, Typography, Chip, Container } from '@mui/material';
 import { emphasize, styled } from '@mui/material/styles';
 import { NavigateNext, Home, Book, ContactPage, Warning, EmojiEmotions, Description, Subject, WorkHistory } from '@mui/icons-material';
 
-function Breadcrumb() {
+export const Breadcrumb = () => {
   const location = useLocation();
   const pathnames = location.pathname.split('/').filter((x) => x);
   const isBlogDetails = location.pathname.includes("/blog/post")
@@ -77,5 +77,3 @@ const StyledBreadcrumb = styled(Chip)(({ theme }) => {
     },
   };
 });
-
-export default Breadcrumb;

@@ -15,7 +15,7 @@ import { BtnScrollTop } from '../components/items/btnScrollTop'
 import { KeyboardArrowUp } from '@mui/icons-material'
 import ScrollToTop from '../components/items/ScrollToTop'
 import { Loader } from '../components/items/Loader'
-import Breadcrumb from '../components/items/Breadcrumbs'
+import { Breadcrumb } from '../components/items/Breadcrumbs'
 import { BlogDetails } from '../views/blog/BlogDetails'
 
 export const Router = ({darkMode, handleChangeTheme}, props) => {
