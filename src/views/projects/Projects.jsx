@@ -1,10 +1,7 @@
 import { useTranslation } from 'react-i18next';
-import { Box } from '../../components/material-ui/Box';
-import { Container } from '../../components/material-ui/Container';
-import { Stack } from '../../components/material-ui/Stack';
-import { Typography } from '../../components/material-ui/Typography';
 import { Web } from './Web';
 import { useLocation } from 'react-router-dom';
+import { Box, Container, Stack, Typography } from '@mui/material';
 
 export const Projects = () => {
   const { t } = useTranslation();

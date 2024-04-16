@@ -3,19 +3,8 @@ import { useParams, Link as LinkRoute } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { projects } from "./projectsData";
 import { ArrowBackSharp, GitHub, Language } from "@mui/icons-material";
-import { CardMedia } from "../../components/material-ui/CardMedia";
-import { Card } from "../../components/material-ui/Card";
-import { Chip } from "../../components/material-ui/Chip";
-import { Container } from "../../components/material-ui/Container";
-import { Divider } from "../../components/material-ui/Divider";
-import { Grid } from "../../components/material-ui/Grid";
-import { IconButton } from "../../components/material-ui/IconButton";
-import { Link } from "../../components/material-ui/Link";
-import { Paper } from "../../components/material-ui/Paper";
-import { Stack } from "../../components/material-ui/Stack";
-import { Typography } from "../../components/material-ui/Typography";
 import { Loader } from "../../components/items/Loader";
-import { Box } from "../../components/material-ui/Box";
+import { Box, CardMedia, Card, Chip, Container, Divider, Grid, IconButton, Link, Paper, Stack, Typography } from "@mui/material";
 
 export const ProjectDetails = () => {
   const { t } = useTranslation();

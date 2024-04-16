@@ -1,20 +1,10 @@
 import React, { forwardRef, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import i18n from '../../config/lan/i18n';
-import { Button } from '../../components/material-ui/Button';
-import { Card } from '../../components/material-ui/Card';
-import { CardActionArea } from '../../components/material-ui/CardActionArea';
-import { CardActions } from '../../components/material-ui/CardActions';
-import { CardContent } from '../../components/material-ui/CardContent';
-import { CardMedia } from '../../components/material-ui/CardMedia';
-import { Grid } from '../../components/material-ui/Grid';
-import { Slide } from '../../components/material-ui/Slide';
-import { Stack } from '../../components/material-ui/Stack';
-import { Typography } from '../../components/material-ui/Typography';
 import FullScreenDialog from '../../components/items/FullScreenDialog';
 import { projects } from './projectsData';
 import { OpenInNewOutlined, VisibilityOutlined } from '@mui/icons-material';
-import { Box } from '@mui/material';
+import { Box, Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Grid, Slide, Stack, Typography } from '@mui/material';
 
 const Transition = forwardRef(function Transition(props, ref) { return <Slide direction="up" ref={ref} {...props} />; });
 
