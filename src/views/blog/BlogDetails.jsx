@@ -1,11 +1,5 @@
 import React from 'react'
-import Typography from '@mui/material/Typography'
-import { Container } from '../../components/material-ui/Container'
-import { Box } from '../../components/material-ui/Box'
-import { Toolbar } from '../../components/material-ui/Toolbar'
-import { Paper } from '../../components/material-ui/Paper'
-import Alert from '@mui/material/Alert';
-import { Stack } from '../../components/material-ui/Stack'
+import { Typography, Container, Box, Toolbar, Paper, Alert, Stack } from '@mui/material'
 import { styled, useTheme } from '@mui/material/styles';
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import MuiAccordion from '@mui/material/Accordion';

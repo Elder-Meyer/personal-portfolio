@@ -1,15 +1,6 @@
 import { useTranslation } from 'react-i18next'
-import { Container } from '../../components/material-ui/Container'
-import { Grid } from '../../components/material-ui/Grid'
-import { Typography } from '../../components/material-ui/Typography'
-import { CardContent } from '../../components/material-ui/CardContent'
-import { CardActions } from '../../components/material-ui/CardActions'
-import { Button } from '../../components/material-ui/Button'
-import { Box } from '../../components/material-ui/Box'
-import { Card } from '../../components/material-ui/Card'
-import { CardMedia } from '../../components/material-ui/CardMedia'
+import { Container, Grid, Typography, CardContent, CardActions, Button, Box, Card, CardMedia, Chip } from '@mui/material'
 import { Link } from "react-router-dom"
-import { Chip } from '../../components/material-ui/Chip'
 // import { useEffect, useState } from 'react'
 // import { getItems } from '../../app/api'
 
