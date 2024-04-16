@@ -1,11 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
-import { Typography } from '../../components/material-ui/Typography'
-import { Button } from '../../components/material-ui/Button'
-import { Container } from '../../components/material-ui/Container'
-import { Grid } from '../../components/material-ui/Grid'
+import { Typography, Button, Container, Grid, Stack } from '@mui/material'
 import { ArrowBack } from '@mui/icons-material'
-import { Stack } from '../../components/material-ui/Stack'
 import { CubeGD } from '../../components/items/CubeGD'
 
 export const Error = () => {
