@@ -1,18 +1,9 @@
 import { useTranslation } from 'react-i18next'
-import { Box } from '../../../components/material-ui/Box'
-import { Button } from '../../../components/material-ui/Button'
-import { Card } from '../../../components/material-ui/Card'
-import { Container } from '../../../components/material-ui/Container'
-import { Grid } from '../../../components/material-ui/Grid'
-import { Stack } from '../../../components/material-ui/Stack'
-import { Toolbar } from '../../../components/material-ui/Toolbar'
-import { Tooltip } from '../../../components/material-ui/Tooltip'
-import { Typography } from '../../../components/material-ui/Typography'
 import { FileDownloadOutlined } from '@mui/icons-material'
 import cube from '../../../assets/img/principal/cube-glow.webp'
 import Typewriter from 'typewriter-effect'
 import CVElderMeyer from "../../../assets/docs/CV-ElderMeyer.pdf"
-import { useMediaQuery, styled } from '@mui/material'
+import { useMediaQuery, styled, Box, Button, Card, Container, Grid, Stack, Toolbar, Tooltip, Typography } from '@mui/material'
 
 export const Presentation = () => {
   const { t } = useTranslation();
