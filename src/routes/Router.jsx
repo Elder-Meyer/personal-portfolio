@@ -10,12 +10,11 @@ const AboutMe         = lazy(() => import('../views/about-me/AboutMe').then((mod
 import { DrawerAppBar } from '../components/layout/navbar/DrawerAppBar'
 import { WavyDivider } from '../components/items/WavyDivider'
 import { AppFooter } from '../components/layout/footer/AppFooter'
-import { Fab } from '@mui/material'
+import { Box, Fab } from '@mui/material'
 import { BtnScrollTop } from '../components/items/btnScrollTop'
 import { KeyboardArrowUp } from '@mui/icons-material'
 import ScrollToTop from '../components/items/ScrollToTop'
 import { Loader } from '../components/items/Loader'
-import { Box } from '../components/material-ui/Box'
 import Breadcrumb from '../components/items/Breadcrumbs'
 import { BlogDetails } from '../views/blog/BlogDetails'
 
