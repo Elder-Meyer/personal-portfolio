@@ -1,5 +1,5 @@
 import { FileDownloadOutlined } from "@mui/icons-material";
-import { Chip } from "../../components/material-ui/Chip";
+import { Chip } from "@mui/material";
 import CVElderMeyer from "../../assets/docs/CV-ElderMeyer.pdf"
 
 export const ChipDownloadCV = () => {

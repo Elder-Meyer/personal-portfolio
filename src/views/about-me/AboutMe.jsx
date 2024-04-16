@@ -1,14 +1,5 @@
 import { ArrowRight, Email, LinkedIn, Phone, Web } from "@mui/icons-material";
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
-import { Container } from "../../components/material-ui/Container";
-import { Grid } from "../../components/material-ui/Grid";
-import { Paper } from "../../components/material-ui/Paper";
-import { Stack } from "../../components/material-ui/Stack";
-import { Typography } from "../../components/material-ui/Typography";
-import { Chip } from "../../components/material-ui/Chip";
-import { Divider } from "../../components/material-ui/Divider";
+import { List, ListItem, ListItemText, Container, Grid, Paper, Stack, Typography, Chip, Divider } from '@mui/material'
 import { ChipDownloadCV } from "./ChipDownloadCV";
 import { useTranslation } from 'react-i18next'
 
