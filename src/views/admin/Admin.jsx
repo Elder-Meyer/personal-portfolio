@@ -1,5 +1,4 @@
-import { Box } from '../../components/material-ui/Box'
-import { Typography } from '../../components/material-ui/Typography'
+import { Box, Typography } from "@mui/material"
 
 export const Admin = () => {
   return (
