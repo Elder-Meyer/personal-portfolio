@@ -1,9 +1,10 @@
 import { useTranslation } from 'react-i18next'
-import { FileDownloadOutlined } from '@mui/icons-material'
+import { ArrowCircleRight, ArrowRight, East, FileDownloadOutlined, KeyboardArrowRight } from '@mui/icons-material'
 import cube from '../../../assets/img/principal/cube-glow.webp'
 import Typewriter from 'typewriter-effect'
 import CVElderMeyer from "../../../assets/docs/CV-ElderMeyer.pdf"
 import { useMediaQuery, styled, Box, Button, Card, Container, Grid, Stack, Toolbar, Tooltip, Typography } from '@mui/material'
+import { Link } from 'react-router-dom'
 
 export const Presentation = () => {
   const { t } = useTranslation();
@@ -47,9 +48,10 @@ const CaptionInfo = ({t}) => {
         {t('home.presentation.description')}
       </Typography>
       <Box>
-        <Button variant="contained" size="medium" download="CV-ElderMeyer" target='_blank' disableElevation
-          endIcon={<FileDownloadOutlined/>}
-          href={CVElderMeyer} 
+        <Button variant="contained" size="medium" disableElevation
+          component={Link}
+          to={'/about-me'}
+          endIcon={<KeyboardArrowRight />}
           sx={{borderRadius: 5}}
         >
           {t('home.presentation.cvbtn')}
