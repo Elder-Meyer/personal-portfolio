@@ -4,7 +4,7 @@
             "title" : "Hey! Soy ",
             "caption" : "",
             "description" : "Desarrollador web apasionado por la innovación. Siempre explorando nuevas tecnologías y tendencias para ofrecer productos de vanguardia.",
-            "cvbtn" : "Descarga mi cv"
+            "cvbtn" : "Ver mas"
         },
         "skills" : {
             "titleskills" : "Habilidades",
@@ -38,7 +38,8 @@
         "cpt" : "Capacitación para el trabajo en informatica",
         "skillsTitle" : "Habilidades",
         "subSkills" : "Comunicación Asertiva, Resolución de Problemas, Trabajo en Equipo, Autodidacta",
-        "language" : "Inglés (intermedio), Español (nativo)"
+        "language" : "Inglés (intermedio), Español (nativo)",
+        "downloadCv" : "Descargar CV"
     },
     "projects" : {
         "title" : "Proyectos",
