@@ -16,7 +16,8 @@ import Cookies from 'js-cookie';
 
 function Copyright({theme, t}) {
   return ( <Box sx={{color: theme.palette.mode==='dark'?"text.secondary":"background.paper"}}>
-      <Typography variant="caption"> {'©  2024 | '}{" Elder Meyer, "}{t("footer.copy")} </Typography>
+      <Link color="text.primary" variant="caption" underline='always' component={LinkRoute}>{'©  2024 | Elder Meyer'}</Link>
+      <Typography variant='caption'>{", "}{t("footer.copy")}</Typography>
   </Box> );
 }
 
