@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Box, Button, Grid, Paper, Typography } from '@mui/material'
+import { Box, Button, Divider, Grid, Link, Paper, Typography } from '@mui/material'
+import { Link as LinkRoute } from "react-router-dom";
 import { TextField } from '@mui/material'
 import { Delete, Send,  } from "@mui/icons-material";
 import { useContactForm } from "../../context/useContactForm"
@@ -17,7 +18,13 @@ export const FormContact = () => {
   return (
     <Paper sx={{ p: {xs:1, sm:3, md:5}, mx: {xs: 1, sm: 2, md: 10, lg: 20, xl: 50 }, my: 2}}  elevation={0}>
       <Typography variant="h4" color="primary" textAlign="center"> {t("contact.title")} </Typography>
-      <Typography variant="body1" color="primary.light" textAlign="center" mb={3}> {t("contact.subtitle")} </Typography>
+      <Typography variant="body1" color="primary.light" textAlign="center" gutterBottom> {t("contact.subtitle")} </Typography>
+      <Divider variant="fullwidth" />
+      <Typography textAlign="center" paragraph>
+        <Link color="text.primary" variant="subtitle2" underline='always' component={LinkRoute} to='/about-me'> 
+          View more info about me 
+        </Link>
+      </Typography>
       <PopUpAlert snackbarOpen={snackbarOpen} setSnackbarOpen={setSnackbarOpen} variantAlert={variantAlert} textAlert={textAlert} />
       <Box component="form" ref={form} onSubmit={formik.handleSubmit} autoComplete="off">
         <Grid container spacing={1}>
