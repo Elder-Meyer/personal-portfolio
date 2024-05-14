@@ -20,7 +20,7 @@ export const FormContact = () => {
       <Typography variant="h4" color="primary" textAlign="center"> {t("contact.title")} </Typography>
       <Typography variant="body1" color="primary.light" textAlign="center" gutterBottom> {t("contact.subtitle")} </Typography>
       <Divider variant="fullwidth">
-        <Chip size="small" label="Or"/>
+        <Chip size="small" label="Or" color="primary" variant="filled" />
       </Divider>
       <Stack component={Typography} textAlign="center" variant="subtitle2" paragraph direction="row" alignItems="center" justifyContent="center" spacing={0.5}>
         <div>Check more info {" "}</div>
