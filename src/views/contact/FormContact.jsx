@@ -17,7 +17,7 @@ export const FormContact = () => {
     
   return (
     <Paper sx={{ p: {xs:1, sm:3, md:5}, mx: {xs: 1, sm: 2, md: 10, lg: 20, xl: 50 }, my: 2}}  elevation={0}>
-      <Typography variant="h4" color="primary" textAlign="center"> {t("contact.title")} </Typography>
+      <Typography variant="h4" color="primary" textAlign="center" gutterBottom fontWeight={500}> {t("contact.title")} </Typography>
       <Typography variant="body1" color="text.secondary" textAlign="center" gutterBottom> {t("contact.subtitle")} </Typography>
       <Divider variant="fullwidth">
         <Chip size="small" label="Or" color="primary" variant="filled" />
