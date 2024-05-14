@@ -22,7 +22,7 @@ export const FormContact = () => {
       <Divider variant="fullwidth">
         <Chip size="small" label="Or"/>
       </Divider>
-      <Stack component={Typography} textAlign="center" variant="subtitle2" paragraph direction="row" justifyContent="center" spacing={0.5}>
+      <Stack component={Typography} textAlign="center" variant="subtitle2" paragraph direction="row" alignItems="center" justifyContent="center" spacing={0.5}>
         <div>Check more info {" "}</div>
         <Link color="text.primary" underline='always' component={LinkRoute} to='/about-me'> 
           {"About Me "}
