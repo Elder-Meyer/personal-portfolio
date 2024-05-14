@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Box, Button, Divider, Grid, Link, Paper, Typography } from '@mui/material'
+import { Box, Button, Chip, Divider, Grid, Link, Paper, Stack, Typography } from '@mui/material'
 import { Link as LinkRoute } from "react-router-dom";
 import { TextField } from '@mui/material'
-import { Delete, Send,  } from "@mui/icons-material";
+import { Delete, Face2, Send,  } from "@mui/icons-material";
 import { useContactForm } from "../../context/useContactForm"
 import { PopUpAlert } from "../../components/items/PopUpAlert";
 
@@ -19,12 +19,15 @@ export const FormContact = () => {
     <Paper sx={{ p: {xs:1, sm:3, md:5}, mx: {xs: 1, sm: 2, md: 10, lg: 20, xl: 50 }, my: 2}}  elevation={0}>
       <Typography variant="h4" color="primary" textAlign="center"> {t("contact.title")} </Typography>
       <Typography variant="body1" color="primary.light" textAlign="center" gutterBottom> {t("contact.subtitle")} </Typography>
-      <Divider variant="fullwidth" />
-      <Typography textAlign="center" paragraph>
-        <Link color="text.primary" variant="subtitle2" underline='always' component={LinkRoute} to='/about-me'> 
-          View more info about me 
+      <Divider variant="fullwidth">
+        <Chip size="small" label="Or"/>
+      </Divider>
+      <Stack component={Typography} textAlign="center" variant="subtitle2" paragraph direction="row" justifyContent="center" spacing={0.5}>
+        <div>Check more info {" "}</div>
+        <Link color="text.primary" underline='always' component={LinkRoute} to='/about-me'> 
+          {"About Me "}
         </Link>
-      </Typography>
+      </Stack>
       <PopUpAlert snackbarOpen={snackbarOpen} setSnackbarOpen={setSnackbarOpen} variantAlert={variantAlert} textAlert={textAlert} />
       <Box component="form" ref={form} onSubmit={formik.handleSubmit} autoComplete="off">
         <Grid container spacing={1}>
