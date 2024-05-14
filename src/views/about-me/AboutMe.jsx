@@ -38,7 +38,7 @@ export const AboutMe = () => {
               <Stack direction="row" spacing={1} alignItems="center">
                 <Chip label={<LinkedIn/>} />
                 <Typography color="text.secondary" variant="body1" component="a" href="https://www.linkedin.com/in/elder-meyer/" target="_BLANK">
-                  {"linkedin.com/in/elder-meyer"}
+                  {"elder-meyer"}
                 </Typography>
               </Stack>
               <Stack direction="row" spacing={1} alignItems="center">
