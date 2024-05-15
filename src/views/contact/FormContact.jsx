@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Box, Button, Chip, Divider, Grid, Link, Paper, Stack, Typography } from '@mui/material'
 import { Link as LinkRoute } from "react-router-dom";
 import { TextField } from '@mui/material'
-import { Delete, Face2, Send,  } from "@mui/icons-material";
+import { AccountCircle, Delete, Face2, Send,  } from "@mui/icons-material";
 import { useContactForm } from "../../context/useContactForm"
 import { PopUpAlert } from "../../components/items/PopUpAlert";
 
@@ -39,6 +39,7 @@ export const FormContact = () => {
               helperText={formik.errors.name}
               value={formik.values.name}
               aria-label="por favor ingrese tu nombre"
+              sx={{ '& .MuiOutlinedInput-root': { '&:hover fieldset': { borderColor: "primary.main" } } }}
             />
           </Grid>
           <Grid item xs={12} md={6}>
@@ -49,6 +50,7 @@ export const FormContact = () => {
               helperText={formik.errors.email}
               value={formik.values.email}
               aria-label="por favor ingrese tu correo electronico"
+              sx={{ '& .MuiOutlinedInput-root': { '&:hover fieldset': { borderColor: "primary.main" } } }}
             />
           </Grid>
           <Grid item xs={12}>
@@ -59,6 +61,7 @@ export const FormContact = () => {
               helperText={formik.errors.message}
               value={formik.values.message}
               aria-label="por favor ingrese su correo electronico"
+              sx={{ '& .MuiOutlinedInput-root': { '&:hover fieldset': { borderColor: "primary.main" } } }}
             />
           </Grid>
           <Grid item xs={6}>
