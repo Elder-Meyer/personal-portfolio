@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link as LinkRoute } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { TextField, useTheme, MenuItem, styled, Box, Container, Divider, Grid, Link, Stack, Typography } from '@mui/material';
+import { TextField, useTheme, MenuItem, styled, Box, Container, Divider, Grid, Link, Stack, Typography, useMediaQuery } from '@mui/material';
 import UseAnimations from 'react-useanimations';
 import facebook from "react-useanimations/lib/facebook";
 import twitter from "react-useanimations/lib/twitter";
@@ -69,6 +69,7 @@ export const AppFooter = () => {
 }, []);
   
   const gaEventTracker = useAnalyticsEventTracker("contact us")
+  const isLargeDevice = useMediaQuery('(min-width:900px)');
   return (
     <Box component="footer" sx={{ display: 'flex', backgroundColor: theme.palette.mode === 'dark' ? "background.paper" : "primary.main" }}>
       <PopUpAlert snackbarOpen={snackbarOpen} setSnackbarOpen={setSnackbarOpen} variantAlert={variantAlert} textAlert={textAlert} />
@@ -89,15 +90,13 @@ export const AppFooter = () => {
                 select size="small"
                 label={t("footer.language.title")}
                 value={selectedLanguage}
-                SelectProps={{ MenuProps: {disableScrollLock: true},}}
+                SelectProps={{ MenuProps: {disableScrollLock: true}, native: isLargeDevice ? false : true }}
                 InputProps={{
                   startAdornment: <InputAdornment position="start"><Language color='inherit'/></InputAdornment>,
                 }}
               >
                 {LANGUAGES.map((option) => (
-                  <MenuItem key={option.code} value={option.code}>
-                    {option.label}
-                  </MenuItem>
+                  isLargeDevice ? <MenuItem key={option.code} value={option.code}>{option.label}</MenuItem> : <option key={option.code} value={option.code}>{option.label}</option>
                 ))}
               </CssTextField>
             </Stack>
