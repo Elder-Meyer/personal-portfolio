@@ -61,7 +61,7 @@ export const FormContact = () => {
               aria-label="por favor ingrese su correo electronico"
             />
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={6}>
             <Button type="submit" fullWidth variant="contained"
               aria-label="enviar formulario de acceso"
               endIcon={<Send />}
@@ -69,7 +69,7 @@ export const FormContact = () => {
               {t("contact.form.pbtn")}
             </Button>
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={6}>
             <Button type="button" fullWidth variant="outlined"
               aria-label="limpiar formulario de acceso"
               onClick={formik.handleReset}
