@@ -15,9 +15,9 @@ import { Language } from '@mui/icons-material';
 import Cookies from 'js-cookie';
 
 function Copyright({theme, t}) {
-  return ( <Box sx={{color: theme.palette.mode==='dark'?"text.secondary":"background.paper"}}>
-      <Link color="text.primary" variant="caption" underline='always' component={LinkRoute}>{'©  2024 | Elder Meyer'}</Link>
-      <Typography variant='caption'>{", "}{t("footer.copy")}</Typography>
+  return ( <Box sx={{color: theme.palette.mode==='dark'?"text.secondary":"background.default"}}>
+      <Link color="inherit" variant="caption" underline='always' component={LinkRoute}>{'©  2024 | Elder Meyer'}</Link>
+      <Typography color="inherit" variant='caption'>{", "}{t("footer.copy")}</Typography>
   </Box> );
 }
 
