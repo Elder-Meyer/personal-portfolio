@@ -21,7 +21,7 @@ export const DrawerAppBar = ({darkMode, handleChangeTheme, window}, props) => {
   const handleDrawerToggle = () => { setMobileOpen((prevState) => !prevState); };
 
   const navItems = [{title: t("navbar.items.home"), path: '/home', icon: <HomeOutlined/>, iconSelected: <Home/>}, {title: t("navbar.items.blog"), path: '/blog', icon: <BookOutlined/>, iconSelected: <Book/>}, {title: t("navbar.items.contact"), path: '/contact', icon: <ContactPageOutlined/>, iconSelected: <ContactPage/>}];
-  const isHome = location.pathname === "/home";
+  const isHome = location.pathname === "/home" || location.pathname === "/";
   const drawer = (
     <Box sx={{ textAlign: 'center', height: "100%" }}>
       <Typography variant="h6" sx={{ my: 2, color: "primary.light" }}> Elder M. </Typography>
