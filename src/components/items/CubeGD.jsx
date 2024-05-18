@@ -3,7 +3,7 @@ import cube from '../../assets/img/principal/cube-glow.webp'
 import { CardMedia } from '@mui/material';
 
 
-export function CubeGD({animate, large = 42}){
+export function CubeGD({animate, large = 42, errorScreen}){
   const [animation, setAnimation] = useState( {animation: "", time: "", keyframes: {}} )
 
   useEffect(() => {
@@ -97,6 +97,7 @@ export function CubeGD({animate, large = 42}){
         '&:hover': {
           animation: `${animation.animation} ${animation.time}`,
         },
+        animation: errorScreen ? `${animation.animation} ${animation.time}` : "default",
         [`@keyframes ${animation.animation}`]: animation.keyframes,
       }}
     />
