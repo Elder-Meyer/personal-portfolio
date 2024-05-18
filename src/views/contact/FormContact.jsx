@@ -20,12 +20,12 @@ export const FormContact = () => {
       <Typography variant="h4" color="primary" textAlign="center" gutterBottom fontWeight={500}> {t("contact.title")} </Typography>
       <Typography variant="body1" color="text.secondary" textAlign="center" gutterBottom> {t("contact.subtitle")} </Typography>
       <Divider variant="fullwidth">
-        <Chip size="small" label="Or" color="primary" variant="filled" />
+        <Chip size="small" label={t("contact.divider")} color="primary" variant="filled" />
       </Divider>
       <Stack direction="row" color={"text.secondary"} alignItems="center" justifyContent="center" spacing={0.5} marginBottom={2}>
-        <Typography variant="subtitle2">Check more info {" "}</Typography>
+        <Typography variant="subtitle2">{t("contact.complementarytext")} {" "}</Typography>
         <Link variant="subtitle2" color="text.primary" underline='always' component={LinkRoute} to='/about-me'> 
-          {"About Me "}
+          {t("contact.linktext") }
         </Link>
       </Stack>
       <PopUpAlert snackbarOpen={snackbarOpen} setSnackbarOpen={setSnackbarOpen} variantAlert={variantAlert} textAlert={textAlert} />
