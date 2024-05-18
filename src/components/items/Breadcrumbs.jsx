@@ -11,7 +11,7 @@ export const Breadcrumb = () => {
   return (
     <Container maxWidth="xl" sx={{py:1, position: isBlogDetails ? "relative" : "static", zIndex: isBlogDetails ? "10" : "none"}}>
       <Breadcrumbs separator={<NavigateNext fontSize="small" />} aria-label="breadcrumb">
-        <StyledBreadcrumb component={Link} to="/" label="Home" icon={<Home sx={{mr: 0.5}} fontSize='inherit'/>} />
+        <StyledBreadcrumb component={Link} to="/home" label="Home" icon={<Home sx={{mr: 0.5}} fontSize='inherit'/>} />
         {pathnames.map((name, index) => {
           const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
           const isLast = index === pathnames.length - 1;
