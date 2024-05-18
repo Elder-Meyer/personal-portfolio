@@ -14,7 +14,7 @@ export const Error = () => {
                 </Grid>
                 <Grid item xs={12}>
                     <Stack width="100%" justifyContent="center" direction="row">
-                        <CubeGD animate={5} large={100}/>
+                        <CubeGD animate={5} large={100} errorScreen={true}/>
                     </Stack>
                 </Grid>
                 <Grid item xs={12}>
