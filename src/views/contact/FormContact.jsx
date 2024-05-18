@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Box, Button, Chip, Divider, Grid, Link, Paper, Stack, Typography } from '@mui/material'
 import { Link as LinkRoute } from "react-router-dom";
 import { TextField } from '@mui/material'
-import { AccountCircle, Delete, Face2, Send,  } from "@mui/icons-material";
+import { Delete, Send } from "@mui/icons-material";
 import { useContactForm } from "../../context/useContactForm"
 import { PopUpAlert } from "../../components/items/PopUpAlert";
 
