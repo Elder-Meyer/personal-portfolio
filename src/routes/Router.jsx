@@ -28,7 +28,7 @@ export const Router = ({darkMode, handleChangeTheme}, props) => {
             <DrawerAppBar darkMode={darkMode} handleChangeTheme={handleChangeTheme}/>
             <Breadcrumb/>
             <Routes>
-              <Route path='/'             element={<Navigate to='/home'/>} />
+              <Route path='/'             element={<Home/>} />
               <Route path='/home/'        element={<Home/>} />
               <Route path='/projects'     element={<Projects/>} />
               <Route path="/projects/:id" element={<ProjectDetails/>} />
