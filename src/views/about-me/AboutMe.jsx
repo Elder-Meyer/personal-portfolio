@@ -31,7 +31,7 @@ export const AboutMe = () => {
               </Stack>
               <Stack direction="row" spacing={1} alignItems="center">
                 <Chip label={<Email/>} />
-                <Typography color="text.secondary" variant="body1" component="a" href="mailto:meyer.sanchez30000@gmail.com">
+                <Typography color="text.secondary" variant="body1" component="a" href="mailto:meyer.sanchez3000@gmail.com">
                   {"meyer.sanchez3000@gmail.com"}
                 </Typography>
               </Stack>
