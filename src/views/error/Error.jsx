@@ -21,7 +21,7 @@ export const Error = () => {
                     <Typography textAlign="center" gutterBottom sx={{fontSize: {xs: 40, sm: 50, md:60}, fontWeight: 700, color: "primary.main"}}> {t('error.title')} </Typography>
                 </Grid>
                 <Grid item xs={12} display={"flex"} justifyContent={"center"}>
-                    <Button variant='contained' component={Link} to="/" startIcon={<ArrowBack/>}> {t('error.btn')} </Button>
+                    <Button variant='contained' component={Link} to="/home" startIcon={<ArrowBack/>}> {t('error.btn')} </Button>
                 </Grid>
             </Grid>
         </Container>
