@@ -66,6 +66,9 @@
     "contact" : {
         "title" : "Contact",
         "subtitle": "Lets get in touch, send me an email",
+        "divider" : "Or",
+        "complementarytext": "Check more info",
+        "linktext": "About Me",
         "form":{
             "name" : "Name",
             "helpname" : "Name is required",
