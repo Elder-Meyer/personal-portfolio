@@ -66,6 +66,9 @@
     "contact" : {
         "title" : "Contacto",
         "subtitle": "Pongamonos en contacto, enviame un correo electrónico",
+        "divider" : "O",
+        "complementarytext": "Mira más información",
+        "linktext": "Sobre Mi",
         "form" : {
             "name" : "Nombre",
             "helpname" : "El nombre es obligatorio",
