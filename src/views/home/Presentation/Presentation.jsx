@@ -38,7 +38,7 @@ const CaptionInfo = ({t}) => {
       >
         <Typewriter
           options={{
-            strings: [ "Web Developer", "Web Designer", "UI/UX Developer", "Software Eng." ],
+            strings: [ "Web Developer", "Web Designer", "UI/UX Developer" ],
             loop: true,
             autoStart: true,
           }}
