@@ -102,12 +102,12 @@ export const AppFooter = () => {
             </Stack>
           </Grid>
           <Grid item xs={12}> <Divider color="inherit"/> </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={6} order={{xs: 4, sm: 3}}>
             <Stack direction="row" spacing={1} height={"100%"} justifyContent={{xs:"center", sm: "flex-start"}} alignItems="center" mx={2} textAlign={"center"}>
               <Copyright theme={theme} t={t} />
             </Stack>
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={6} order={{xs: 3, sm: 4}}>
             <Stack direction="row" spacing={0.5} height={"100%"} justifyContent={{xs: "center", sm: "flex-end"}} alignItems={"center"} mx={2} color={theme.palette.mode === "dark" ? "primary.light" : "background.paper"}>
               <LinkRoute to="https://www.linkedin.com/in/elder-meyer/" target='_BLANK'>
                 <UseAnimations animation={linkedin} size={45} 
