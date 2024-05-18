@@ -138,6 +138,7 @@ export const AppFooter = () => {
 }
 
 const CssTextField = styled(TextField)(({ theme })=>({
+  '& .MuiNativeSelect-select':{ color: theme.palette.mode === "dark" ? theme.palette.primary.light : theme.palette.background.default },
   width: 145,
   '& label ': { color: theme.palette.mode === "dark" ? theme.palette.primary.light : theme.palette.background.default, },
   '& label.Mui-focused': { color: theme.palette.mode === "dark" ? theme.palette.primary.light : theme.palette.background.default, },
