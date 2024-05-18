@@ -94,7 +94,9 @@ export function CubeGD({animate, large = 42}){
       title='Principal image'
       sx={{ 
         aspectRatio: "42/42", width: large, bgcolor: "transparent", userSelect: "none",
-        animation: `${animation.animation} ${animation.time}`,
+        '&:hover': {
+          animation: `${animation.animation} ${animation.time}`,
+        },
         [`@keyframes ${animation.animation}`]: animation.keyframes,
       }}
     />
