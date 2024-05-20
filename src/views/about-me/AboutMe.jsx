@@ -1,5 +1,5 @@
-import { ArrowRight, Email, LinkedIn, Phone, Web } from "@mui/icons-material";
-import { List, ListItem, ListItemText, Container, Grid, Paper, Stack, Typography, Chip, Divider } from '@mui/material'
+import { ArrowRight, ContactPage, Email, LightMode, LinkedIn, Phone, Web } from "@mui/icons-material";
+import { List, ListItem, ListItemText, Container, Grid, Paper, Stack, Typography, Chip, Divider, IconButton, Button } from '@mui/material'
 import { ChipDownloadCV } from "./ChipDownloadCV";
 import { useTranslation } from 'react-i18next'
 
@@ -334,7 +334,7 @@ export const AboutMe = () => {
             </Grid>
           </Grid>
           {/* Download BTN */}
-          <Grid item xs={12}>
+          <Grid item xs={7} component={Stack} justifyContent={"flex-start"} alignItems={"center"}>
             <ChipDownloadCV/>
           </Grid>
         </Grid>
