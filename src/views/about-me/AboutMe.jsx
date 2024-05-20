@@ -337,6 +337,14 @@ export const AboutMe = () => {
           <Grid item xs={7} component={Stack} justifyContent={"flex-start"} alignItems={"center"}>
             <ChipDownloadCV/>
           </Grid>
+          <Grid item xs={5} component={Stack} justifyContent={"flex-end"} alignItems={"center"}>
+            <IconButton color="primary" size="medium" sx={{ borderColor: "divider", borderWidth: 1, borderStyle: "solid", display: {xs: "flex", sm: "none"} }}>
+              <ContactPage fontSize="inherit" /> 
+            </IconButton>
+            <Button size="medium" variant="outlined" sx={{ borderRadius: 5, display: {xs: "none", sm: "flex"} }} endIcon={<ContactPage/>}>
+              Go to contact page
+            </Button>
+          </Grid>
         </Grid>
       </Paper>
     </Container>
