@@ -39,7 +39,8 @@
         "skillsTitle" : "Habilidades",
         "subSkills" : "Comunicación Asertiva, Resolución de Problemas, Trabajo en Equipo, Autodidacta",
         "language" : "Inglés (intermedio), Español (nativo)",
-        "downloadCv" : "Descargar CV"
+        "downloadCv" : "Descargar CV",
+        "backtocontact": "Ir a la página de contacto"
     },
     "projects" : {
         "title" : "Proyectos",
