@@ -343,7 +343,7 @@ export const AboutMe = () => {
               <ContactPage fontSize="inherit" /> 
             </IconButton>
             <Button component={Link} to={"/contact"} size="medium" variant="outlined" sx={{ borderRadius: 5, display: {xs: "none", sm: "flex"} }} endIcon={<ContactPage/>}>
-              Go to contact page
+              {t("aboutMe.backtocontact")}
             </Button>
           </Grid>
         </Grid>
