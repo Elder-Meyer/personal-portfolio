@@ -2,6 +2,7 @@ import { ArrowRight, ContactPage, Email, LightMode, LinkedIn, Phone, Web } from 
 import { List, ListItem, ListItemText, Container, Grid, Paper, Stack, Typography, Chip, Divider, IconButton, Button } from '@mui/material'
 import { ChipDownloadCV } from "./ChipDownloadCV";
 import { useTranslation } from 'react-i18next'
+import { Link } from "react-router-dom";
 
 export const AboutMe = () => {
   const { t } = useTranslation()
@@ -338,10 +339,10 @@ export const AboutMe = () => {
             <ChipDownloadCV/>
           </Grid>
           <Grid item xs={5} component={Stack} justifyContent={"flex-end"} alignItems={"center"}>
-            <IconButton color="primary" size="medium" sx={{ borderColor: "divider", borderWidth: 1, borderStyle: "solid", display: {xs: "flex", sm: "none"} }}>
+            <IconButton component={Link} to={"/contact"} color="primary" size="medium" sx={{ borderColor: "divider", borderWidth: 1, borderStyle: "solid", display: {xs: "flex", sm: "none"} }}>
               <ContactPage fontSize="inherit" /> 
             </IconButton>
-            <Button size="medium" variant="outlined" sx={{ borderRadius: 5, display: {xs: "none", sm: "flex"} }} endIcon={<ContactPage/>}>
+            <Button component={Link} to={"/contact"} size="medium" variant="outlined" sx={{ borderRadius: 5, display: {xs: "none", sm: "flex"} }} endIcon={<ContactPage/>}>
               Go to contact page
             </Button>
           </Grid>
