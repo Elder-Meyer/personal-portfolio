@@ -39,7 +39,8 @@
         "skillsTitle" : "Skills",
         "subSkills" : "Assertive Communication, Problem Solving, Teamwork, Self-taught",
         "language" : "English (B1), Spanish (Native)",
-        "downloadCv" : "Download CV"
+        "downloadCv" : "Download CV",
+        "backtocontact": "Go to contact page"
     },
     "projects" : {
         "title" : "Projects",
