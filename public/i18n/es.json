@@ -99,8 +99,8 @@
             "contact" : "Contacto"
         },
         "bbtn" : "Volver al inicio",
-        "darkThemeText" : "Enciende la luz",
-        "lightThemeText" : "Apaga la luz"
+        "darkthemetext" : "Enciende la luz",
+        "lightthemetext" : "Apaga la luz"
     },
     "footer" : {
         "links" : {
