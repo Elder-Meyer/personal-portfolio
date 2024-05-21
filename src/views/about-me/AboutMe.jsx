@@ -17,7 +17,7 @@ export const AboutMe = () => {
                 Elder Meyer
               </Typography>
               <Typography color="text.primary" variant="h6" fontWeight={700}>
-                {t("aboutMe.sub")}
+                {t("aboutme.sub")}
               </Typography>
             </Stack>
           </Grid>
@@ -53,30 +53,30 @@ export const AboutMe = () => {
           {/* Desc */}
           <Grid item xs={12}>
             <Typography color="text.secondary" variant="body1">
-              {t("aboutMe.info")}
+              {t("aboutme.info")}
             </Typography>
           </Grid>
           <Grid item xs={12}> <Divider /> </Grid>
           {/* Experiencia */}
           <Grid item xs={12}>
             <Typography color="text.primary" variant="h5" fontWeight={700}>
-              {t("aboutMe.workTitle")}
+              {t("aboutme.worktitle")}
             </Typography>
             <Typography color="text.primary" variant="subtitle1">
-              {t("aboutMe.workCaption")}
+              {t("aboutme.workcaption")}
             </Typography>
             <Typography color="text.primary" variant="subtitle2">
               Tienda de abarrotes, Sep 2020 - Nov 2023
             </Typography>
             <Typography color="text.secondary" variant="body1">
-              {t("aboutMe.workDescription")}
+              {t("aboutme.workdescription")}
             </Typography>
           </Grid>
           <Grid item xs={12}> <Divider /> </Grid>
           {/* Educación */}
           <Grid item xs={12} sm={6}>
             <Typography color="text.primary" variant="h5" fontWeight={700}>
-              {t("aboutMe.educationTitle")}
+              {t("aboutme.educationtitle")}
             </Typography>
             <Stack direction="column" spacing={3}>
               <div>
@@ -87,7 +87,7 @@ export const AboutMe = () => {
                   Universidad Tecnologica de la Huasteca Hidalguense
                 </Typography>
                 <Typography color="text.secondary" variant="body2">
-                  {t("aboutMe.ing")}
+                  {t("aboutme.ing")}
                 </Typography>
               </div>
               <div>
@@ -98,7 +98,7 @@ export const AboutMe = () => {
                   Universidad Tecnologica de la Huasteca Hidalguense
                 </Typography>
                 <Typography color="text.secondary" variant="body2">
-                  {t("aboutMe.tsu")}
+                  {t("aboutme.tsu")}
                 </Typography>
               </div>
               <div>
@@ -109,7 +109,7 @@ export const AboutMe = () => {
                   Colegio de Bachilleres del Estado de Hidalgo
                 </Typography>
                 <Typography color="text.secondary" variant="body2">
-                  {t("aboutMe.cpt")} 
+                  {t("aboutme.cpt")} 
                 </Typography>
               </div>
             </Stack>
@@ -118,7 +118,7 @@ export const AboutMe = () => {
           <Grid container item xs={12} sm={6}>
             <Grid item xs={12}>
               <Typography color="text.primary" variant="h5" fontWeight={700}>
-                {t("aboutMe.skillsTitle")}
+                {t("aboutme.skillstitle")}
               </Typography>
             </Grid>
             {/* listas */}
@@ -327,10 +327,10 @@ export const AboutMe = () => {
             <Grid item xs={12}>
               <br/>
               <Typography color="text.secondary" variant="body1" gutterBottom>
-                {t("aboutMe.subSkills")}
+                {t("aboutme.subskills")}
               </Typography>
               <Typography color="text.secondary" variant="body1">
-                {t("aboutMe.language")}
+                {t("aboutme.language")}
               </Typography>
             </Grid>
           </Grid>
@@ -343,7 +343,7 @@ export const AboutMe = () => {
               <ContactPage fontSize="inherit" /> 
             </IconButton>
             <Button component={Link} to={"/contact"} size="medium" variant="outlined" sx={{ borderRadius: 5, display: {xs: "none", sm: "flex"} }} endIcon={<ContactPage/>}>
-              {t("aboutMe.backtocontact")}
+              {t("aboutme.backtocontact")}
             </Button>
           </Grid>
         </Grid>
