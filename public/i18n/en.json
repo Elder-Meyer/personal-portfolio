@@ -26,20 +26,20 @@
             "btn" : "Ok, got it!"
         }
     },
-    "aboutMe" : {
+    "aboutme" : {
         "sub" : "TSU. IN INFORMATION TECHNOLOGIES",
         "info" : "Web developer passionate about creating applications that are useful, attractive and innovative. Always exploring new technologies and trends to offer products that are at the forefront of innovation on the web. Proactive, organized developer with the ability to work as a team,",
-        "workTitle" : "Work experience",
-        "workCaption" : "Assistant",
-        "workDescription" : "Customer Service: Provide friendly and efficient customer service, resolving customer doubts and queries. Product organization: Keep products on shelves in an orderly manner and accessible to customers. Communication and customer service skills: Ability to communicate effectively with customers, resolving their doubts and queries in a friendly and efficient manner. Organization and planning skills: Ability to organize and plan work efficiently.",
-        "educationTitle" : "Education",
+        "worktitle" : "Work experience",
+        "workcaption" : "Assistant",
+        "workdescription" : "Customer Service: Provide friendly and efficient customer service, resolving customer doubts and queries. Product organization: Keep products on shelves in an orderly manner and accessible to customers. Communication and customer service skills: Ability to communicate effectively with customers, resolving their doubts and queries in a friendly and efficient manner. Organization and planning skills: Ability to organize and plan work efficiently.",
+        "educationtitle" : "Education",
         "ing" : "Software Development and Management Eng.",
         "tsu" : "HT. in Information Technologies",
         "cpt" : "Training for computer work",
-        "skillsTitle" : "Skills",
-        "subSkills" : "Assertive Communication, Problem Solving, Teamwork, Self-taught",
+        "skillstitle" : "Skills",
+        "subskills" : "Assertive Communication, Problem Solving, Teamwork, Self-taught",
         "language" : "English (B1), Spanish (Native)",
-        "downloadCv" : "Download CV",
+        "downloadcv" : "Download CV",
         "backtocontact": "Go to contact page"
     },
     "projects" : {
