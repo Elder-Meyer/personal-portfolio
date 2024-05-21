@@ -13,7 +13,7 @@ export const ChipDownloadCV = () => {
       sx={{borderRadius: 5}}
       disableElevation
     >
-      {t("aboutMe.downloadCv")}
+      {t("aboutme.downloadcv")}
     </Button>
   )
 }
