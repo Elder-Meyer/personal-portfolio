@@ -14,7 +14,7 @@ const ThemeSwitcher = ({ darkMode, handleChangeTheme }) => {
   };
 
   return (
-    <Tooltip title={darkMode ? t("navbar.darkThemeText") : t("navbar.lightThemeText") } placement={"bottom"} arrow>
+    <Tooltip title={darkMode ? t("navbar.darkthemetext") : t("navbar.lightthemetext") } placement={"bottom"} arrow>
       <IconButton onClick={handleIconClick}
         sx={{ 
           color : "inherit",
@@ -23,7 +23,7 @@ const ThemeSwitcher = ({ darkMode, handleChangeTheme }) => {
         }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        aria-label={darkMode ? t("navbar.darkThemeText") : t("navbar.lightThemeText") }
+        aria-label={darkMode ? t("navbar.darkthemetext") : t("navbar.lightthemetext") }
         size='large'
       >
         {darkMode ? (
