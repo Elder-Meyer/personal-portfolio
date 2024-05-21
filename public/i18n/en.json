@@ -99,8 +99,8 @@
             "contact" : "Contact"
         },
         "bbtn" : "Go home",
-        "darkThemeText" : "Turn on the light",
-        "lightThemeText" : "Turn off the light"
+        "darkthemetext" : "Turn on the light",
+        "lightthemetext" : "Turn off the light"
     },
     "footer" : {
         "links" : {
