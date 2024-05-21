@@ -8,16 +8,7 @@
         },
         "skills" : {
             "titleskills" : "Habilidades",
-            "descriptionskills" : "Tengo experiencia y habilidades en diversas tecnologías y lenguajes de programación.",
-            "web" : "Desarrollo web",
-            "pro" : "Lenguajes de Programación",
-            "frame" : "Frameworks y librerias",
-            "data" : "Bases de datos",
-            "titlelanguages" : "Idiomas",
-            "descriptionlanguages" : "Tengo conocimientos de los siguientes idiomas.",
-            "en" : "Inglés",
-            "fr" : "Francés",
-            "es" : "Español"
+            "descriptionskills" : "Tengo experiencia y habilidades en diversas tecnologías y lenguajes de programación."
         },
         "backtopbtn" : "Volver arriba",
         "cookies" : {

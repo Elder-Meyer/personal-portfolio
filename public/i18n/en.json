@@ -8,16 +8,7 @@
         },
         "skills" : {
             "titleskills" : "Skills",
-            "descriptionskills" : "I have experience and skills in various technologies and programming languages.",
-            "web" : "Web Development",
-            "pro" : "Programming Language",
-            "frame" : "Frameworks and libraries",
-            "data" : "Database",
-            "titlelanguages" : "Languages",
-            "descriptionlanguages" : "I have knowledge of the following languages.",
-            "en" : "English",
-            "fr" : "French",
-            "es" : "Spanish"
+            "descriptionskills" : "I have experience and skills in various technologies and programming languages."
         },
         "backtopbtn" : "Back to the top",
         "cookies" : {
