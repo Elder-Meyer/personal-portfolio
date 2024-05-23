@@ -4,7 +4,7 @@
             "title" : "Hi! I'm ",
             "caption" : "",
             "description" : "Web developer passionate about innovation. Always exploring new tech and trends to deliver cutting-edge products.",
-            "cvbtn" : "View more"
+            "viewmoreinfo" : "View more"
         },
         "skills" : {
             "titleskills" : "Skills",
