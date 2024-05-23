@@ -54,7 +54,7 @@ const CaptionInfo = ({t}) => {
           endIcon={<KeyboardArrowRight />}
           sx={{borderRadius: 5}}
         >
-          {t('home.presentation.cvbtn')}
+          {t('home.presentation.viewmoreinfo')}
         </Button>
       </Box>
     </Stack>
