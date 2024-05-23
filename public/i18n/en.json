@@ -7,8 +7,8 @@
             "viewmoreinfo" : "View more"
         },
         "skills" : {
-            "titleskills" : "Skills",
-            "descriptionskills" : "I have experience and skills in various technologies and programming languages."
+            "title" : "Skills",
+            "description" : "I have experience and skills in various technologies and programming languages."
         },
         "cookies" : {
             "title" : "This website uses cookies.",
