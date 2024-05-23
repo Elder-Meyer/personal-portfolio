@@ -4,7 +4,7 @@
             "title" : "Hey! Soy ",
             "caption" : "",
             "description" : "Desarrollador web apasionado por la innovación. Siempre explorando nuevas tecnologías y tendencias para ofrecer productos de vanguardia.",
-            "cvbtn" : "Ver mas"
+            "viewmoreinfo" : "Ver mas"
         },
         "skills" : {
             "titleskills" : "Habilidades",
