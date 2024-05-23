@@ -10,12 +10,12 @@
             "titleskills" : "Skills",
             "descriptionskills" : "I have experience and skills in various technologies and programming languages."
         },
-        "backtopbtn" : "Back to the top",
         "cookies" : {
             "title" : "This website uses cookies.",
             "description" : "To improve your experience this website use cookies.",
             "btn" : "Ok, got it!"
-        }
+        },
+        "backtopbtn" : "Back to the top"
     },
     "aboutme" : {
         "sub" : "TSU. IN INFORMATION TECHNOLOGIES",
