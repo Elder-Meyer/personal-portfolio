@@ -13,7 +13,7 @@
         "cookies" : {
             "title" : "Este sitio web utiliza cookies.",
             "description" : "Para mejorar tu experiencia este sitio web utiliza cookies.",
-            "btn" : "De acuerdo"
+            "acceptbtn" : "De acuerdo"
         },
         "backtopbtn" : "Volver arriba"
     },
