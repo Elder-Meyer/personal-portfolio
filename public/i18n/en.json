@@ -13,7 +13,7 @@
         "cookies" : {
             "title" : "This website uses cookies.",
             "description" : "To improve your experience this website use cookies.",
-            "btn" : "Ok, got it!"
+            "acceptbtn" : "Ok, got it!"
         },
         "backtopbtn" : "Back to the top"
     },
