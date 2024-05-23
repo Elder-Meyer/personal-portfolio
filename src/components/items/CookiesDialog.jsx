@@ -39,7 +39,7 @@ export const CookiesDialog = () => {
               <Typography fontWeight="bold">{t('home.cookies.title')}</Typography>
               <Typography variant="body2">{t('home.cookies.description')}</Typography>
             </Box>
-            <Button size="small" onClick={closeBanner} variant="contained">{t('home.cookies.btn')}</Button>
+            <Button size="small" onClick={closeBanner} variant="contained">{t('home.cookies.acceptbtn')}</Button>
           </Stack>
         </Paper>
       </Slide>
