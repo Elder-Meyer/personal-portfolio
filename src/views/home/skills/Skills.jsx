@@ -9,10 +9,10 @@ export const Skills = () => {
         <Paper sx={{borderRadius: 5, py: 3, px: {xs: 1.5, md: 8, xl:16 }, bgcolor: "background.paper" }} elevation={0}>
           <Stack direction="column" spacing={1} pb={2}>
             <Typography color='primary.main' textAlign="center" sx={{ fontSize: 40, fontWeight: 500}}>
-              {t('home.skills.titleskills')}
+              {t('home.skills.title')}
             </Typography>
             <Typography color='text.secondary' textAlign="center" sx={{fontSize: 18}}>
-              {t('home.skills.descriptionskills')}
+              {t('home.skills.description')}
             </Typography>
           </Stack>
           <Grid container>
