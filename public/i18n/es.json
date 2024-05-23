@@ -7,8 +7,8 @@
             "viewmoreinfo" : "Ver mas"
         },
         "skills" : {
-            "titleskills" : "Habilidades",
-            "descriptionskills" : "Tengo experiencia y habilidades en diversas tecnologías y lenguajes de programación."
+            "title" : "Habilidades",
+            "description" : "Tengo experiencia y habilidades en diversas tecnologías y lenguajes de programación."
         },
         "cookies" : {
             "title" : "Este sitio web utiliza cookies.",
