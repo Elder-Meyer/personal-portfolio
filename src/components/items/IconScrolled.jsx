@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Box, Fade, Tooltip, useScrollTrigger } from '@mui/material';
+import { useLocation } from 'react-router-dom';
 
 export function IconScrolled(props) {
     const { children, window } = props;
     const [screenHeight, setScreenHeight] = useState(0);
+    const location = useLocation()
+    const isHome = location.pathname === "/home" || location.pathname === "/";
 
     useEffect(() => {
         const height = window ? window().innerHeight : globalThis.innerHeight;
@@ -25,12 +28,18 @@ export function IconScrolled(props) {
     });
 
     return (
-        <Fade in={trigger}>
-            <Tooltip title="nueva pista" placement='right' arrow>
+        <>
+            { isHome ? (
+                <Fade in={trigger}>
+                    <Box>
+                        {children}
+                    </Box>
+                </Fade>
+            ) : (
                 <Box>
                     {children}
                 </Box>
-            </Tooltip>
-        </Fade>
+            ) }
+        </>
     );
 }
