@@ -55,9 +55,11 @@ export const DrawerAppBar = ({darkMode, handleChangeTheme, window}, props) => {
           <Container maxWidth="xl">
             <Toolbar sx={{justifyContent: "space-between", mx:-2 }}>
               <IconScrolled {...props}>
+                <Tooltip title=":)" placement='right' arrow>
                   <Link to="/home" style={{ textDecoration: "none", color: "inherit" }} aria-label="Go home" >
                     <CubeGD animate={3} aria-label='Go home' />
                   </Link>            
+                </Tooltip>
               </IconScrolled>
               <IconButton aria-label="open drawer" edge="start" onClick={handleDrawerToggle} sx={{ display: { xs: "flex", sm: "flex", md: 'none' }, color: "inherit"}} >
                 <Menu />
