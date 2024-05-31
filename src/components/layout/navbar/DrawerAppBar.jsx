@@ -9,6 +9,7 @@ import { CubeGD } from '../../items/CubeGD'
 import { ElevationScroll } from '../../../utils/fnElevationScroll';
 import { ScrollIndicator } from '../../items/ScrollIndicator';
 import { useTranslation } from 'react-i18next';
+import { IconScrolled } from '../../items/IconScrolled';
 
 const drawerWidth = 240;
 
@@ -53,13 +54,11 @@ export const DrawerAppBar = ({darkMode, handleChangeTheme, window}, props) => {
         <AppBar position='fixed' sx={{backgroundColor: theme.palette.mode === "dark" ? `${theme.palette.background.default}bf` : `${theme.palette.primary.dark}cc` , backdropFilter: "blur(8px)" }}>
           <Container maxWidth="xl">
             <Toolbar sx={{justifyContent: "space-between", mx:-2 }}>
-              <Box>
-                <Tooltip title={t("navbar.bbtn")} placement="right" arrow>
+              <IconScrolled {...props}>
                   <Link to="/home" style={{ textDecoration: "none", color: "inherit" }} aria-label="Go home" >
                     <CubeGD animate={3} aria-label='Go home' />
                   </Link>            
-                </Tooltip>
-              </Box>
+              </IconScrolled>
               <IconButton aria-label="open drawer" edge="start" onClick={handleDrawerToggle} sx={{ display: { xs: "flex", sm: "flex", md: 'none' }, color: "inherit"}} >
                 <Menu />
               </IconButton>
