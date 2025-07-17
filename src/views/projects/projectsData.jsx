@@ -40,7 +40,7 @@ const projects = [
     imgMd: proj_01_md,
     imgSm: proj_01_sm,
     imgXs: proj_01_xs,
-    href: "https://corazon-huasteco.com",
+    href: "https://corazon-huasteco-bfbcc.web.app",
     repo: "https://github.com/Eduardo1802/Corazon_Huasteco",
   },
   {
