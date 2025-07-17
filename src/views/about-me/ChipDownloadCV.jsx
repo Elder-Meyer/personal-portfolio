@@ -1,6 +1,6 @@
 import { FileDownloadOutlined } from "@mui/icons-material";
 import { Button, Chip } from "@mui/material";
-import CVElderMeyer from "../../assets/docs/CV-ElderMeyer.pdf"
+import CVElder from "../../assets/docs/ElderMeyerCV.pdf"
 import { useTranslation } from "react-i18next";
 
 export const ChipDownloadCV = () => {
@@ -21,9 +21,9 @@ export const ChipDownloadCV = () => {
 
 function handleChipClick() {
     const link = document.createElement('a');
-    link.href = CVElderMeyer;
+    link.href = CVElder;
     link.target = '_blank';
-    link.download = 'CV-ElderMeyer';
+    link.download = 'Elder Meyer CV';
     // Simular un clic en el enlace para iniciar la descarga
     document.body.appendChild(link);
     link.click();
