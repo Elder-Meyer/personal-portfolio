@@ -2,7 +2,6 @@ import { useTranslation } from 'react-i18next'
 import { ArrowCircleRight, ArrowRight, East, FileDownloadOutlined, KeyboardArrowRight } from '@mui/icons-material'
 import cube from '../../../assets/img/principal/cube-glow.webp'
 import Typewriter from 'typewriter-effect'
-import CVElderMeyer from "../../../assets/docs/CV-ElderMeyer.pdf"
 import { useMediaQuery, styled, Box, Button, Card, Container, Grid, Stack, Toolbar, Tooltip, Typography } from '@mui/material'
 import { Link } from 'react-router-dom'
 
@@ -28,12 +27,12 @@ const CaptionInfo = ({t}) => {
   const isSmallScreen = useMediaQuery('(max-width:334px)');
   return (
     <Stack direction="column">
-      <Typography variant='h1' color='text.primary' sx={{fontWeight: 500, fontSize: {xs: 76, sm: 86, md: 96}}}>
+      <Typography paragraph  variant='h1' color='text.primary' sx={{fontWeight: 600, fontSize: {xs: 76, sm: 86, md: 96}}}>
         {t('home.presentation.title')} <CaptionName> Elder </CaptionName>
       </Typography>
       <Typography variant='h2' color='primary.light' 
         sx={{
-          fontWeight: 100, fontSize: isSmallScreen ? "30px" : {xs: 35, sm: 50, md: 55}, mb: 2
+          fontWeight: 500, fontSize: isSmallScreen ? "30px" : {xs: 35, sm: 50, md: 55}, mb: 2
         }}
       >
         <Typewriter
@@ -44,18 +43,17 @@ const CaptionInfo = ({t}) => {
           }}
         />
       </Typography>
-      <Typography paragraph variant='body2' color="text.primary" sx={{fontSize: "1.3rem"}}>
+      <Typography paragraph variant='body2' color="text.primary" sx={{fontSize: "1.3rem", fontWeight: 300}}>
         {t('home.presentation.description')}
       </Typography>
       <Box>
-        <Button variant="contained" size="medium" disableElevation
+        <GradientButton variant="contained" size="large" disableElevation
           component={Link}
           to={'/about-me'}
           endIcon={<KeyboardArrowRight />}
-          sx={{borderRadius: 5}}
         >
           {t('home.presentation.viewmoreinfo')}
-        </Button>
+        </GradientButton>
       </Box>
     </Stack>
   )
@@ -119,5 +117,49 @@ export const CaptionName = styled("span")(({ theme })=>({
     '0%':{ backgroundPosition: "0% 50%" },
     '50%':{ backgroundPosition: "100% 50%" },
     '100%':{ backgroundPosition: "0% 50%" },
+  }
+}));
+
+export const GradientButton = styled(Button)(({ theme })=>({
+  fontSize: "1rem",
+  color: "#fff",
+  background: "linear-gradient(90deg, #7d7dff, #00bc7d, #00cccc, #7d7dff)",
+  // background: "linear-gradient(90deg, #7d7dff, #00ffc0, #00ffff, #7d7dff)",
+  backgroundSize: "400%",
+  borderRadius: "24px",
+  zIndex: 1,  
+  animationPlayState: "paused",
+  
+  '&:hover': {
+    animation: "animate 8s linear infinite",
+    animationPlayState: "running",
+  },
+
+  '@keyframes animate' : {
+    '0%':{ backgroundPosition: "0%" },
+    '100%':{ backgroundPosition: "400%" },
+  },
+
+  '&:before': {
+    content: '""',
+    position: 'absolute',
+    top: "-5px",
+    left: "-5px",
+    bottom: "-5px",
+    right: "-5px",
+    zIndex: -1,
+    background: "linear-gradient(90deg, #7d7dff, #00bc7d, #00cccc, #7d7dff)",
+    // background: "linear-gradient(90deg, #7d7dff, #00ffc0, #00ffff, #7d7dff)",
+    backgroundSize: "400%",
+    borderRadius: "24px",
+    filter: "blur(25px)",
+    opacity: 0,
+    transition: "0.5s"
+  },
+
+  '&:hover:before': {
+    filter: "blur(25px)",
+    opacity: 1,
+    animation: "animate 8s linear infinite"
   }
 }));
