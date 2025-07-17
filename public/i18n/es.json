@@ -19,13 +19,28 @@
     },
     "aboutme" : {
         "personal":{
-            "degree" : "TSU. EN TECNOLOGÍAS DE LA INFORMACIÓN",
-            "info" : "Desarrollador web apasionado por crear aplicaciones que sean útiles, atractivas e innovadoras. Siempre explorando nuevas tecnologías y tendencias para ofrecer productos que estén a la vanguardia de la innovación en la web. Desarrollador proactivo, organizado y con capacidad de trabajo en equipo,"
+            "degree" : "ING. EN DESARROLLO Y GESTIÓN DE SOFTWARE",
+            "info" : "Desarrollador apasionado por crear aplicaciones que sean útiles, atractivas e innovadoras. Siempre explorando nuevas tecnologías y tendencias para ofrecer productos que estén a la vanguardia, principalmente en desarrollo web y frontend. Desarrollador proactivo, organizado y con capacidad de trabajo en equipo."
         },
         "workexp":{
-            "title" : "Experiencia Laboral",
-            "position" : "Auxiliar",
-            "description" : "Atención al cliente: Brindar un servicio de atención al cliente amable y eficiente, resolviendo las dudas y consultas de los clientes. Organización de productos:Mantener los productos en los estantes de manera ordenada y accesible para los clientes. Habilidades de comunicación y atención al cliente:Capacidad para comunicarse de forma efectiva con los clientes, resolviendo sus dudas y consultas de forma amable y eficiente. Habilidades de organización y planificación:Capacidad para organizar y planificar el trabajo de manera eficiente."
+            "title" : "Proyectos y Contribuciones",
+            "projects": {
+                "project01":{
+                    "title": "App CAIH",
+                    "url": "https://huasteca-mx.web.app/",
+                    "info": "Actualización de una plataforma para el Colegio de Arquitectos e Ingenieros Civiles de la Huasteca (CAIH), migrando la idea original creada con HTML, CSS y JavaScript a un entorno que emplea frameworks, librerías y servicios en la nube."
+                },
+                "project02":{
+                    "title": "Corazón Huasteco",
+                    "url": "https://corazon-huasteco-bfbcc.web.app/",
+                    "info": "Desarrollo de un sitio web como proyecto escolar con el objetivo de crear un espacio en línea para difundir información sobre las culturas y tradiciones de la región de Huejutla de Reyes, Hidalgo. El proyecto busca preservar y compartir conocimientos que tradicionalmente se almacenan en libros, facilitando su acceso a través de una plataforma digital."
+                },
+                "project03":{
+                    "title": "Contribución: Sitio Web del Artista Musical Geoxor",
+                    "url": "https://github.com/Geoxor/geoxor.moe/issues/40",
+                    "info": "Solución de un problema de recarga de rutas que generaba un error 404 en el sitio web. Implementación de un script que resolvió el issue, relacionado a un proyecto desarrollado previamente."
+                }
+            }
         },
         "education":{
             "title" : "Educación",
@@ -36,7 +51,7 @@
         "skills":{
             "title" : "Habilidades",
             "skills" : "Comunicación Asertiva, Resolución de Problemas, Trabajo en Equipo, Autodidacta",
-            "language" : "Inglés (intermedio), Español (nativo)"
+            "language" : "Inglés (B2), Español (nativo)"
         },
         "downloadcv" : "Descargar CV",
         "backbtn": "Ir a la página de contacto"

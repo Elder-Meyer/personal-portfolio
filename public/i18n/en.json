@@ -19,13 +19,28 @@
     },
     "aboutme" : {
         "personal":{
-            "degree" : "TSU. IN INFORMATION TECHNOLOGIES",
-            "info" : "Web developer passionate about creating applications that are useful, attractive and innovative. Always exploring new technologies and trends to offer products that are at the forefront of innovation on the web. Proactive, organized developer with the ability to work as a team,"
+            "degree" : "ENG. SOFTWARE DEVELOPMENT AND MANAGEMENT",
+            "info" : "Developer passionate about creating applications that are useful, attractive and innovative. Always exploring new technologies and trends to offer products that are at the forefront of innovation on the web. Proactive, organized developer with the ability to work as a team,"
         },
         "workexp":{
-            "title" : "Work experience",
-            "position" : "Assistant",
-            "description" : "Customer Service: Provide friendly and efficient customer service, resolving customer doubts and queries. Product organization: Keep products on shelves in an orderly manner and accessible to customers. Communication and customer service skills: Ability to communicate effectively with customers, resolving their doubts and queries in a friendly and efficient manner. Organization and planning skills: Ability to organize and plan work efficiently."
+            "title" : "Projects and Contributions",
+            "projects": {
+                "project01":{
+                    "title": "App CAIH",
+                    "url": "https://huasteca-mx.web.app/",
+                    "info": "Updated a platform for the College of Architects and Civil Engineers of Huasteca (CAIH), migrating the original idea created with HTML, CSS, and JavaScript to an environment that uses frameworks, libraries, and cloud services."
+                },
+                "project02":{
+                    "title": "Corazon Huasteco",
+                    "url": "https://corazon-huasteco-bfbcc.web.app/",
+                    "info": "Development of a website as a school project with the goal of creating an online space to disseminate information about the cultures and traditions of the Huejutla de Reyes region, Hidalgo. The project seeks to preserve and share knowledge traditionally stored in books, facilitating its access through a digital platform."
+                },
+                "project03":{
+                    "title": "Contribution: Geoxor Music Artist Website",
+                    "url": "https://github.com/Geoxor/geoxor.moe/issues/40",
+                    "info": "Fixed a route reloading issue that was generating a 404 error on the website. Implemented a script that resolved the issue, related to a previously developed project."
+                }
+            }
         },
         "education":{
             "title" : "Education",
@@ -36,7 +51,7 @@
         "skills":{
             "title" : "Skills",
             "skills" : "Assertive Communication, Problem Solving, Teamwork, Self-taught",
-            "language" : "English (B1), Spanish (Native)"
+            "language" : "English (B2), Spanish (Native)"
         },
         "downloadcv" : "Download CV",
         "backbtn": "Go to contact page"
