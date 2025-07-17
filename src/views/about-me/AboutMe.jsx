@@ -2,19 +2,20 @@ import { ArrowRight, ContactPage, Email, LightMode, LinkedIn, Phone, Web } from 
 import { List, ListItem, ListItemText, Container, Grid, Paper, Stack, Typography, Chip, Divider, IconButton, Button } from '@mui/material'
 import { ChipDownloadCV } from "./ChipDownloadCV";
 import { useTranslation } from 'react-i18next'
+import { Link as LinkMUI } from "@mui/material";
 import { Link } from "react-router-dom";
 
 export const AboutMe = () => {
   const { t } = useTranslation()
   return (
-    <Container maxWidth="lg" sx={{ minHeight: { xs: "55vh", sm: "60vh", md: "67vh" }}}>
+    <Container maxWidth="md" sx={{ minHeight: { xs: "55vh", sm: "60vh", md: "67vh" }}}>
       <Paper  elevation={0} sx={{p: {xs:1, md:2, lg:3}, borderRadius: 5 }}>
         <Grid container spacing={2}>
           {/* Nombre */}
-          <Grid item xs={12} sm={5} md={6}>
+          <Grid item xs={12} sm={5} md={7}>
             <Stack direction="column" spacing={1}>
               <Typography color="text.primary" variant="h2" fontWeight={700}>
-                Elder Meyer
+                ELDER MEYER
               </Typography>
               <Typography color="text.primary" variant="h6" fontWeight={700}>
                 {t("aboutme.personal.degree")}
@@ -22,7 +23,7 @@ export const AboutMe = () => {
             </Stack>
           </Grid>
           {/* Contacto */}
-          <Grid item xs={12} sm={7} md={6}>
+          <Grid item xs={12} sm={7} md={5}>
             <Stack direction="column" spacing={0.5} height="100%" justifyContent="center">
               <Stack direction="row" spacing={1} alignItems="center">
                 <Chip label={<Phone/>} />
@@ -42,12 +43,6 @@ export const AboutMe = () => {
                   {"elder-meyer"}
                 </Typography>
               </Stack>
-              <Stack direction="row" spacing={1} alignItems="center">
-                <Chip label={<Web/>} />
-                <Typography color="text.secondary" variant="body1" component="a" href="https://elder-meyer.web.app" target="_BLANK">
-                  {"elder-meyer.web.app"}
-                </Typography>
-              </Stack>
             </Stack>
           </Grid>
           {/* Desc */}
@@ -57,19 +52,47 @@ export const AboutMe = () => {
             </Typography>
           </Grid>
           <Grid item xs={12}> <Divider /> </Grid>
-          {/* Experiencia */}
+          {/* Experiencia en proyectos */}
           <Grid item xs={12}>
             <Typography color="text.primary" variant="h5" fontWeight={700}>
               {t("aboutme.workexp.title")}
             </Typography>
-            <Typography color="text.primary" variant="subtitle1">
-              {t("aboutme.workexp.position")}
+          </Grid>
+          {/* Proyectos */}
+          {/* project 1 */}
+          <Grid item xs={12}>
+            <Typography color="text.primary" variant="subtitle1" fontWeight={700}>
+              {t("aboutme.workexp.projects.project01.title")}
             </Typography>
-            <Typography color="text.primary" variant="subtitle2">
-              Tienda de abarrotes, Sep 2020 - Nov 2023
-            </Typography>
+            <LinkMUI component={Link} href="#" underline="always">
+              {t("aboutme.workexp.projects.project01.url")}
+            </LinkMUI>
             <Typography color="text.secondary" variant="body1">
-              {t("aboutme.workexp.description")}
+              {t("aboutme.workexp.projects.project01.info")}
+            </Typography>
+          </Grid>
+          {/* project 2 */}
+          <Grid item xs={12}>
+            <Typography color="text.primary" variant="subtitle1" fontWeight={700}>
+              {t("aboutme.workexp.projects.project02.title")}
+            </Typography>
+            <LinkMUI component={Link} href="#" underline="always">
+              {t("aboutme.workexp.projects.project02.url")}
+            </LinkMUI>
+            <Typography color="text.secondary" variant="body1">
+              {t("aboutme.workexp.projects.project02.info")}
+            </Typography>
+          </Grid>
+          {/* project 3 */}
+          <Grid item xs={12}>
+            <Typography color="text.primary" variant="subtitle1" fontWeight={700}>
+              {t("aboutme.workexp.projects.project03.title")}
+            </Typography>
+            <LinkMUI component={Link} href="#" underline="always">
+              {t("aboutme.workexp.projects.project03.url")}
+            </LinkMUI>
+            <Typography color="text.secondary" variant="body1" paragraph>
+              {t("aboutme.workexp.projects.project03.info")}
             </Typography>
           </Grid>
           <Grid item xs={12}> <Divider /> </Grid>
@@ -81,7 +104,7 @@ export const AboutMe = () => {
             <Stack direction="column" spacing={3}>
               <div>
                 <Typography color="text.primary" variant="caption">
-                  2022 - Presente
+                  2022 - 2025
                 </Typography>
                 <Typography color="text.primary" variant="h6">
                   Universidad Tecnologica de la Huasteca Hidalguense
