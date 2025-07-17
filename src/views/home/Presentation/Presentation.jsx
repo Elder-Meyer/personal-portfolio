@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { ArrowCircleRight, ArrowRight, East, FileDownloadOutlined, KeyboardArrowRight } from '@mui/icons-material'
+import { East } from '@mui/icons-material'
 import cube from '../../../assets/img/principal/cube-glow.webp'
 import Typewriter from 'typewriter-effect'
 import { useMediaQuery, styled, Box, Button, Card, Container, Grid, Stack, Toolbar, Tooltip, Typography } from '@mui/material'
@@ -50,7 +50,7 @@ const CaptionInfo = ({t}) => {
         <GradientButton variant="contained" size="large" disableElevation
           component={Link}
           to={'/about-me'}
-          endIcon={<KeyboardArrowRight />}
+          endIcon={<East />}
         >
           {t('home.presentation.viewmoreinfo')}
         </GradientButton>
@@ -123,7 +123,7 @@ export const CaptionName = styled("span")(({ theme })=>({
 export const GradientButton = styled(Button)(({ theme })=>({
   fontSize: "1rem",
   color: "#fff",
-  background: "linear-gradient(90deg, #7d7dff, #00bc7d, #00cccc, #7d7dff)",
+  background: "linear-gradient(90deg, #7d7dff, #00ffff, #00cccc, #7d7dff)",
   // background: "linear-gradient(90deg, #7d7dff, #00ffc0, #00ffff, #7d7dff)",
   backgroundSize: "400%",
   borderRadius: "24px",
